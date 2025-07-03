@@ -18,14 +18,14 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://private-research-loning-auric.dw.cash/', // Replace 'auric' with actual GitHub username
+  url: 'https://the-phys.dw.cash/', // Replace 'auric' with actual GitHub username
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   organizationName: 'loning', // Replace with actual GitHub username
-  projectName: 'the-private-research-loning-auric', // Repository name
+  projectName: 'the-phys', // Repository name
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
 
@@ -61,7 +61,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           editUrl:
-            'https://github.com/loning/the-private-research-loning-auric/tree/main/',
+            'https://github.com/loning/the-phys/tree/main/',
           remarkPlugins: [remarkMath],
           rehypePlugins: [
         [
