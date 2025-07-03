@@ -23,23 +23,31 @@ $$
 
 *Proof*: Left and right spirals cannot perfectly align. Their mismatch creates a fractional coupling strength. ∎
 
-## The Limit Nature of α
+## Fine Structure as EM-Quantum Fixed Point
 
-**Definition 25.1** (Coupling as Limit): The fine structure constant emerges as a limit:
-
-$$
-α = \lim_{n \to \infty} \frac{\text{coupled patterns}}{\text{total patterns}} \text{ in } \mathcal{C}^n[\psi]
-$$
-
-It represents the asymptotic fraction of electromagnetic coupling.
-
-**Theorem 25.2** (Stability Constraint): The value α ≈ 1/137 emerges from the requirement:
+**Definition 25.1** (α from Tensor Fixed Point): The fine structure constant emerges as:
 
 $$
-\text{Stable atoms} \iff α \in \left(\frac{1}{200}, \frac{1}{80}\right)
+α = \lim_{n \to \infty} \frac{\|\mathcal{C}^n[T_{\text{EM}}]\|}{\|\mathcal{C}^n[T_{\text{quantum}}]\|}
 $$
 
-*Note*: The precise derivation of 1/137.036 from first principles remains an open question in our framework. This suggests deeper structures yet to be uncovered.
+where:
+- $T_{\text{EM}}$ is the electromagnetic field tensor
+- $T_{\text{quantum}}$ is the quantum transition tensor
+- The ratio converges to the coupling strength α
+
+**Fixed Point Equation**:
+
+$$
+\mathcal{C}[T_{\text{EM}} \otimes T_{\text{quantum}}] = α \cdot (T_{\text{EM}} \otimes T_{\text{quantum}})
+$$
+
+**Theorem 25.2** (Stability Constraint): The specific value α ≈ 1/137 is the unique fixed point that allows:
+- Stable atomic orbitals (not too strong)
+- Effective photon emission (not too weak)
+- Chemical complexity (just right)
+
+*Note*: The precise numerical derivation remains an open question, suggesting deeper tensor structures.
 
 ## Vector Information Theory of Coupling
 

@@ -93,19 +93,43 @@ graph TD
     end
 ```
 
-## Constants as Limits
+## Constants as Categorical Limits/Colimits
 
-**Theorem 32.3** (Constant Emergence): All constants are limits:
+**Theorem 32.3** (Constants as Universal Constructions): All physical constants are limit or colimit constructions between collapse tensors:
 
 $$
-c = \lim_{n \to \infty} \frac{\text{collapse propagation}}{\text{time step}}
+\text{Constant} = \lim_{\mathcal{J}} \mathcal{C}: T_1 \otimes T_2 \to \mathcal{U}
 $$
+
+or
+
 $$
-\hbar = \lim_{n \to \infty} \frac{\text{action}}{\text{complete cycle}}
+\text{Constant} = \text{colim}_{\mathcal{J}} \mathcal{C}: T_1 \otimes T_2 \to \mathcal{U}
 $$
-$$
-G = \lim_{n \to \infty} \frac{\text{curvature response}}{\text{mass}^2}
-$$
+
+where $\mathcal{J}$ is the indexing category and $\mathcal{U}$ is the universal object.
+
+**Speed of light (limit)**:
+$$c = \lim_{\substack{T_{\text{space}} \to X \\ T_{\text{time}} \to X}} X$$
+The universal object mediating between space and time tensors.
+
+**Planck constant (limit)**:
+$$\hbar = \lim_{\substack{T_{\text{action}} \to Y \\ T_{\text{cycle}} \to Y}} Y$$
+The minimal cone over action and cycle.
+
+**Fine structure (colimit)**:
+$$\alpha = \text{colim}_{\substack{T_{\text{EM}} \to Z \\ T_{\text{quantum}} \to Z}} Z$$
+The universal cocone receiving both EM and quantum.
+
+**Gravitational (limit of diagram)**:
+$$G = \lim_{\substack{T_{\text{mass}} \times T_{\text{mass}} \to W \\ T_{\text{curvature}} \to W}} W$$
+The limit of the mass-curvature diagram.
+
+**Boltzmann (colimit)**:
+$$k_B = \text{colim}_{\substack{T_{\text{micro}} \to V \\ T_{\text{macro}} \to V}} V$$
+The minimal object containing both scales.
+
+Each constant is thus the unique universal object satisfying the appropriate diagram in the category of collapse tensors.
 
 ## Emergence Hierarchy
 

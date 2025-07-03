@@ -25,15 +25,28 @@ $$
 
 *Proof*: Instantaneous propagation would mean the universe collapses everywhere simultaneously, preventing the distinctions necessary for observation. Finite speed preserves causality. ∎
 
-## The Golden Speed
+## The Speed of Light as Categorical Limit
 
-**Definition 23.1** (Natural Units): In golden vector space:
+**Definition 23.1** (c as Universal Limit): The speed of light is the limit in the category of collapse tensors:
 
 $$
-c = \frac{1}{\sqrt{\phi}} \cdot \ell_P / t_P
+c = \lim_{\substack{T_{\text{space}} \xrightarrow{f} X \\ T_{\text{time}} \xrightarrow{g} X}} X
 $$
 
-where $\ell_P$ and $t_P$ are Planck length and time.
+This means $c$ is the universal object with morphisms from both space and time tensors.
+
+**Theorem 23.1b** (Universal Property): For any other object $Y$ with morphisms from $T_{\text{space}}$ and $T_{\text{time}}$, there exists a unique morphism $c \to Y$ making the diagram commute:
+
+```mermaid
+graph TD
+    Ts[T_space] -->|f| c
+    Tt[T_time] -->|g| c
+    Ts -->|f'| Y
+    Tt -->|g'| Y
+    c -->|unique| Y
+```
+
+This universality ensures $c$ is the unique mediator between space and time, explaining why all massless phenomena propagate at exactly this speed.
 
 ## Light as Collapse Wave
 

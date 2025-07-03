@@ -17,15 +17,26 @@ where $\mathcal{C}$ is the collapse operator.
 
 ## The Principle of Constant Emergence
 
-**Theorem 9.1** (Constant Generation): Physical constants emerge as fixed points of the collapse operator:
+**Theorem 9.1** (Constants as Categorical Limits/Colimits): Every physical constant is a limit or colimit construction between collapse tensors in the category $\mathcal{T}_{\text{collapse}}$:
 
 $$
-\vec{c}_{\text{constant}} = \vec{v} \text{ such that } \mathcal{C}[\vec{v}] = \lambda \vec{v}
+\text{Constant} = \lim_{\mathcal{J}} F \quad \text{or} \quad \text{Constant} = \text{colim}_{\mathcal{J}} F
 $$
 
-where $\lambda$ is the eigenvalue determining the constant's magnitude.
+where $F: \mathcal{J} \to \mathcal{T}_{\text{collapse}}$ is a functor from an indexing category.
 
-*Proof*: The collapse operator must have invariant directions in $\mathcal{V}_\phi$. These eigenvectors represent stable configurations that persist through collapse. ∎
+*Proof*: Physical constants must be universal - they mediate between different aspects of reality in a unique, optimal way. This universality is precisely what limits and colimits capture. ∎
+
+**Categorical Interpretation**:
+- **Limits**: Universal cones - "the best way to map into a diagram"
+  - Example: $c$ is the limit mediating space and time
+  - Example: $\hbar$ is the limit reconciling action and periodicity
+  
+- **Colimits**: Universal cocones - "the best way to map out of a diagram"
+  - Example: $\alpha$ is the colimit emerging from EM and quantum
+  - Example: $k_B$ is the colimit bridging micro and macro
+
+The specific value of each constant is determined by the requirement that the universal property be satisfied.
 
 ## Vector Information Theory of Constants
 

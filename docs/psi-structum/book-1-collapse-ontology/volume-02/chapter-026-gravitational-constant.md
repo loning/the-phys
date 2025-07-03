@@ -79,15 +79,26 @@ $$
 
 *Proof*: In the limit of small curvature, geodesic deviation reduces to inverse square attraction. ∎
 
-## The Value of G
+## Gravitational Constant as Mass-Curvature Fixed Point
 
-**Definition 26.3** (Natural Units): In our framework:
+**Definition 26.3** (G from Tensor Fixed Point): The gravitational constant emerges as:
 
 $$
-G = \frac{\ell_P^2 c^3}{\hbar} \cdot \frac{1}{\phi^8}
+G = \lim_{n \to \infty} \frac{\|\mathcal{C}^n[T_{\text{curvature}}]\|}{\|\mathcal{C}^n[T_{\text{mass}}]\|^2}
 $$
 
-The eighth power of golden ratio sets gravitational strength.
+where:
+- $T_{\text{mass}}$ is the mass-energy tensor
+- $T_{\text{curvature}}$ is the spacetime curvature tensor
+- The squared mass term reflects gravity's universality
+
+**Fixed Point Equation**:
+
+$$
+\mathcal{C}[T_{\text{mass}} \otimes T_{\text{mass}} \otimes T_{\text{curvature}}] = G \cdot (T_{\text{mass}}^2 \otimes T_{\text{curvature}})
+$$
+
+This fixed point determines how strongly mass curves spacetime.
 
 ## Graph Theory of Gravitational Networks
 

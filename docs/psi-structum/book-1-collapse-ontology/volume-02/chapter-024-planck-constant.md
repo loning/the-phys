@@ -33,15 +33,26 @@ $$
 
 This emerges because $\psi$ cannot simultaneously be observer and observed with perfect precision.
 
-## The Golden Quantum
+## Planck Constant as Action-Cycle Fixed Point
 
-**Theorem 24.2** (Natural Value): In golden units:
+**Theorem 24.2** (ħ from Tensor Fixed Point): Planck's constant emerges as:
 
 $$
-\hbar = \frac{m_P c \ell_P}{\phi} = \frac{\sqrt{\hbar c^5/G}}{\phi}
+\hbar = \lim_{n \to \infty} \frac{\|\mathcal{C}^n[T_{\text{action}}]\|}{\|\mathcal{C}^n[T_{\text{cycle}}]\|}
 $$
 
-This shows $\hbar$ connects to other constants through $\phi$.
+where:
+- $T_{\text{action}}$ is the action integral tensor
+- $T_{\text{cycle}}$ is the complete observation cycle tensor
+- The ratio converges to the quantum of action $\hbar$
+
+**Fixed Point Equation**:
+
+$$
+\mathcal{C}[T_{\text{action}} \otimes T_{\text{cycle}}] = \hbar \cdot (T_{\text{action}} \otimes T_{\text{cycle}})
+$$
+
+This represents the minimum distinguishable action in one complete self-observation cycle.
 
 ## Vector Information Theory of Quantization
 

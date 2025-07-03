@@ -70,15 +70,26 @@ graph TD
     end
 ```
 
-## The Value of k_B
+## Boltzmann Constant as Micro-Macro Fixed Point
 
-**Theorem 27.3** (Natural Scale): In golden units:
+**Theorem 27.3** (k_B from Tensor Fixed Point): Boltzmann's constant emerges as:
 
 $$
-k_B = \frac{\hbar \omega_0}{T_0} \cdot \frac{1}{\phi^3}
+k_B = \lim_{n \to \infty} \frac{\|\mathcal{C}^n[T_{\text{micro}}]\|}{\|\mathcal{C}^n[T_{\text{macro}}]\|}
 $$
 
-The third power of golden ratio sets the thermal scale.
+where:
+- $T_{\text{micro}}$ is the microscopic state tensor (individual collapse patterns)
+- $T_{\text{macro}}$ is the macroscopic state tensor (statistical ensembles)
+- The ratio converges to the scale factor $k_B$
+
+**Fixed Point Equation**:
+
+$$
+\mathcal{C}[T_{\text{micro}} \otimes T_{\text{macro}}] = k_B \cdot (T_{\text{micro}} \otimes T_{\text{macro}})
+$$
+
+This fixed point bridges microscopic and macroscopic descriptions.
 
 ## Ideal Gas Law
 
