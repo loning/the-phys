@@ -57,7 +57,9 @@ Golden ratio minimizes total connection cost while maintaining full connectivity
 Couplings form tensor algebra.
 
 **Definition 38.4** (Coupling Algebra):
-$$[G_1, G_2]^{ij,kl}_{mn,pq} = G_1^{ij,ab}_{mn,cd} G_2^{ab,kl}_{cd,pq} - G_2^{ij,ab}_{mn,cd} G_1^{ab,kl}_{cd,pq}$$
+$$[G_1, G_2] = G_1 \cdot G_2 - G_2 \cdot G_1$$
+
+where the product involves contraction over intermediate indices.
 
 **Theorem 38.4** (Lie Algebra):
 Coupling tensors form a Lie algebra under commutation.
