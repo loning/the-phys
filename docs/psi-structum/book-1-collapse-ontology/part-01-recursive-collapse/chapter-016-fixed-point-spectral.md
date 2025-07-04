@@ -116,30 +116,35 @@ Fixed points form a category.
 2. Terminal objects: Strange attractors
 3. Products exist for compatible fixed points
 
-## 16.8 Physical States as Fixed Points
+## 16.8 Mathematical Pattern States
 
-Observable physics corresponds to fixed points.
+Stable mathematical patterns correspond to fixed points within our collapse framework.
 
-**Definition 16.8** (Physical Fixed Points):
-$$\mathcal{P}_{\text{phys}} = \{\psi_* : \psi_* \text{ fixed and } S[\psi_*] < \infty\}$$
+**Definition 16.8** (Pattern Fixed Points):
+$$\mathcal{P}_{\text{math}} = \{\psi_* : \psi_* \text{ fixed and } S[\psi_*] < \infty\}$$
 
-**Theorem 16.8** (State Identification):
-1. **Vacuum**: Trivial fixed point
-2. **Photon**: $|\gamma\rangle = |F_2\rangle$
-3. **Electron**: $|e\rangle = |F_1\rangle + |F_3\rangle$
-4. **Proton**: Complex fixed point of order 13
+**Theorem 16.8** (Pattern Classification):
+1. **Null Pattern**: Trivial fixed point $|0\rangle$
+2. **Simple Patterns**: Single mode $|F_n\rangle$
+3. **Composite Patterns**: Multi-mode combinations
+4. **Complex Patterns**: Higher-order structures
 
-## 16.9 Constants from Fixed Point Ratios
+*Note*: These represent mathematical stability patterns within our framework, not claims about physical particles.
 
-Physical constants emerge from relationships between fixed points.
+## 16.9 Mathematical Constants from Pattern Ratios
 
-**Definition 16.9** (Fixed Point Coupling):
+Dimensionless mathematical constants emerge from fixed point relationships.
+
+**Definition 16.9** (Pattern Coupling):
 $$g_{ij} = \frac{\langle\psi_i|\psi_j\rangle}{\sqrt{\langle\psi_i|\psi_i\rangle\langle\psi_j|\psi_j\rangle}}$$
 
-**Theorem 16.9** (Fine Structure):
-$$\alpha = |g_{e\gamma}|^2 = \frac{1}{137.036...}$$
+**Theorem 16.9** (Mathematical Scaling):
+For specific pattern combinations, dimensionless ratios emerge:
+$$\alpha_{\text{math}} = |g_{\text{pattern1,pattern2}}|^2$$
 
-where $e$ is electron, $\gamma$ is photon fixed points.
+These represent mathematical relationships within our collapse framework.
+
+*Note*: This generates mathematical constants, not claims about physical fine structure constant.
 
 ## 16.10 Stability and Bifurcations
 
@@ -175,8 +180,8 @@ Fixed points reveal:
 2. **Multiple Types**: From trivial to strange
 3. **Spectral Structure**: Eigenvalues in golden disk
 4. **Basin Organization**: Measure from spectrum
-5. **Physical States**: As special fixed points
-6. **Constants**: From fixed point relations
+5. **Pattern States**: As mathematical structures
+6. **Mathematical Constants**: From pattern relations
 7. **Consciousness**: As meta-fixed structure
 
 ```mermaid

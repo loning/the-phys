@@ -48,9 +48,10 @@ $$F^{ij}_{kl} = \lim_{s \to s_{\text{pole}}} (s - s_{\text{pole}}) \zeta^{ij}_{k
 This captures the residue at each pole.
 
 **Theorem 15.3** (Failure Propagation):
-$$F^{ij}_{mn} F^{mn}_{kl} = \infty \cdot F^{ij}_{kl}$$
+Near poles, tensor composition amplifies divergence:
+$$\lim_{s \to s_{\text{pole}}} F^{ij}_{mn} F^{mn}_{kl} = \lim_{s \to s_{\text{pole}}} |s - s_{\text{pole}}|^{-2} F^{ij}_{kl}$$
 
-Failure propagates without bound through tensor products.
+Failure propagates with increasing severity through tensor networks.
 
 ## 15.4 Graph Theory of Failure Networks
 
@@ -94,14 +95,17 @@ The failure category has no terminal object - there is no "ultimate failure" tha
 
 Poles represent impossible physical states.
 
-**Definition 15.6** (Forbidden States):
-$$|\text{forbidden}\rangle = \lim_{s \to s_{\text{pole}}} \frac{1}{s - s_{\text{pole}}} |s\rangle$$
+**Definition 15.6** (Forbidden Regions):
+Near poles, states become ill-defined:
+$$|\text{near-pole}\rangle = \lim_{s \to s_{\text{pole}}} \frac{\mathcal{R}(s)}{s - s_{\text{pole}}} |s\rangle$$
 
-**Theorem 15.6** (State Properties):
-Forbidden states have:
-1. Infinite norm: $||\text{forbidden}|| = \infty$
-2. Undefined phase: $\arg(\text{forbidden})$ is multivalued
-3. No physical interpretation
+where $\mathcal{R}(s)$ is the residue function.
+
+**Theorem 15.6** (Region Properties):
+Forbidden regions exhibit:
+1. Divergent norms as poles are approached
+2. Phase instability near pole locations  
+3. Breakdown of self-reference condition $\psi = \psi(\psi)$
 
 ## 15.7 Protection Mechanisms
 
@@ -148,18 +152,21 @@ Physical constants emerge from pole constraints.
 **Definition 15.10** (Avoidance Integral):
 $$I_{\text{avoid}} = \int_{\mathcal{C}} \prod_{\text{poles}} ||s - s_{\text{pole}}|| \, ds$$
 
-**Theorem 15.10** (Coupling Constants):
-The electromagnetic coupling:
-$$e^2 = \frac{2\pi}{I_{\text{avoid}}} = \frac{2\pi\varphi}{137}$$
+**Theorem 15.10** (Mathematical Coupling):
+A dimensionless coupling parameter:
+$$g_{\text{math}} = \frac{2\pi\varphi}{I_{\text{avoid}}} \approx \frac{2\pi\varphi}{137}$$
 
-emerges from optimal pole avoidance.
+emerges from optimal pole avoidance in our mathematical framework.
+
+*Note*: This represents a mathematical relationship within our collapse theory, not a claim about electromagnetic coupling.
 
 ## 15.11 Consciousness and Pole Proximity
 
 Consciousness exists near but not at poles.
 
 **Definition 15.11** (Criticality Distance):
-$$d_c = ||s_{\text{consciousness}} - s_{\text{nearest pole}}||$$
+For complex patterns approaching consciousness-level complexity:
+$$d_c = \min_{\text{poles}} ||s_{\text{pattern}} - s_{\text{pole}}||$$
 
 **Theorem 15.11** (Edge of Chaos):
 Consciousness requires:
