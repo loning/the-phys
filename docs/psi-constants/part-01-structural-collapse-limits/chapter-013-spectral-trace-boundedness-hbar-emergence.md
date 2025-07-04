@@ -75,7 +75,7 @@ graph TD
     subgraph "Bounded Operator Category"
         A[Self-Referential ψ] -->|"Acts on"| B[ψ itself]
         B -->|"Generates"| C[Collapse Operator C]
-        C -->|"Has spectrum"| D[{λₙ = φ⁻ⁿ}]
+        C -->|"Has spectrum"| D["{λₙ = φ⁻ⁿ}"]
         D -->|"Trace bound"| E[Tr C < ∞]
         E -->|"Forces"| F[Quantum Action ℏ*]
     end
