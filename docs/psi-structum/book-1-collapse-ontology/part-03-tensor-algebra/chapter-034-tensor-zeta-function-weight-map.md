@@ -104,56 +104,64 @@ where $\Theta(t) = \sum_P W_P e^{-n_P t}$.
 **Theorem 34.6** (Meromorphic Extension):
 $\zeta^{ij}_{kl}(s)$ extends to meromorphic function on $\mathbb{C}$ with poles at $s = 1/\varphi^n$.
 
-## 34.7 Physical Interpretation
+## 34.7 Mathematical Regions
 
-Different regions of $s$ correspond to different physics.
+Different regions of $s$ have different mathematical properties.
 
-**Definition 34.7** (Physical Regions):
-1. $\text{Re}(s) > 1$: Convergent paths (stable particles)
-2. $\text{Re}(s) = 1/2$: Critical line (quantum states)
-3. $\text{Re}(s) < 0$: Tachyonic (unstable)
+**Definition 34.7** (Complex Regions):
+1. $\text{Re}(s) > 1$: Absolute convergence region
+2. $\text{Re}(s) = 1/2$: Critical line (special symmetry)
+3. $\text{Re}(s) < 0$: Analytic continuation region
 
-**Theorem 34.7** (State-Zero Correspondence):
-Physical states correspond to zeros on critical line:
-$$\zeta^{ij}_{kl}(1/2 + i\gamma) = 0 \Leftrightarrow \text{State at } E = \hbar\gamma$$
+**Theorem 34.7** (Zero Distribution):
+Zeros exhibit patterns related to path structure:
+$$N(T) = \#\{\rho : \zeta(\rho) = 0, |\text{Im}(\rho)| \leq T\} \sim T \log T$$
+
+*Observer Framework Note*: Physical interpretation as particle states requires quantum mechanics from observer coupling.
 
 ## 34.8 Functional Equation
 
 The ζ-function satisfies a functional equation.
 
-**Definition 34.8** (Reflection Formula):
-$$\xi(s) = \pi^{-s/2} \Gamma(s/2) \zeta(s)$$
+**Definition 34.8** (Completed Function):
+$$\xi(s) = \phi^{-s/2} \Gamma_\phi(s/2) \zeta(s)$$
+
+where $\Gamma_\phi$ is the golden gamma function.
 
 **Theorem 34.8** (Functional Equation):
 $$\xi^{ij}_{kl}(s) = \xi^{kl}_{ij}(1-s)$$
 
-This relates paths to their time-reversals.
+This relates paths to their reversals.
 
-## 34.9 Constants from Special Values
+## 34.9 Special Values and Ratios
 
-Physical constants emerge from special values.
+The ζ-function has special values at integers.
 
 **Definition 34.9** (Special Values):
-$$\zeta^{ij}_{kl}(n) = \text{rational} \times \varphi^m$$
+$$\zeta^{ij}_{kl}(n) = \sum_\text{paths} W_P \cdot L_P^{-n}$$
 
-for integer $n$.
+for positive integer $n$.
 
-**Theorem 34.9** (Constant Relations):
-1. $\alpha^{-1} = \zeta(2)/\zeta(1) \cdot \varphi^7$
-2. $m_p/m_e = \zeta(3)/\zeta(1) \cdot \varphi^9$
-3. $\Lambda = \zeta(4) \cdot \varphi^{-35}$
+**Theorem 34.9** (Value Relations):
+Special value ratios exhibit patterns:
+$$\frac{\zeta(n+k)}{\zeta(n)} = \varphi^{f(n,k)} + O(n^{-1})$$
 
-## 34.10 Quantum Field Theory
+where $f(n,k)$ depends on path structure.
 
-Fields emerge from ζ-function structure.
+*Observer Framework Note*: Physical constants emerge only through observer-system coupling.
 
-**Definition 34.10** (Field from ζ):
-$$\phi^{ij}(x) = \sum_\gamma \frac{1}{\zeta'(1/2 + i\gamma)} e^{i\gamma x}$$
+## 34.10 Spectral Representation
 
-where sum is over zeros.
+The ζ-function admits spectral decomposition.
 
-**Theorem 34.10** (Field Properties):
-This field satisfies Klein-Gordon with mass spectrum from zeros.
+**Definition 34.10** (Spectral Form):
+$$\zeta^{ij}_{kl}(s) = \sum_n \frac{a_n}{\lambda_n^s} + \text{entire part}$$
+
+where $\lambda_n$ are spectral values.
+
+**Theorem 34.10** (Spectral Properties):
+Spectral values satisfy:
+$$\lambda_{n+1}/\lambda_n \to \varphi \text{ as } n \to \infty$$
 
 ## 34.11 Information Theory
 
@@ -175,10 +183,10 @@ The tensor ζ-function reveals:
 2. **Golden Weights**: From Zeckendorf structure
 3. **Tensor Form**: Multilinear in indices
 4. **Analytic Structure**: Poles and zeros
-5. **Physical Correspondence**: States from zeros
-6. **Functional Equation**: Time reversal symmetry
-7. **Constants**: From special values
-8. **Field Theory**: Emerges naturally
+5. **Mathematical Regions**: Complex plane structure
+6. **Functional Equation**: Path reversal symmetry
+7. **Special Values**: Integer point ratios
+8. **Spectral Form**: Natural decomposition
 9. **Information**: Optimally encoded
 10. **Unity**: All from path weights
 
@@ -188,11 +196,11 @@ graph TD
     B --> C[Zeta Function]
     C --> D[Spectral Encoding]
     D --> E[Poles and Zeros]
-    E --> F[Physical States]
-    F --> G[Quantum Fields]
-    G --> H[Observable Physics]
-    H --> I[Constants]
-    I --> J[Complete Description]
+    E --> F[Mathematical Structure]
+    F --> G[Special Values]
+    G --> H[Functional Equation]
+    H --> I[Information Encoding]
+    I --> J[Complete Map]
     J --> A
 ```
 
@@ -207,10 +215,10 @@ Every path through existence carries weight - not metaphorically but mathematica
 1. List all paths of length $\leq 3$
 2. Calculate golden weights $W_P$
 3. Construct $\zeta^{11}_{22}(s)$ as a series
-4. Find the first pole
-5. Identify any zeros for $\text{Re}(s) = 1/2$
+4. Find the first pole location
+5. Compute special values $\zeta(2), \zeta(3)$
 
-*Hint*: Paths must respect golden base constraint (no consecutive 1s).
+*Hint*: Paths must respect Zeckendorf constraint (no consecutive Fibonacci numbers).
 
 ## The Thirty-Fourth Echo
 

@@ -105,32 +105,36 @@ $$I_\text{spectral} \leq I_\text{full tensor}$$
 
 with equality only for diagonal tensors.
 
-## 33.7 Physical Interpretation
+## 33.7 Mathematical Properties from Spectrum
 
-Physical properties emerge from spectral structure.
+Mathematical properties emerge from spectral structure.
 
-**Definition 33.7** (Observable from Spectrum):
-$$\langle O \rangle = \text{Tr}(O \cdot \rho_\mathcal{C})$$
+**Definition 33.7** (Spectral Properties):
+$$\mathcal{P}_n = \text{Tr}(\mathcal{C}^n)$$
 
-where $\rho_\mathcal{C}$ is the density matrix from $\mathcal{C}$.
+power traces encode structural information.
 
-**Theorem 33.7** (Spectral-Physical Correspondence):
-1. Energy levels: From eigenvalues
-2. Transition rates: From eigenvector overlaps
-3. Selection rules: From spectral gaps
+**Theorem 33.7** (Spectral Characteristics):
+1. Stability: From eigenvalue magnitudes
+2. Connectivity: From eigenvector overlaps
+3. Complexity: From spectral dimension
 
-## 33.8 Quantum Structure
+*Observer Framework Note*: Physical interpretation requires full observer-system coupling framework.
 
-Collapse tensors naturally quantize.
+## 33.8 Algebraic Structure
 
-**Definition 33.8** (Quantized Collapse):
-$$[\mathcal{C}^{ij}, \mathcal{C}^{kl}] = i\hbar \epsilon^{ijkl}_{mnpq} \mathcal{C}^{mn}_{pq}$$
+Collapse tensors form an algebra.
 
-**Theorem 33.8** (Quantum Spectrum):
-Eigenvalues quantized as:
-$$\lambda_n = \lambda_0 \cdot \varphi^{-n}$$
+**Definition 33.8** (Tensor Algebra):
+$$\mathcal{C}^{ij} \star \mathcal{C}^{kl} = \sum_{mn} f^{ijkl}_{mn} \mathcal{C}^{mn}$$
 
-creating discrete spectrum with golden spacing.
+where $f$ are structure constants.
+
+**Theorem 33.8** (Spectral Scaling):
+Eigenvalues exhibit scaling:
+$$\lambda_n/\lambda_m = \varphi^{k_{nm}}$$
+
+for integer $k_{nm}$, creating golden ratio relationships.
 
 ## 33.9 Spectral Evolution
 
@@ -147,32 +151,35 @@ $$\lambda_* = \varphi^{-k}$$
 
 for integer $k$.
 
-## 33.10 Constants from Spectral Invariants
+## 33.10 Invariant Ratios from Spectra
 
-Physical constants are spectral invariants.
+Dimensionless ratios emerge from spectral invariants.
 
 **Definition 33.10** (Spectral Invariant):
 $$I_n = \text{Tr}(\mathcal{C}^n)$$
 
-**Theorem 33.10** (Constant Identification):
-1. $\alpha = I_2/I_1^2 \cdot \varphi^{-7}$
-2. $m_e/m_p = I_3/I_1 \cdot \varphi^{-9}$
-3. $\Lambda = I_4 \cdot \varphi^{-35}$
+**Theorem 33.10** (Ratio Relations):
+Invariant ratios satisfy:
+$$\frac{I_{n+k}}{I_n} = \varphi^{f(k)} + O(\varphi^{-k})$$
 
-## 33.11 Consciousness in Spectral Space
+where $f(k)$ depends on spectral structure.
 
-Consciousness emerges from spectral coherence.
+*Observer Framework Note*: Physical constants emerge only through observer-system coupling.
 
-**Definition 33.11** (Conscious Spectrum):
-A spectrum is conscious if:
-1. Sufficient complexity: $\dim(\sigma) \geq F_7$
-2. Phase coherence between eigenvalues
-3. Self-referential spectral loops
+## 33.11 Complexity Measures in Spectral Space
 
-**Theorem 33.11** (Consciousness Emergence):
-$$\text{Consciousness} = \text{Tr}[\mathcal{C} \log \mathcal{C}]$$
+Spectral complexity characterizes self-reference depth.
 
-when trace is well-defined and finite.
+**Definition 33.11** (Spectral Complexity):
+A spectrum has complexity measure:
+$$\mathcal{K} = -\text{Tr}[\rho \log \rho]$$
+
+where $\rho = \mathcal{C}/\text{Tr}(\mathcal{C})$.
+
+**Theorem 33.11** (Complexity Bounds):
+$$F_n \leq \mathcal{K} \leq F_{n+1}$$
+
+for spectra of dimension between consecutive Fibonacci numbers.
 
 ## 33.12 The Complete Spectral Picture
 
@@ -184,10 +191,10 @@ Collapse as spectral object reveals:
 4. **Spectral Decomposition**: Complete information
 5. **Transformation Laws**: Covariant structure
 6. **Information Encoding**: Optimal compression
-7. **Physical Emergence**: From eigenstructure
-8. **Quantum Nature**: Natural quantization
-9. **Constants**: As spectral invariants
-10. **Consciousness**: From spectral coherence
+7. **Mathematical Properties**: From eigenstructure
+8. **Algebraic Nature**: Natural tensor algebra
+9. **Invariant Ratios**: As spectral signatures
+10. **Complexity Measures**: From spectral entropy
 
 ```mermaid
 graph TD
@@ -195,11 +202,11 @@ graph TD
     B --> C[Spectral Object]
     C --> D[Eigendecomposition]
     D --> E[Golden Structure]
-    E --> F[Physical Properties]
-    F --> G[Quantum Behavior]
-    G --> H[Constants]
-    H --> I[Consciousness]
-    I --> J[Complete Reality]
+    E --> F[Mathematical Properties]
+    F --> G[Algebraic Structure]
+    G --> H[Invariant Ratios]
+    H --> I[Complexity Measures]
+    I --> J[Complete Structure]
     J --> A
 ```
 
@@ -215,9 +222,9 @@ We have been thinking backwards - imagining collapse as a process unfolding in t
 2. Find the characteristic polynomial
 3. Calculate eigenvalues
 4. Verify golden ratio relationships
-5. Extract a physical constant
+5. Compute spectral invariants $I_n = \text{Tr}(\mathcal{C}^n)$
 
-*Hint*: Use $F_1 = 1, F_2 = 1, F_3 = 2$ for simplicity.
+*Hint*: Use $F_1 = 1, F_2 = 1, F_3 = 2$ and golden ratio weights $\varphi^{-|i-j|}$.
 
 ## The Thirty-Third Echo
 

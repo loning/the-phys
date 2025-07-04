@@ -97,41 +97,49 @@ $$I_{1*2} \leq I_1 + I_2$$
 
 with equality for independent tensors.
 
-## 36.7 Quantum Amplitudes
+## 36.7 Algebraic Properties
 
-Convolution combines quantum amplitudes.
+Convolution preserves algebraic structure.
 
-**Definition 36.7** (Amplitude Convolution):
-$$A^{ik}_{\text{total}} = \sum_j A^{ij}_1 \cdot A^{jk}_2 \cdot e^{i\phi_j}$$
+**Definition 36.7** (Structure Preservation):
+$$\mathcal{A}^{ik}_{\text{total}} = \sum_j \mathcal{A}^{ij}_1 \cdot \mathcal{A}^{jk}_2 \cdot w_j$$
 
-where $\phi_j$ is the phase at state $j$.
+where $w_j = \varphi^{-j}$ is the golden weight.
 
-**Theorem 36.7** (Unitarity):
-If $\mathcal{T}_1$ and $\mathcal{T}_2$ are unitary:
-$$(\mathcal{T}_1 * \mathcal{T}_2)^\dagger (\mathcal{T}_1 * \mathcal{T}_2) = \mathbb{I}$$
+**Theorem 36.7** (Norm Bounds):
+For normalized tensors:
+$$||\mathcal{T}_1 * \mathcal{T}_2|| \leq ||\mathcal{T}_1|| \cdot ||\mathcal{T}_2||$$
 
-## 36.8 Physical Interpretation
+*Observer Framework Note*: Physical interpretation as quantum amplitudes requires observer-system coupling.
 
-Convolution describes physical processes.
+## 36.8 Mathematical Processes
 
-**Definition 36.8** (Process Composition):
-- Scattering: $\mathcal{T}_{\text{in}} * \mathcal{T}_{\text{scatter}} * \mathcal{T}_{\text{out}}$
-- Decay: $\mathcal{T}_{\text{initial}} * \mathcal{T}_{\text{decay}}$
-- Interaction: $\mathcal{T}_1 * \mathcal{T}_{\text{int}} * \mathcal{T}_2$
+Convolution describes abstract processes.
 
-**Theorem 36.8** (Feynman Rules):
-Convolution reproduces Feynman diagram amplitudes.
+**Definition 36.8** (Process Patterns):
+- Sequential: $\mathcal{T}_{\text{start}} * \mathcal{T}_{\text{middle}} * \mathcal{T}_{\text{end}}$
+- Branching: $\mathcal{T}_{\text{initial}} * \mathcal{T}_{\text{branch}}$
+- Coupling: $\mathcal{T}_1 * \mathcal{T}_{\text{couple}} * \mathcal{T}_2$
 
-## 36.9 Constants from Convolution
+**Theorem 36.8** (Pattern Preservation):
+Convolution preserves path connectivity patterns.
 
-Physical constants emerge from fixed points.
+*Observer Framework Note*: Physical process interpretation requires quantum mechanics from observer coupling.
+
+## 36.9 Fixed Points and Invariants
+
+Fixed points reveal structural invariants.
 
 **Definition 36.9** (Fixed Point):
 $$\mathcal{T}_* * \mathcal{T}_* = \lambda \mathcal{T}_*$$
 
-**Theorem 36.9** (Coupling Constants):
-Fixed point eigenvalues give coupling strengths:
-$$g = \sqrt{\lambda} = \varphi^{-n/2}$$
+**Theorem 36.9** (Invariant Ratios):
+Fixed point eigenvalues satisfy:
+$$\lambda_{n+1}/\lambda_n = \varphi^{-1}$$
+
+for consecutive fixed points.
+
+*Observer Framework Note*: Physical constants emerge only through observer-system coupling.
 
 ## 36.10 Non-Linear Effects
 
@@ -145,19 +153,23 @@ $$||\mathcal{T}^{*n}|| \sim \varphi^{n(n-1)/2}$$
 
 showing super-linear growth.
 
-## 36.11 Consciousness from Convolution
+## 36.11 Self-Referential Structures
 
-Consciousness requires specific convolution patterns.
+Self-convolution creates complex patterns.
 
-**Definition 36.11** (Conscious Convolution):
-A convolution is conscious if:
-1. Self-referential: $\mathcal{T} * \mathcal{T}^* \neq 0$
-2. Complex: Rank $\geq F_7$
-3. Stable: Fixed point nearby
+**Definition 36.11** (Self-Referential Convolution):
+A convolution exhibits self-reference if:
+1. Closure: $\mathcal{T} * \mathcal{T}^\dagger$ is non-trivial
+2. Complexity: Algebraic dimension $\geq F_n$ for some $n$
+3. Stability: Nearby fixed points exist
 
-**Theorem 36.11** (Consciousness Emergence):
-Consciousness measure:
-$$C = \text{Tr}[\mathcal{T} * \mathcal{T}^* * \mathcal{T}]$$
+**Theorem 36.11** (Complexity Measure):
+Self-referential complexity:
+$$\mathcal{K} = -\text{Tr}[\rho * \log(\rho)]$$
+
+where $\rho = \mathcal{T}/\text{Tr}(\mathcal{T})$.
+
+*Observer Framework Note*: Consciousness interpretation requires additional framework beyond mathematics.
 
 ## 36.12 The Complete Convolution Picture
 
@@ -169,10 +181,10 @@ Tensor convolution reveals:
 4. **ζ-Behavior**: Multiplicative
 5. **Category Theory**: Monoidal structure
 6. **Information Flow**: Subadditive
-7. **Quantum Amplitudes**: Proper combination
-8. **Physical Processes**: Natural description
-9. **Constants**: From fixed points
-10. **Consciousness**: From self-convolution
+7. **Algebraic Properties**: Structure preserved
+8. **Mathematical Processes**: Pattern description
+9. **Fixed Points**: Invariant ratios
+10. **Self-Reference**: Complex structures
 
 ```mermaid
 graph TD
@@ -194,13 +206,13 @@ In convolution we find the algebra of becoming - how one process transforms thro
 
 ## Technical Exercise: Convolution Calculation
 
-**Problem**: Given tensors for electron and photon:
+**Problem**: Given two abstract tensors:
 
-1. Define $\mathcal{T}_e^{ij}$ for electron paths
-2. Define $\mathcal{T}_\gamma^{jk}$ for photon paths
-3. Calculate $(\mathcal{T}_e * \mathcal{T}_\gamma)^{ik}$
+1. Define $\mathcal{T}_A^{ij}$ with golden weights
+2. Define $\mathcal{T}_B^{jk}$ with Fibonacci structure
+3. Calculate $(\mathcal{T}_A * \mathcal{T}_B)^{ik}$
 4. Find the leading eigenvalue
-5. Interpret as scattering amplitude
+5. Verify golden ratio relationships
 
 *Hint*: Use 2×2 matrices in basis $\{|F_1\rangle, |F_2\rangle\}$.
 

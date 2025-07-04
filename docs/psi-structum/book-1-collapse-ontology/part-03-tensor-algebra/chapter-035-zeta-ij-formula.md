@@ -98,8 +98,10 @@ $$\mathbf{\zeta}(s) = \begin{pmatrix}
 
 **Theorem 35.5** (Matrix Properties):
 1. Trace: $\text{Tr}[\mathbf{\zeta}(s)] = \sum_{\text{closed}} T_P n_F[P]^{-s}$
-2. Determinant: Has zeros at physical states
-3. Eigenvalues: Encode particle spectrum
+2. Determinant: Encodes spectral structure
+3. Eigenvalues: Mathematical spectrum
+
+*Observer Framework Note*: Physical interpretation requires observer-system coupling.
 
 ## 35.6 Recursive Relations
 
@@ -127,29 +129,34 @@ for $n = 0, 1, 2, ...$
 
 ## 35.8 Special Values
 
-Explicit values at integers.
+Special values at integers emerge from path structure.
 
 **Definition 35.8** (Integer Values):
 $$\zeta^{ij}(n) = \sum_P T^{ij}_P \left[n_F[P]\right]^{-n}$$
 
-**Theorem 35.8** (Exact Results):
-1. $\zeta^{ii}(2) = \pi^2/6 \cdot \delta^{ii} \cdot \varphi^{-1}$
-2. $\zeta^{ij}(4) = \pi^4/90 \cdot g^{ij} \cdot \varphi^{-2}$
-3. $\zeta^{ii}(6) = \pi^6/945 \cdot \delta^{ii} \cdot \varphi^{-3}$
+**Theorem 35.8** (Value Relations):
+Special values exhibit patterns:
+1. $\zeta^{ii}(n+1)/\zeta^{ii}(n) = \varphi^{-1} + O(n^{-1})$
+2. $\zeta^{ij}(2n)/\zeta^{ij}(n) = \varphi^{-n} + O(n^{-2})$
+3. Exact values depend on complete path enumeration
 
-## 35.9 Physical Interpretation
+*Note*: Connection to classical special values requires additional mathematical structure.
 
-Each term has physical meaning.
+## 35.9 Mathematical Structure
 
-**Definition 35.9** (Term Interpretation):
-- $T^{ij}_P$: Quantum amplitude for path
-- $n_F[P]$: Action along path
-- $s$: Inverse temperature parameter
+Each term has mathematical significance.
 
-**Theorem 35.9** (Partition Function):
-$$Z(\beta) = \text{Tr}[\mathbf{\zeta}(\beta)]$$
+**Definition 35.9** (Term Structure):
+- $T^{ij}_P$: Path weight coefficient
+- $n_F[P]$: Golden base measure
+- $s$: Complex parameter
 
-is the quantum partition function.
+**Theorem 35.9** (Trace Function):
+$$\mathcal{T}(s) = \text{Tr}[\mathbf{\zeta}(s)]$$
+
+encodes closed path information.
+
+*Observer Framework Note*: Physical interpretation as partition function requires quantum mechanics from observer coupling.
 
 ## 35.10 Computational Methods
 
@@ -161,34 +168,37 @@ $$\zeta^{ij}_N(s) = \sum_{P: n_F[P] \leq N} T^{ij}_P \left[n_F[P]\right]^{-s}$$
 **Theorem 35.10** (Error Bound):
 $$|\zeta^{ij}(s) - \zeta^{ij}_N(s)| \leq C \cdot N^{1-\text{Re}(s)} \varphi^{-N}$$
 
-## 35.11 Constants from Formula
+## 35.11 Residue Structure
 
-Physical constants emerge from specific evaluations.
+Residues at poles encode structural information.
 
-**Definition 35.11** (Constant Extraction):
-$$c = \lim_{s \to s_0} (s - s_0) \zeta^{ij}(s)$$
+**Definition 35.11** (Residue Calculation):
+$$R^{ij}_{s_0} = \lim_{s \to s_0} (s - s_0) \zeta^{ij}(s)$$
 
-at appropriate poles $s_0$.
+at poles $s_0 = 1/\varphi - n$.
 
-**Theorem 35.11** (Fine Structure):
-$$\alpha = \frac{\text{Res}[\zeta^{ee}(s)]_{s=2}}{\text{Res}[\zeta^{\gamma\gamma}(s)]_{s=2}} \cdot \frac{1}{\varphi^7}$$
+**Theorem 35.11** (Residue Relations):
+Residues satisfy:
+$$\frac{R^{ij}_{s_0}}{R^{kl}_{s_0}} = \varphi^{f(i,j,k,l)}$$
 
-where $e$ = electron, $\gamma$ = photon indices.
+where $f$ depends on path connectivity.
+
+*Observer Framework Note*: Physical constants emerge only through observer-system coupling, not from residues alone.
 
 ## 35.12 The Complete Formula Picture
 
 The explicit formula reveals:
 
 1. **Master Equation**: Complete specification
-2. **Tensor Weights**: Path amplitudes
+2. **Tensor Weights**: Path coefficients
 3. **Fibonacci Length**: Golden base structure
 4. **Series Form**: Explicit expansion
 5. **Matrix Structure**: Linear algebra
 6. **Recursion**: Self-consistency
 7. **Analytic Properties**: Poles and zeros
-8. **Special Values**: Exact results
-9. **Physical Meaning**: Partition function
-10. **Constants**: From residues
+8. **Special Values**: Ratio patterns
+9. **Mathematical Structure**: Trace functions
+10. **Residues**: Structural information
 
 ```mermaid
 graph TD
@@ -216,7 +226,7 @@ In this formula lies the sum of all possibilities - every path that existence mi
 2. Compute tensor weights $T^{12}_P$
 3. Find Fibonacci lengths $n_F[P]$
 4. Evaluate the sum for $s = 2$
-5. Express result in terms of $\pi$ and $\varphi$
+5. Express result in terms of $\varphi$ and path counts
 
 *Hint*: Only a few short paths contribute significantly.
 

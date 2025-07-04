@@ -196,7 +196,7 @@ graph TD
     G --> I[Structure Update]
     I --> B
     E --> J[Unity Property]
-    J --> K[psi = psi(psi)]
+    J --> K[psi = psi psi]
 ```
 
 ## Philosophical Meditation: The Self-Referential Structure
