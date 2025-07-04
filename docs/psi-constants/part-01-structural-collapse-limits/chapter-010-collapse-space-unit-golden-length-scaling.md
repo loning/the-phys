@@ -92,9 +92,9 @@ where ds is the line element in the collapse metric.
 ## 10.5 Category Theory of Spatial Morphisms
 
 **Definition 10.4** (Space Category 𝕊): The category of spatial structures consists of:
-- Objects: Collapse states {|ψ⟩}
-- Morphisms: Spatial translations T_ℓ
-- Composition: T_{ℓ₁} ∘ T_{ℓ₂} = T_{ℓ₁+ℓ₂}
+- Objects: Collapse states $\{|\psi\rangle\}$
+- Morphisms: Spatial translations $T_\ell$
+- Composition: $T_{\ell_1} \circ T_{\ell_2} = T_{\ell_1+\ell_2}$
 
 **Theorem 10.3** (Functor to Metric Space): There exists a faithful functor:
 

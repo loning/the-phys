@@ -102,7 +102,7 @@ graph TD
 
 ### Definition 8.2 (Energy Category)
 The energy category ℰ consists of:
-- Objects: Energy eigenstates {|En⟩}
+- Objects: Energy eigenstates $\{|E_n\rangle\}$
 - Morphisms: Energy transitions Û(ΔE)
 - Composition: Sequential transitions
 

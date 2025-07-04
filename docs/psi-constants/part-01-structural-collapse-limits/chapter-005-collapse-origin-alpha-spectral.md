@@ -47,7 +47,7 @@ The collapse operator $\mathcal{C}$ acts on product states by summing over all p
 
 ## 5.3 Geometric Counting: φ-Trace Path Degeneracy
 
-**Definition 5.3** (Path Degeneracy): The number of distinguishable path types at rank-s in the φ-trace network is:
+**Definition 5.3** (Path Degeneracy): The number of distinguishable path types at rank-$s$ in the φ-trace network is:
 
 $$
 D_s = F_{s+2}
@@ -55,10 +55,10 @@ $$
 
 where F_n is the n-th Fibonacci number.
 
-**Theorem 5.3** (Fibonacci Path Counting): Each rank-s represents paths with exactly s golden ratio bifurcations, where each bifurcation offers "left φ" and "right 1" choices. The total number of topologically distinct paths follows Fibonacci recursion.
+**Theorem 5.3** (Fibonacci Path Counting): Each rank-$s$ represents paths with exactly $s$ golden ratio bifurcations, where each bifurcation offers "left φ" and "right 1" choices. The total number of topologically distinct paths follows Fibonacci recursion.
 
 *Proof*:
-In the Zeckendorf representation, every path can be uniquely decomposed into non-consecutive Fibonacci components. The number of such decompositions for rank-s equals F_{s+2}. This follows from the fundamental recursion of the φ-trace structure. ∎
+In the Zeckendorf representation, every path can be uniquely decomposed into non-consecutive Fibonacci components. The number of such decompositions for rank-$s$ equals $F_{s+2}$. This follows from the fundamental recursion of the φ-trace structure. ∎
 
 **Key Values**:
 $$
@@ -78,15 +78,15 @@ $$
 |A| = \varphi^{-1/2}
 $$
 
-**Corollary 5.4.1** (Rank-s Amplitude): A complete rank-s path has squared amplitude:
+**Corollary 5.4.1** (Rank-s Amplitude): A complete rank-$s$ path has squared amplitude:
 $$
 |A_s|^2 = \varphi^{-s}
 $$
 
 *Proof*:
-In collapse field theory, advancing by one rank corresponds to encoding one additional bit of information in the golden base. The energy cost scales as log φ, giving an amplitude suppression of φ^(-1/2) per step. For s steps, the total suppression is φ^(-s/2), and the probability (squared amplitude) is φ^(-s). ∎
+In collapse field theory, advancing by one rank corresponds to encoding one additional bit of information in the golden base. The energy cost scales as $\log \varphi$, giving an amplitude suppression of $\varphi^{-1/2}$ per step. For $s$ steps, the total suppression is $\varphi^{-s/2}$, and the probability (squared amplitude) is $\varphi^{-s}$. ∎
 
-**Definition 5.4** (Effective Weight): The effective weight of all rank-s paths is:
+**Definition 5.4** (Effective Weight): The effective weight of all rank-$s$ paths is:
 $$
 w_s = D_s \cdot \varphi^{-s}
 $$

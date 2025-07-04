@@ -80,7 +80,7 @@ graph TD
 
 ### Definition 9.2 (Mass Category)
 The mass category ℳ consists of:
-- Objects: Closed collapse loops {γᵢ}
+- Objects: Closed collapse loops $\{\gamma_i\}$
 - Morphisms: Loop deformations preserving winding
 - Composition: Loop concatenation
 
