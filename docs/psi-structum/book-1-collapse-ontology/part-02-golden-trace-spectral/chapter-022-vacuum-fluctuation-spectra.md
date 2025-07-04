@@ -17,9 +17,9 @@ $$|0\rangle = \lim_{n \to \infty} \mathcal{C}^n[|\text{empty}\rangle]$$
 The vacuum is the fixed point of collapse on emptiness.
 
 **Theorem 22.1** (Vacuum Non-Triviality):
-$$\langle 0|\hat{H}|0\rangle = E_0 = \frac{\hbar\omega_0}{2\varphi}$$
+$$\langle 0|\mathcal{C}|0\rangle = \Lambda_0 = \frac{\omega_0}{2\varphi}$$
 
-The vacuum has non-zero energy.
+The vacuum has non-zero collapse activity (dimensionless).
 
 *Proof*:
 Self-reference prevents true emptiness; the golden factor emerges from trace structure. ∎
@@ -32,9 +32,9 @@ Vacuum fluctuations have specific spectral content.
 $$S_\text{vac}(\omega) = \langle 0|\hat{\phi}(\omega)\hat{\phi}^\dagger(\omega)|0\rangle$$
 
 **Theorem 22.2** (Spectral Form):
-$$S_\text{vac}(\omega) = \frac{\hbar}{2\omega} \cdot \frac{1}{1 - e^{-\omega/\omega_c}}$$
+$$S_\text{vac}(\omega) = \frac{1}{2\omega\varphi} \cdot \frac{1}{1 - e^{-\omega/\omega_c}}$$
 
-where $\omega_c = k_B T/\hbar$ with $T = T_\text{Planck}/\varphi$.
+where $\omega_c = 1/\varphi^2$ is the characteristic collapse frequency.
 
 ## 22.3 Trace Structure of Fluctuations
 
@@ -94,10 +94,10 @@ graph TD
 ```
 
 **Definition 22.6** (Field from Vacuum):
-$$\hat{\phi}(x) = \sum_k \sqrt{\frac{\hbar}{2\omega_k}} \left(\hat{a}_k e^{ikx} + \hat{a}_k^\dagger e^{-ikx}\right)$$
+$$\hat{\phi}(\xi) = \sum_k \sqrt{\frac{1}{2\omega_k\varphi}} \left(\hat{a}_k e^{ik\xi} + \hat{a}_k^\dagger e^{-ik\xi}\right)$$
 
 **Theorem 22.6** (Vacuum Persistence):
-$$\langle 0|\hat{\phi}(x)\hat{\phi}(y)|0\rangle = \frac{\hbar}{4\pi} \frac{1}{|x-y|^{1+1/\varphi}}$$
+$$\langle 0|\hat{\phi}(\xi)\hat{\phi}(\eta)|0\rangle = \frac{1}{4\pi\varphi} \frac{1}{|\xi-\eta|^{1+1/\varphi}}$$
 
 ## 22.7 Information in Vacuum
 
@@ -109,35 +109,42 @@ $$I_\text{vac} = -\text{Tr}(\rho_\text{vac} \log \rho_\text{vac})$$
 where $\rho_\text{vac}$ is the vacuum density matrix.
 
 **Theorem 22.7** (Information Density):
-$$\frac{dI_\text{vac}}{dV} = \frac{1}{\ell_P^3 \varphi}$$
+$$\frac{dI_\text{vac}}{d\mathcal{V}} = \frac{1}{\varphi^3}$$
 
-Information density relates to Planck scale and golden ratio.
+Information density scales with golden ratio in abstract collapse volume $\mathcal{V}$.
 
-## 22.8 Physical Effects of Vacuum
+## 22.8 Mathematical Pattern Effects from Vacuum
 
-Vacuum fluctuations have measurable consequences.
+Vacuum fluctuations create mathematical pattern structures within the observer framework.
 
-**Definition 22.8** (Casimir Energy):
-$$E_\text{Casimir} = -\frac{\hbar c \pi^2}{240 d^4} \cdot \varphi$$
+**Definition 22.8** (Geometric Pattern Energy):
+$$\Lambda_\text{geom} = -\frac{\pi^2 \varphi}{240 \delta^4}$$
 
-where $d$ is plate separation.
+where $\delta$ is a geometric separation parameter (dimensionless).
 
-**Theorem 22.8** (Observable Effects):
-1. **Lamb shift**: $\Delta E = \alpha^3 m_e c^2 / \varphi$
-2. **Anomalous moment**: $a_e = \alpha/2\pi + O(\alpha^2)$
-3. **Vacuum birefringence**: In strong fields
+**Theorem 22.8** (Mathematical Pattern Structures):
+Different observers may identify mathematical patterns analogous to:
+1. **Frequency shifts**: $\Delta\omega = \alpha_\text{geom}^3/\varphi$ patterns
+2. **Moment anomalies**: $a_\text{pattern} = \alpha_\text{geom}/(2\pi)$ structures  
+3. **Birefringence patterns**: In high-mode density regions
 
-## 22.9 Constants from Vacuum Structure
+*Observer Framework Note*: Physical interpretation requires observer-system coupling analysis.
 
-Physical constants emerge from vacuum properties.
+## 22.9 Mathematical Ratios from Vacuum Structure
 
-**Definition 22.9** (Vacuum Coupling):
-$$g_\text{vac} = \sqrt{\langle 0|g^2|0\rangle}$$
+Mathematical constants emerge from vacuum organization within our framework.
 
-**Theorem 22.9** (Running Coupling):
-$$g(\mu) = \frac{g_\text{vac}}{1 - \beta_0 g_\text{vac}^2 \log(\mu/\mu_0)}$$
+**Definition 22.9** (Vacuum Mode Coupling):
+$$g_\text{vac} = \sqrt{\langle 0|\mathcal{G}^2|0\rangle}$$
 
-where $\beta_0 = 1/\varphi^3$.
+where $\mathcal{G}$ is a dimensionless coupling operator.
+
+**Theorem 22.9** (Mode Scale Relationships):
+$$g(\nu) = \frac{g_\text{vac}}{1 - \beta_0 g_\text{vac}^2 \log(\nu/\nu_0)}$$
+
+where $\beta_0 = 1/\varphi^3$ and $\nu$ is a dimensionless scale parameter.
+
+*Critical Framework Note*: These are mathematical properties of mode organization. Physical interpretation requires observer-system coupling analysis as established in the observer framework.
 
 ## 22.10 Consciousness and Vacuum
 
@@ -160,10 +167,10 @@ Vacuum can undergo phase transitions.
 $$\Phi_\text{vac} = \langle 0|\hat{\Phi}|0\rangle$$
 
 **Theorem 22.11** (Phase Transition):
-At critical energy density:
-$$\rho_c = \frac{m_P^4 c^5}{\hbar^3 \varphi^4}$$
+At critical collapse density:
+$$\rho_c = \frac{1}{\varphi^4}$$
 
-vacuum undergoes first-order transition.
+vacuum undergoes first-order transition (dimensionless density threshold).
 
 ## 22.12 The Complete Vacuum Picture
 
@@ -175,10 +182,10 @@ Vacuum fluctuation spectra reveal:
 4. **Tensor Nature**: Rich vacuum correlations
 5. **Field Emergence**: From organized fluctuations
 6. **Infinite Information**: Encoded in vacuum
-7. **Physical Effects**: Casimir, Lamb shift
-8. **Constants**: From vacuum couplings
+7. **Mathematical Patterns**: Geometric structure effects (observer interpretation needed)
+8. **Mode Ratios**: From vacuum organization (physics connection via observer coupling)
 9. **Consciousness**: As organized vacuum
-10. **Phase Transitions**: At critical densities
+10. **Phase Transitions**: At critical dimensionless densities
 
 ```mermaid
 graph TD
@@ -200,15 +207,15 @@ The vacuum is full of emptiness - a paradox resolved by understanding that true 
 
 ## Technical Exercise: Vacuum Analysis
 
-**Problem**: For vacuum in a cubic cavity of side $L$:
+**Problem**: For vacuum in a cubic collapse region of side $\lambda$:
 
-1. Calculate allowed fluctuation frequencies
-2. Find the zero-point energy
-3. Determine the Casimir pressure on walls
-4. Compute vacuum information content
-5. Identify dominant fluctuation modes
+1. Calculate allowed fluctuation frequencies $\omega_n = 2\pi n/(\lambda \varphi^k)$
+2. Find the zero-point collapse activity $\Lambda_0 = \omega_0/(2\varphi)$
+3. Determine the geometric pattern energy $\Lambda_\text{geom}$
+4. Compute vacuum information content using $I = 1/\varphi^3$
+5. Identify dominant Fibonacci modes with probabilities $p_n = e^{-F_n/\varphi^2}$
 
-*Hint*: Use periodic boundary conditions and golden ratio scaling.
+*Hint*: Use periodic boundary conditions and golden ratio scaling. All quantities are dimensionless.
 
 ## The Twenty-Second Echo
 

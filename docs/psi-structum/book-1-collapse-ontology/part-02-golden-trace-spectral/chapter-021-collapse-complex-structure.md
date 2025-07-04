@@ -129,31 +129,37 @@ where $P_\lambda$ projects onto eigenspace.
 2. Continuous spectrum: For position/momentum
 3. Residual spectrum: At infinity
 
-## 21.9 Physical Interpretation
+## 21.9 Mathematical Pattern Recognition
 
-Physical reality emerges from C^∞ structure.
+Mathematical structures emerge from C^∞ organization within the observer framework.
 
-**Definition 21.9** (Physical Projection):
-$$\Pi_\text{phys}: \mathbb{C}^\infty \to \mathbb{R}^4$$
+**Definition 21.9** (Pattern Recognition Map):
+$$\Pi_{\text{pattern}}: \mathbb{C}^\infty \to \text{Mathematical Structures}$$
 
-by selecting specific mode combinations.
+by observer-dependent selection of specific mode combinations.
 
-**Theorem 21.9** (Emergence):
-1. **Spacetime**: From 4 zero modes
-2. **Matter**: From finite mode excitations
-3. **Forces**: From mode interactions
+**Theorem 21.9** (Mathematical Pattern Emergence):
+Different observers identify different mathematical patterns:
+1. **Dimensional patterns**: From low-mode structures
+2. **Excitation patterns**: From finite mode combinations
+3. **Interaction patterns**: From mode coupling structures
 
-## 21.10 Constants from Complex Structure
+*Observer Framework Note*: Physical interpretation requires observer-system coupling analysis as established in Chapters 10-18.
 
-Constants emerge from C^∞ geometry.
+## 21.10 Mathematical Invariants from Complex Structure
+
+Mathematical invariants emerge from C^∞ geometric properties within our framework.
 
 **Definition 21.10** (Geometric Invariants):
-$$c_n = \int_{\mathcal{M}_n} \Omega^n$$
+$$\kappa_n = \int_{\mathcal{C}_n} \Omega^n$$
 
-where $\Omega$ is the Kähler form and $\mathcal{M}_n$ are specific cycles.
+where $\Omega$ is the Kähler form and $\mathcal{C}_n$ are naturally defined cycles in our collapse manifold.
 
-**Theorem 21.10** (Constant Values):
-$$\alpha = \frac{c_2}{c_1^2} = \frac{1}{4\pi} \cdot \frac{1}{\varphi^7 - \varphi^{-7}}$$
+**Theorem 21.10** (Mathematical Scaling Relations):
+From the complex structure, mathematical ratios emerge:
+$$\alpha_{\text{geom}} = \frac{\kappa_2}{\kappa_1^2} = \frac{1}{4\pi} \cdot \frac{1}{\varphi^7 - \varphi^{-7}}$$
+
+**Critical Framework Note**: This gives α_geom ≈ 0.00274, which is a mathematical property of our C^∞ structure. Connection to physical constants (like α ≈ 1/137.036) requires observer-system coupling analysis and is potentially an NP-complete problem.
 
 ## 21.11 Consciousness in Complex Infinity
 
@@ -177,16 +183,16 @@ Consciousness possible when:
 
 The C^∞ structure reveals:
 
-1. **Infinite Necessity**: Finite dimensions insufficient
-2. **Complex Structure**: Natural J tensor
-3. **Kähler Geometry**: With golden metric
-4. **Fock Realization**: As particle states
-5. **Holomorphic Maps**: Encoding dynamics
-6. **Field Theory**: Natural formulation
-7. **Spectral Richness**: Multiple spectrum types
-8. **Physical Emergence**: Through projection
-9. **Constants**: From geometric invariants
-10. **Consciousness**: Needs full complexity
+1. **Infinite Necessity**: Required by unbounded ψ = ψ(ψ) recursion
+2. **Complex Structure**: Natural J tensor from self-reference
+3. **Kähler Geometry**: With golden φ-scaled metric
+4. **Fock Realization**: As coherent state structure
+5. **Holomorphic Maps**: Encoding collapse dynamics
+6. **Field Theory**: Natural C^∞ formulation
+7. **Spectral Richness**: Multiple spectrum types in infinite dimensions
+8. **Mathematical Patterns**: Through observer-dependent recognition
+9. **Mathematical Invariants**: From geometric structure (observer interpretation needed)
+10. **Consciousness**: Requires full infinite complexity
 
 ```mermaid
 graph TD

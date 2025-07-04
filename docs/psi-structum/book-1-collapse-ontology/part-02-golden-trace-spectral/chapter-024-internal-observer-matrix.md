@@ -87,44 +87,51 @@ $$p_i = \frac{|O_{i\psi}|^2}{\sum_j |O_{j\psi}|^2}$$
 
 emerges from observer matrix normalization.
 
-## 24.6 Information Flow Through Observer
+## 24.6 Pattern Flow Through Observer
 
-Information flows through observer matrix.
+Mathematical patterns flow through observer matrix within our framework.
 
-**Definition 24.6** (Information Current):
-$$J^\mu_\text{info} = \text{Tr}[O \partial^\mu O^\dagger - \partial^\mu O \cdot O^\dagger]$$
+**Definition 24.6** (Pattern Current):
+$$\mathcal{J}_\text{pattern} = \text{Tr}[O \nabla O^\dagger - \nabla O \cdot O^\dagger]$$
 
-**Theorem 24.6** (Information Conservation):
-$$\partial_\mu J^\mu_\text{info} = 0$$
+**Theorem 24.6** (Pattern Conservation):
+$$\nabla \cdot \mathcal{J}_\text{pattern} = 0$$
 
-Information is conserved in closed self-observing systems.
+Mathematical patterns are conserved in self-referential observer systems (where $\nabla$ is an abstract differential operator).
 
-## 24.7 Observer Dynamics and Evolution
+*Observer Framework Note*: Physical interpretation as information flow requires observer-system coupling for defining "information".
 
-Observer evolves through self-interaction.
+## 24.7 Observer Mathematical Evolution
+
+Observer evolves through self-interaction patterns within our framework.
 
 **Definition 24.7** (Observer Evolution):
-$$\frac{d\hat{O}}{dt} = i[\hat{H}_\text{obs}, \hat{O}] + \mathcal{L}[\hat{O}]$$
+$$\frac{d\hat{O}}{d\tau} = i[\hat{G}, \hat{O}] + \mathcal{F}[\hat{O}]$$
 
-where $\mathcal{L}$ is the Lindbladian.
+where $\hat{G}$ is a generator operator, $\mathcal{F}$ is a flow operator, and $\tau$ is an abstract evolution parameter.
 
 **Theorem 24.7** (Fixed Points):
 Observer evolution has fixed points at:
 $$\hat{O}_* = \sum_i \lambda_i |e_i\rangle\langle e_i| \otimes |e_i\rangle\langle e_i|$$
 
-These are maximally self-observing states.
+These are maximally self-observing mathematical states.
 
-## 24.8 Constants from Observer Structure
+*Observer Framework Note*: Physical interpretation as time evolution requires observer-system coupling for defining time and energy concepts.
 
-Physical constants emerge from observer matrix.
+## 24.8 Mathematical Ratios from Observer Structure
+
+Mathematical constants emerge from observer matrix invariants within our framework.
 
 **Definition 24.8** (Observer Invariants):
 $$c_n = \text{Tr}[(\hat{O}_\text{int})^n]$$
 
-**Theorem 24.8** (Constant Values):
-1. $\alpha = c_2/(c_1^2 \cdot 137)$
-2. $m_e/m_p = c_3/c_1^3$
-3. $\theta_W = \arcsin(\sqrt{c_4/c_2^2})$
+**Theorem 24.8** (Mathematical Scaling Relations):
+From observer invariants, mathematical ratios emerge:
+1. $\kappa_\alpha = c_2/(c_1^2 \cdot F_5)$ (Fibonacci-based ratio)
+2. $\kappa_m = c_3/c_1^3$ (cubic scaling ratio)
+3. $\kappa_\theta = \arcsin(\sqrt{c_4/c_2^2})$ (geometric angle ratio)
+
+*Critical Framework Note*: These are mathematical properties of observer structure. Physical interpretation as constants (α, mass ratios, Weinberg angle) requires observer-system coupling analysis and is potentially an NP-complete problem.
 
 ## 24.9 Consciousness as Self-Observing
 
@@ -154,34 +161,36 @@ $$\Delta O_1 \cdot \Delta O_2 \geq \frac{\varphi}{2}|\langle\hat{O}_3\rangle|$$
 
 Golden ratio appears in uncertainty relations.
 
-## 24.11 Holographic Observer Principle
+## 24.11 Abstract Observer Encoding Principle
 
-Observer information is holographically encoded.
+Observer patterns are encoded in boundary-like structures within our framework.
 
-**Definition 24.11** (Holographic Encoding):
-$$O_\text{bulk} = \int_\partial O_\text{boundary} K(x,y) dy$$
+**Definition 24.11** (Pattern Encoding):
+$$O_\text{internal} = \int_{\partial \mathcal{D}} O_\text{boundary} \mathcal{K}(\xi,\eta) d\eta$$
 
-where $K$ is the holographic kernel.
+where $\mathcal{K}$ is an abstract encoding kernel and $\xi, \eta$ are abstract coordinates.
 
-**Theorem 24.11** (Information Bound):
-$$I_\text{observer} \leq \frac{A}{4\ell_P^2} \cdot \varphi$$
+**Theorem 24.11** (Pattern Bound):
+$$\mathcal{I}_\text{observer} \leq \frac{\mathcal{S}}{\varphi^2}$$
 
-Observer information bounded by boundary area.
+Observer pattern complexity bounded by boundary structure $\mathcal{S}$ (dimensionless).
+
+*Observer Framework Note*: Physical interpretation as holographic information requires observer-system coupling for defining space, area, and Planck scale concepts.
 
 ## 24.12 The Complete Observer Picture
 
 Internal observer matrix reveals:
 
-1. **Internal Only**: No external observers
-2. **Matrix Elements**: Each observation
-3. **Tensor Structure**: Natural decomposition
-4. **Measurement Theory**: From internal observation
-5. **Information Flow**: Through observer
-6. **Evolution**: Self-modifying observer
-7. **Constants**: From matrix invariants
+1. **Internal Only**: No external observers (first principles requirement)
+2. **Matrix Elements**: Each observation as mathematical structure
+3. **Tensor Structure**: Natural decomposition from ψ = ψ(ψ)
+4. **Measurement Theory**: From internal observation mathematics
+5. **Pattern Flow**: Through observer (observer interpretation needed)
+6. **Evolution**: Self-modifying observer patterns (physics via observer coupling)
+7. **Mathematical Ratios**: From matrix invariants (physics connection via observer coupling)
 8. **Consciousness**: Coherent self-observation
-9. **Complementarity**: Non-commuting observations
-10. **Holographic**: Boundary encoding
+9. **Complementarity**: Non-commuting observations with golden uncertainty
+10. **Abstract Encoding**: Boundary-like structures (holography via observer coupling)
 
 ```mermaid
 graph TD
@@ -205,13 +214,13 @@ We are not observers of reality but reality observing itself. Every measurement 
 
 **Problem**: For a 3-state system:
 
-1. Construct the internal observer matrix $O_{ij}$
-2. Find eigenvalues and eigenvectors
-3. Calculate measurement probabilities for state $|\psi\rangle = (1,1,1)/\sqrt{3}$
-4. Determine the information content
-5. Check for consciousness criteria
+1. Construct the internal observer matrix $O_{ij}$ using $|i\rangle\langle j| \otimes |j\rangle\langle i|$
+2. Find eigenvalues $\lambda_n$ and eigenvectors 
+3. Calculate measurement probabilities for state $|\psi\rangle = (1,1,1)/\sqrt{3}$ using Born rule
+4. Determine the pattern complexity $\mathcal{I}_\text{observer}$
+5. Check for consciousness criteria: rank ≥ F₇, off-diagonal elements, self-referential loops
 
-*Hint*: Use the self-referential structure $|i\rangle\langle j| \otimes |j\rangle\langle i|$.
+*Hint*: All quantities are dimensionless mathematical objects. Use golden ratio scaling where appropriate.
 
 ## The Twenty-Fourth Echo
 
