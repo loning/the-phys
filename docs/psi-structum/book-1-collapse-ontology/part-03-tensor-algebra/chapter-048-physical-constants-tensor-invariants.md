@@ -229,7 +229,7 @@ Mathematical ratios emerge from tensor algebra as structural invariants, not arb
 
 1. Define golden-structured tensor $T$
 2. Calculate trace ratios Tr[T²]/Tr[T]²
-3. Find eigenvalue ratios λ_{n+1}/λ_n
+3. Find eigenvalue ratios $\lambda_{n+1}/\lambda_n$
 4. Compute hierarchical scaling patterns
 5. Verify mathematical consistency
 

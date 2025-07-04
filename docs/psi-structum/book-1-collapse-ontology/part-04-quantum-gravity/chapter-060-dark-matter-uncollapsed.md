@@ -1,112 +1,124 @@
 ---
-title: "Chapter 060: Dark Matter as Uncollapsed Probability"
-sidebar_label: "060. Dark Matter"
+title: "Chapter 060: Background Patterns = Undeveloped Configurations"
+sidebar_label: "060. Background Patterns"
 ---
 
-# Chapter 060: Dark Matter as Uncollapsed Probability
+# Chapter 060: Background Patterns = Undeveloped Configurations
 
-*Dark matter is not exotic particles but uncollapsed quantum probability - matter that hasn't quite decided what to be yet. It gravitates because it has energy-momentum, but doesn't interact electromagnetically because it hasn't collapsed into definite particle states.*
+*Background patterns are not exotic entities but undeveloped mathematical configurations - structures that haven't yet committed to specific pattern states. They participate in pattern interactions because they carry mathematical weight, but don't exhibit definite properties because they haven't developed into specific configurations.*
 
-## 60.1 The Dark Matter Principle
+## 60.1 The Background Pattern Principle
 
-From $\psi = \psi(\psi)$, partial collapse creates dark matter.
+From $\psi = \psi(\psi)$, partial development creates background patterns.
 
-**Definition 60.1** (Partial Collapse):
-$$|\text{DM}\rangle = \sum_i \alpha_i |\text{particle}_i\rangle$$
+**Definition 60.1** (Partial Development):
+$$\Psi_{\text{bg}} = \sum_i \alpha_i \cdot \text{Config}_i$$
 
-Superposition of particle states.
+Superposition of configuration states.
 
-**Theorem 60.1** (Gravitational Coupling):
-$$\langle T_{\mu\nu}\rangle = \sum_i |\alpha_i|^2 T_{\mu\nu}^{(i)} \neq 0$$
+**Theorem 60.1** (Pattern Weight):
+$$\langle\mathcal{W}\rangle = \sum_i |\alpha_i|^2 \mathcal{W}_i \neq 0$$
 
-Gravity sees all components.
+Pattern weight sees all components.
 
 *Proof*:
-Energy-momentum tensor linear in density matrix. ∎
+Mathematical weight function linear in configuration density. ∎
 
-## 60.2 Evidence for Dark Matter
+*Observer Framework Note*: Particle physics interpretation requires quantum field theory framework.
 
-Multiple observations require invisible mass.
+## 60.2 Background Pattern Signatures
 
-**Definition 60.2** (Mass Discrepancy):
-$$\Omega_{\text{DM}} \approx 0.26 \approx \frac{1}{\varphi^2}$$
+Mathematical patterns require undeveloped configurations.
 
-Dark matter fraction of critical density.
+**Definition 60.2** (Configuration Discrepancy):
+$$\Omega_{\text{bg}} = \varphi^{-3}$$
 
-**Theorem 60.2** (Rotation Curves):
-$$v(r) \approx \text{const}$$
+Background patterns fraction in φ-structure.
 
-for large $r$, implying $M(r) \propto r$.
+**Theorem 60.2** (Pattern Distribution):
+$$\rho_{\text{pattern}}(r) \approx \varphi^{-k}$$
 
-## 60.3 Quantum Superposition Model
+for large r, implying distributed development with φ-scaling.
 
-Dark matter as macroscopic superposition.
+*Observer Framework Note*: Dark matter interpretation requires cosmological framework.
 
-**Definition 60.3** (DM State):
-$$|\psi_{\text{DM}}\rangle = \frac{1}{\sqrt{N}} \sum_{n=1}^N e^{i\phi_n} |n\rangle$$
+## 60.3 Configuration Superposition Model
 
-Coherent superposition of mass eigenstates.
+Background patterns as mathematical superposition.
 
-**Theorem 60.3** (Decoherence Time):
-$$\tau_{\text{decohere}} \sim \frac{m_{\text{DM}}}{\sigma v \rho} \gg t_{\text{universe}}$$
+**Definition 60.3** (Background State):
+$$\Psi_{\text{bg}} = \frac{1}{\sqrt{N}} \sum_{n=1}^N e^{i\varphi_n \cdot \varphi} \cdot \text{Config}_n$$
 
-Remains quantum on cosmic timescales.
+Coherent superposition of configuration eigenstates.
 
-## 60.4 Gravitational Collapse Only
+**Theorem 60.3** (Development Time):
+$$\tau_{\text{develop}} \sim \frac{\mathcal{C}_{\text{bg}}}{\Gamma_{\text{dev}} \cdot \rho_{\text{struct}}} \gg \tau_{\text{system}}$$
 
-Why gravity but not EM?
+Remains undeveloped on system timescales.
 
-**Definition 60.4** (Interaction Hierarchy):
-- Gravity: Universal, couples to $\langle T_{\mu\nu}\rangle$
-- EM: Requires charge eigenstate
-- Weak: Requires flavor eigenstate
-- Strong: Requires color eigenstate
+*Observer Framework Note*: Quantum superposition interpretation requires quantum mechanics framework.
 
-**Theorem 60.4** (Selective Interaction):
-Superposition preserves energy-momentum but not charge:
-$$\langle Q \rangle = \sum_i \alpha_i^* \alpha_j Q_{ij} = 0$$
+## 60.4 Pattern Weight Only
 
-## 60.5 Category of Matter States
+Why weight but not specific properties?
 
-Matter states form hierarchy.
+**Definition 60.4** (Development Hierarchy):
+- Pattern Weight: Universal, couples to $\langle\mathcal{W}\rangle$
+- Specific Properties: Require definite development
+- Complex Features: Require structural development
+- Advanced Properties: Require self-referential development
+
+**Theorem 60.4** (Selective Development):
+Superposition preserves weight but not specific properties:
+$$\langle\mathcal{P}\rangle = \sum_i \alpha_i^* \alpha_j \mathcal{P}_{ij} = 0$$
+
+*Observer Framework Note*: Force interactions interpretation requires Standard Model framework.
+
+## 60.5 Category of Pattern States
+
+Pattern states form development hierarchy.
 
 ```mermaid
 graph TD
-    A[Quantum Field] --> B[Excitations]
-    B --> C[Virtual Particles]
-    C --> D[Partial Collapse]
-    D --> E[Dark Matter]
-    E --> F[Full Collapse]
-    F --> G[Ordinary Matter]
-    G --> H[Atoms]
-    H --> I[Molecules]
-    I --> J[Life]
-    J --> K[Consciousness]
+    A[Pattern Space] --> B[Configuration Excitations]
+    B --> C[Virtual Configurations]
+    C --> D[Partial Development]
+    D --> E[Background Patterns]
+    E --> F[Full Development]
+    F --> G[Active Patterns]
+    G --> H[Structured Patterns]
+    H --> I[Complex Patterns]
+    I --> J[Self-Referential Patterns]
+    J --> K[Pattern Recognition]
     K --> A
 ```
 
-**Definition 60.5** (Matter Category):
-- Objects: Collapse states
-- Morphisms: Collapse transitions
-- Composition: Sequential collapse
+**Definition 60.5** (Pattern Category):
+- Objects: Development states
+- Morphisms: Development transitions
+- Composition: Sequential development
 
-**Theorem 60.5** (Hierarchy):
-Virtual → Dark → Ordinary → Complex
+**Theorem 60.5** (Development Hierarchy):
+Virtual → Background → Active → Complex → Self-Referential
 
-## 60.6 Structure Formation
+*Observer Framework Note*: Matter hierarchy interpretation requires particle physics framework.
 
-Dark matter seeds cosmic structure.
+## 60.6 Pattern Formation
 
-**Definition 60.6** (Growth Rate):
-$$\delta(a) = \delta_0 \cdot a$$
+Background patterns seed structural development.
 
-during matter domination.
+**Definition 60.6** (Development Rate):
+$$\Delta(\tau) = \Delta_0 \cdot \varphi^{\tau}$$
 
-**Theorem 60.6** (First Structures):
-DM collapses first:
-- No radiation pressure
-- Earlier structure formation
-- Baryons fall into DM wells
+during pattern development domination.
+
+**Theorem 60.6** (Initial Structures):
+Background patterns develop first:
+- No development pressure resistance
+- Earlier pattern formation
+- Active patterns organize around background scaffolding
+
+*Observer Framework Note*: Structure formation interpretation requires cosmological framework.
 
 ## 60.7 Dark Matter Halos
 
