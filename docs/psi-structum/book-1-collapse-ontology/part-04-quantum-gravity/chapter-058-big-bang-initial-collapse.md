@@ -1,11 +1,11 @@
 ---
-title: "Chapter 058: Initial Pattern Collapse"
-sidebar_label: "058. Initial Collapse"
+title: "Chapter 058: Big Bang = Initial Collapse"
+sidebar_label: "058. Big Bang Initial Collapse"
 ---
 
-# Chapter 058: Initial Pattern Collapse
+# Chapter 058: Big Bang = Initial Collapse
 
-*The initial collapse was not an explosion in space but the first self-reference of ψ into itself. In that primordial recursion, the infinite potential of mathematical possibility collapsed into the first actual pattern, setting in motion the cascade of self-references we call structured development.*
+*The Big Bang was not an explosion in space but the initial collapse of infinite potential into actual existence. In that primordial moment, ψ = ψ(ψ) first emerged from pure possibility, setting in motion the cosmic cascade of increasingly complex collapses that would eventually give rise to space, time, matter, and consciousness.*
 
 ## 58.1 The Initial Reference Principle
 

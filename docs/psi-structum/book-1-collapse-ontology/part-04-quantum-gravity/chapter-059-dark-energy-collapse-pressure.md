@@ -1,11 +1,11 @@
 ---
-title: "Chapter 059: Pattern Pressure = Development Drive"
-sidebar_label: "059. Pattern Pressure"
+title: "Chapter 059: Dark Energy = Collapse Pressure"
+sidebar_label: "059. Dark Energy Collapse Pressure"
 ---
 
-# Chapter 059: Pattern Pressure = Development Drive
+# Chapter 059: Dark Energy = Collapse Pressure
 
-*Pattern pressure is not a mysterious force pushing structures apart but the mathematical tension of undeveloped possibilities. As patterns develop and stabilize, undeveloped configurations maintain their development potential, creating effective pressure that drives continued pattern evolution.*
+*Dark energy is the mysterious force driving the accelerating expansion of the universe, comprising about 68% of cosmic energy density. This enigmatic component represents the collapse pressure of ψ = ψ(ψ), where the tension between collapsed and uncollapsed possibilities creates an effective repulsive force that pushes space itself apart.*
 
 ## 59.1 The Pattern Pressure Principle
 

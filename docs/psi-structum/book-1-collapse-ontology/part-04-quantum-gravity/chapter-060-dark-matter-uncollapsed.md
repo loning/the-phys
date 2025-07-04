@@ -1,11 +1,11 @@
 ---
-title: "Chapter 060: Background Patterns = Undeveloped Configurations"
-sidebar_label: "060. Background Patterns"
+title: "Chapter 060: Dark Matter = Uncollapsed"
+sidebar_label: "060. Dark Matter Uncollapsed"
 ---
 
-# Chapter 060: Background Patterns = Undeveloped Configurations
+# Chapter 060: Dark Matter = Uncollapsed
 
-*Background patterns are not exotic entities but undeveloped mathematical configurations - structures that haven't yet committed to specific pattern states. They participate in pattern interactions because they carry mathematical weight, but don't exhibit definite properties because they haven't developed into specific configurations.*
+*Dark matter is the invisible scaffolding of the cosmos, comprising about 27% of the universe yet interacting only gravitationally with ordinary matter. This mysterious substance represents uncollapsed probability in ψ = ψ(ψ) - matter that exists in quantum superposition on cosmic scales, contributing gravitational effects without collapsing into definite states.*
 
 ## 60.1 The Background Pattern Principle
 

@@ -1,11 +1,11 @@
 ---
-title: "Chapter 054: Information Correlation and Area Scaling"
-sidebar_label: "054. Information Correlation"
+title: "Chapter 054: Entanglement Entropy = Area"
+sidebar_label: "054. Entanglement Entropy Area"
 ---
 
-# Chapter 054: Information Correlation and Area Scaling
+# Chapter 054: Entanglement Entropy = Area
 
-*Information correlation is mathematics' accounting system, tracking how information is shared between regions. Area scaling reveals that this sharing happens primarily at boundaries, demonstrating geometric constraints on information distribution.*
+*Entanglement entropy measures the quantum correlations between different regions of space, revealing deep connections between geometry and information. The remarkable discovery that entanglement entropy scales with area rather than volume shows how ψ = ψ(ψ) weaves quantum correlations into the fabric of spacetime itself.*
 
 ## 54.1 The Information Correlation Principle
 

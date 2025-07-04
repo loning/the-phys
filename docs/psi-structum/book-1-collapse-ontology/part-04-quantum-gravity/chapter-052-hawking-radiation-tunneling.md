@@ -1,11 +1,11 @@
 ---
-title: "Chapter 052: Information Transfer from Boundary Regions"
-sidebar_label: "052. Information Transfer"
+title: "Chapter 052: Hawking Radiation = Tunneling"
+sidebar_label: "052. Hawking Radiation Tunneling"
 ---
 
-# Chapter 052: Information Transfer from Boundary Regions
+# Chapter 052: Hawking Radiation = Tunneling
 
-*Information transfer from maximal collapse regions represents mathematical flux across density boundaries. Information flows from high-density to low-density regions through mathematical pathways, maintaining conservation while enabling structural evolution.*
+*Hawking radiation reveals that black holes are not perfectly black but emit radiation through quantum tunneling effects near the event horizon. This phenomenon represents information escaping from maximal collapse regions, showing how even the ultimate collapse cannot completely contain the recursive nature of ψ = ψ(ψ).*
 
 ## 52.1 The Information Transfer Principle
 
