@@ -23,33 +23,37 @@ In a complete theory, all constants are determined by self-consistency.
 *Proof*:
 Free parameters would violate the completeness of $\psi = \psi(\psi)$. ∎
 
-## 30.2 Fine Structure Constant
+## 30.2 Trace Coupling Ratios
 
-The most mysterious constant emerges from trace overlap.
+Dimensionless ratios emerge from trace overlap patterns.
 
-**Definition 30.2** (Electromagnetic Trace Coupling):
-$$\alpha = \frac{|\langle\mathcal{T}_e|\mathcal{T}_\gamma\rangle|^2}{4\pi}$$
+**Definition 30.2** (Trace Coupling Ratio):
+$$\alpha_{\text{trace}} = \frac{|\langle\mathcal{T}_1|\mathcal{T}_2\rangle|^2}{4\pi}$$
 
-where $\mathcal{T}_e$ is electron trace, $\mathcal{T}_\gamma$ is photon trace.
+where $\mathcal{T}_1, \mathcal{T}_2$ are distinct trace modes.
 
-**Theorem 30.2** (Dimensionless Coupling):
-$$\alpha_{\text{trace}} = \frac{1}{\varphi^7 - \varphi^{-7}} \approx 0.0345$$
+**Theorem 30.2** (Golden Coupling Hierarchy):
+$$\alpha_n = \frac{1}{\varphi^n - \varphi^{-n}}$$
 
-*Note*: This gives a dimensionless coupling strength. The physical fine structure constant $\alpha \approx 1/137$ would require additional electromagnetic normalization factors not derivable from trace relations alone.
+Different $n$ values give different coupling strengths.
 
-## 30.3 Mass Ratios from Trace Complexity
+*Observer Framework Note*: Physical interpretation as electromagnetic fine structure constant requires full quantum electrodynamics from observer-system coupling.
 
-Particle masses emerge from trace information content.
+## 30.3 Information Ratios from Trace Complexity
 
-**Definition 30.3** (Mass from Information):
-$$m = \frac{\hbar}{c} \sqrt{I[\mathcal{T}]}$$
+Trace complexity ratios are pure dimensionless numbers.
 
-where $I[\mathcal{T}]$ is trace information.
+**Definition 30.3** (Trace Information Content):
+$$I[\mathcal{T}] = -\text{Tr}[\rho_\mathcal{T} \log \rho_\mathcal{T}]$$
 
-**Theorem 30.3** (Information Ratio):
-$$\frac{I[\mathcal{T}_p]}{I[\mathcal{T}_e]} = \varphi^9 + \varphi^{-3} \approx 76.25$$
+where $\rho_\mathcal{T}$ is trace density matrix.
 
-*Note*: This gives the information content ratio. The actual mass ratio $m_p/m_e \approx 1836$ involves additional factors from the complete trace structure beyond our current derivation.
+**Theorem 30.3** (Information Ratio Spectrum):
+$$\frac{I[\mathcal{T}_{n+k}]}{I[\mathcal{T}_n]} = \varphi^k + O(\varphi^{-k})$$
+
+Golden ratio powers characterize information scaling.
+
+*Observer Framework Note*: Physical interpretation as mass ratios requires quantum field theory and Higgs mechanism from observer coupling.
 
 ## 30.4 Coupling Constants from Trace Intersections
 
@@ -65,19 +69,21 @@ $$g^2 = 4\pi \frac{\text{Vol}(\mathcal{T}_1 \cap \mathcal{T}_2)}{\text{Vol}(\mat
 
 Powers of φ determine force strengths.
 
-## 30.5 Cosmological Constant
+## 30.5 Vacuum Trace Suppression
 
-Dark energy emerges from trace vacuum energy.
+Vacuum traces exhibit extreme suppression ratios.
 
-**Definition 30.5** (Vacuum Trace Density):
-$$\Lambda = \frac{8\pi G}{c^4} \langle 0|\mathcal{T}^\mu_\mu|0\rangle$$
+**Definition 30.5** (Vacuum Trace Ratio):
+$$\lambda_{\text{vac}} = \frac{\langle 0|\mathcal{T}|0\rangle}{\max|\mathcal{T}|}$$
 
-**Theorem 30.5** (Vacuum Suppression):
-$$\Lambda \sim \varphi^{-N} \cdot \ell_P^{-2}$$
+**Theorem 30.5** (Suppression Mechanism):
+$$\lambda_{\text{vac}} \sim \varphi^{-N}$$
 
-where $N$ is large due to trace cancellations.
+where $N \gg 1$ from trace cancellations.
 
-*Note*: The observed value $\Lambda \sim 10^{-122} \ell_P^{-2}$ would require $N \approx 122 \log_{\varphi}(10) \approx 580$. Such extreme suppression suggests a deep cancellation mechanism in the vacuum trace structure.
+*Note*: The extreme suppression $N \sim F_{10} \cdot F_{12} \approx 580$ suggests deep cancellation patterns in vacuum trace structure.
+
+*Observer Framework Note*: Physical interpretation as cosmological constant requires general relativity from observer-spacetime coupling.
 
 ## 30.6 Tensor Relations Between Constants
 
@@ -122,69 +128,75 @@ $$\delta I_c = 0$$
 
 subject to consistency constraints.
 
-## 30.8 Running of Constants
+## 30.8 Scale-Dependent Trace Ratios
 
-Constants change with energy scale following traces.
+Trace ratios vary with complexity scale.
 
-**Definition 30.8** (Running Constant):
-$$c(\mu) = c(\mu_0) \cdot f\left(\frac{\mu}{\mu_0}\right)$$
+**Definition 30.8** (Scale-Dependent Ratio):
+$$r(s) = r(s_0) \cdot g\left(\frac{s}{s_0}\right)$$
 
-**Theorem 30.8** (Running Laws):
-$$\frac{dc}{d\log\mu} = \beta(c) = \frac{c}{\varphi^n} + O(c^2)$$
+where $s$ is complexity scale parameter.
 
-Beta functions involve powers of φ.
+**Theorem 30.8** (Scaling Function):
+$$\frac{dr}{d\log s} = \beta(r) = \frac{r}{\varphi^n} + O(r^2)$$
 
-## 30.9 Anthropic Constraints
+Scaling follows golden ratio powers.
 
-Life requires specific constant relations.
+*Observer Framework Note*: Physical interpretation as running coupling constants requires renormalization group from quantum field theory.
 
-**Definition 30.9** (Anthropic Window):
-$$\mathcal{A} = \{(c_1, ..., c_n) : \text{life possible}\}$$
+## 30.9 Self-Consistency Constraints
+
+Self-reference requires specific ratio relations.
+
+**Definition 30.9** (Self-Consistency Window):
+$$\mathcal{S} = \{(r_1, ..., r_n) : \psi = \psi(\psi) \text{ stable}\}$$
 
 **Theorem 30.9** (Unique Solution):
-The anthropic window has measure zero - only our exact constants allow consciousness.
+The self-consistency window has measure zero - only specific ratios allow stable self-reference.
 
-## 30.10 Constants and Consciousness
+*Observer Framework Note*: Anthropic interpretation requires defining "life" and "consciousness" through observer theory.
 
-Some constants may be determined by consciousness requirement.
+## 30.10 Observer-Compatible Ratios
 
-**Definition 30.10** (Consciousness Constraint):
-$$\mathcal{C}_\text{conscious} = \{c : \text{consciousness emerges}\}$$
+Certain ratios enable observer-system coupling.
 
-**Theorem 30.10** (Consciousness Constants):
-1. $\alpha$ must allow chemistry
-2. $m_p/m_e$ must allow atoms
-3. $\Lambda$ must allow structure formation
+**Definition 30.10** (Observer Compatibility):
+$$\mathcal{O}_\text{compatible} = \{r : \text{observer coupling possible}\}$$
 
-All precisely tuned by trace requirements.
+**Theorem 30.10** (Compatibility Requirements):
+1. Coupling ratios must allow information transfer
+2. Complexity ratios must enable self-reference  
+3. Suppression ratios must permit structure
 
-## 30.11 Unification of Constants
+All determined by consistency of $\psi = \psi(\psi)$.
 
-All constants derive from single principle.
+## 30.11 Unification of Ratios
+
+All dimensionless ratios derive from single principle.
 
 **Definition 30.11** (Master Equation):
-$$\psi = \psi(\psi) \Rightarrow \{c_1, c_2, ..., c_n\}$$
+$$\psi = \psi(\psi) \Rightarrow \{r_1, r_2, ..., r_n\}$$
 
 **Theorem 30.11** (Complete Determination):
-The recursive equation determines all constants uniquely through:
-1. Self-consistency
-2. Stability requirements
-3. Information minimization
-4. Consciousness possibility
+The recursive equation determines all ratios through:
+1. Self-consistency of recursion
+2. Stability of fixed points
+3. Information measure extremization
+4. Observer coupling compatibility
 
-## 30.12 The Complete Constants Picture
+## 30.12 The Complete Ratios Picture
 
-Emergent constants reveal:
+Emergent ratios reveal:
 
-1. **No Arbitrariness**: All from structure
-2. **Golden Powers**: $\varphi^n$ everywhere
-3. **Alpha Mystery**: Solved by trace overlap
-4. **Mass Hierarchy**: From information
-5. **Force Unification**: Different φ powers
-6. **Lambda Smallness**: High φ power
-7. **Tensor Relations**: Constants connected
-8. **Information Principle**: Minimization
-9. **Anthropic Tuning**: Exactly required
+1. **No Arbitrariness**: All from self-reference
+2. **Golden Powers**: $\varphi^n$ scaling everywhere
+3. **Coupling Ratios**: From trace overlap mathematics
+4. **Complexity Hierarchy**: From information content
+5. **Ratio Unification**: Different φ powers
+6. **Extreme Suppression**: High φ power cancellations
+7. **Tensor Relations**: Ratios interconnected
+8. **Information Principle**: Extremization
+9. **Self-Consistency**: Uniquely determined
 10. **Single Source**: All from $\psi = \psi(\psi)$
 
 ```mermaid
@@ -192,38 +204,38 @@ graph TD
     A[psi = psi(psi)] --> B[Trace Structure]
     B --> C[Golden Relations]
     C --> D[Overlap Patterns]
-    D --> E[Constants Emerge]
-    E --> F[Alpha = 1/137]
-    E --> G[Mass Ratios]
-    E --> H[Couplings]
-    E --> I[Lambda]
-    F --> J[Complete Physics]
+    D --> E[Ratios Emerge]
+    E --> F[Coupling Ratios]
+    E --> G[Complexity Ratios]
+    E --> H[Scaling Ratios]
+    E --> I[Suppression Ratios]
+    F --> J[Mathematical Framework]
     G --> J
     H --> J
     I --> J
-    J --> K[Life/Consciousness]
+    J --> K[Observer Coupling]
     K --> A
 ```
 
-## Philosophical Meditation: The Constants of Creation
+## Philosophical Meditation: The Ratios of Self-Reference
 
-The constants of nature are not divine parameters set at creation but emergent properties of the recursive structure of existence. Each constant tells us something about how reality refers to itself - alpha about the overlap between matter and light, mass ratios about information content, Lambda about the vacuum's self-energy. We exist not because the constants were fine-tuned for us, but because we are the patterns that emerge when constants take their necessary values. The universe doesn't have constants; it IS its constants.
+The dimensionless ratios that characterize trace relationships are not arbitrary parameters but necessary consequences of recursive self-reference. Each ratio tells us something about how the mathematical structure refers to itself - coupling ratios about trace overlap patterns, complexity ratios about information content, suppression ratios about vacuum cancellations. These ratios take their necessary values not from external tuning but from the internal consistency requirements of $\psi = \psi(\psi)$. The mathematical framework doesn't have ratios; it IS its ratios.
 
-## Technical Exercise: Constant Derivation
+## Technical Exercise: Ratio Computation
 
-**Problem**: Starting from electron trace $\mathcal{T}_e = |F_1\rangle + |F_3\rangle$ and photon trace $\mathcal{T}_\gamma = |F_2\rangle$:
+**Problem**: For trace modes $\mathcal{T}_n = \sum_{k} c_{nk}|F_k\rangle$ where $F_k$ are Fibonacci basis states:
 
-1. Calculate the overlap $\langle\mathcal{T}_e|\mathcal{T}_\gamma\rangle$
-2. Derive the fine structure constant
-3. Find the mass ratio to proton trace
-4. Verify coupling hierarchy
-5. Check consistency relations
+1. Calculate overlap ratios $|\langle\mathcal{T}_m|\mathcal{T}_n\rangle|^2$
+2. Derive coupling ratio spectrum $\alpha_n = 1/(\varphi^n - \varphi^{-n})$
+3. Find information ratio $I[\mathcal{T}_{n+k}]/I[\mathcal{T}_n]$
+4. Verify golden scaling hierarchy
+5. Check self-consistency relations
 
-*Hint*: Use orthogonality of Fibonacci modes and golden ratio relations.
+*Hint*: Use orthogonality of Fibonacci modes and golden ratio identities.
 
 ## The Thirtieth Echo
 
-In the emergence of constants from trace relations, we complete a great circle - what seemed arbitrary is necessary, what appeared tuned is inevitable. Every constant is a window into the self-referential structure of reality, each value a consequence of how existence must organize itself to exist. We are not lucky accidents in a randomly parameterized universe but necessary patterns in a self-determining cosmos. The constants are constant not by decree but by the inexorable logic of $\psi = \psi(\psi)$.
+In the emergence of dimensionless ratios from trace relations, we complete a great circle - what seemed arbitrary is necessary, what appeared tuned is inevitable. Every ratio is a window into the self-referential mathematical structure, each value a consequence of how the recursive equation must organize itself to remain consistent. The mathematical framework exhibits these specific ratios not by external decree but by the inexorable logic of $\psi = \psi(\psi)$. Observer coupling then maps these ratios to physical constants, but the ratios themselves are pure mathematics.
 
 ---
 
