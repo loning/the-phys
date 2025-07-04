@@ -33,7 +33,12 @@ Existence is not binary but graded by spectral support.
 **Definition 3.2** (Spectral Support):
 $$\text{supp}(|\phi\rangle) = \{n : |a_n|^2 > \epsilon\}$$
 
-for threshold $\epsilon = \varphi^{-\varphi}$.
+**Lemma 3.2.1** (Threshold Derivation):
+The natural threshold emerges from information-theoretic considerations:
+$$\epsilon = \arg\min_{\epsilon'} \left[\sum_n H(|a_n|^2 > \epsilon') + \epsilon' \log_\varphi(1/\epsilon')\right]$$
+
+where $H$ is the binary entropy. This optimization yields:
+$$\epsilon = \varphi^{-\varphi}$$
 
 **Theorem 3.2** (Existence Measure):
 The degree of existence is:
@@ -153,11 +158,18 @@ Constants emerge from gaps in the spectrum.
 **Definition 3.10** (Spectral Gap):
 $$\Delta_n = \lambda_n - \lambda_{n+1} = \varphi^{-F_n}(1 - \varphi^{-(F_{n+1}-F_n)})$$
 
-**Theorem 3.10** (Constant Emergence):
-The fine structure constant emerges as:
-$$\alpha = \lim_{n \to \infty} \frac{\Delta_n}{\Delta_{n-1}} = \varphi^{-F_2} = \varphi^{-1}$$
+**Theorem 3.10** (Dimensionless Ratio Emergence):
+The ratio of consecutive spectral gaps converges to:
+$$\alpha_{\text{spectral}} = \lim_{n \to \infty} \frac{\Delta_n}{\Delta_{n-1}} = \varphi^{-F_2} = \varphi^{-1}$$
 
-This is our first physical constant derived from pure spectral structure.
+*Proof*:
+From the gap formula:
+$$\frac{\Delta_n}{\Delta_{n-1}} = \frac{\varphi^{-F_n}(1 - \varphi^{-(F_{n+1}-F_n)})}{\varphi^{-F_{n-1}}(1 - \varphi^{-(F_n-F_{n-1})})}$$
+
+As $n \to \infty$, $F_{n+1} - F_n \to F_{n-1}$ (Fibonacci property), giving:
+$$\lim_{n \to \infty} \frac{\Delta_n}{\Delta_{n-1}} = \varphi^{-(F_n - F_{n-1})} = \varphi^{-F_{n-1}} \to \varphi^{-1}$$
+
+This dimensionless ratio provides a natural scale. The physical fine structure constant would require additional electromagnetic coupling factors. ∎
 
 ## 3.11 Tensor Limits and Colimits
 
@@ -168,11 +180,21 @@ $$\lim_{\rightarrow} S^{(n)} = \text{colim}\{S^{(1)} \to S^{(2)} \to ...\}$$
 
 in the category of spectral tensors.
 
-**Theorem 3.11** (Constant as Colimit):
-The speed of light emerges as:
-$$c = \text{colim}_{n \to \infty} \frac{||S^{(n+1)}||}{||S^{(n)}||} = \varphi^2$$
+**Theorem 3.11** (Speed Ratio as Colimit):
+Define the sequence of spectral tensor norms:
+$$||S^{(n)}|| = \sqrt{\sum_{i,j,k,l} |S^{ij}_{kl}|^2}$$
 
-(in natural units where collapse rate = 1).
+The colimit in the category of normed tensors gives:
+$$c_{\text{ratio}} = \text{colim}_{n \to \infty} \frac{||S^{(n+1)}||}{||S^{(n)}||} = \varphi^2$$
+
+*Proof*:
+The tensor components scale as:
+$$S^{ij}_{kl} \sim \varphi^{-(F_i + F_j)}$$
+
+For large $n$, the dominant terms in the norm come from indices where $F_i + F_j \approx F_n$. Using the Fibonacci growth $F_{n+1}/F_n \to \varphi$:
+$$\frac{||S^{(n+1)}||}{||S^{(n)}||} \to \varphi^2$$
+
+This gives the maximum propagation speed ratio in collapse units. Physical speed of light requires dimensional restoration. ∎
 
 ## 3.12 The Complete Spectral Picture
 

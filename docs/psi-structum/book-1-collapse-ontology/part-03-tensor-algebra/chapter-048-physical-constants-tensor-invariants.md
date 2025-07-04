@@ -21,19 +21,20 @@ $$\hat{I}|c\rangle = c|c\rangle$$
 *Proof*:
 Self-consistency requires fixed points in tensor space. ∎
 
-## 48.2 Fine Structure Constant
+## 48.2 Dimensionless Coupling Ratios
 
-Electromagnetic coupling from trace invariants.
+Coupling strengths emerge as ratios of tensor invariants.
 
-**Definition 48.2** (Fine Structure):
-$$\alpha = \frac{\text{Tr}[\mathcal{T}_{em}^2]}{\text{Tr}[\mathcal{T}_{em}]^2} \cdot \frac{1}{4\pi\varphi^7}$$
+**Definition 48.2** (Coupling Ratio):
+$$\alpha_{\text{tensor}} = \frac{\text{Tr}[\mathcal{T}_{em}^2]}{\text{Tr}[\mathcal{T}_{em}]^2}$$
 
-where $\mathcal{T}_{em}$ is electromagnetic collapse tensor.
+where $\mathcal{T}_{em}$ is the electromagnetic collapse tensor.
 
-**Theorem 48.2** (Value):
-$$\alpha \approx \frac{1}{137.035999...}$$
+**Theorem 48.2** (Dimensionless Nature):
+For the golden-base tensor structure:
+$$\alpha_{\text{tensor}} = \varphi^{-2} \approx 0.382$$
 
-Emerges from golden ratio geometry.
+*Note*: This gives a dimensionless ratio. The physical fine structure constant $\alpha \approx 1/137$ would require additional factors from the full electromagnetic-gravitational unification, which is beyond our current first-principles derivation.
 
 ## 48.3 Gravitational Constant
 
@@ -109,10 +110,13 @@ $$m_n = m_0 \cdot \varphi^{-s_n}$$
 
 where $s_n$ are scaling dimensions.
 
-**Theorem 48.7** (Hierarchy):
-1. $m_e/m_p \approx 1/\varphi^{11}$
-2. $m_W/m_H \approx \varphi^2$
-3. $m_{\text{Planck}}/m_e \approx \varphi^{30}$
+**Theorem 48.7** (Hierarchy Patterns):
+Mass ratios show golden ratio patterns:
+1. Small hierarchy: $\varphi^{-n}$ for $n \sim 10-20$
+2. Medium hierarchy: $\varphi^{\pm m}$ for $m \sim 2-5$
+3. Large hierarchy: $\varphi^{k}$ for $k \sim 20-40$
+
+*Note*: Exact values depend on the specific tensor eigenvalue spectrum. These are order-of-magnitude patterns, not precise predictions.
 
 ## 48.8 Coupling Unification
 
@@ -129,15 +133,18 @@ $$g_1 = g_2 = g_3 = \sqrt{\varphi}$$
 
 Vacuum energy from trace anomaly.
 
-**Definition 48.9** (Lambda):
-$$\Lambda = \frac{\text{Tr}[\mathcal{T}_{\text{vac}}]}{V} \cdot \frac{1}{\varphi^{122}}$$
+**Definition 48.9** (Vacuum Energy Density):
+$$\Lambda_{\text{tensor}} = \lim_{V \to \infty} \frac{\text{Tr}[\mathcal{T}_{\text{vac}}]}{V}$$
 
-where $V$ is spacetime volume.
+where $V$ is a regularization volume.
 
-**Theorem 48.9** (Coincidence):
-$$\Lambda \sim H_0^2 \sim (1/\varphi^{61} \cdot t_0)^2$$
+**Theorem 48.9** (Extreme Suppression):
+The vacuum energy is suppressed by high powers of $\varphi$:
+$$\Lambda_{\text{tensor}} \sim \varphi^{-N}$$
 
-Current value from age of universe.
+where $N \gg 1$ emerges from the cancellation structure in the vacuum tensor trace.
+
+*Note*: The precise power $N$ requires a full quantum gravity calculation beyond our current scope.
 
 ## 48.10 Information Theoretic Constants
 

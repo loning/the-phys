@@ -20,7 +20,7 @@ The fundamental reconception - collapse is not a process but a tensor with spect
 How the ζ-function encodes tensor path weights into spectral form.
 
 ### [Chapter 035: ζ Function Formula](chapter-035-zeta-ij-formula)
-The explicit formula for ζ^{ij}(s) in terms of golden base vectors.
+The explicit formula for $\zeta^{ij}(s)$ in terms of golden base vectors.
 
 ### [Chapter 036: Tensor Convolution as Path Composition](chapter-036-tensor-convolution-path-composition)
 Path composition becomes tensor convolution in spectral space.

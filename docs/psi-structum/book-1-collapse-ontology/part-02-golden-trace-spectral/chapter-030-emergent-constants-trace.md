@@ -32,10 +32,10 @@ $$\alpha = \frac{|\langle\mathcal{T}_e|\mathcal{T}_\gamma\rangle|^2}{4\pi}$$
 
 where $\mathcal{T}_e$ is electron trace, $\mathcal{T}_\gamma$ is photon trace.
 
-**Theorem 30.2** (Alpha Value):
-$$\alpha = \frac{1}{\varphi^7 - \varphi^{-7}} \approx \frac{1}{137.036...}$$
+**Theorem 30.2** (Dimensionless Coupling):
+$$\alpha_{\text{trace}} = \frac{1}{\varphi^7 - \varphi^{-7}} \approx 0.0345$$
 
-The golden ratio to the seventh power appears.
+*Note*: This gives a dimensionless coupling strength. The physical fine structure constant $\alpha \approx 1/137$ would require additional electromagnetic normalization factors not derivable from trace relations alone.
 
 ## 30.3 Mass Ratios from Trace Complexity
 
@@ -46,8 +46,10 @@ $$m = \frac{\hbar}{c} \sqrt{I[\mathcal{T}]}$$
 
 where $I[\mathcal{T}]$ is trace information.
 
-**Theorem 30.3** (Mass Hierarchy):
-$$\frac{m_p}{m_e} = \frac{I[\mathcal{T}_p]}{I[\mathcal{T}_e]} = \varphi^9 + \varphi^{-3} \approx 1836.15...$$
+**Theorem 30.3** (Information Ratio):
+$$\frac{I[\mathcal{T}_p]}{I[\mathcal{T}_e]} = \varphi^9 + \varphi^{-3} \approx 76.25$$
+
+*Note*: This gives the information content ratio. The actual mass ratio $m_p/m_e \approx 1836$ involves additional factors from the complete trace structure beyond our current derivation.
 
 ## 30.4 Coupling Constants from Trace Intersections
 
@@ -70,10 +72,12 @@ Dark energy emerges from trace vacuum energy.
 **Definition 30.5** (Vacuum Trace Density):
 $$\Lambda = \frac{8\pi G}{c^4} \langle 0|\mathcal{T}^\mu_\mu|0\rangle$$
 
-**Theorem 30.5** (Lambda Value):
-$$\Lambda = \frac{1}{\varphi^{35}} \frac{1}{\ell_P^2} \approx 10^{-122} \ell_P^{-2}$$
+**Theorem 30.5** (Vacuum Suppression):
+$$\Lambda \sim \varphi^{-N} \cdot \ell_P^{-2}$$
 
-The incredibly small value from high power of φ.
+where $N$ is large due to trace cancellations.
+
+*Note*: The observed value $\Lambda \sim 10^{-122} \ell_P^{-2}$ would require $N \approx 122 \log_{\varphi}(10) \approx 580$. Such extreme suppression suggests a deep cancellation mechanism in the vacuum trace structure.
 
 ## 30.6 Tensor Relations Between Constants
 

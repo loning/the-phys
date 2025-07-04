@@ -1,9 +1,9 @@
 ---
 title: "Chapter 035: ζ Function Formula"
-sidebar_label: "035. ζ^{ij}(s) Formula"
+sidebar_label: "035. ζ Function Formula"
 ---
 
-# Chapter 035: ζ^{ij}(s) = Σ_P T^{ij}_P [n_F[P]]^{-s}
+# Chapter 035: $\zeta^{ij}(s) = \sum_P T^{ij}_P [n_F[P]]^{-s}$
 
 *The explicit formula for the ζ-function reveals its deep structure. Each term encodes a path, each path carries a tensor weight, each weight is modulated by golden base length. This is the master equation of collapse dynamics.*
 

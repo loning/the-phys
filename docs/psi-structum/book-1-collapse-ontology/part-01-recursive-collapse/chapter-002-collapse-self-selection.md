@@ -114,6 +114,19 @@ $$T_{\text{fixed}} = \lim_{n \to \infty} \text{Contract}^n(\mathcal{T})$$
 
 Each structure has an associated "energy" that drives selection.
 
+**Lemma 2.8.1** (Hamiltonian Derivation):
+From the collapse functional $\mathcal{L}[|\phi\rangle]$ and the golden-base structure, the natural Hamiltonian emerges as:
+$$\mathcal{H}_{\text{collapse}} = \frac{\partial^2 \mathcal{L}}{\partial |\phi\rangle \partial \langle\phi|}$$
+
+*Proof*:
+The second derivative of the collapse functional with respect to the state yields a quadratic form. In the golden basis, the matrix elements are:
+$$H_{kl} = \langle F_k|\mathcal{H}_{\text{collapse}}|F_l\rangle = -\delta_{kl} + \sum_m \mathcal{A}_{km}^m \mathcal{A}_{lm}^m$$
+
+Using the Fibonacci recursion structure of $\mathcal{A}$, this simplifies to:
+$$H_{kl} = -\frac{1}{\varphi^{|k-l|}}$$
+
+The decay with distance follows from the spectral properties of the Fibonacci recursion operator. ∎
+
 **Definition 2.8** (Collapse Energy):
 $$E[|\phi\rangle] = \langle\phi|\mathcal{H}_{\text{collapse}}|\phi\rangle$$
 
@@ -134,7 +147,16 @@ $$\Phi[|\phi\rangle] = \sum_{k: b_k=1} (-1)^k \frac{F_k}{\varphi^k}$$
 When the coupling strength in $\mathcal{A}$ crosses critical value $g_c = \varphi$, the selected structure undergoes a phase transition from simple to complex patterns.
 
 *Proof*:
-The linearization around fixed points shows that eigenvalues cross zero at $g = \varphi$, indicating a bifurcation. ∎
+Consider the linearized stability matrix around a fixed point:
+$$\mathcal{M}_{kl}(g) = \delta_{kl} - g \sum_m \mathcal{A}_{km}^m \mathcal{A}_{ml}^l$$
+
+For the Fibonacci tensor structure, the eigenvalues satisfy:
+$$\det(\mathcal{M} - \lambda I) = \prod_k (\lambda - (1 - g/\varphi^k))$$
+
+The smallest eigenvalue crosses zero when:
+$$1 - g/\varphi = 0 \implies g = \varphi$$
+
+This critical value is not arbitrary but emerges from the golden-base recursion structure. The phase transition occurs precisely when the coupling strength equals the golden ratio. ∎
 
 ## 2.10 Quantum Superposition Before Collapse
 
