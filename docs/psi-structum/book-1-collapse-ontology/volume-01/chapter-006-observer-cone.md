@@ -33,10 +33,7 @@ $$
 
 where $\|\cdot\|_\phi$ is the golden norm.
 
-In binary representation:
-$$
-r_{\text{max}} = [1,0,1,0,0,1,0,0,0,1,0,0,1,...]
-$$
+**Note**: The specific binary representation of $r_{\text{max}}$ depends on the observer state $\vec{\psi}$ and must be derived from the cone construction, not arbitrarily assigned.
 
 ## Vector Information Theory of Cones
 
@@ -103,15 +100,17 @@ graph TD
 2. **Union**: $\mathcal{C}_{\psi_1} \cup \mathcal{C}_{\psi_2}$ = combined observation range
 3. **Complement**: $\mathcal{C}_\psi^c$ = unobservable states
 
-## The Light Cone Analogy
+## Geometric Properties
 
-**Theorem 6.2** (Golden Light Cone): The observer-cone in golden space corresponds to the light cone in spacetime:
+**Theorem 6.2** (Golden Cone Metric): The observer-cone has an intrinsic golden metric:
 
 $$
-\mathcal{C}_\psi \leftrightarrow \{x : (x-x_0)^2 \leq c^2(t-t_0)^2\}
+g_{ij} = \phi^{|i-j|} \cdot \delta(|i-j| > 1)
 $$
 
-but with golden metric instead of Minkowski.
+This provides the geometric structure for the cone in golden vector space.
+
+**Note**: Any correspondence to physical spacetime requires further derivation from the collapse dynamics.
 
 ## Entropy Within Cones
 
@@ -166,13 +165,15 @@ $$
 
 ## Quantum Cone Correspondence
 
-**Definition 6.9** (Quantum Observable Cone): In quantum mechanics:
+**Definition 6.9** (Observable Operator Structure): We can define operators on the golden cone:
 
 $$
-\mathcal{C}_\psi^{\text{quantum}} = \{\hat{O} : [\hat{O}, \hat{\psi}] = 0\}
+\mathcal{O}_\psi[\vec{v}] = \text{GoldenProject}[\vec{v}, \mathcal{C}_\psi]
 $$
 
-maps to golden cone structure.
+where GoldenProject preserves the golden constraint.
+
+**Note**: The connection to quantum observables requires derivation from the collapse framework.
 
 ## Cone Collapse Mechanism
 
@@ -236,13 +237,15 @@ $$
 
 Each fiber is an observer-cone.
 
-## Physical Implications
+## Structural Implications
 
-Observer-cones explain:
-- Why observation creates reality
-- The origin of measurement limits
-- Quantum decoherence patterns
-- The holographic principle
+Observer-cones provide the mathematical framework for:
+- The geometric limits of observation in golden space
+- Information capacity bounds for observers
+- Self-referential structure in observation
+- Hierarchical organization of observable states
+
+**Note**: Specific connections to physical phenomena require further derivation from the foundational principles.
 
 ## Exercises
 

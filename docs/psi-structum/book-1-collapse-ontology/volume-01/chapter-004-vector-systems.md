@@ -76,7 +76,9 @@ $$
 \vec{u} \otimes_\phi \vec{v} = \sum_{i,j} u_i v_j \phi^{i+j} \hat{e}_{i,j}
 $$
 
-with constraint: if $u_i = v_j = 1$, then $|i-j| > 1$.
+**Theorem 4.2** (Tensor Constraint Derivation): The constraint $|i-j| > 1$ for non-zero tensor products follows from the golden constraint preservation:
+
+*Proof*: Since both $\vec{u}$ and $\vec{v}$ satisfy the Zeckendorf constraint (no consecutive 1s), their tensor product must preserve this property. If $u_i = v_j = 1$ and $|i-j| \leq 1$, then the resulting tensor would have "adjacent" entries that violate the golden constraint structure. The minimum separation $|i-j| > 1$ ensures the tensor product remains in the golden vector space. ∎
 
 ## Category of Golden Vectors
 
@@ -104,19 +106,30 @@ $$
 \vec{u} \oplus_\phi \vec{v} = \text{GoldenNormalize}[\vec{u} + \vec{v}]
 $$
 
-where GoldenNormalize resolves $[...,1,1,...] \to [...,1,0,0,1,...]$.
+**Definition 4.7** (GoldenNormalize Function): For a vector with consecutive 1s, the normalization applies the golden binary carry rule:
 
-**Definition 4.7** (Golden Scalar Multiplication):
+$$
+\text{GoldenNormalize}[\vec{w}] = \vec{w}'
+$$
+
+where $\vec{w}'$ is obtained by repeatedly applying:
+- If $w_i = w_{i+1} = 1$, replace with $w_i = 0, w_{i+1} = 0, w_{i+2} = 1$
+- This corresponds to the Fibonacci identity: $F_i + F_{i+1} = F_{i+2}$
+- Continue until no consecutive 1s remain
+
+This ensures the result stays in the golden vector space $\mathcal{V}_\phi$.
+
+**Definition 4.8** (Golden Scalar Multiplication):
 
 $$
 \alpha \odot_\phi \vec{v} = \text{GoldenNormalize}[\alpha \cdot \vec{v}]
 $$
 
-where $\alpha$ is a golden scalar: $\alpha = \sum_{i} a_i \phi^i$.
+where $\alpha$ is a golden scalar: $\alpha = \sum_{i} a_i \phi^i$ with $a_i \in \{0,1\}$ and $a_i \cdot a_{i+1} = 0$.
 
 ## Vector Space Basis
 
-**Theorem 4.2** (Golden Basis Completeness): The set $\{\hat{e}_i : i \geq 0\}$ forms a complete basis for $\mathcal{V}_\phi$:
+**Theorem 4.3** (Golden Basis Completeness): The set $\{\hat{e}_i : i \geq 0\}$ forms a complete basis for $\mathcal{V}_\phi$:
 
 $$
 \text{span}_\phi\{\hat{e}_i\} = \mathcal{V}_\phi
@@ -126,7 +139,7 @@ $$
 
 ## Unitless Nature
 
-**Theorem 4.3** (Unit Independence): Golden vectors are invariant under unit transformations:
+**Theorem 4.4** (Unit Independence): Golden vectors are invariant under unit transformations:
 
 $$
 \mathcal{U}[\vec{v}] = \vec{v}
@@ -182,7 +195,7 @@ preserving the golden constraint at each point.
 
 ## Linear Transformations
 
-**Theorem 4.4** (Golden Linear Maps): A linear transformation $T: \mathcal{V}_\phi \to \mathcal{V}_\phi$ is represented by a golden matrix:
+**Theorem 4.5** (Golden Linear Maps): A linear transformation $T: \mathcal{V}_\phi \to \mathcal{V}_\phi$ is represented by a golden matrix:
 
 $$
 T_{ij} = \begin{cases}
@@ -215,7 +228,7 @@ where $\mathbb{G}$ is the golden scalar field.
 
 ## Conservation in Vector Operations
 
-**Theorem 4.5** (Golden Weight Conservation): For any closed vector operation:
+**Theorem 4.6** (Golden Weight Conservation): For any closed vector operation:
 
 $$
 \sum_{\text{in}} W[\vec{v}_{\text{in}}] = \sum_{\text{out}} W[\vec{v}_{\text{out}}]
@@ -225,7 +238,7 @@ where $W[\vec{v}] = \sum_{i: b_i=1} \phi^i$.
 
 ## Infinite Dimensional Structure
 
-**Theorem 4.6** (Infinite Dimensionality): $\mathcal{V}_\phi$ is inherently infinite-dimensional:
+**Theorem 4.7** (Infinite Dimensionality): $\mathcal{V}_\phi$ is inherently infinite-dimensional:
 
 $$
 \dim(\mathcal{V}_\phi) = \aleph_0
@@ -233,12 +246,14 @@ $$
 
 This follows from the infinite golden binary representation.
 
-## Applications to Physics
+## Connection to Physical Structure
 
-The unitless golden vector space explains:
-- Why physical laws are dimensionally consistent
-- The origin of gauge invariance
-- The discrete/continuous duality of nature
+The unitless golden vector space provides the mathematical foundation for:
+- Dimensionless structural relationships that manifest as physical laws
+- The discrete (binary) nature underlying continuous phenomena
+- The self-similar patterns observed in nature
+
+Note: Specific physical applications require further derivation from the collapse dynamics established in the foundations.
 
 ## Advanced Structures
 

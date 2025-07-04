@@ -28,13 +28,15 @@ This ensures the golden constraint propagates through tensor operations.
 
 ## Encapsulation Tension
 
-**Definition 5.2** (Encapsulation Tension): The tension that drives collapse is encoded as:
+**Definition 5.2** (Encapsulation Tension): The tension emerges from the golden constraint violation tendency:
 
 $$
 \mathcal{E}^{ij} = \phi^{|i-j|} \cdot \delta(b_i \cdot b_j = 0)
 $$
 
 where $\delta$ is 1 if the golden constraint is satisfied, 0 otherwise.
+
+**Derivation**: This tensor measures the "stress" created when the system tends toward configurations that would violate the golden constraint $b_i \cdot b_{i+1} = 0$, providing the mathematical foundation for collapse dynamics.
 
 ## Vector Information Theory of Tensors
 
@@ -81,25 +83,29 @@ $$
 
 This preserves the golden constraint through contraction.
 
-## The Stress-Energy Tensor
+## Energy-Information Tensor
 
-**Definition 5.6** (Golden Stress-Energy): The fundamental tensor governing reality's energy distribution:
+**Definition 5.6** (Golden Energy-Information Tensor): Based on the information content of tensors, we define:
 
 $$
 T^{\mu\nu} = \sum_{i,j} t_{ij} \phi^{i+j} \hat{e}^\mu_i \otimes \hat{e}^\nu_j
 $$
 
-with $t_{ij} = 0$ if $|i-j| \leq 1$.
+where $t_{ij}$ represents the golden information density at tensor positions $(i,j)$, with $t_{ij} = 0$ if $|i-j| \leq 1$ (golden constraint).
 
-## Curvature Tensors
+**Note**: The connection to physical energy-momentum requires further derivation from the collapse dynamics.
 
-**Definition 5.7** (Golden Riemann Tensor): The curvature of golden space:
+## Geometric Structure from Tensors
+
+**Definition 5.7** (Golden Geometric Tensor): The geometric structure of golden tensor space:
 
 $$
-R^i_{jkl} = \partial_k \Gamma^i_{jl} - \partial_l \Gamma^i_{jk} + \Gamma^i_{mk}\Gamma^m_{jl} - \Gamma^i_{ml}\Gamma^m_{jk}
+G^i_{jkl} = \text{GoldenContract}[T^i_{jk}, T^m_{ml}] - \text{GoldenContract}[T^i_{jl}, T^m_{mk}]
 $$
 
-where all operations respect golden constraints.
+where GoldenContract respects the golden constraint $|i-j| > 1$.
+
+**Note**: This provides the foundation for geometric concepts, but the connection to physical spacetime curvature requires derivation from the collapse framework.
 
 ## Graph Structure of Tensor Networks
 
@@ -224,12 +230,14 @@ $$
 
 where each $T_x$ is a golden tensor space.
 
-## Physical Implications
+## Structural Implications
 
-Collapse tensors explain:
-- The origin of forces as tensor gradients
-- Mass-energy as tensor trace
-- Spacetime curvature as tensor geometry
+Collapse tensors provide the mathematical framework for:
+- Structural relationships that may manifest as forces
+- Information density patterns that may correspond to mass-energy
+- Geometric structures that may relate to spacetime
+
+**Note**: Specific physical correspondences require further derivation from the fundamental collapse dynamics.
 
 ## Exercises
 

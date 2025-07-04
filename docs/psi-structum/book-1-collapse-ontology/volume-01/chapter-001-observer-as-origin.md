@@ -71,23 +71,39 @@ graph LR
 
 The self-referential equation naturally generates the golden ratio $\phi$:
 
-**Theorem 1.2** (Golden Genesis): The recursive relation $\psi = \psi(\psi)$ when linearized yields:
+**Theorem 1.2** (Fixed Point Necessity): The recursive relation $\psi = \psi(\psi)$ requires a fixed point:
 
+For self-consistency, we need $\psi = \psi(\psi)$ to have a solution. Let $\psi$ represent a generative function. If we model this as $\psi: x \mapsto f(x)$ where $\psi(x) = x$, then:
+
+$$
+x = f(x)
+$$
+
+The simplest non-trivial self-referential function that exhibits growth and self-limitation is:
+
+$$
+f(x) = 1 + \frac{1}{x}
+$$
+
+This gives the fixed point equation:
 $$
 x = 1 + \frac{1}{x}
 $$
 
-which gives:
-
+Rearranging:
+$$
+x^2 = x + 1
+$$
 $$
 x^2 - x - 1 = 0
 $$
 
+The positive solution is:
 $$
 x = \frac{1 + \sqrt{5}}{2} = \phi
 $$
 
-This is why all subsequent structures will be based on the golden binary vector system.
+**Justification**: This particular form emerges because $\psi = \psi(\psi)$ requires both self-reference (the $1$) and recursive application (the $1/x$ term), making $\phi$ the fundamental scaling factor for self-referential systems.
 
 ## Graph Theory Representation
 
@@ -107,6 +123,10 @@ graph TD
 
 ## Binary Vector Foundation
 
+**Theorem 1.3** (Zeckendorf Decomposition Necessity): Since $\phi$ is the fundamental scaling factor from $\psi = \psi(\psi)$, any finite representation must use powers of $\phi$.
+
+From number theory, every positive number can be uniquely represented as a sum of non-consecutive Fibonacci numbers (Zeckendorf's theorem). Since $F_n \sim \phi^n/\sqrt{5}$, this leads to:
+
 **Definition 1.3** (Golden Binary Basis): Every observer state can be decomposed as:
 
 $$
@@ -114,9 +134,11 @@ $$
 $$
 
 where:
-- $b_i \in \{0, 1\}$ are binary coefficients
-- $\phi = \frac{1+\sqrt{5}}{2}$ is the golden ratio
-- $\hat{e}_i$ are basis vectors in the observer space
+
+- $b_i \in \{0, 1\}$ are binary coefficients with constraint $b_i \cdot b_{i+1} = 0$ (no consecutive 1s)
+- $\phi = \frac{1+\sqrt{5}}{2}$ is the fundamental scaling ratio
+- $\hat{e}_i$ are orthogonal basis vectors
+- The constraint ensures unique representation (Zeckendorf property)
 
 ## The Collapse Mechanism
 

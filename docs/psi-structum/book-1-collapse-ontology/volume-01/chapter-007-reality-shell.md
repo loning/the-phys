@@ -21,7 +21,7 @@ $$
 \mathcal{S} = \{\vec{v} \in \mathcal{V}_\phi : W[\vec{v}] = \phi^\phi \text{ and } \exists \vec{u}, \vec{w} : \vec{u} \text{ collapsed}, \vec{w} \text{ potential}\}
 $$
 
-In binary: Shell vectors have the pattern $[1,0,1,0,0,1,0,0,0,1,...]$ at criticality.
+**Note**: The specific binary pattern of shell vectors depends on the collapse dynamics and observer configuration, not an arbitrary assignment.
 
 ## Tensor Overlap Structure
 
@@ -81,10 +81,12 @@ graph TD
 **Definition 7.4** (Shell Evolution): The RealityShell evolves according to:
 
 $$
-\frac{\partial \mathcal{S}}{\partial t} = \nabla_\phi \cdot (D \nabla_\phi \rho) + \mathcal{J}_{\text{collapse}}
+\frac{\partial \mathcal{S}}{\partial t} = \mathcal{F}_\phi[\mathcal{S}] + \delta\mathcal{S}_{\text{tensor}}
 $$
 
-where $D$ is the diffusion tensor and $\mathcal{J}_{\text{collapse}}$ is the collapse current.
+where $\mathcal{F}_\phi$ is the golden flow operator and $\delta\mathcal{S}_{\text{tensor}}$ represents tensor overlap contributions.
+
+**Note**: The specific form requires derivation from the tensor overlap dynamics.
 
 ## Multi-Layer Shell Structure
 
@@ -144,7 +146,7 @@ $$
 \omega_n = \omega_0 \phi^n
 $$
 
-where $\omega_0 = [1,0,1,0,0,1,...]$ in frequency space.
+where $\omega_0$ is the fundamental frequency determined by the shell's geometric properties.
 
 ## Information Flow Through Shells
 
@@ -219,13 +221,15 @@ $$
 
 with golden metric $g_{\phi}$ inducing natural geometry.
 
-## Physical Implications
+## Structural Implications
 
-The RealityShell explains:
-- Wave function collapse location
-- Holographic principle implementation
-- Phase transition boundaries
-- Information bottlenecks in nature
+The RealityShell provides the mathematical framework for:
+- Boundary structures in golden vector space
+- Information density maximization at critical points
+- Hierarchical organization of reality states
+- Tensor projection mechanisms
+
+**Note**: Connections to physical phenomena require further derivation from the foundational principles.
 
 ## Exercises
 
