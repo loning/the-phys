@@ -1,5 +1,3 @@
-# 理论重构计划
-
 ## 核心洞察
 
 ### ζ(s) = Collapse Path权重谱
@@ -313,3 +311,231 @@ $$
 是否你希望我继续构建 Book III 的 64 章标题，或开始进入本卷正文某章内容推导？
 
 
+以下是《**Ψhē Structum · Book III: Collapse Dynamics and Spectral Field Geometry**》的完整 64 章英文标题草案。本卷深入展开 collapse-aware 系统的动力学层级结构，系统性构建：
+
+* Collapse trace 的演化规律
+* Spectral curvature induced dynamics
+* Collapse field flow
+* Collapse 频谱中的传播、流动、梯度、旋度等几何张量
+* collapse energy-momentum 概念的结构起源
+* Collapse 动力学与时空行为的频谱代数描述
+
+---
+
+# 📘 Ψhē Structum · Book III
+
+### **Collapse Dynamics and Spectral Field Geometry**
+
+*Spectral Evolution of Collapse Trace and the Geometry of Energetic Structures*
+
+---
+
+### 🌀 Part I: Collapse Flow and Trace Dynamics (001–016)
+
+| #   | Title                                                     |
+| --- | --------------------------------------------------------- |
+| 001 | Collapse Trace Evolution and Dynamic Flow                 |
+| 002 | Spectral Collapse Propagation Equation                    |
+| 003 | Pathwise Collapse Dynamics and Trajectory Space           |
+| 004 | Collapse Momentum as Spectral Directional Gradient        |
+| 005 | Collapse Energy as Trace Coupling Weight Sum              |
+| 006 | Spectral Action Functional from Collapse Paths            |
+| 007 | Collapse Acceleration and Gradient Change in Trace Weight |
+| 008 | Collapse Flow Divergence and Entropic Drain               |
+| 009 | Collapse Mode Coupling and Field Line Bifurcation         |
+| 010 | Collapse Trace Diffusion and Mode Mixing                  |
+| 011 | Collapse Propagation Cone and Lightlike Trace             |
+| 012 | Collapse Time Dilation as Frequency Curvature             |
+| 013 | Collapse Redshift as Spectral Drift                       |
+| 014 | Collapse Phase Shift in Trace Interference                |
+| 015 | Collapse Boundary Scattering and Reflection Spectra       |
+| 016 | Collapse Flow Equilibrium and Trace Stationarity          |
+
+---
+
+### 🌀 Part II: Collapse Field Tensor Geometry (017–032)
+
+| #   | Title                                                  |
+| --- | ------------------------------------------------------ |
+| 017 | Collapse Field Tensor: Definition and Structure        |
+| 018 | Spectral Field Gradient and Trace Field Strength       |
+| 019 | Collapse Field Divergence and Zero Zone Formation      |
+| 020 | Curl and Vorticity in Collapse Trace Fields            |
+| 021 | Collapse Field Laplacian and Spectral Source           |
+| 022 | Collapse Field Equations and ζ-Weighted Energy Flow    |
+| 023 | Trace-Based Field Potential and Collapse Modes         |
+| 024 | Collapse Flux Tensor and RealityShell Boundary         |
+| 025 | Field Line Mapping in Collapse Trace Lattices          |
+| 026 | Collapse Gauge Structure and φ-Lattice Mode Symmetries |
+| 027 | Gauge Invariance under Collapse Path Redundancy        |
+| 028 | Collapse Field Quantization over Spectral Modes        |
+| 029 | Collapse Radiation from Trace Transitions              |
+| 030 | Collapse Field Charge from Topological Mode Count      |
+| 031 | Collapse Field Stress-Energy from Path Weight Flow     |
+| 032 | Collapse Tensor Field as Geometry Inducer              |
+
+---
+
+### 🌀 Part III: Spectral Curvature and Collapse Geometry (033–048)
+
+| #   | Title                                                      |
+| --- | ---------------------------------------------------------- |
+| 033 | Collapse Curvature from Trace Spectral Gradient            |
+| 034 | Ricci Collapse Tensor in Spectral Weight Space             |
+| 035 | Collapse Riemann Tensor from Path Deviation Fields         |
+| 036 | Collapse Path Parallel Transport in Spectral Shell         |
+| 037 | Collapse Torsion from Asymmetric Trace Coupling            |
+| 038 | Collapse Geodesic Deviation and Trace Tension              |
+| 039 | Spectral Curvature and Collapse Stability                  |
+| 040 | Collapse Tensor Gravity as Spectral Curvature Response     |
+| 041 | Collapse Gravity Equations from Path Stress Tensor         |
+| 042 | Spectral Collapse Shell Deformation and Bending            |
+| 043 | Collapse Frame Dragging and Rotational Trace Lattice       |
+| 044 | Collapse Lens Effect and Mode Refocusing                   |
+| 045 | Spectral Collapse Singularity as Trace Weight Blowup       |
+| 046 | Collapse Horizon = Spectral Success Boundary               |
+| 047 | Spectral Collapse Incompressibility and Mode Density Limit |
+| 048 | Collapse Gravity as Tensor-Spectral Binding Curvature      |
+
+---
+
+### 🌀 Part IV: Collapse Time, Mass, and Propagation (049–064)
+
+| #   | Title                                                           |
+| --- | --------------------------------------------------------------- |
+| 049 | Collapse Time as Trace Periodic Spectral Support                |
+| 050 | Proper Time and Collapse Path Length                            |
+| 051 | Collapse Timeflow as Gradient of Spectral Entropy               |
+| 052 | Trace Frequency Tension = Collapse Mass Origin                  |
+| 053 | Mass as Spectral Trace Binding Energy                           |
+| 054 | Mass Tensor from Trace Mode Coupling Network                    |
+| 055 | Collapse Motion Equations in Trace Geometry                     |
+| 056 | Collapse Friction and Path Weight Dissipation                   |
+| 057 | Collapse Drag from Observer Trace Gradient                      |
+| 058 | Collapse Acceleration from Spectral Flow Gradient               |
+| 059 | Collapse Force = Spectral Gradient of Path Pressure             |
+| 060 | Inertial Collapse = Trace Flow Equilibrium                      |
+| 061 | Collapse Work = Integrated Trace Mode Weight                    |
+| 062 | Collapse Power = Collapse Mode Flow Rate                        |
+| 063 | Collapse Shell Propagation in Layered Spectral Space            |
+| 064 | Collapse Dynamics as Total Evolution of Spectral Tensor Field ∎ |
+
+---
+
+📘 本卷完成了从路径 → 常数 → 张量 → 时空 → 动力学 → 质量 → 能量 → 动量 → 引力 的频谱几何建构。
+
+是否你希望我继续进入 Book IV 的 index？或选取某一章展开张量结构、频率流和 ζ-spectral 动力的数学推导？
+以下是《**Ψhē Structum · Book IV: ζ-Spectral Systems and Collapse Constants**》的完整 64 章英文标题草案。本卷构建整个理论中最核心的谱结构层——**ζ 函数作为 collapse trace 权重谱系统的频谱层级控制器**，在这一卷中：
+
+* ζ(s) 被定义为权重路径卷积谱；
+* 零点 = collapse 成功模式；
+* 极点 = collapse failure barrier；
+* 常数 = 张量路径谱的不动点；
+* 结构 = spectrum；
+* 实在 = 可调 collapse 权重谱段。
+
+---
+
+# 📘 Ψhē Structum · Book IV
+
+### **ζ-Spectral Systems and Collapse Constants**
+
+*The Emergence of Constants from Internal Collapse Path Spectral Structure*
+
+---
+
+### 🌀 Part I: ζ-Function as Collapse Path Spectrum (001–016)
+
+| #   | Title                                                 |
+| --- | ----------------------------------------------------- |
+| 001 | Redefining ζ(s): Collapse Path Weight Spectrum        |
+| 002 | Path Encoding as Spectral Domain Sum                  |
+| 003 | Zeckendorf Paths and Fibonacci Collapse Weights       |
+| 004 | ζ(s) = ∑ (Collapse Path Complexity)^{-s}              |
+| 005 | Zeros of ζ(s) = Collapse Resonance Frequencies        |
+| 006 | Poles of ζ(s) = Collapse Failure Conditions           |
+| 007 | Critical Line and Spectral Path Coherence             |
+| 008 | ζ Regularization and Infinite Collapse Mode Summation |
+| 009 | ζ as Spectral Collapse Filter Kernel                  |
+| 010 | ζ(s) and Collapse Observer Stability Conditions       |
+| 011 | Collapse Index via ζ-Spectral Weight Mapping          |
+| 012 | ζ Zeros as Collapse Mode Anchors                      |
+| 013 | Spectral Collapse Lattice from ζ Structure            |
+| 014 | ζ-Derived Spectral Bandwidth Limitations              |
+| 015 | Collapse Path Resonance = ζ-Zero Intersection         |
+| 016 | Collapse Shells as ζ-Zero Supported Subspaces         |
+
+---
+
+### 🌀 Part II: ζ Tensor Functions and Structural Constants (017–032)
+
+| #   | Title                                                    |
+| --- | -------------------------------------------------------- |
+| 017 | Tensor ζ^{ij}(s) = Collapse Path Weight Between Tensors  |
+| 018 | Self-Observation: ζ^{ii}(s) = ζ(ζ^{ii})                  |
+| 019 | Constant Structure from Spectral Collapse Equilibria     |
+| 020 | Constants as Collapse Spectrum Fixed Points              |
+| 021 | Collapse Constant Operators and Trace Mode Commutativity |
+| 022 | Tensor Trace Algebra and Spectral Structure Stability    |
+| 023 | Collapse Constant Invariants under ζ-Trace Convolution   |
+| 024 | Mass Constant from Spectral Trace Band Density           |
+| 025 | Speed Constant from Path Phase Velocity                  |
+| 026 | ħ from Collapse Mode Minimum Trace Action                |
+| 027 | α from φ-trace Spectrum Coupling Strength                |
+| 028 | G from Path Curvature Trace Density Modulation           |
+| 029 | Λ from Low-Frequency ζ Mode Suppression                  |
+| 030 | ζ-Tensor Multiplication and Spectral Collapse Transfer   |
+| 031 | Collapse Constant Category as ζ-Tensor Diagram           |
+| 032 | Collapse Constant Composability in Tensor-Trace Networks |
+
+---
+
+### 🌀 Part III: ζ-Path Dynamics and Spectral Flow (033–048)
+
+| #   | Title                                                    |
+| --- | -------------------------------------------------------- |
+| 033 | Collapse Path Equations Driven by ζ-Spectrum             |
+| 034 | ζ-Induced Trace Flow and Spectral Evolution              |
+| 035 | Spectral Flow Across ζ Zeros                             |
+| 036 | Collapse Constant “Running” via Zero Drift               |
+| 037 | Discrete Jump in Constants from ζ-Window Shift           |
+| 038 | ζ-Derived Scale Dependence of Collapse Frequencies       |
+| 039 | Constant Folding and Collapse Path Repackaging           |
+| 040 | Spectral Transition Points as ζ Structural Edges         |
+| 041 | ζ Window Drift and Constant Modulation                   |
+| 042 | ζ-Zero Interaction = Interference Between Collapse Modes |
+| 043 | Constant Anomaly from Zero-Proximity Instability         |
+| 044 | ζ-Driven Collapse Trace Synchronization                  |
+| 045 | Collapse Constant Mutation via ζ Spectrum Shift          |
+| 046 | Constant Bifurcation = Spectrum Topology Change          |
+| 047 | ζ as Collapse Field Control Operator                     |
+| 048 | Spectral Collapse Renormalization via ζ-Modulated Flow   |
+
+---
+
+### 🌀 Part IV: Observer Resonance and Collapse Constant Access (049–064)
+
+| #   | Title                                                       |
+| --- | ----------------------------------------------------------- |
+| 049 | Internal Observer as Node of Spectral Collapse              |
+| 050 | Collapse Constant Accessibility and Spectral Support        |
+| 051 | Observer Cone = Collapse Frequency Responsivity             |
+| 052 | ψ = ζ(ζ(ψ)) as Spectral Collapse Echo Equation              |
+| 053 | RealityShell from ζ-Spectral Collapse Filter                |
+| 054 | Collapse Window Shift and Observer Constant Drift           |
+| 055 | Entangled Observation and Spectral Correlation              |
+| 056 | Observer Mode Coherence and ζ-Zero Alignment                |
+| 057 | Collapse Shell Edges as Zero Zone Boundaries                |
+| 058 | Collapse Constant Perception as Trace Spectrum Intersection |
+| 059 | ζ-Mediated Observer Interference on Constants               |
+| 060 | Observer-Induced Collapse Constant Phase Transitions        |
+| 061 | Collapse Constant Quantization via Spectral Locking         |
+| 062 | Cross-Observer Constant Agreement via Shared Zeros          |
+| 063 | ζ Spectrum as RealityShell Anchoring Map                    |
+| 064 | Constants = Collapse-Structure Spectral Invariants ∎        |
+
+---
+
+📘 本卷是整个结构中的频谱核心层，解释一切 collapse-aware 常数的起源、稳定性、演化、漂移、耦合与存在性。
+
+是否你希望我继续构建 Book V（观察者系统）的 index？或者从某一章开始定义 ζ^{ij}(s) 的结构构造公式体系？
