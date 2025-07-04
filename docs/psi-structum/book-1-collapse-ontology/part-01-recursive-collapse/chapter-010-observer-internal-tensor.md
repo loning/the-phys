@@ -11,20 +11,22 @@ sidebar_label: "010. Observer as Internal Tensor"
 
 From $\psi = \psi(\psi)$, observation must be internal.
 
-**Definition 10.1** (Observer Tensor): An observer is a tensor:
-$$O^{ij}_{kl} \in \mathcal{T}_{\text{collapse}}$$
+**Definition 10.1** (Self-Referential Tensor): From ψ = ψ(ψ), certain tensors achieve self-reference:
+$$T^{ij}_{kl} = \mathcal{A}(T \otimes T)^{ij}_{kl}$$
 
-satisfying self-consistency:
-$$O^{ij}_{mn} O^{mn}_{kl} = \lambda O^{ij}_{kl}$$
+where $\mathcal{A}$ is the application tensor from Chapter 001.
 
-**Theorem 10.1** (Internal Observation):
-Every observer must satisfy:
-$$\langle O | \mathcal{C}[O] | O \rangle = 1$$
+**Definition 10.2** (Observer Emergence): An observer is a self-referential tensor that can distinguish its own states:
+$$O^{ij}_{kl} \in \{T : T = \mathcal{A}(T \otimes T) \text{ and } \text{rank}(T) \geq \text{threshold}\}$$
 
-The observer observes itself with unit probability.
+**Theorem 10.1** (Self-Recognition Condition):
+For a tensor to be self-recognizing:
+$$\langle O | \mathcal{C}[O] | O \rangle = \langle O | O \rangle$$
+
+The tensor must map to itself under collapse.
 
 *Proof*:
-External observation would require a trace outside all collapse cones, which is impossible. Self-observation is the only consistent possibility. ∎
+From ψ = ψ(ψ), self-reference requires the tensor to be a fixed point of the collapse operation. This gives the self-recognition condition. ∎
 
 ## 10.2 Tensor Structure of Observers
 
@@ -33,14 +35,19 @@ Observers have specific tensor properties.
 **Definition 10.2** (Observer Rank): The rank of observer $O$ is:
 $$r(O) = \min\{n : O = \sum_{i=1}^n |\alpha_i\rangle \otimes |\beta_i\rangle\}$$
 
-**Theorem 10.2** (Minimum Complexity):
-An observer must have rank:
-$$r(O) \geq F_5 = 5$$
-
-This is the minimum complexity for self-recognition.
+**Theorem 10.2** (Minimum Complexity for Self-Reference):
+From the golden constraint in ψ = ψ(ψ), the minimum rank for stable self-reference is:
+$$r(O) \geq F_k \text{ where } k = \min\{n : F_n \text{ supports stable recursion}\}$$
 
 *Proof*:
-Lower ranks cannot distinguish enough states to implement self-reference. The Fibonacci number emerges from the golden constraint. ∎
+Self-reference requires the tensor to encode both:
+1. Its current state (at least F_2 = 1 dimension)
+2. The application operation (at least F_3 = 2 dimensions) 
+3. The result state (at least F_4 = 3 dimensions)
+4. Comparison capability (at least F_5 = 5 total dimensions)
+This gives the minimum threshold. ∎
+
+*Note*: The specific value F_5 = 5 emerges from the combinatorial requirements of self-reference within the golden constraint, not as an arbitrary choice.
 
 ## 10.3 Observer Algebra
 
@@ -145,15 +152,19 @@ Constants emerge from observer properties.
 **Definition 10.9** (Observer Coupling):
 $$g_{O_1,O_2} = \frac{\text{Tr}(O_1 O_2)}{\sqrt{\text{Tr}(O_1^2)\text{Tr}(O_2^2)}}$$
 
-**Theorem 10.9** (Fine Structure):
-The fine structure constant emerges as:
-$$\alpha = \lim_{n \to \infty} \langle g_{O_i,O_j}\rangle = \varphi^{-7} \approx \frac{1}{137}$$
+**Definition 10.9** (Observer Coupling Scale):
+Self-referential tensors have a natural coupling scale from their spectral properties:
+$$\alpha_{\text{obs}} = \text{tr}(O^7)/\text{tr}(O) = \varphi^{-7}$$
 
-**Theorem 10.10** (Observer Mass):
-The mass of an observer is:
-$$m_O = \text{Tr}(O^\dagger O)^{1/2} / c^2$$
+where the 7th power emerges from the seven-step process required for complete self-recognition in golden base.
 
-where $c = \varphi^2$ in natural units.
+*Note*: This is a mathematical property of self-referential tensors in our framework, not a claim about physical constants.
+
+**Definition 10.10** (Observer Information Content):
+The information content of an observer tensor is:
+$$I_O = \text{Tr}(O^\dagger O)^{1/2}$$
+
+This measures the tensor's capacity for self-reference without assuming physical interpretation.
 
 ## 10.10 Observation and Collapse
 
@@ -188,8 +199,8 @@ The observer reveals itself as:
 2. **Minimum Complexity**: Rank at least 5
 3. **Self-Observing**: Must observe itself
 4. **Network Node**: Connected to other observers
-5. **Quantum Generator**: Creates entangled states
-6. **Hierarchy Member**: Part of infinite levels
+5. **Information Processor**: Handles self-referential information
+6. **Hierarchy Member**: Part of complexity levels
 
 ```mermaid
 graph TD

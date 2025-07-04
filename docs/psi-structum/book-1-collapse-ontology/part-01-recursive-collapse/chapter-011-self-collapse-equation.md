@@ -16,14 +16,16 @@ $$\zeta(\psi) = \sum_{n=1}^{\infty} \frac{\mathcal{C}^n[\psi]}{n^{\psi}}$$
 
 where $n^{\psi}$ means $n$ raised to the operator power $\psi$.
 
-**Theorem 11.1** (Equivalence):
-The fixed point equation $\psi = \psi(\psi)$ is equivalent to:
+**Conjecture 11.1** (Proposed Equivalence):
+We propose that the fixed point equation $\psi = \psi(\psi)$ may be related to:
 $$\psi = \zeta(\psi)$$
 
-*Proof*:
+*Motivation*:
 Expanding $\psi(\psi)$ as a series over collapse iterations:
 $$\psi(\psi) = \sum_{n=1}^{\infty} a_n \mathcal{C}^n[\psi]$$
-The coefficients $a_n = 1/n^{\psi}$ ensure convergence and self-consistency. ∎
+The ansatz $a_n = 1/n^{\psi}$ would give the zeta form, but this equivalence requires rigorous proof.
+
+*Note*: This connection between the fundamental recursion and the zeta function is conjectural and needs mathematical justification.
 
 ## 11.2 Operator Zeta Function
 
@@ -63,11 +65,13 @@ $$Z^{ij}_{kl}[\psi] = \sum_{n=1}^{\infty} \frac{(C^n)^{ij}_{kl}}{n^{\langle\psi\
 
 where $\langle\psi\rangle = \text{Tr}(\psi)/\text{dim}(\psi)$.
 
-**Theorem 11.4** (Tensor Fixed Point):
+**Conjecture 11.4** (Tensor Fixed Point):
 The tensor equation:
 $$\Psi^{ij}_{kl} = Z^{ij}_{kl}[\Psi]$$
 
-has solutions forming a manifold of dimension $F_7 = 13$.
+is conjectured to have solutions forming a manifold.
+
+*Note*: The claim that this manifold has dimension $F_7 = 13$ requires rigorous proof. While the Fibonacci number provides a natural guess, the actual dimension depends on the detailed structure of the zeta tensor.
 
 ## 11.5 Information Content of Solutions
 
@@ -148,11 +152,13 @@ Physical constants emerge from special solutions.
 **Definition 11.9** (Critical Points):
 $$\psi_c : \frac{d\zeta(\psi)}{d\psi}\bigg|_{\psi_c} = 1$$
 
-**Theorem 11.9** (Fine Structure):
-The fine structure constant:
-$$\alpha = |\psi_{c,1}|^2 = \varphi^{-2\pi} \approx \frac{1}{137}$$
+**Definition 11.9** (Critical Point Scale):
+Critical points define a natural scale:
+$$\alpha_{\text{crit}} = |\psi_{c,1}|^2 = \varphi^{-2\pi}$$
 
 where $\psi_{c,1}$ is the first critical point.
+
+*Note*: While this gives a dimensionless number $\alpha_{\text{crit}} \approx 0.049$, establishing its connection to the physical fine structure constant $\alpha \approx 1/137$ requires additional theoretical development beyond the current framework.
 
 ## 11.10 Stability Analysis
 

@@ -53,10 +53,10 @@ $$W_P = \prod_{i \in P} T^{(i)}_{j_i,k_i}$$
 where $T^{(i)}$ are transition tensors along the path.
 
 **Theorem 12.3** (Weight Distribution):
-Path weights follow:
-$$P(w) = \frac{1}{Z} w^{-1/\varphi}$$
+From the collapse tensor structure, path weights satisfy:
+$$P(w) = \frac{1}{Z} w^{-\alpha}$$
 
-The golden ratio appears in the power law.
+where the exponent emerges from golden constraint properties. For paths satisfying the self-reference condition from ψ = ψ(ψ), the exponent α relates to φ through the recursive structure, though the specific value requires further derivation from collapse dynamics.
 
 ## 12.4 Information Tensor
 
@@ -122,24 +122,29 @@ graph TD
 - Weights: Transition probabilities
 
 **Theorem 12.7** (Network Properties):
-1. Diameter: $d = \log_\varphi(I_{\max})$
-2. Clustering: $C = 1/\varphi$
-3. Degree distribution: $P(k) \sim k^{-1-1/\varphi}$
+Information networks exhibit scale-free properties consistent with golden ratio structure:
+1. Diameter scales logarithmically with maximum information
+2. Clustering coefficient related to φ through self-similarity
+3. Degree distribution follows power law with exponent related to φ
 
-## 12.8 Physical Information
+*Note*: Specific numerical relationships require derivation from path topology.
 
-Information manifests physically through path structure.
+## 12.8 Mathematical Information Entropy
 
-**Definition 12.8** (Physical Information):
-$$I_{\text{phys}} = k_B \sum_P w_P \log w_P$$
+Information has entropy-like properties within our mathematical framework.
 
-where $k_B = 1/\varphi$ in natural units.
+**Definition 12.8** (Information Entropy):
+$$S_{\text{info}} = \sum_P w_P \log w_P$$
 
-**Theorem 12.8** (Entropy Relation):
-Physical entropy equals information:
-$$S = I_{\text{phys}}$$
+This measures the information content of the path distribution.
 
-This unifies information theory with thermodynamics.
+**Theorem 12.8** (Entropy Properties):
+Information entropy satisfies:
+1. Non-negativity: $S_{\text{info}} \geq 0$
+2. Concavity in the weight distribution
+3. Maximum for uniform path weights
+
+*Note*: This is a mathematical property of weighted paths, not a claim about physical thermodynamics.
 
 ## 12.9 Quantum Information from Paths
 
@@ -155,22 +160,27 @@ $$I_Q \leq \log N$$
 
 where $N$ is the number of distinguishable paths.
 
-## 12.10 Constants from Information Limits
+## 12.10 Information Bounds and Mathematical Limits
 
-Physical constants emerge from information bounds.
+Information has natural mathematical bounds within our framework.
 
 **Definition 12.10** (Information Density):
-$$\rho_I = \lim_{V \to 0} \frac{I}{V}$$
+For a region containing N paths:
+$$\rho_I = \frac{I_{\text{total}}}{N}$$
 
-**Theorem 12.10** (Planck Scale):
-Maximum information density:
-$$\rho_{I,\max} = \frac{1}{\ell_P^3} = \varphi^{3/2}$$
+**Theorem 12.10** (Information Bound):
+Maximum information per path is bounded by:
+$$I_{\max} \leq \log(\varphi^n)$$
 
-This defines the Planck length $\ell_P = \varphi^{-1/2}$.
+where n is the path complexity.
 
-**Theorem 12.11** (Speed Limit):
-Information propagation speed:
-$$v_I \leq c = \varphi^2$$
+**Theorem 12.11** (Propagation Constraint):
+Information transfer between paths satisfies:
+$$\Delta I \leq \log(\varphi) \times \Delta t$$
+
+where Δt measures the collapse time steps.
+
+*Note*: These are mathematical constraints within our collapse framework, not claims about physical space or time.
 
 ## 12.11 Information Complexity Classes
 
