@@ -98,7 +98,7 @@ graph TD
 The mode graph is:
 1. Connected
 2. Has chromatic number $\chi = 3$
-3. Has fractal dimension $d_f = \log(3)/\log(\varphi) \approx 2.48$
+3. Has fractal dimension $d_f = \log(3)/\log(\varphi) \approx 2.28$
 
 ## 3.6 Category of Spectral Supports
 

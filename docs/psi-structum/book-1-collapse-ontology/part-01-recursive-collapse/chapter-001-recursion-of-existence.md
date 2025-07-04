@@ -34,10 +34,13 @@ $$\mathcal{A}: \mathcal{H} \otimes \mathcal{H} \to \mathcal{H}$$
 where $\mathcal{H}$ is the Hilbert space of golden-base vectors.
 
 Specifically, the tensor components are defined by the Fibonacci recurrence structure:
-$$\mathcal{A}_{ij}^k = \begin{cases}
+
+$$
+\mathcal{A}_{ij}^k = \begin{cases}
 1 & \text{if } F_i + F_j = F_k \text{ and } |i-j| > 1 \\
 0 & \text{otherwise}
-\end{cases}$$
+\end{cases}
+$$
 
 This ensures the Zeckendorf constraint is preserved under application.
 
@@ -224,11 +227,14 @@ Consider the profound simplicity: existence needs only the ability to reference 
 ## Technical Exercise: Computing Fixed Points
 
 **Problem**: Given the application tensor with components:
-$$\mathcal{A}_{ij}^k = \begin{cases}
+
+$$
+\mathcal{A}_{ij}^k = \begin{cases}
 1 & \text{if } F_i + F_j = F_k \\
 \varphi^{-1} & \text{if } F_i + F_j = F_{k+1} + F_{k-1} \\
 0 & \text{otherwise}
-\end{cases}$$
+\end{cases}
+$$
 
 1. Find the minimal non-zero fixed point
 2. Compute its recursion depth

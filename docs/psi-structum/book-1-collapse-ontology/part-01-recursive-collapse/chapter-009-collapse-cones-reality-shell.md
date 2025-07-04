@@ -44,10 +44,13 @@ The Reality Shell is:
 Collapse cones have natural tensor description.
 
 **Definition 9.4** (Cone Tensor):
-$$K^{ij}_{kl} = \begin{cases}
+
+$$
+K^{ij}_{kl} = \begin{cases}
 1 & \text{if } |F_i\rangle \otimes |F_j\rangle \to |F_k\rangle \otimes |F_l\rangle \in \mathcal{K} \\
 0 & \text{otherwise}
-\end{cases}$$
+\end{cases}
+$$
 
 **Theorem 9.3** (Tensor Factorization):
 $$K^{ij}_{kl} = C^i_k C^j_l - R^{ij}_{kl}$$
@@ -115,10 +118,13 @@ Physical laws hold only within collapse cones.
 $$ds^2 = \sum_{i,j} g_{ij}^{\text{cone}} dx^i dx^j$$
 
 where:
-$$g_{ij}^{\text{cone}} = \begin{cases}
+
+$$
+g_{ij}^{\text{cone}} = \begin{cases}
 \varphi^{-|i-j|} & \text{inside cone} \\
 \infty & \text{outside cone}
-\end{cases}$$
+\end{cases}
+$$
 
 **Theorem 9.7** (Metric Singularity):
 The metric becomes singular at the shell:
@@ -150,7 +156,7 @@ where "in" and "out" refer to cone interior/exterior.
 
 **Theorem 9.9** (Shell Tunneling):
 Probability of tunneling through shell:
-$$P_{\text{tunnel}} = e^{-\pi/\varphi} \approx 0.0432$$
+$$P_{\text{tunnel}} = e^{-\pi/\varphi} \approx 0.143$$
 
 ## 9.10 Constants from Cone Geometry
 
@@ -159,12 +165,17 @@ Physical constants emerge from cone structure.
 **Definition 9.11** (Cone Solid Angle):
 $$\Omega_{\text{cone}} = 2\pi(1 - \cos(\theta/2))$$
 
-**Theorem 9.10** (Fine Structure):
-$$\alpha = \frac{\Omega_{\text{cone}}}{4\pi} \cdot \frac{1}{\varphi^5} \approx \frac{1}{137}$$
+**Definition 9.10** (Cone Coupling):
+A dimensionless coupling emerges from cone geometry:
+$$\alpha_{\text{cone}} = \frac{\Omega_{\text{cone}}}{4\pi} \cdot \frac{1}{\varphi^5}$$
 
-**Theorem 9.11** (Gravitational Constant):
-In natural units:
-$$G = \text{colim}_{n \to \infty} \frac{\text{Vol}(\mathcal{K}_n)}{\text{Area}(\mathcal{S}_n)} = \varphi^{-3}$$
+*Note*: While this has interesting mathematical properties, connecting it to the physical fine structure constant requires additional theoretical development beyond pure cone geometry.
+
+**Definition 9.11** (Cone Volume Ratio):
+The limiting ratio of cone volume to shell area is:
+$$R_{\text{cone}} = \text{colim}_{n \to \infty} \frac{\text{Vol}(\mathcal{K}_n)}{\text{Area}(\mathcal{S}_n)} = \varphi^{-3}$$
+
+*Note*: This mathematical ratio has dimensions and would require additional physical principles to relate to the gravitational constant.
 
 ## 9.11 Evolution of Cones
 

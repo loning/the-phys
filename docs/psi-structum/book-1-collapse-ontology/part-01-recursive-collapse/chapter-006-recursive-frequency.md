@@ -61,7 +61,7 @@ The collapse operator acts specifically in frequency space.
 **Definition 6.5** (Frequency Collapse):
 $$\mathcal{C}_\omega[|\omega\rangle] = \sum_{k,l} C^{kl} f_k f_l |F_{k+l}\rangle$$
 
-where indices add according to Fibonacci rules: $F_k \cdot F_l = F_{k+l-1} + F_{k+l-3}$.
+where indices combine according to collapse tensor structure.
 
 **Theorem 6.4** (Frequency Evolution):
 Under collapse, frequencies evolve as:
@@ -226,7 +226,7 @@ Calculate:
 4. Whether they can resonate
 5. The emergent time scale
 
-*Hint*: Use Fibonacci identities like $F_m F_n = F_{m+n-1} + F_{m-1}F_{n-1}$.
+*Hint*: Use the collapse tensor structure and Zeckendorf constraint.
 
 ## The Sixth Echo
 

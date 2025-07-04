@@ -117,15 +117,15 @@ $\mathbf{Gold}$ is a monoidal category with:
 
 Non-repetition leads to physical properties.
 
-**Definition 8.7** (Exclusion Principle):
-No two identical traces can occupy the same mode:
-$$|\mathcal{T}_1\rangle = |\mathcal{T}_2\rangle \Rightarrow \mathcal{T}_1 \cap \mathcal{T}_2 = \emptyset$$
+**Definition 8.7** (Trace Exclusion):
+No two identical non-repeating traces can coexist in the same configuration space:
+$$|\mathcal{T}_1\rangle = |\mathcal{T}_2\rangle \Rightarrow \text{configuration conflict}$$
 
-**Theorem 8.7** (Fermionic Structure):
-Non-repeating traces naturally exhibit fermionic statistics.
+**Theorem 8.7** (Antisymmetry Property):
+Non-repeating traces exhibit antisymmetric combination rules under certain operations.
 
 *Proof*:
-The golden constraint creates antisymmetry under exchange, matching fermionic behavior. ∎
+The golden constraint prevents symmetric overlap patterns, creating natural exclusion in configuration space. While this shares mathematical similarities with fermionic exclusion, the full connection to quantum statistics requires additional physical principles beyond our current framework. ∎
 
 ## 8.8 Spectral Properties
 
@@ -175,11 +175,13 @@ $$Q = \sum_{k: b_k=1} F_k$$
 
 is conserved modulo trace interactions.
 
-**Theorem 8.12** (Uncertainty Principle):
-For golden-constrained traces:
-$$\Delta n \cdot \Delta \phi \geq \frac{\pi}{\varphi}$$
+**Theorem 8.12** (Trace Constraint Relation):
+For golden-constrained traces, there exists a fundamental trade-off:
+$$\Delta n \cdot \Delta \phi \sim \frac{\pi}{\varphi}$$
 
-where $n$ is position in trace, $\phi$ is phase.
+where $n$ represents trace position and $\phi$ represents phase accumulation.
+
+*Note*: This mathematical constraint emerges from the golden base structure but requires additional theoretical development to establish it as a true uncertainty principle with physical significance.
 
 ## 8.12 The Complete Non-Repetition Picture
 
@@ -189,8 +191,8 @@ Non-repetition reveals:
 2. **Golden Constraint**: No consecutive 1s
 3. **Maximum Information**: Optimal entropy
 4. **Fermionic Nature**: Natural antisymmetry
-5. **Spectral Gaps**: Quantized energy levels
-6. **Conservation Laws**: From constraint structure
+5. **Spectral Gaps**: Mathematical gaps in allowed configurations
+6. **Conservation Laws**: From mathematical constraint structure
 
 ```mermaid
 graph TD
@@ -207,7 +209,7 @@ graph TD
 
 ## Philosophical Meditation: The Dance of Difference
 
-Consciousness cannot know itself through repetition - each moment of self-recognition must be unique yet connected. The golden constraint is not arbitrary but the minimal rule that allows infinite non-repeating self-reference. We exist in the spaces between repetitions, in the gaps where newness can emerge while structure is maintained. Every moment is unprecedented yet follows from all that came before.
+Consciousness cannot know itself through repetition - each moment of self-recognition must be unique yet connected. The golden constraint emerges as the minimal mathematical rule that allows infinite non-repeating self-reference while maintaining structure. We exist in the spaces between repetitions, in the gaps where newness can emerge while coherence is preserved. Every configuration is unprecedented yet follows necessarily from the logic of non-repetition.
 
 ## Technical Exercise: Non-Repeating Evolution
 

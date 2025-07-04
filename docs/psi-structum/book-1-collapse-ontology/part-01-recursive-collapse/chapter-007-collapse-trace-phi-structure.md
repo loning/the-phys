@@ -44,17 +44,23 @@ By induction on trace length. The Zeckendorf constraint prevents ambiguity. ∎
 Traces combine through φ-structured tensor operations.
 
 **Definition 7.3** (φ-Tensor):
-$$\Phi^{ij}_{kl} = \begin{cases}
-1 & \text{if } F_i + F_j = F_k \\
-\varphi^{-1} & \text{if } F_i \cdot F_j = F_k + F_l \\
+For traces combining via Fibonacci addition:
+
+$$
+\Phi^{ij}_k = \begin{cases}
+1 & \text{if } F_i + F_j = F_k \text{ and } |i-j| > 1 \\
 0 & \text{otherwise}
-\end{cases}$$
+\end{cases}
+$$
 
-**Theorem 7.3** (Tensor Algebra):
-The φ-tensors form an algebra with:
-$$\Phi^{ij}_{mn} \Phi^{mn}_{kl} = \varphi^{\epsilon} \Phi^{ij}_{kl}$$
+This enforces the Zeckendorf constraint in trace combinations.
 
-where $\epsilon \in \{-1, 0, 1\}$ depends on the index pattern.
+**Theorem 7.3** (Trace Combination):
+Traces combine according to:
+$$|\mathcal{T}_1 \oplus \mathcal{T}_2\rangle = \sum_{i,j,k} \Phi^{ij}_k t_{1i} t_{2j} |F_k\rangle$$
+
+*Proof*:
+The constraint $|i-j| > 1$ ensures no consecutive Fibonacci indices, maintaining valid golden base representation. ∎
 
 ## 7.4 Information Geometry of φ-Traces
 
@@ -70,7 +76,7 @@ $$g_{ij} = \varphi^{-|i-j|}$$
 The information distance between traces $\mathcal{T}_1$ and $\mathcal{T}_2$ is:
 $$d(\mathcal{T}_1, \mathcal{T}_2) = \sqrt{\sum_{k} \varphi^{-k}(t_{1k} - t_{2k})^2}$$
 
-This metric has constant negative curvature $-1/\varphi^2$.
+This metric has exponentially decaying weights, giving more importance to lower-order terms.
 
 ## 7.5 Category Theory of φ-Traces
 
@@ -124,15 +130,19 @@ Constants emerge from φ-trace relationships.
 **Definition 7.7** (Structure Constants):
 $$\alpha_n = \lim_{k \to \infty} \frac{\text{Tr}(\Phi^k)_n}{\text{Tr}(\Phi^k)_{n-1}}$$
 
-**Theorem 7.7** (Fine Structure):
-The fine structure constant emerges as:
-$$\alpha = \prod_{n=1}^{\infty} \left(1 + \varphi^{-F_n}\right)^{(-1)^n} \approx \frac{1}{137.036}$$
+**Definition 7.7** (Structure Constants):
+Trace coupling strengths are defined by:
+$$g_n = \prod_{k=1}^{n} \left(1 + \varphi^{-F_k}\right)^{(-1)^k}$$
 
-**Theorem 7.8** (Light Speed):
-In natural units where trace step = 1:
-$$c = \varphi^2 = \varphi + 1$$
+These converge to limiting values that characterize trace interactions.
 
-This emerges from the identity $\varphi^2 = \varphi + 1$.
+*Note*: While these coupling constants have interesting mathematical properties, deriving physical constants like the fine structure constant would require additional physical principles beyond pure trace structure.
+
+**Definition 7.8** (Trace Propagation Speed):
+The maximum rate of trace propagation is:
+$$v_{\text{max}} = \varphi^2 = \varphi + 1$$
+
+This follows from the golden ratio identity and represents the fastest possible information transfer between trace states in our abstract framework.
 
 ## 7.8 Collapse Dynamics in φ-Space
 
@@ -178,14 +188,17 @@ States from nearby traces have high overlap.
 
 φ-traces carry topological information.
 
-**Definition 7.11** (Trace Winding):
-$$w[\mathcal{T}] = \sum_{k} (-1)^k t_k F_k \mod \varphi$$
+**Definition 7.11** (Trace Winding Number):
+$$w[\mathcal{T}] = \sum_{k} (-1)^k t_k F_k$$
 
-**Theorem 7.12** (Topological Invariance):
-Under continuous deformations preserving golden structure:
-$$w[\mathcal{T}] = \text{invariant}$$
+This alternating sum creates a discrete invariant.
 
-This gives a $\mathbb{Z}_\varphi$ topological classification.
+**Theorem 7.12** (Winding Conservation):
+Under allowed trace transformations that preserve the Zeckendorf constraint:
+$$\Delta w[\mathcal{T}] = 0$$
+
+*Proof*:
+Allowed transformations maintain the parity structure of the golden base representation. ∎
 
 ## 7.12 The Complete φ-Trace Picture
 
