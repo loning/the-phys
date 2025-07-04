@@ -133,13 +133,16 @@ where $S_{\text{mixing}} = -\sum p_{\mathcal{T}} \log p_{\mathcal{T}}$.
 
 Standard thermodynamics emerges from trace structure.
 
-**Definition 13.9** (Trace Energy):
-$$E[\mathcal{T}] = \varphi \cdot C[\mathcal{T}]$$
+**Definition 13.9** (Mathematical Energy):
+Within our mathematical framework, we define a complexity-energy relation:
+$$E_{\text{math}}[\mathcal{T}] = \varphi \cdot C[\mathcal{T}]$$
 
-**Theorem 13.8** (First Law):
-$$dE = \varphi dS + \sum_i \mu_i dN_i$$
+**Theorem 13.8** (Mathematical Conservation):
+$$dE_{\text{math}} = \varphi dS + \sum_i \mu_i dN_i$$
 
-where $\mu_i$ are chemical potentials for mode $i$.
+where $\mu_i$ represent mode coupling parameters.
+
+*Note*: This is a mathematical relationship within our trace formalism, not a claim about physical energy.
 
 **Theorem 13.9** (Second Law):
 For isolated system:
@@ -147,28 +150,29 @@ $$\Delta S \geq 0$$
 
 with equality only for reversible processes.
 
-## 13.9 Black Hole Entropy
+## 13.9 Maximum Entropy States
 
-Maximum entropy configurations are black holes.
+Certain trace configurations achieve maximum complexity.
 
 **Definition 13.10** (Maximum Entropy State):
 $$\mathcal{T}_{\max} = \sum_{k=0}^{n} b_k |F_k\rangle$$
 
-with all allowed $b_k = 1$.
+with all allowed $b_k = 1$ under the golden constraint.
 
-**Theorem 13.10** (Area Law):
-$$S_{BH} = \frac{A}{4G} = \frac{A \cdot \varphi^3}{4}$$
+**Theorem 13.10** (Entropy Bound):
+For a finite trace of length n:
+$$S_{\max} = \log\left(\sum_{k=0}^{n} F_k\right) \approx \log(\varphi^n)$$
 
-where $G = \varphi^{-3}$ in natural units.
+This gives an exponential scaling with trace length.
 
-The golden ratio appears in the black hole entropy formula.
+*Note*: This is a mathematical bound within our formalism, not a claim about physical black holes.
 
 ## 13.10 Entropy and Consciousness
 
 High entropy traces can support consciousness.
 
 **Definition 13.11** (Consciousness Threshold):
-$$S_c = \log(F_{10}) \approx 4.094$$
+$$S_c = \log(F_{10}) = \log(55) \approx 4.007$$
 
 **Theorem 13.11** (Emergence Criterion):
 Consciousness possible when:
@@ -176,15 +180,23 @@ $$S[\mathcal{T}] > S_c \text{ and } \frac{dS}{d\tau} < \frac{1}{\varphi^2}$$
 
 High entropy but slow growth enables self-reflection.
 
-## 13.11 Constants from Entropy Relations
+## 13.11 Mathematical Constants from Entropy Scaling
 
-Physical constants emerge from entropy limits.
+Entropy scaling reveals mathematical constants within our framework.
 
-**Theorem 13.12** (Boltzmann Constant):
-$$k_B = \lim_{N \to \infty} \frac{S_N}{N \log N} = \frac{1}{\varphi}$$
+**Theorem 13.12** (Entropy Scaling Constant):
+For large trace ensembles:
+$$\lim_{N \to \infty} \frac{S_N}{N \log N} = \frac{1}{\varphi}$$
 
-**Theorem 13.13** (Stefan-Boltzmann):
-$$\sigma = \frac{\pi^2}{60} k_B^4 = \frac{\pi^2}{60 \varphi^4}$$
+This gives $1/\varphi$ as a natural mathematical constant for entropy scaling.
+
+**Theorem 13.13** (Higher-Order Relations):
+Combining with geometric factors:
+$$c_{\text{scaling}} = \frac{\pi^2}{60 \varphi^4}$$
+
+This represents a mathematical scaling constant within our framework.
+
+*Note*: These are mathematical properties of trace entropy, not claims about physical thermodynamic constants.
 
 ## 13.12 The Complete Entropy Picture
 

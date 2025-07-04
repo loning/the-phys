@@ -107,47 +107,52 @@ $$\hat{U}(t)|\Psi_{\text{res}}\rangle = e^{iE_{\text{res}}t}|\Psi_{\text{res}}\r
 
 with $E_{\text{res}} = \hbar \sum m_i \omega_i = 0$.
 
-## 14.7 Physical Particles as Resonances
+## 14.7 Stable Patterns as Resonances
 
-Particles are stable resonance patterns.
+Stable collapse patterns correspond to resonance configurations.
 
-**Definition 14.7** (Particle Spectrum):
-$$|\text{particle}\rangle = \sum_{k \in S} |F_k\rangle$$
+**Definition 14.7** (Pattern Spectrum):
+$$|\text{pattern}\rangle = \sum_{k \in S} |F_k\rangle$$
 
-where $S$ is a resonant set.
+where $S$ is a resonant set satisfying the golden constraint.
 
-**Theorem 14.7** (Mass from Resonance):
-Particle mass emerges as:
-$$m = \frac{\hbar}{c^2} \sqrt{\sum_{k \in S} \omega_k^2}$$
+**Theorem 14.7** (Pattern Stability):
+Pattern stability measure:
+$$\mathcal{S} = \sqrt{\sum_{k \in S} \omega_k^2}$$
 
-where $c = \varphi^2$ and $\hbar = 1/\varphi$.
+where $\omega_k = 2\pi/\varphi^k$ are the natural collapse frequencies.
 
-## 14.8 Atomic Structure from Resonances
+*Note*: This is a mathematical stability measure within our framework, not a claim about physical particle masses.
 
-Atoms are hierarchical resonances.
+## 14.8 Hierarchical Resonance Structures
 
-**Definition 14.8** (Atomic Resonance):
-$$|\text{atom}\rangle = |\text{nucleus}\rangle \otimes |\text{electron}\rangle_{\text{res}}$$
+Complex patterns emerge from hierarchical resonance arrangements.
 
-**Theorem 14.8** (Energy Levels):
-Allowed energies satisfy:
-$$E_n = -\frac{E_0}{F_n^2}$$
+**Definition 14.8** (Hierarchical Resonance):
+$$|\text{complex}\rangle = |\text{base}\rangle \otimes |\text{higher}\rangle_{\text{res}}$$
 
-where $F_n$ are Fibonacci numbers.
+**Theorem 14.8** (Fibonacci Hierarchy):
+Within our mathematical framework, resonance levels follow:
+$$\mathcal{E}_n = \frac{\mathcal{E}_0}{F_n^2}$$
 
-This gives a Fibonacci-spaced spectrum instead of $1/n^2$.
+where $F_n$ are Fibonacci numbers and $\mathcal{E}_0$ is a reference scale.
 
-## 14.9 Constants from Resonance Patterns
+*Note*: This represents mathematical energy levels in our collapse framework, not a model of atomic physics.
 
-Physical constants emerge from special resonances.
+## 14.9 Mathematical Constants from Resonance Patterns
+
+Certain mathematical constants emerge from resonance statistics.
 
 **Definition 14.9** (Resonance Density):
 $$\rho_{\text{res}}(\omega) = \sum_{\text{resonances}} \delta(\omega - \omega_{\text{res}})$$
 
-**Theorem 14.9** (Fine Structure):
-$$\alpha = \int_0^{\infty} \rho_{\text{res}}(\omega) e^{-\omega/\omega_c} d\omega$$
+**Theorem 14.9** (Mathematical Scaling Constant):
+A dimensionless constant emerges from resonance integrals:
+$$\alpha_{\text{math}} = \int_0^{\infty} \rho_{\text{res}}(\omega) e^{-\omega/\omega_c} d\omega$$
 
-where $\omega_c = 2\pi \varphi^{-7}$, giving $\alpha \approx 1/137$.
+where $\omega_c = 2\pi \varphi^{-7}$, giving $\alpha_{\text{math}} = \varphi^{-7} \approx 0.034$.
+
+*Note*: This is a mathematical property of our resonance framework, not a claim about physical fine structure constant.
 
 ## 14.10 Consciousness as Meta-Resonance
 
@@ -181,9 +186,9 @@ Resonance reveals:
 
 1. **Frequency Matching**: Integer combinations summing to zero
 2. **Golden Enhancement**: Factors of $\varphi$
-3. **Particle Formation**: Stable resonance patterns
-4. **Atomic Structure**: Hierarchical resonances
-5. **Constant Emergence**: From resonance statistics
+3. **Pattern Formation**: Stable resonance configurations
+4. **Hierarchical Structure**: Multi-level resonances
+5. **Mathematical Constants**: From resonance statistics
 6. **Consciousness**: Meta-resonance patterns
 
 ```mermaid
