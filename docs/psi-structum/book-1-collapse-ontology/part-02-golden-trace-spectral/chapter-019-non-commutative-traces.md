@@ -51,8 +51,10 @@ $$[[\mathcal{T}_1, \mathcal{T}_2], \mathcal{T}_3] + \text{cyclic} = 0$$
 **Theorem 19.3** (Algebra Classification):
 The trace Lie algebra is:
 1. Simple for prime $F_n$ dimensions
-2. Semi-simple for composite dimensions
-3. Contains $\mathfrak{su}(\varphi)$ subalgebra
+2. Semi-simple for composite dimensions  
+3. Contains $\mathfrak{sl}(F_n, \mathbb{C})$ subalgebras for appropriate Fibonacci indices
+
+*Note*: The golden ratio φ appears in the structure constants and scaling relations, not as a direct dimension parameter.
 
 ## 19.4 Tensor Formulation
 
@@ -117,37 +119,43 @@ $$ds_h^2 = \sum_{i,j \in \text{hidden}} g_{ij}^h dx^i dx^j$$
 
 where $g_{ij}^h = \varphi^{-|i-j|}$.
 
-**Theorem 19.7** (Compactification):
-Hidden dimensions compactify with radii:
-$$R_n = \ell_P \varphi^{-n/2}$$
+**Theorem 19.7** (Mathematical Scaling):
+Hidden dimensions follow mathematical scaling:
+$$\lambda_n = \lambda_0 \varphi^{-n/2}$$
 
-where $\ell_P$ is the Planck length.
+where $\lambda_0$ is a reference scale derived from the golden constraint. This represents the mathematical structure of hidden dimension scaling, not a claim about physical compactification.
 
-## 19.8 Physical Effects of Non-Commutativity
+## 19.8 Mathematical Uncertainty Relations
 
-Non-commutativity generates observable physics.
+Non-commutativity generates mathematical uncertainty principles.
 
-**Definition 19.8** (Uncertainty Relation):
+**Definition 19.8** (Trace Uncertainty Relation):
 $$\Delta \mathcal{T}_1 \cdot \Delta \mathcal{T}_2 \geq \frac{1}{2}|[\mathcal{T}_1, \mathcal{T}_2]|$$
 
-**Theorem 19.8** (Physical Consequences):
-1. **Spin**: From $SO(3)$ non-commutativity
-2. **Charge**: From $U(1)$ phase non-commutativity
-3. **Mass**: From scale non-commutativity
+**Theorem 19.8** (Mathematical Structure Types):
+Non-commutative traces exhibit mathematical structures analogous to:
+1. **Rotational patterns**: From non-commuting angular-like traces
+2. **Phase relationships**: From non-commuting complex traces  
+3. **Scale hierarchies**: From non-commuting scaling traces
 
-## 19.9 Constants from Commutator Structure
+*Note*: These are mathematical patterns within our framework. Physical interpretation requires observer-system coupling analysis as established in previous chapters.
 
-Physical constants emerge from commutator ratios.
+## 19.9 Mathematical Ratios from Commutator Structure
+
+Mathematical constants emerge from commutator ratios within our framework.
 
 **Definition 19.9** (Structure Ratio):
 $$\alpha_{ijk} = \frac{C^{ijk}}{C^{123}}$$
 
 normalized to a reference commutator.
 
-**Theorem 19.9** (Gauge Couplings):
-$$g_i^2 = 4\pi \alpha_{iij}$$
+**Theorem 19.9** (Mathematical Scaling Constants):
+From the commutator structure, mathematical ratios emerge:
+$$\kappa_i = 4\pi \alpha_{iij}$$
 
 where no sum on repeated indices.
+
+**Critical Framework Note**: These are mathematical properties of our non-commutative trace algebra. Connection to physical constants requires observer-system coupling analysis and may be an NP-complete computational problem, as established in the observer framework (Chapters 10-18).
 
 ## 19.10 Consciousness and Non-Commutativity
 

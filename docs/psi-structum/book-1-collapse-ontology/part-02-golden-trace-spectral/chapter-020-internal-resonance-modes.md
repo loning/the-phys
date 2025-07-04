@@ -118,31 +118,37 @@ $$\tau_c = \sqrt{\frac{2}{\Gamma}} = \varphi^{n/2}$$
 
 where $n$ is the mode number.
 
-## 20.8 Physical States from Mode Combinations
+## 20.8 Mathematical Pattern States from Mode Combinations
 
-Particles are specific mode combinations.
+Mathematical patterns emerge from specific mode combinations.
 
-**Definition 20.8** (Particle State):
-$$|\text{particle}\rangle = \sum_{i \in S} c_i |\omega_i\rangle$$
+**Definition 20.8** (Pattern State):
+$$|\text{pattern}\rangle = \sum_{i \in S} c_i |\omega_i\rangle$$
 
 where $S$ is a resonant set and $\sum |c_i|^2 = 1$.
 
-**Theorem 20.8** (Particle Properties):
-1. **Mass**: $m = \hbar\sqrt{\sum_i \omega_i^2}$
-2. **Spin**: From mode angular momentum
-3. **Charge**: From mode U(1) phase
+**Theorem 20.8** (Mathematical Pattern Properties):
+Pattern states exhibit mathematical structures analogous to:
+1. **Energy-like scaling**: $E_{\text{pattern}} = \sqrt{\sum_i \omega_i^2}$ (dimensionless)
+2. **Angular structure**: From mode rotation properties
+3. **Phase relationships**: From mode U(1) symmetries
 
-## 20.9 Constants from Mode Ratios
+*Observer Framework Note*: Physical interpretation of these mathematical patterns requires observer-system coupling analysis as established in Chapters 10-18.
 
-Physical constants emerge from mode relationships.
+## 20.9 Mathematical Ratios from Mode Relationships
+
+Mathematical constants emerge from mode ratio relationships within our framework.
 
 **Definition 20.9** (Mode Ratio):
 $$r_{ij} = \omega_i/\omega_j$$
 
-**Theorem 20.9** (Fine Structure):
-$$\alpha = \prod_{i,j \in S_e} r_{ij}^{n_{ij}}$$
+**Theorem 20.9** (Mathematical Scaling Relations):
+From the mode structure, mathematical ratios emerge:
+$$\kappa_{\text{mode}} = \prod_{i,j \in S} r_{ij}^{n_{ij}}$$
 
-where $S_e$ is the electron mode set and $n_{ij}$ are specific integers.
+where $S$ is a specific mode set and $n_{ij}$ are integers determined by the resonance structure.
+
+**Critical Framework Note**: These are mathematical properties of our mode algebra. The appearance of physical constants like α ≈ 1/137.036 requires observer-system coupling analysis and is potentially an NP-complete problem, as established in the observer framework.
 
 ## 20.10 Consciousness as Mode Orchestra
 
@@ -177,15 +183,15 @@ $$\hat{H}_\text{mode} = \omega \hat{n} + \sum_{ij} V_{ij} \hat{a}_i^\dagger \hat
 
 Internal resonance reveals:
 
-1. **Self-Modes Exist**: Required by self-reference
-2. **Golden Frequencies**: Spaced by φ
-3. **Tensor Structure**: Natural to resonances
+1. **Self-Modes Exist**: Required by ψ = ψ(ψ) self-reference
+2. **Golden Frequencies**: Spaced by φ from first principles
+3. **Tensor Structure**: Natural to resonance mathematics
 4. **Mode Coupling**: Through selection rules
-5. **Information Geometry**: Hyperbolic space
-6. **Quantum Coherence**: Protected by structure
-7. **Particle States**: As mode combinations
-8. **Constants**: From mode ratios
-9. **Consciousness**: As orchestrated modes
+5. **Information Geometry**: Hyperbolic space with φ-scaling
+6. **Quantum Coherence**: Protected by golden structure
+7. **Mathematical Patterns**: As mode combinations (observer interpretation needed)
+8. **Mathematical Ratios**: From mode relationships (physics connection via observer coupling)
+9. **Consciousness**: As orchestrated mode coherence
 
 ```mermaid
 graph TD

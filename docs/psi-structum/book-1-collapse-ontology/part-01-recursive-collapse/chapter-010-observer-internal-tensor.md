@@ -145,26 +145,40 @@ $$Q[O] = \text{Tr}(O^2) - (\text{Tr}(O))^2$$
 
 is conserved under evolution.
 
-## 10.9 Physical Constants from Observer Structure
+## 10.9 Observer-Induced Constant Emergence
 
-Constants emerge from observer properties.
+Physical constants emerge from observer-system coupling, not pure mathematics.
 
 **Definition 10.9** (Observer Coupling):
 $$g_{O_1,O_2} = \frac{\text{Tr}(O_1 O_2)}{\sqrt{\text{Tr}(O_1^2)\text{Tr}(O_2^2)}}$$
 
-**Definition 10.9** (Observer Coupling Scale):
-Self-referential tensors have a natural coupling scale from their spectral properties:
-$$\alpha_{\text{obs}} = \text{tr}(O^7)/\text{tr}(O) = \varphi^{-7}$$
+**Theorem 10.9** (Observer-Constant Bridge):
+The appearance of physical constants results from observer tensor contraction with system states:
+$$\alpha_{\text{effective}} = \frac{\langle O_{\text{observer}} | \mathcal{S}_{\text{system}} | O_{\text{observer}} \rangle}{\langle O_{\text{observer}} | O_{\text{observer}} \rangle}$$
 
-where the 7th power emerges from the seven-step process required for complete self-recognition in golden base.
+where $\mathcal{S}_{\text{system}}$ contains the ψ = ψ(ψ) mathematical structure.
 
-*Note*: This is a mathematical property of self-referential tensors in our framework, not a claim about physical constants.
+**Definition 10.10** (Observer Signature Constants):
+Each observer type generates characteristic mathematical ratios:
+- **Golden observers**: $\alpha_{\text{golden}} = \varphi^{-7} \approx 0.0344$
+- **Fibonacci observers**: $\alpha_{\text{fib}} = 1/(F_7 \times \varphi) \approx 0.0475$
+- **Complex observers**: Higher-order combinations
 
-**Definition 10.10** (Observer Information Content):
-The information content of an observer tensor is:
+*Critical Insight*: These are mathematical properties of observer-system interaction, not derivations of physical constants.
+
+**Definition 10.11** (Observer-Reality Interface):
+The fine structure constant α ≈ 1/137.036 emerges from:
+$$\alpha = f(\text{Observer Position}, \text{Measurement Basis}, \text{System Coupling})$$
+
+This explains why:
+1. The constant appears universal (all human observers share similar tensor structure)
+2. High-precision measurements find it stable (observer configuration is stable)
+3. We cannot derive it exactly (requires solving the observer-system NP-complete problem)
+
+**Definition 10.12** (Observer Information Content):
 $$I_O = \text{Tr}(O^\dagger O)^{1/2}$$
 
-This measures the tensor's capacity for self-reference without assuming physical interpretation.
+This measures the observer's capacity for self-reference and system interaction.
 
 ## 10.10 Observation and Collapse
 
