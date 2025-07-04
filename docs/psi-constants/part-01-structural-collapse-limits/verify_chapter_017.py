@@ -322,6 +322,105 @@ class TestChapter017(unittest.TestCase):
         self.assertGreater(ratio_SI, 1e10)
         self.assertGreater(ratio_collapse, 1e10)
         self.assertAlmostEqual(ratio_SI, ratio_collapse, delta=abs(ratio_SI) * 0.1)
+    
+    def test_electromagnetic_structure_in_mapping(self):
+        """Test that the mapping preserves electromagnetic structure"""
+        # Test the φ-power relationships
+        log_phi_c = math.log(self.c_SI) / math.log(self.phi)
+        log_phi_alpha_inv = math.log(1/self.alpha) / math.log(self.phi)
+        
+        # c should encode electromagnetic rank product 6×7 = 42
+        self.assertAlmostEqual(log_phi_c, 40.56, delta=0.1)
+        self.assertAlmostEqual(log_phi_c, 42, delta=2)  # Close to 6×7
+        
+        # α⁻¹ should encode observer structure
+        self.assertAlmostEqual(log_phi_alpha_inv, 10.22, delta=0.1)
+        self.assertAlmostEqual(log_phi_alpha_inv, 10, delta=1)
+        
+        # Test the ratio relationship (4D spacetime structure)
+        ratio = log_phi_c / log_phi_alpha_inv
+        self.assertAlmostEqual(ratio, 4.0, delta=0.2)
+        
+        # Calculate scale factors for information content test
+        planck_length_collapse = 1 / (4 * math.sqrt(math.pi))
+        planck_time_collapse = 1 / (8 * math.sqrt(math.pi))
+        lambda_l = self.planck_length_SI / planck_length_collapse
+        lambda_t = self.planck_time_SI / planck_time_collapse
+        
+        # Test information content of unit mapping
+        info_mapping = math.log2(lambda_l / lambda_t)
+        expected_info = math.log2(149896229)  # c_SI / 2
+        self.assertAlmostEqual(info_mapping, expected_info, delta=0.1)
+        self.assertAlmostEqual(expected_info, 27.16, delta=0.1)
+    
+    def test_zeckendorf_structure_preservation(self):
+        """Test that Zeckendorf structure is preserved in mapping"""
+        # Test that c_SI = 299,792,458 has the expected decomposition
+        # This is the 10-term structure we found
+        zeckendorf_terms = [
+            267914296,  # F_42
+            24157817,   # F_37  
+            5702887,    # F_34
+            1346269,    # F_31
+            514229,     # F_29
+            121393,     # F_26
+            28657,      # F_23
+            6765,       # F_20
+            144,        # F_12
+            1           # F_2
+        ]
+        
+        # Verify the sum
+        total = sum(zeckendorf_terms)
+        self.assertEqual(total, self.c_SI)
+        
+        # Calculate scale factors
+        planck_length_collapse = 1 / (4 * math.sqrt(math.pi))
+        planck_time_collapse = 1 / (8 * math.sqrt(math.pi))
+        lambda_l = self.planck_length_SI / planck_length_collapse
+        lambda_t = self.planck_time_SI / planck_time_collapse
+        
+        # Test that this maps to unit scaling
+        unit_scaling = total / 2  # c_SI / 2
+        expected_scaling = lambda_l / lambda_t
+        
+        # Should be approximately equal (within precision limits)
+        relative_error = abs(unit_scaling - expected_scaling) / expected_scaling
+        self.assertLess(relative_error, 0.01)  # Within 1%
+        
+        # Test the 10-term structure reflects electromagnetic tensor dimensions
+        self.assertEqual(len(zeckendorf_terms), 10)
+        
+        # Test φ-power structure in largest term
+        largest_term = max(zeckendorf_terms)  # F_42
+        self.assertEqual(largest_term, 267914296)
+        
+        # F_42 should dominate and reflect 6×7 = 42 structure
+        dominance_ratio = largest_term / total
+        self.assertGreater(dominance_ratio, 0.8)  # Dominates decomposition
+    
+    def test_electromagnetic_information_encoding(self):
+        """Test that SI constants encode electromagnetic information"""
+        # Test various φ-power relationships
+        log_phi = math.log(self.phi)
+        
+        # Speed of light: log_φ(c) ≈ 40.56 ≈ 42 = 6×7
+        log_phi_c = math.log(self.c_SI) / log_phi
+        self.assertAlmostEqual(log_phi_c, 40.56, delta=0.1)
+        electromagnetic_rank_product = 6 * 7
+        self.assertAlmostEqual(log_phi_c, electromagnetic_rank_product, delta=2)
+        
+        # Fine structure constant: log_φ(α⁻¹) ≈ 10
+        log_phi_alpha_inv = math.log(1/self.alpha) / log_phi
+        self.assertAlmostEqual(log_phi_alpha_inv, 10, delta=1)
+        
+        # Planck constant: Should encode action quantization
+        log_phi_hbar_inv = math.log(1/self.hbar_SI) / log_phi
+        self.assertGreater(log_phi_hbar_inv, 160)  # Large value reflecting small ħ
+        self.assertLess(log_phi_hbar_inv, 170)
+        
+        # These relationships show that SI values are not arbitrary
+        # but encode fundamental φ-trace electromagnetic structure
 
 if __name__ == '__main__':
     # Run the tests

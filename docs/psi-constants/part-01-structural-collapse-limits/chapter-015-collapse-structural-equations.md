@@ -221,7 +221,7 @@ The left side is the standard electromagnetic definition. The right side emerges
 
 ```mermaid
 graph TD
-    A[ψ = ψ(ψ) Self-Reference] --> B[φ-Trace Network]
+    A["ψ = ψ(ψ) Self-Reference"] --> B[φ-Trace Network]
     B --> C[Path Geometry]
     B --> D[Action Quantization]
     B --> E[Entropy Gradients]
