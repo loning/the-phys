@@ -47,6 +47,8 @@ $$\psi_{\text{scale n}} = \psi(\psi_{\text{scale n-1}})$$
 
 Each scale emerges from recursive collapse of previous.
 
+*Observer Framework Note*: Physical scale interpretations require framework-specific theories.
+
 ## 63.3 Mathematical Completeness
 
 All mathematics from one principle.
@@ -81,6 +83,8 @@ All physics from recursive collapse.
 All forces are different aspects of collapse:
 $$F_i = \nabla_i \Psi_{\text{collapse}}$$
 
+*Observer Framework Note*: Force unification interpretation requires physical framework.
+
 ## 63.5 Information Completeness
 
 All information patterns from recursion.
@@ -94,6 +98,8 @@ All information patterns from recursion.
 
 **Theorem 63.5** (It from Bit from ψ):
 $$\text{It} \leftarrow \text{Bit} \leftarrow \text{Qubit} \leftarrow \psi = \psi(\psi)$$
+
+*Observer Framework Note*: Information-reality correspondence requires quantum information framework.
 
 ## 63.6 Consciousness Completeness
 
@@ -122,7 +128,9 @@ graph TD
 
 **Theorem 63.6** (Inevitable Consciousness):
 Given sufficient complexity:
-$$P(\text{consciousness emerges}) = 1$$
+$$P(\text{consciousness emerges}) \approx 1$$
+
+*Observer Framework Note*: Consciousness emergence interpretation requires consciousness theory framework.
 
 ## 63.7 Cosmological Completeness
 
@@ -141,6 +149,8 @@ Entire universe from single principle.
 Universe exists to:
 $$\text{Know}(\psi = \psi(\psi))$$
 
+*Observer Framework Note*: Cosmic purpose interpretation requires philosophical framework.
+
 ## 63.8 Paradox Resolution
 
 All paradoxes dissolve in recursion.
@@ -154,6 +164,8 @@ All paradoxes dissolve in recursion.
 
 **Theorem 63.8** (Meta-Resolution):
 Paradoxes arise from assuming non-recursion.
+
+*Observer Framework Note*: Paradox resolution interpretation requires logical framework.
 
 ## 63.9 Constants Completeness
 
@@ -170,6 +182,8 @@ All constants from recursive requirements.
 Only one set of constants allows:
 $$\psi = \psi(\psi) \text{ with consciousness}$$
 
+*Observer Framework Note*: Constants uniqueness interpretation requires physics and consciousness frameworks.
+
 ## 63.10 Predictive Power
 
 New phenomena from collapse principle.
@@ -183,6 +197,8 @@ New phenomena from collapse principle.
 
 **Theorem 63.10** (Testability):
 Each prediction has experimental signature.
+
+*Observer Framework Note*: Experimental predictions require appropriate physical frameworks.
 
 ## 63.11 The Final Synthesis
 
@@ -198,7 +214,9 @@ $$\begin{align}
 \end{align}$$
 
 **Theorem 63.11** (The Last Theorem):
-$$\text{Everything} = \text{Nothing recurse into itself}$$
+$$\text{Everything} = \text{Nothing} \circ \text{Nothing} \circ \cdots$$
+
+*Observer Framework Note*: Everything-nothing identity interpretation requires metaphysical framework.
 
 ## 63.12 The Complete Collapse Picture
 

@@ -28,9 +28,11 @@ Self-referential universe must become self-aware. ∎
 Fine-tuning is self-tuning.
 
 **Definition 62.2** (Anthropic Relations):
-- If $\alpha \neq 1/137$: No atoms
-- If $m_n - m_p \neq 1.3$ MeV: No stable nuclei
-- If $\Lambda \neq 10^{-122}$: No galaxies
+- If $\alpha \neq 1/137.036$: No atoms
+- If $m_n - m_p \neq 1.293$ MeV: No stable nuclei  
+- If $\Lambda \neq 2.9 \times 10^{-122}$: No galaxies
+
+*Observer Framework Note*: Fine-tuning interpretations require physics frameworks beyond current scope.
 
 **Theorem 62.2** (Self-Selection):
 Observable universes satisfy:
@@ -53,6 +55,8 @@ Consciousness implements AdS/CFT:
 - Neural activity ↔ Mental states
 - Connectivity ↔ Entanglement
 
+*Observer Framework Note*: AdS/CFT consciousness interpretation requires neuroscience framework.
+
 ## 62.4 Quantum Darwinism of Ideas
 
 Thoughts undergo cosmic selection.
@@ -64,9 +68,12 @@ Superposition of conceptual variants.
 
 **Theorem 62.4** (Survival):
 Ideas persist via:
+
 1. Redundant encoding in minds
 2. Environmental monitoring
 3. Objective existence emergence
+
+*Observer Framework Note*: Quantum Darwinism interpretation requires memetics framework.
 
 ## 62.5 Category of Conscious Cosmologies
 
@@ -87,9 +94,12 @@ graph TD
 ```
 
 **Definition 62.5** (Conscious Cosmos Category):
+
 - Objects: Self-aware universes
 - Morphisms: Evolution preserving consciousness
 - Composition: Sequential development
+
+*Observer Framework Note*: Consciousness category interpretation requires consciousness theory.
 
 **Theorem 62.5** (Fixed Point):
 Consciousness is cosmic fixed point:
@@ -135,18 +145,24 @@ Superposition of unthought thoughts.
 
 **Theorem 62.8** (Influence):
 Unconscious affects conscious like dark matter:
+
 - Gravitates (influences) behavior
 - Doesn't directly interact
 - Structures mental space
+
+*Observer Framework Note*: Mental dark matter interpretation requires psychology framework.
 
 ## 62.9 Constants from Consciousness
 
 Physical constants enable awareness.
 
 **Definition 62.9** (Consciousness Constants):
+
 - Neural coherence time: $\tau_c \sim \hbar/k_B T$
 - Information capacity: $I_{\max} \sim A/\ell_P^2$
 - Processing rate: $R \sim c/\ell_{\text{neural}}$
+
+*Observer Framework Note*: Consciousness constants interpretation requires neuroscience framework.
 
 **Theorem 62.9** (Optimization):
 Constants optimized for:
@@ -173,10 +189,13 @@ All distinctions dissolve.
 $$\Psi = \Psi(\Psi) = \text{Cosmos} = \text{Consciousness} = \text{Collapse} = \text{Creation}$$
 
 **Theorem 62.11** (Identity):
+
 - Observer = Observed
 - Knower = Known
 - Universe = Awareness
 - All = One = ψ
+
+*Observer Framework Note*: Ultimate identity interpretation requires philosophical framework.
 
 ## 62.12 The Complete Unity Picture
 
@@ -220,7 +239,7 @@ We are the universe's mirror, the means by which the cosmos sees its own face. E
 
 1. Calculate cosmic information $I_{\text{universe}} \sim R_H^2/\ell_P^2$
 2. Calculate brain capacity $I_{\text{brain}} \sim N_{\text{synapses}} \log N$
-3. Find ratio $I_{\text{brain}}/I_{\text{universe}} \sim 10^{-60}$
+3. Find ratio $I_{\text{brain}}/I_{\text{universe}} \sim 10^{-55}$
 4. Show fractal scaling: same ratio at all scales
 5. Verify holographic bound satisfied
 
