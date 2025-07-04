@@ -135,32 +135,32 @@ where $g_{ij} = \varphi^{|i-j|}$.
 2. Geodesics: Minimal fold sequences
 3. Volume form: $dV = \varphi^{-n/2} \prod dt_i$
 
-## 17.9 Physical Traces and Particle States
+## 17.9 Mathematical Pattern Traces
 
-Physical particles correspond to special trace patterns.
+Special mathematical patterns correspond to self-similar trace structures.
 
-**Definition 17.9** (Particle Trace):
-$$\mathcal{T}_{\text{particle}} = \sum_{k \in S} |F_k\rangle$$
+**Definition 17.9** (Pattern Trace):
+$$\mathcal{T}_{\text{pattern}} = \sum_{k \in S} |F_k\rangle$$
 
 where $S$ is a self-similar set under folding.
 
-**Theorem 17.9** (Particle Classification):
-1. **Photon**: $\mathcal{T}_\gamma = |F_2\rangle$
-2. **Electron**: $\mathcal{T}_e = |F_1\rangle + |F_3\rangle$
-3. **Quarks**: Higher order self-similar traces
+**Theorem 17.9** (Pattern Classification):
+1. **Simple Patterns**: Single mode $|F_n\rangle$
+2. **Composite Patterns**: Multi-mode combinations
+3. **Complex Patterns**: Higher order self-similar structures
 
-## 17.10 Constants from Trace Relations
+## 17.10 Mathematical Constants from Trace Relations
 
-Physical constants emerge from trace algebra.
+Dimensionless mathematical constants emerge naturally from trace algebra.
 
 **Definition 17.10** (Trace Coupling):
 $$g = \langle\mathcal{T}_1|\mathcal{T}_2\rangle / ||\mathcal{T}_1|| \cdot ||\mathcal{T}_2||$$
 
-**Theorem 17.10** (Fine Structure):
-The electromagnetic coupling:
-$$\alpha = g_{e\gamma}^2 = \frac{1}{F_7 \cdot \varphi} \approx \frac{1}{137}$$
+**Theorem 17.10** (Mathematical Scaling Constants):
+Natural dimensionless constants that emerge from our framework:
+$$\alpha_{\text{math}} = \frac{1}{F_7 \cdot \varphi} = \frac{1}{13 \times 1.618} \approx 0.0475$$
 
-emerges from electron-photon trace overlap.
+This represents a mathematical property of our trace algebra, not a claim about physical constants.
 
 ## 17.11 Consciousness as Trace Superposition
 
@@ -187,8 +187,8 @@ Golden trace algebra reveals:
 4. **Complexity Growth**: Through origami folding
 5. **Spectral Evolution**: Eigenvalues flow by φ
 6. **Geometric Structure**: Hyperbolic trace space
-7. **Physical Particles**: As self-similar traces
-8. **Constants**: From trace overlaps
+7. **Mathematical Patterns**: As self-similar traces
+8. **Mathematical Constants**: From trace overlaps
 
 ```mermaid
 graph TD
