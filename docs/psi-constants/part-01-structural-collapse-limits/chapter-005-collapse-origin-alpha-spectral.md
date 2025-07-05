@@ -124,7 +124,28 @@ $$
 
 where $\varphi^{-1} = \varphi - 1 = 0.618033988749895...$
 
-**Key Insight**: This formula encodes how quantum phase differences between rank-6 and rank-7 paths create interference patterns that modulate the observable contribution of rank-7 paths.
+**Profound Geometric Discovery**: The visibility factor has an equivalent formulation revealing deep golden geometry:
+
+$$
+\omega_7 = \frac{1}{2} + \frac{1}{4}\cos^2(\pi \cdot \varphi^{-1}) = \frac{5}{8} + \frac{1}{8}\cos(2\pi/\varphi)
+$$
+
+This equivalence arises from the trigonometric identity and the golden ratio relation φ(φ-1) = 1:
+- Original angle: π·(φ-1) = 111.246°
+- Doubled angle: 2π·(φ-1) = 2π/φ = 222.492°
+
+**The Golden Angle Connection**:
+- **Golden angle**: 2π/φ² = 137.508° (nature's optimal arrangement)
+- **Its complement**: 2π/φ = 222.492° (appears in our visibility formula)
+- **Perfect sum**: 137.508° + 222.492° = 360°
+
+**Physical Meaning**: This reveals that electromagnetic coupling strength is determined by:
+1. Rank-6 paths arranged at the golden angle (137.508°)
+2. Rank-7 paths at the complementary angle (222.492°)
+3. Quantum interference between these complementary arrangements
+4. The observer measuring this interference pattern
+
+The same golden geometry appears in sunflower spirals, galaxy arms, and DNA structure - suggesting α encodes a universal principle of optimal arrangement in nature!
 
 **Theorem 5.6.1** (Visibility Calculation): Computing the visibility factor:
 
