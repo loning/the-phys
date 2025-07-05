@@ -175,9 +175,9 @@ This formula contains:
 - **Weight ratio r**: Emerges from four intrinsic factors:
   - Geometric degeneracy: $D_6/D_7 = F_8/F_9 = 21/34$
   - Dynamic scaling: Factor of φ
-  - Phase interference: $\cos^2(\pi/7) \approx 0.821$
-  - Curvature correction: δr = -0.063
-  - Combined result: r ≈ 1.155
+  - Phase interference: $\cos^2\theta_7^{\text{eff}} \approx 0.8207$ where $\theta_7^{\text{eff}} = \frac{\pi}{7}\sqrt{1-\frac{1}{\varphi^2}}$
+  - Curvature correction: δr = -0.06269
+  - Combined result: r ≈ 1.155029
 - **Circular encapsulation**: 1/(2π) from 4D loop topology
 
 **No free parameters**: The value 1/137.035999084 emerges from pure collapse geometry without any empirical fitting.

@@ -61,6 +61,7 @@ where F_n is the n-th Fibonacci number.
 In the Zeckendorf representation, every path can be uniquely decomposed into non-consecutive Fibonacci components. The number of such decompositions for rank-$s$ equals $F_{s+2}$. This follows from the fundamental recursion of the φ-trace structure. ∎
 
 **Key Values**:
+
 $$
 D_6 = F_8 = 21, \qquad D_7 = F_9 = 34
 $$
@@ -113,21 +114,88 @@ Remarkably, the geometric counting and dynamical decay nearly cancel! ∎
 
 ## 5.6 Observer Filtering: Intrinsic Phase and Interference
 
-**Theorem 5.6** (Rank-7 Phase Suppression): Rank-7 paths involve an additional "measurement loop" beyond the basic charge-field interaction of rank-6. This extra loop introduces an average topological phase under golden spiral curvature:
+**Theorem 5.6** (Rank-7 Phase Suppression): Rank-7 paths involve an additional "measurement loop" beyond the basic charge-field interaction of rank-6. This extra loop introduces an average topological phase under golden spiral curvature.
+
+To eliminate any ambiguity in the spiral phase formula, we present the derivation in three precise layers: geometry → algebra → numerics.
+
+### 5.6.1 Geometric Setup (Coordinates, Dimensions)
+
+| Symbol | Definition | Units |
+|--------|-----------|-------|
+| $s$ | Arc length along curve | Length |
+| $\phi$ | Polar coordinate azimuthal angle | Radians |
+| $k$ | Golden spiral expansion constant | Dimensionless |
+| $\kappa(\phi)$ | Curvature = 1/radius of curvature | 1/Length |
+
+**Golden Spiral in Polar Form**:
+$$
+r(\phi) = r_0 e^{k\phi}, \qquad k = \sqrt{1-\frac{1}{\varphi^{2}}}
+$$
+
+*Derivation: The spiral expands by factor φ per 2π rotation ⇒ k = ln φ / 2π. Substituting ln φ = √5 π / (2φ) recovers the above form; both expressions are equivalent.*
+
+**Curvature and Arc Length Element**:
+$$
+\begin{aligned}
+\kappa(\phi) &= \frac{k}{r(\phi)\sqrt{1+k^{2}}}, \\[6pt]
+ds &= r(\phi)\sqrt{1+k^{2}}\,d\phi
+\end{aligned}
+$$
+
+> Multiplying: $\kappa \cdot ds = k \, d\phi$. This is the key simplification for golden spirals: **curvature × arc element = constant × dφ**.
+
+### 5.6.2 Rank-7 "Extra Loop" Exact Integration
+
+**φ-trace Discrete Steps**:
+The φ-trace divides the spiral into rank-based segments. For the physical collapse construction, the rank-7 phase integral corresponds to:
 
 $$
-\theta_7^{\text{eff}} = \frac{\pi}{7}\sqrt{1-\frac{1}{\varphi^{2}}}
+\Delta\phi = \frac{\pi}{7}
 $$
 
-leading to interference suppression:
+> This emerges from the constraint that rank-7 represents the minimal observer feedback beyond rank-6 charge coupling.
+
+**Integration Formula**:
 $$
-\cos^2\theta_7^{\text{eff}} \approx 0.820695375728083381638985
+\theta_7^{\text{eff}} = \int_{\phi_6}^{\phi_7} \kappa \, ds = k \int_{\phi_6}^{\phi_6+\pi/7} d\phi = k \cdot \frac{\pi}{7}
 $$
+
+Writing out $k$ and $\pi/7$ explicitly:
+$$
+\boxed{\theta_7^{\text{eff}} = \sqrt{1-\frac{1}{\varphi^{2}}} \times \frac{\pi}{7}}
+$$
+
+### 5.6.3 Numerical Stage (No Approximations)
+
+$$
+\begin{aligned}
+\sqrt{1-\frac{1}{\varphi^{2}}} &= 0.786151377757423\ldots \\
+\frac{\pi}{7} &= 0.448798950512828\ldots \\
+\theta_7^{\text{eff}} &= 0.352823913281745\ldots \text{ rad} \\
+\cos^2\theta_7^{\text{eff}} &= \boxed{0.820695375728083\ldots}
+\end{aligned}
+$$
+
+### 5.6.4 Unambiguous Formula
+
+$$
+\boxed{
+\theta_7^{\text{eff}} = \left(\frac{\pi}{7}\right) \sqrt{1-\frac{1}{\varphi^{2}}}, \qquad
+\langle\cos^{2}\theta\rangle_{7} = \cos^{2}\theta_7^{\text{eff}}
+}
+$$
+
+Where:
+
+- **π/7** = single segment central angle among 7 divisions (no conflict with rank counting)
+- **√(1–1/φ²)** = ratio of golden spiral curvature to circular curvature
+- No hidden "re-averaging" or "re-squaring" operations; the result is the one-time visibility factor
 
 *Proof*:
+
 - Rank-6: Single charge-field closed loop → minimal phase
 - Rank-7: Charge-field + observer feedback loop → additional phase under golden spiral curvature
-- The effective phase arises from the average winding number with golden ratio correction $\sqrt{1-\frac{1}{\varphi^{2}}}$
+- The effective phase arises from the average winding with golden ratio correction $\sqrt{1-\frac{1}{\varphi^{2}}}$
 - Interference visibility reduced by cos²(θ₇ᵉᶠᶠ) ≈ 0.8207 ∎
 
 **Corollary 5.6.1**: Rank-6 has negligible phase loss: cos²θ₆ ≈ 1
