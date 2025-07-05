@@ -164,23 +164,30 @@ The collapse path network forms a discrete approximation to continuous 4D spacet
 **Main Result 1.1** (Structural Fine Structure Constant): The fine structure constant is given exactly by:
 
 $$
-\alpha = \frac{1}{2\pi} \cdot \frac{r \varphi^{-6} + \varphi^{-7}}{r + 1}
+\alpha = \frac{1}{2\pi} \cdot \frac{D_6 \cdot \varphi^{-6} + D_7 \cdot \omega_7 \cdot \varphi^{-7}}{D_6 + D_7 \cdot \omega_7}
 $$
 
-where r is the ratio of rank-6 to rank-7 collapse path weights, determined by the observer tensor structure.
+Or equivalently, its inverse:
 
-This formula contains:
-- **Golden decay**: $\varphi^{-6}, \varphi^{-7}$ (information-theoretic path weights)  
-- **Dual-rank spectrum**: Ranks 6 (charge-field coupling) and 7 (measurement)
-- **Weight ratio r**: Emerges from four intrinsic factors:
-  - Geometric degeneracy: $D_6/D_7 = F_8/F_9 = 21/34$
-  - Dynamic scaling: Factor of φ
-  - Phase interference: $\cos^2\theta_7^{\text{eff}} \approx 0.8207$ where $\theta_7^{\text{eff}} = \frac{\pi}{7}\sqrt{1-\frac{1}{\varphi^2}}$
-  - Curvature correction: δr = -0.06269
-  - Combined result: r ≈ 1.155029
-- **Circular encapsulation**: 1/(2π) from 4D loop topology
+$$
+\boxed{\alpha^{-1} = \frac{2\pi \left( D_6 + D_7 \cdot \omega_7 \right)}{D_6 \cdot \varphi^{-6} + D_7 \cdot \omega_7 \cdot \varphi^{-7}}}
+$$
 
-**No free parameters**: The value 1/137.035999084 emerges from pure collapse geometry without any empirical fitting.
+where:
+- $D_6 = F_8 = 21$: rank-6 path count (Fibonacci)
+- $D_7 = F_9 = 34$: rank-7 path count (Fibonacci)
+- $\varphi = (1 + \sqrt{5})/2$: golden ratio (self-similarity)
+- $\omega_7 = \frac{1}{2} + \frac{1}{4}\cos^2(\pi \cdot \varphi^{-1}) = 0.532828890240210$: visibility factor (quantum interference)
+
+**No free parameters**: This formula contains only mathematical constants and yields $\alpha^{-1} = 136.979$, in excellent agreement with the experimental value 137.036 (error < 0.05%).
+
+**Fully Expanded Formula**: The fine structure constant depends only on:
+
+$$
+\alpha^{-1} = \frac{2\pi \left( 21 + 34 \cdot \left[\frac{1}{2} + \frac{1}{4}\cos^2\left(\pi \cdot \left(\frac{1+\sqrt{5}}{2} - 1\right)\right)\right] \right)}{21 \cdot \left(\frac{1+\sqrt{5}}{2}\right)^{-6} + 34 \cdot \left[\frac{1}{2} + \frac{1}{4}\cos^2\left(\pi \cdot \left(\frac{1+\sqrt{5}}{2} - 1\right)\right)\right] \cdot \left(\frac{1+\sqrt{5}}{2}\right)^{-7}}
+$$
+
+This remarkable result shows α emerges from just the numbers 21, 34, π, √5, and basic arithmetic operations.
 
 ## 1.9 Information-Theoretic Interpretation
 
