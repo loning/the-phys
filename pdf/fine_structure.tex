@@ -3,10 +3,11 @@
 %  A Complete Parameter-Free Derivation
 %===================================================================
 \documentclass[%
- onecolumn,
+ reprint,
  amsmath,amssymb,
  aps,
  prd,
+ 10pt,
  nofootinbib,      % 把脚注放正文底部
  longbibliography  % 自动展开所有作者
 ]{revtex4-2}
@@ -17,38 +18,61 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
-\usepackage{hyperref}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
 \usepackage{graphicx}
 \usepackage{booktabs}
+\usepackage{array}
 \usepackage{bm}
+\usepackage{hyperref}
 
 \renewcommand{\vec}[1]{\bm{#1}}  % 粗体矢量
 
-% 改善断行和页面设置以减少warnings
+% 改善断行和页面设置
 \tolerance=1000
 \emergencystretch=2pt
-\hbadness=10000  % 减少underfull hbox警告
-\vbadness=10000  % 减少underfull vbox警告
+\hbadness=10000
+\vbadness=10000
 
-% 单页排版优化
-\setlength{\textwidth}{17cm}
-\setlength{\textheight}{24cm}
-\setlength{\topmargin}{-1cm}
-\setlength{\oddsidemargin}{-0.5cm}
+% 数学定理环境
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{axiom}[theorem]{Axiom}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+% 标准物理期刊格式优化
+\setlength{\abovedisplayskip}{10pt plus 2pt minus 5pt}
+\setlength{\belowdisplayskip}{10pt plus 2pt minus 5pt}
+\setlength{\abovedisplayshortskip}{0pt plus 3pt}
+\setlength{\belowdisplayshortskip}{6pt plus 3pt minus 3pt}
+
+% 浮动体设置
+\setcounter{topnumber}{2}
+\renewcommand{\topfraction}{0.7}
+\setcounter{bottomnumber}{1}
+\renewcommand{\bottomfraction}{0.3}
+\setcounter{totalnumber}{3}
+\renewcommand{\textfraction}{0.2}
+\renewcommand{\floatpagefraction}{0.5}
 
 %===================================================================
 %  Title & Authors
 %===================================================================
 \begin{document}
 
-\title{%
-Fine-Structure Constant from Collapse \texorpdfstring{$\varphi$}{phi}-Trace Geometry:\texorpdfstring{\\}{} A Complete Zero-Parameter Derivation via Path Averaging
-}
+\title{Fine-Structure Constant from Collapse \texorpdfstring{$\varphi$}{phi}-Trace Geometry: A Complete Zero-Parameter Derivation via Path Averaging}
 
 \author{Ma Haobo}
 \email{aloning@gmail.com}
-
-
+\affiliation{Independent Research}
 
 \date{\today}
 
@@ -221,9 +245,10 @@ The observer is not external but part of the system itself:
 The observer is a quantum superposition of all rank-7 paths.
 
 \textbf{Visibility Factor}: Observer self-interference creates path filtering. The visibility between paths $\gamma$ and $\gamma'$ is:
-\begin{equation}
-V(\gamma, \gamma') = \left|\langle\gamma|\text{Observer}\rangle\langle\text{Observer}|\gamma'\rangle\right|^2 = \frac{1}{34^2} \cos^2\left(\frac{\Theta(\gamma) - \Theta(\gamma')}{2}\right)
-\end{equation}
+\begin{align}
+V(\gamma, \gamma') &= \left|\langle\gamma|\text{Observer}\rangle\langle\text{Observer}|\gamma'\rangle\right|^2 \\
+&= \frac{1}{34^2} \cos^2\left(\frac{\Theta(\gamma) - \Theta(\gamma')}{2}\right)
+\end{align}
 
 where $\Theta(\gamma) = \sum_{k=1}^n 2\pi \cdot \varphi^{-k} \cdot [\text{bit}_k(\gamma) = 1]$.
 
@@ -375,16 +400,17 @@ Experimental value: $\alpha^{-1} = 137.035999084$. The agreement within 0.05\% d
 
 Table~\ref{tab:contributions}
 summarises the four fundamental components of the zero-parameter derivation.
-\begin{table}[ht]
+\begin{table}[h!]
   \centering
-  \begin{tabular}{@{}lcc@{}}
+  \small
+  \begin{tabular}{@{}lll@{}}
     \toprule
     Component & Mathematical Origin & Physical Meaning \\
     \midrule
     Fibonacci Numbers & Zeckendorf constraint & Path counting \\
-    Golden Ratio Decay & $\varphi^{-s}$ & Collapse weights \\
+    Golden Ratio Decay & $\varphi^{-s}$ decay & Collapse weights \\
     Visibility Factor & Quantum interference & Observer filtering \\
-    Phase Normalization & $2\pi$ & Continuous mapping \\
+    Phase Normalization & $2\pi$ factor & Continuous mapping \\
     \bottomrule
   \end{tabular}
   \caption{Four components of the zero-parameter $\alpha$ formula.}
