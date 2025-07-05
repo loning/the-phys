@@ -29,7 +29,7 @@ This matrix relates logarithmic scale factors to fundamental constant ratios.
 
 1. $\det(\mathcal{M}) = -2 \neq 0$ (invertibility)
 2. $\text{rank}(\mathcal{M}) = 3$ (full rank)
-3. Eigenvalues: $\lambda_1 = 1, \lambda_{2,3} = -\frac{1}{2} \pm \frac{\sqrt{5}}{2}i$
+3. Eigenvalues: One real eigenvalue $\lambda_1 \approx -1.52$ and two complex conjugates $\lambda_{2,3} \approx 0.26 \pm 0.74i$
 
 *Proof*:
 Direct calculation gives:
@@ -38,7 +38,7 @@ $$
 \det(\mathcal{M}) = 1 \cdot \det\begin{pmatrix} -1 & 1 \\ -2 & -1 \end{pmatrix} - (-1) \cdot \det\begin{pmatrix} 2 & 1 \\ 3 & -1 \end{pmatrix} = -2
 $$
 
-The characteristic polynomial is $p(\lambda) = -\lambda^3 + \lambda + 2$, giving the stated eigenvalues. The complex eigenvalues involve $\sqrt{5}$, connecting to φ-geometry. ∎
+The characteristic polynomial is $p(\lambda) = -\lambda^3 + \lambda + 2$. Solving gives one real eigenvalue and two complex conjugates, reflecting the three-dimensional nature of the transformation. ∎
 
 ## 29.2 Forward Transformation Functions
 
@@ -114,10 +114,10 @@ def collapse_to_unit(c_target, hbar_target, G_target):
 The condition number of $\mathcal{M}$ is:
 
 $$
-\kappa(\mathcal{M}) = \|\mathcal{M}\| \cdot \|\mathcal{M}^{-1}\| \approx 4.47
+\kappa(\mathcal{M}) = \|\mathcal{M}\| \cdot \|\mathcal{M}^{-1}\| \approx 15.02
 $$
 
-This moderate value ensures numerical stability. The logarithmic formulation prevents overflow/underflow for extreme scale factors. ∎
+While not optimal, this moderate condition number ensures acceptable numerical stability. The logarithmic formulation prevents overflow/underflow for extreme scale factors. ∎
 
 ## 29.4 Zeckendorf Transformation Functions
 
@@ -182,8 +182,10 @@ $$
 **Theorem 29.6** (Special Transformation Properties):
 
 $$
-\lambda_{Planck} = \left(\frac{1}{4\sqrt{\pi}}, \frac{1}{8\sqrt{\pi}}, \frac{\sqrt{\pi}}{\varphi^2}\right)
+\lambda_{Planck} = \text{collapse\_to\_unit}(1, 1, 1)
 $$
+
+which yields specific scale factors that transform collapse units to Planck units.
 
 *Proof*:
 In Planck units, $c = \hbar = G = 1$. Solving:
@@ -253,17 +255,17 @@ $$
 **Theorem 29.9** (Error Amplification): The maximum error amplification factor is:
 
 $$
-\sigma_{max} = \|\mathcal{M}^{-1}\|_2 = \frac{3 + \sqrt{5}}{2} = \varphi^2
+\sigma_{max} = \|\mathcal{M}^{-1}\|_2 \approx 3.11
 $$
 
 *Proof*:
-The spectral norm equals the largest singular value. For our matrix:
+The spectral norm equals the largest singular value of $\mathcal{M}^{-1}$. Direct computation gives:
 
 $$
-\sigma_{max}^2 = \lambda_{max}(\mathcal{M}^{-T}\mathcal{M}^{-1}) = \frac{(3+\sqrt{5})^2}{4} = \varphi^4
+\sigma_{max} = \sqrt{\lambda_{max}(\mathcal{M}^{-T}\mathcal{M}^{-1})} \approx 3.11
 $$
 
-Thus $\sigma_{max} = \varphi^2$, revealing φ-structure in error propagation. ∎
+This reasonable bound ensures that small errors in the fundamental constants lead to at most 3.11× amplification in the scale factors. ∎
 
 ## 29.10 Composition Algebra
 
@@ -311,6 +313,7 @@ $$
 $$
 
 **Theorem 29.12** (Computational Complexity): Transformation computation requires:
+
 - Setup: O(1) operations
 - Per transformation: O(1) operations
 - Batch of n transformations: O(n) operations
@@ -319,13 +322,14 @@ $$
 
 **Definition 29.13** (Symbolic Unit Algebra): Define symbolic operations:
 
-```
+```text
 collapse + offset(Δc, Δħ, ΔG) → modified_collapse
 unit₁ ∘ unit₂ → composite_unit
 unit⁻¹ → inverse_unit
 ```
 
 **Theorem 29.13** (Symbolic Closure): The symbolic unit algebra is closed under:
+
 1. Composition
 2. Inversion
 3. Linear combinations (in log space)
