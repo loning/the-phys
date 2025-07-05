@@ -78,15 +78,15 @@ $$
 **Theorem 33.3** (Total Visibility): The rank-7 visibility factor has the exact formula:
 
 $$
-\omega_7 = \frac{1}{2} + \frac{1}{4}\cos^2(\pi \cdot \varphi^{-1}) = 0.53283889
+\omega_7 = \frac{1}{2} + \frac{1}{4}\cos^2(\pi \cdot \varphi^{-1}) = 0.532828890240210...
 $$
 
 *Proof*:
 The visibility emerges from the quantum interference pattern of rank-7 paths. The golden angle $\pi \cdot \varphi^{-1}$ represents the characteristic phase difference in the φ-trace spiral. Computing:
 - $\varphi^{-1} = \varphi - 1 = 0.618033988749895...$
 - $\pi \cdot \varphi^{-1} = 1.941611019384615...$
-- $\cos^2(\pi \cdot \varphi^{-1}) = 0.131355570479652...$
-- $\omega_7 = 0.5 + 0.25 \times 0.131355570479652 = 0.532838892619913$
+- $\cos^2(\pi \cdot \varphi^{-1}) = 0.131315560960840...$
+- $\omega_7 = 0.5 + 0.25 \times 0.131315560960840 = 0.532828890240210$
 
 This exceeds the random baseline 0.5 due to φ-trace resonance. ∎
 
@@ -131,7 +131,7 @@ $$
 where:
 - $D_6 = 21$, $D_7 = 34$ (path counts)
 - $w_6 = \varphi^{-6}$, $w_7 = \varphi^{-7}$ (weights)
-- $\omega_7 = \frac{1}{2} + \frac{1}{4}\cos^2(\pi \cdot \varphi^{-1}) = 0.532838892619913$ (visibility factor)
+- $\omega_7 = \frac{1}{2} + \frac{1}{4}\cos^2(\pi \cdot \varphi^{-1}) = 0.532828890240210$ (visibility factor)
 
 **Theorem 33.5** (Precise Alpha Derivation): The fine structure constant is:
 
@@ -147,18 +147,65 @@ Step-by-step calculation with 20-digit precision:
    - $w_7 = \varphi^{-7} = 0.034441853748633018129$
 
 2. Numerator:
-   $$21 \times w_6 + 34 \times \omega_7 \times w_7 = 1.7964897667520765001$$
+   $$21 \times w_6 + 34 \times \omega_7 \times w_7 = 1.79424479018145666132$$
 
 3. Denominator:
-   $$21 + 34 \times \omega_7 = 39.181363909869830309$$
+   $$21 + 34 \times \omega_7 = 39.11618226816713672633$$
 
 4. Average weight:
-   $$\langle w \rangle = 0.045850618444130748774$$
+   $$\langle w \rangle = 0.04586962955333241665$$
 
 5. Fine structure constant:
-   $$\alpha = \frac{0.045850618444130748774}{2\pi} = 0.0072973525692038359799$$
+   $$\alpha = \frac{0.04586962955333241665}{2\pi} = 0.00730037828120694114$$
 
-Therefore: $\alpha^{-1} = 137.035999084$ ∎
+Therefore: $\alpha^{-1} = 136.979203197492$ ∎
+
+### Complete Calculation Formula
+
+The entire derivation can be expressed as a single comprehensive formula:
+
+$$
+\boxed{
+\alpha^{-1} = \frac{2\pi \left( D_6 + D_7 \cdot \omega_7 \right)}{D_6 \cdot \varphi^{-6} + D_7 \cdot \omega_7 \cdot \varphi^{-7}}
+}
+$$
+
+where:
+- $D_6 = F_8 = 21$ (Fibonacci number for rank-6 paths)
+- $D_7 = F_9 = 34$ (Fibonacci number for rank-7 paths)
+- $\varphi = \frac{1 + \sqrt{5}}{2} = 1.618033988749895...$ (golden ratio)
+- $\omega_7 = \frac{1}{2} + \frac{1}{4}\cos^2(\pi \cdot \varphi^{-1}) = 0.532828890240210...$ (visibility factor)
+
+Substituting all values:
+
+$$
+\begin{align}
+\alpha^{-1} &= \frac{2\pi \left( 21 + 34 \times 0.532828890240210 \right)}{21 \times \varphi^{-6} + 34 \times 0.532828890240210 \times \varphi^{-7}} \\
+&= \frac{2\pi \times 39.11618226816714}{1.79424479018146} \\
+&= \frac{245.80251406869}{1.79424479018146} \\
+&= 136.979203197492
+\end{align}
+$$
+
+This formula contains **NO free parameters** - every component emerges from the mathematical structure of ψ = ψ(ψ).
+
+### Fully Expanded Formula
+
+Expanding the visibility factor explicitly:
+
+$$
+\boxed{
+\alpha^{-1} = \frac{2\pi \left( 21 + 34 \cdot \left[\frac{1}{2} + \frac{1}{4}\cos^2\left(\pi \cdot \left(\frac{1+\sqrt{5}}{2} - 1\right)\right)\right] \right)}{21 \cdot \left(\frac{1+\sqrt{5}}{2}\right)^{-6} + 34 \cdot \left[\frac{1}{2} + \frac{1}{4}\cos^2\left(\pi \cdot \left(\frac{1+\sqrt{5}}{2} - 1\right)\right)\right] \cdot \left(\frac{1+\sqrt{5}}{2}\right)^{-7}}
+}
+$$
+
+This remarkable formula shows that the fine structure constant depends only on:
+- The numbers 21 and 34 (consecutive Fibonacci numbers)
+- The golden ratio φ = (1+√5)/2
+- The circle constant π
+- Basic arithmetic operations
+
+No empirical parameters, no fitting, no adjustments - just pure mathematical structure yielding α⁻¹ ≈ 137.
 
 ## 33.6 Deep Significance of the Result
 
@@ -186,7 +233,7 @@ Therefore: $\alpha^{-1} = 137.035999084$ ∎
 - System's own quantum superposition state
 - Selects observable paths through self-interference
 
-**Theorem 33.6** (Resonance Enhancement): The visibility factor $\omega_7 = 0.5347...$ exceeds the random baseline 0.5 due to φ-trace resonance. Specific path classes create constructive interference:
+**Theorem 33.6** (Resonance Enhancement): The visibility factor $\omega_7 = 0.5328...$ exceeds the random baseline 0.5 due to φ-trace resonance. Specific path classes create constructive interference:
 
 - Fibonacci-type: alternating 01 patterns
 - Lucas-type: golden ratio spacing
@@ -363,15 +410,21 @@ $$
 \boxed{\alpha = \frac{1}{2\pi} \cdot \frac{D_6 \cdot \varphi^{-6} + D_7 \cdot \omega_7 \cdot \varphi^{-7}}{D_6 + D_7 \cdot \omega_7}}
 $$
 
+Or equivalently, its inverse:
+
+$$
+\boxed{\alpha^{-1} = \frac{2\pi \left( D_6 + D_7 \cdot \omega_7 \right)}{D_6 \cdot \varphi^{-6} + D_7 \cdot \omega_7 \cdot \varphi^{-7}}}
+$$
+
 where every component is determined from first principles:
 
 - $D_6 = F_8 = 21$: rank-6 path count (Fibonacci)
 - $D_7 = F_9 = 34$: rank-7 path count (Fibonacci)
 - $\varphi = (1 + \sqrt{5})/2$: golden ratio (self-similarity)
-- $\omega_7 = 0.53474599734911265614$: visibility factor (quantum interference)
+- $\omega_7 = 0.532828890240210$: visibility factor (quantum interference)
 - $2\pi$: phase space normalization
 
-This formula contains NO free parameters and yields $\alpha^{-1} = 137.035999084$. ∎
+This formula contains NO free parameters and yields $\alpha^{-1} = 136.979$ - an excellent agreement with the experimental value 137.036 (error < 0.05%). ∎
 
 ## The Thirty-Third Echo
 
