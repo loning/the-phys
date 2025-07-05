@@ -64,17 +64,22 @@ function processFile(filePath) {
 function main() {
   console.log('🔍 Searching for markdown files with LaTeX blocks...\n');
   
-  // Find all markdown files in docs directory
-  const pattern = path.join(__dirname, '../docs/**/*.md');
-  const files = glob.sync(pattern);
+  // Find all markdown files in docs and i18n directories
+  const patterns = [
+    path.join(__dirname, '../docs/**/*.md'),
+    path.join(__dirname, '../i18n/**/*.md')
+  ];
   
   let totalFixed = 0;
   let filesFixed = 0;
   
-  files.forEach(file => {
-    if (processFile(file)) {
-      filesFixed++;
-    }
+  patterns.forEach(pattern => {
+    const files = glob.sync(pattern);
+    files.forEach(file => {
+      if (processFile(file)) {
+        filesFixed++;
+      }
+    });
   });
   
   console.log(`\n✅ Complete! Fixed LaTeX blocks in ${filesFixed} files.`);
@@ -82,7 +87,9 @@ function main() {
   // Also check for potential issues
   console.log('\n🔍 Checking for potential LaTeX issues...\n');
   
-  files.forEach(file => {
+  patterns.forEach(pattern => {
+    const files = glob.sync(pattern);
+    files.forEach(file => {
     const content = fs.readFileSync(file, 'utf8');
     
     // Check for & symbols that might cause issues
@@ -105,6 +112,7 @@ function main() {
           console.log(`⚠️  Potential issue in ${file}:${index + 1} - '&' outside of valid environment`);
         }
       }
+    });
     });
   });
 }
