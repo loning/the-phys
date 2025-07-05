@@ -52,17 +52,21 @@ The final volume addresses consciousness directly:
 ## Core Mathematical Framework
 
 ### The Fundamental Identity
-$$\psi = \psi(\psi)$$
-
+$$
+\psi = \psi(\psi)
+$$
 ### The Collapse Tensor ζ-Function
-$$\zeta^{ij}_{\text{tensor}}(s) = \sum_{P: i \to j} T^{ij}_P \left[n_{F}[P]\right]^{-s}$$
-
+$$
+\zeta^{ij}_{\text{tensor}}(s) = \sum_{P: i \to j} T^{ij}_P \left[n_{F}[P]\right]^{-s}
+$$
 ### The Observer Equation
-$$\Psi_{\text{obs}}^{ii} = \zeta^{ii}_{\text{self}}(\zeta^{ii}_{\text{self}}(s))$$
-
+$$
+\Psi_{\text{obs}}^{ii} = \zeta^{ii}_{\text{self}}(\zeta^{ii}_{\text{self}}(s))
+$$
 ### The Spectral Convolution
-$$\mathcal{C}_{\text{spectral}}[T_1, T_2](\omega) = \int_{-\infty}^{\infty} T_1(\omega') T_2^*(\omega-\omega') K^{ij}(\omega',\omega) d\omega'$$
-
+$$
+\mathcal{C}_{\text{spectral}}[T_1, T_2](\omega) = \int_{-\infty}^{\infty} T_1(\omega') T_2^*(\omega-\omega') K^{ij}(\omega',\omega) d\omega'
+$$
 ## Reading Guide
 
 Each book is designed to be self-contained while building upon previous foundations. Readers may begin with Book I for the complete theoretical development, or explore specific books based on their interests:

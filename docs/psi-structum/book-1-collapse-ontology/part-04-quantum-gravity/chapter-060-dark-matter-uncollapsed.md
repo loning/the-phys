@@ -12,13 +12,15 @@ sidebar_label: "060. Dark Matter Uncollapsed"
 From $\psi = \psi(\psi)$, partial development creates background patterns.
 
 **Definition 60.1** (Partial Development):
-$$\Psi_{\text{bg}} = \sum_i \alpha_i \cdot \text{Config}_i$$
-
+$$
+\Psi_{\text{bg}} = \sum_i \alpha_i \cdot \text{Config}_i
+$$
 Superposition of configuration states.
 
 **Theorem 60.1** (Pattern Weight):
-$$\langle\mathcal{W}\rangle = \sum_i |\alpha_i|^2 \mathcal{W}_i \neq 0$$
-
+$$
+\langle\mathcal{W}\rangle = \sum_i |\alpha_i|^2 \mathcal{W}_i \neq 0
+$$
 Pattern weight sees all components.
 
 *Proof*:
@@ -31,13 +33,15 @@ Mathematical weight function linear in configuration density. ∎
 Mathematical patterns require undeveloped configurations.
 
 **Definition 60.2** (Configuration Discrepancy):
-$$\Omega_{\text{bg}} = \varphi^{-3}$$
-
+$$
+\Omega_{\text{bg}} = \varphi^{-3}
+$$
 Background patterns fraction in φ-structure.
 
 **Theorem 60.2** (Pattern Distribution):
-$$\rho_{\text{pattern}}(r) \approx \varphi^{-k}$$
-
+$$
+\rho_{\text{pattern}}(r) \approx \varphi^{-k}
+$$
 for large r, implying distributed development with φ-scaling.
 
 *Observer Framework Note*: Dark matter interpretation requires cosmological framework.
@@ -47,13 +51,15 @@ for large r, implying distributed development with φ-scaling.
 Background patterns as mathematical superposition.
 
 **Definition 60.3** (Background State):
-$$\Psi_{\text{bg}} = \frac{1}{\sqrt{N}} \sum_{n=1}^N e^{i\varphi_n \cdot \varphi} \cdot \text{Config}_n$$
-
+$$
+\Psi_{\text{bg}} = \frac{1}{\sqrt{N}} \sum_{n=1}^N e^{i\varphi_n \cdot \varphi} \cdot \text{Config}_n
+$$
 Coherent superposition of configuration eigenstates.
 
 **Theorem 60.3** (Development Time):
-$$\tau_{\text{develop}} \sim \frac{\mathcal{C}_{\text{bg}}}{\Gamma_{\text{dev}} \cdot \rho_{\text{struct}}} \gg \tau_{\text{system}}$$
-
+$$
+\tau_{\text{develop}} \sim \frac{\mathcal{C}_{\text{bg}}}{\Gamma_{\text{dev}} \cdot \rho_{\text{struct}}} \gg \tau_{\text{system}}
+$$
 Remains undeveloped on system timescales.
 
 *Observer Framework Note*: Quantum superposition interpretation requires quantum mechanics framework.
@@ -70,8 +76,9 @@ Why weight but not specific properties?
 
 **Theorem 60.4** (Selective Development):
 Superposition preserves weight but not specific properties:
-$$\langle\mathcal{P}\rangle = \sum_i \alpha_i^* \alpha_j \mathcal{P}_{ij} = 0$$
-
+$$
+\langle\mathcal{P}\rangle = \sum_i \alpha_i^* \alpha_j \mathcal{P}_{ij} = 0
+$$
 *Observer Framework Note*: Force interactions interpretation requires Standard Model framework.
 
 ## 60.5 Category of Pattern States
@@ -108,8 +115,9 @@ Virtual → Background → Active → Complex → Self-Referential
 Background patterns seed structural development.
 
 **Definition 60.6** (Development Rate):
-$$\Delta(\tau) = \Delta_0 \cdot \varphi^{\tau}$$
-
+$$
+\Delta(\tau) = \Delta_0 \cdot \varphi^{\tau}
+$$
 during pattern development domination.
 
 **Theorem 60.6** (Initial Structures):
@@ -125,13 +133,15 @@ Background patterns develop first:
 Mathematical clustering of undeveloped configurations.
 
 **Definition 60.7** (φ-Profile):
-$$\rho_{\text{bg}}(r) = \frac{\rho_{\varphi}}{(r/r_{\varphi})(1 + r/r_{\varphi})^{\varphi}}$$
-
+$$
+\rho_{\text{bg}}(r) = \frac{\rho_{\varphi}}{(r/r_{\varphi})(1 + r/r_{\varphi})^{\varphi}}
+$$
 Universal background pattern density with φ-exponent.
 
 **Theorem 60.7** (Development Equilibrium):
-$$2\mathcal{K}_{\text{dev}} + \mathcal{U}_{\text{dev}} = 0$$
-
+$$
+2\mathcal{K}_{\text{dev}} + \mathcal{U}_{\text{dev}} = 0
+$$
 Development kinetics balances development potential.
 
 *Observer Framework Note*: Gravitational interpretation requires general relativity framework.
@@ -141,14 +151,16 @@ Development kinetics balances development potential.
 Why are background patterns elusive?
 
 **Definition 60.8** (Development Cross Section):
-$$\sigma_{\text{bg-act}} < \varphi^{-k}$$
-
+$$
+\sigma_{\text{bg-act}} < \varphi^{-k}
+$$
 Extremely weak coupling to active patterns.
 
 **Theorem 60.8** (Superposition Protection):
 Configuration superposition suppresses definite interactions:
-$$\Gamma_{\text{dev}} \propto |\langle\text{final}|\text{initial}\rangle_{\varphi}|^2 \approx 0$$
-
+$$
+\Gamma_{\text{dev}} \propto |\langle\text{final}|\text{initial}\rangle_{\varphi}|^2 \approx 0
+$$
 *Observer Framework Note*: Particle detection interpretation requires experimental physics framework.
 
 ## 60.9 Parameters from Background Patterns
@@ -156,14 +168,16 @@ $$\Gamma_{\text{dev}} \propto |\langle\text{final}|\text{initial}\rangle_{\varph
 Mathematical parameters from background configuration properties.
 
 **Definition 60.9** (Development Ratio):
-$$\Omega_{\text{bg}}/\Omega_{\text{act}} = \varphi$$
-
+$$
+\Omega_{\text{bg}}/\Omega_{\text{act}} = \varphi
+$$
 Background to active pattern ratio.
 
 **Theorem 60.9** (φ-Development Scale):
 For development equilibrium:
-$$\langle\Gamma_{\text{dev}}\rangle \approx \frac{\varphi^{-k}}{\tau_{\text{system}}}$$
-
+$$
+\langle\Gamma_{\text{dev}}\rangle \approx \frac{\varphi^{-k}}{\tau_{\text{system}}}
+$$
 *Observer Framework Note*: Physical constants interpretation requires physics framework.
 
 ## 60.10 Modified Development Alternative
@@ -171,8 +185,9 @@ $$\langle\Gamma_{\text{dev}}\rangle \approx \frac{\varphi^{-k}}{\tau_{\text{syst
 Are background patterns necessary?
 
 **Definition 60.10** (Modified Development):
-$$\mathcal{F}_{\text{dev}} = \mu_{\text{dev}}(\Delta/\Delta_0) \cdot \mathcal{C}_{\text{pattern}} \Delta$$
-
+$$
+\mathcal{F}_{\text{dev}} = \mu_{\text{dev}}(\Delta/\Delta_0) \cdot \mathcal{C}_{\text{pattern}} \Delta
+$$
 where $\Delta_0 \approx \varphi^{-5}$.
 
 **Theorem 60.10** (Inadequacy):

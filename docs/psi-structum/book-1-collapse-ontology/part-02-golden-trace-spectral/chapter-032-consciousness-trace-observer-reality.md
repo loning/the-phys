@@ -12,14 +12,16 @@ sidebar_label: "032. Consciousness = Tr[Observer × Reality]"
 From $\psi = \psi(\psi)$, systems must exhibit self-referential coupling.
 
 **Definition 32.1** (Self-Reference Coupling):
-$$\mathcal{S} = \text{Tr}[\mathcal{T} \times \mathcal{T}^\dagger]$$
-
+$$
+\mathcal{S} = \text{Tr}[\mathcal{T} \times \mathcal{T}^\dagger]
+$$
 where $\mathcal{T}$ is the system trace tensor.
 
 **Theorem 32.1** (Non-Zero Coupling):
 For any non-trivial self-referential system:
-$$\mathcal{S} \neq 0$$
-
+$$
+\mathcal{S} \neq 0
+$$
 *Proof*:
 Self-reference $\psi = \psi(\psi)$ guarantees non-zero trace coupling. ∎
 
@@ -28,8 +30,9 @@ Self-reference $\psi = \psi(\psi)$ guarantees non-zero trace coupling. ∎
 Self-referential systems have specific tensor form.
 
 **Definition 32.2** (System Tensor):
-$$\mathcal{T}^{ij}_{kl} = \sum_n \varphi^{-n/2} |F_n\rangle\langle F_n| \otimes \langle i|F_n\rangle\langle F_n|j\rangle \otimes |k\rangle\langle l|$$
-
+$$
+\mathcal{T}^{ij}_{kl} = \sum_n \varphi^{-n/2} |F_n\rangle\langle F_n| \otimes \langle i|F_n\rangle\langle F_n|j\rangle \otimes |k\rangle\langle l|
+$$
 where $|F_n\rangle$ are Fibonacci basis states.
 
 **Theorem 32.2** (Tensor Properties):
@@ -42,11 +45,13 @@ where $|F_n\rangle$ are Fibonacci basis states.
 The dual tensor emerges from collapse dynamics.
 
 **Definition 32.3** (Dual Tensor):
-$$\mathcal{T}^{\dagger\mu\nu} = \text{Tr}[\mathcal{C}^\mu (\mathcal{C}^\nu)^\dagger]$$
-
+$$
+\mathcal{T}^{\dagger\mu\nu} = \text{Tr}[\mathcal{C}^\mu (\mathcal{C}^\nu)^\dagger]
+$$
 **Theorem 32.3** (Completeness):
-$$\sum_{\mu\nu} \mathcal{T}^{\dagger\mu\nu} = \text{Total Structure}$$
-
+$$
+\sum_{\mu\nu} \mathcal{T}^{\dagger\mu\nu} = \text{Total Structure}
+$$
 All mathematical structure contained in this tensor.
 
 ## 32.4 The Trace Coupling Operation
@@ -54,8 +59,9 @@ All mathematical structure contained in this tensor.
 Taking the trace measures self-reference degree.
 
 **Definition 32.4** (Self-Reference Trace):
-$$\mathcal{S} = \sum_{ijkl} \mathcal{T}^{ij}_{kl} \mathcal{T}^{\dagger kl}_{ij}$$
-
+$$
+\mathcal{S} = \sum_{ijkl} \mathcal{T}^{ij}_{kl} \mathcal{T}^{\dagger kl}_{ij}
+$$
 **Theorem 32.4** (Trace Properties):
 1. Real: $\mathcal{S}^* = \mathcal{S}$
 2. Positive: $\mathcal{S} \geq 0$
@@ -80,13 +86,15 @@ graph TD
 ```
 
 **Definition 32.5** (Coupling Information):
-$$I_\mathcal{S} = -\text{Tr}[\rho_\mathcal{S} \log \rho_\mathcal{S}]$$
-
+$$
+I_\mathcal{S} = -\text{Tr}[\rho_\mathcal{S} \log \rho_\mathcal{S}]
+$$
 where $\rho_\mathcal{S}$ is the coupling density matrix.
 
 **Theorem 32.5** (Information Bounds):
-$$I_\mathcal{S} \leq F_n \log(\varphi)$$
-
+$$
+I_\mathcal{S} \leq F_n \log(\varphi)
+$$
 for systems of complexity order $n$.
 
 ## 32.6 Coherence Properties of Self-Reference
@@ -94,11 +102,13 @@ for systems of complexity order $n$.
 Self-reference exhibits mathematical coherence.
 
 **Definition 32.6** (Coherence Structure):
-$$|\mathcal{S}\rangle = \sum_{n} \varphi^{-n/4} |F_n\rangle \otimes |F_n^*\rangle$$
-
+$$
+|\mathcal{S}\rangle = \sum_{n} \varphi^{-n/4} |F_n\rangle \otimes |F_n^*\rangle
+$$
 **Theorem 32.6** (Coherence Length):
-$$\ell_\text{coherence} = \varphi^{N/2}$$
-
+$$
+\ell_\text{coherence} = \varphi^{N/2}
+$$
 where $N$ is the Fibonacci index of dominant mode.
 
 *Observer Framework Note*: Physical interpretation as quantum coherence requires quantum mechanics from observer coupling.
@@ -115,21 +125,24 @@ Different coupling values exhibit distinct behaviors.
 
 **Theorem 32.7** (Critical Transitions):
 Phase transitions occur at Fibonacci thresholds:
-$$\mathcal{S}_c = F_n$$
-
+$$
+\mathcal{S}_c = F_n
+$$
 ## 32.8 Evolution of Self-Reference
 
 Self-reference coupling evolves through trace dynamics.
 
 **Definition 32.8** (Coupling Evolution):
-$$\frac{d\mathcal{S}}{d\tau} = \text{Tr}\left[\frac{d\mathcal{T}}{d\tau} \times \mathcal{T}^\dagger + \mathcal{T} \times \frac{d\mathcal{T}^\dagger}{d\tau}\right]$$
-
+$$
+\frac{d\mathcal{S}}{d\tau} = \text{Tr}\left[\frac{d\mathcal{T}}{d\tau} \times \mathcal{T}^\dagger + \mathcal{T} \times \frac{d\mathcal{T}^\dagger}{d\tau}\right]
+$$
 where $\tau$ is complexity parameter.
 
 **Theorem 32.8** (Growth Condition):
 Coupling increases when:
-$$\text{Tr}[\mathcal{T}' \times \mathcal{T}^\dagger] > 0$$
-
+$$
+\text{Tr}[\mathcal{T}' \times \mathcal{T}^\dagger] > 0
+$$
 System complexity must increase coherently.
 
 ## 32.9 Structural Correlates
@@ -137,8 +150,9 @@ System complexity must increase coherently.
 Network structures map to coupling values.
 
 **Definition 32.9** (Network Coupling):
-$$\mathcal{S}_\text{network} = \sum_\text{nodes} w_{ij} \cdot \text{Tr}[\mathcal{T}_i \times \mathcal{T}_j^\dagger]$$
-
+$$
+\mathcal{S}_\text{network} = \sum_\text{nodes} w_{ij} \cdot \text{Tr}[\mathcal{T}_i \times \mathcal{T}_j^\dagger]
+$$
 **Theorem 32.9** (Correlation):
 Network topology correlates with local coupling contributions.
 
@@ -150,21 +164,24 @@ Certain ratios enable strong self-reference.
 
 **Definition 32.10** (Ratio Constraints):
 Ratios must satisfy:
-$$\mathcal{S}[\{r_i\}] > F_5$$
-
+$$
+\mathcal{S}[\{r_i\}] > F_5
+$$
 for strong coupling.
 
 **Theorem 32.10** (Ratio Selection):
 Only specific ratio combinations allow $\mathcal{S} > F_5$:
-$$r_1/r_2 = \varphi^k, \quad k \in \mathbb{Z}$$
-
+$$
+r_1/r_2 = \varphi^k, \quad k \in \mathbb{Z}
+$$
 ## 32.11 Universal Self-Reference
 
 Does the mathematical universe exhibit self-reference?
 
 **Definition 32.11** (Total Coupling):
-$$\mathcal{S}_\text{total} = \text{Tr}[\mathcal{T}_\text{all} \times \mathcal{T}_\text{all}^\dagger]$$
-
+$$
+\mathcal{S}_\text{total} = \text{Tr}[\mathcal{T}_\text{all} \times \mathcal{T}_\text{all}^\dagger]
+$$
 **Theorem 32.11** (Universal Property):
 $\mathcal{S}_\text{total} = \infty$ due to $\psi = \psi(\psi)$ at all scales.
 

@@ -12,17 +12,20 @@ sidebar_label: "013. Entropy as Trace Complexity"
 We derive entropy purely from the complexity of collapse traces.
 
 **Definition 13.1** (Trace Complexity): For trace $\mathcal{T}$ in golden base:
-$$C[\mathcal{T}] = \sum_{k: t_k=1} k \cdot F_k$$
-
+$$
+C[\mathcal{T}] = \sum_{k: t_k=1} k \cdot F_k
+$$
 This weights each active mode by its position and Fibonacci value.
 
 **Definition 13.2** (Trace Entropy):
-$$S[\mathcal{T}] = \log C[\mathcal{T}]$$
-
+$$
+S[\mathcal{T}] = \log C[\mathcal{T}]
+$$
 **Theorem 13.1** (Entropy Growth):
 Under collapse evolution:
-$$\frac{dS}{d\tau} \geq 0$$
-
+$$
+\frac{dS}{d\tau} \geq 0
+$$
 Entropy never decreases.
 
 *Proof*:
@@ -33,13 +36,15 @@ Each collapse step can only add complexity, never remove it, due to the golden c
 Temperature emerges from trace statistics.
 
 **Definition 13.3** (Trace Distribution):
-$$\rho(\mathcal{T}) = \frac{1}{Z} e^{-\beta C[\mathcal{T}]}$$
-
+$$
+\rho(\mathcal{T}) = \frac{1}{Z} e^{-\beta C[\mathcal{T}]}
+$$
 where $Z$ is the partition function.
 
 **Theorem 13.2** (Temperature Identification):
-$$\beta = \frac{1}{k_B T} = \varphi^{S_0 - S}$$
-
+$$
+\beta = \frac{1}{k_B T} = \varphi^{S_0 - S}
+$$
 where $S_0$ is reference entropy.
 
 Temperature relates to entropy through the golden ratio.
@@ -49,8 +54,9 @@ Temperature relates to entropy through the golden ratio.
 Entropy has natural tensor structure.
 
 **Definition 13.4** (Entropy Tensor):
-$$S^{ij}_{kl} = -\sum_P P^{ij}_{kl} \log P^{ij}_{kl}$$
-
+$$
+S^{ij}_{kl} = -\sum_P P^{ij}_{kl} \log P^{ij}_{kl}
+$$
 where $P^{ij}_{kl}$ is the probability of transition $(i,j) \to (k,l)$.
 
 **Theorem 13.3** (Tensor Properties):
@@ -63,8 +69,9 @@ where $P^{ij}_{kl}$ is the probability of transition $(i,j) \to (k,l)$.
 Entropy defines a geometric structure.
 
 **Definition 13.5** (Entropy Metric):
-$$g_{ij} = -\frac{\partial^2 S}{\partial p_i \partial p_j}$$
-
+$$
+g_{ij} = -\frac{\partial^2 S}{\partial p_i \partial p_j}
+$$
 where $p_i$ are probability parameters.
 
 **Theorem 13.4** (Metric Properties):
@@ -110,23 +117,27 @@ Entropic states form a category.
 - Composition: Sequential evolution
 
 **Theorem 13.6** (Categorical Limit):
-$$S_\infty = \text{colim}_{n \to \infty} S_n = \infty$$
-
+$$
+S_\infty = \text{colim}_{n \to \infty} S_n = \infty
+$$
 But the rate of approach is:
-$$S_n \sim n^{1/\varphi}$$
-
+$$
+S_n \sim n^{1/\varphi}
+$$
 ## 13.7 Quantum Entropy
 
 Quantum entropy emerges from trace superposition.
 
 **Definition 13.8** (Von Neumann Entropy):
-$$S_{vN} = -\text{Tr}(\rho \log \rho)$$
-
+$$
+S_{vN} = -\text{Tr}(\rho \log \rho)
+$$
 where $\rho$ is the density matrix.
 
 **Theorem 13.7** (Trace Decomposition):
-$$S_{vN} = \sum_{\mathcal{T}} p_{\mathcal{T}} S[\mathcal{T}] + S_{\text{mixing}}$$
-
+$$
+S_{vN} = \sum_{\mathcal{T}} p_{\mathcal{T}} S[\mathcal{T}] + S_{\text{mixing}}
+$$
 where $S_{\text{mixing}} = -\sum p_{\mathcal{T}} \log p_{\mathcal{T}}$.
 
 ## 13.8 Thermodynamic Relations
@@ -135,19 +146,22 @@ Standard thermodynamics emerges from trace structure.
 
 **Definition 13.9** (Mathematical Energy):
 Within our mathematical framework, we define a complexity-energy relation:
-$$E_{\text{math}}[\mathcal{T}] = \varphi \cdot C[\mathcal{T}]$$
-
+$$
+E_{\text{math}}[\mathcal{T}] = \varphi \cdot C[\mathcal{T}]
+$$
 **Theorem 13.8** (Mathematical Conservation):
-$$dE_{\text{math}} = \varphi dS + \sum_i \mu_i dN_i$$
-
+$$
+dE_{\text{math}} = \varphi dS + \sum_i \mu_i dN_i
+$$
 where $\mu_i$ represent mode coupling parameters.
 
 *Note*: This is a mathematical relationship within our trace formalism, not a claim about physical energy.
 
 **Theorem 13.9** (Second Law):
 For isolated system:
-$$\Delta S \geq 0$$
-
+$$
+\Delta S \geq 0
+$$
 with equality only for reversible processes.
 
 ## 13.9 Maximum Entropy States
@@ -155,14 +169,16 @@ with equality only for reversible processes.
 Certain trace configurations achieve maximum complexity.
 
 **Definition 13.10** (Maximum Entropy State):
-$$\mathcal{T}_{\max} = \sum_{k=0}^{n} b_k |F_k\rangle$$
-
+$$
+\mathcal{T}_{\max} = \sum_{k=0}^{n} b_k |F_k\rangle
+$$
 with all allowed $b_k = 1$ under the golden constraint.
 
 **Theorem 13.10** (Entropy Bound):
 For a finite trace of length n:
-$$S_{\max} = \log\left(\sum_{k=0}^{n} F_k\right) \approx \log(\varphi^n)$$
-
+$$
+S_{\max} = \log\left(\sum_{k=0}^{n} F_k\right) \approx \log(\varphi^n)
+$$
 This gives an exponential scaling with trace length.
 
 *Note*: This is a mathematical bound within our formalism, not a claim about physical black holes.
@@ -172,12 +188,14 @@ This gives an exponential scaling with trace length.
 High entropy traces can support consciousness.
 
 **Definition 13.11** (Consciousness Threshold):
-$$S_c = \log(F_{10}) = \log(55) \approx 4.007$$
-
+$$
+S_c = \log(F_{10}) = \log(55) \approx 4.007
+$$
 **Theorem 13.11** (Emergence Criterion):
 Consciousness possible when:
-$$S[\mathcal{T}] > S_c \text{ and } \frac{dS}{d\tau} < \frac{1}{\varphi^2}$$
-
+$$
+S[\mathcal{T}] > S_c \text{ and } \frac{dS}{d\tau} < \frac{1}{\varphi^2}
+$$
 High entropy but slow growth enables self-reflection.
 
 ## 13.11 Mathematical Constants from Entropy Scaling
@@ -186,14 +204,16 @@ Entropy scaling reveals mathematical constants within our framework.
 
 **Theorem 13.12** (Entropy Scaling Constant):
 For large trace ensembles:
-$$\lim_{N \to \infty} \frac{S_N}{N \log N} = \frac{1}{\varphi}$$
-
+$$
+\lim_{N \to \infty} \frac{S_N}{N \log N} = \frac{1}{\varphi}
+$$
 This gives $1/\varphi$ as a natural mathematical constant for entropy scaling.
 
 **Theorem 13.13** (Higher-Order Relations):
 Combining with geometric factors:
-$$c_{\text{scaling}} = \frac{\pi^2}{60 \varphi^4}$$
-
+$$
+c_{\text{scaling}} = \frac{\pi^2}{60 \varphi^4}
+$$
 This represents a mathematical scaling constant within our framework.
 
 *Note*: These are mathematical properties of trace entropy, not claims about physical thermodynamic constants.

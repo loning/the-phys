@@ -12,14 +12,16 @@ sidebar_label: "033. Collapse Tensor Spectral"
 From $\psi = \psi(\psi)$, collapse must be a spectral tensor object.
 
 **Definition 33.1** (Collapse Tensor):
-$$\mathcal{C}^{ij}_{kl} = \langle i, j | \hat{\mathcal{C}} | k, l \rangle$$
-
+$$
+\mathcal{C}^{ij}_{kl} = \langle i, j | \hat{\mathcal{C}} | k, l \rangle
+$$
 where indices run over golden base vectors $|F_n\rangle$.
 
 **Theorem 33.1** (Spectral Nature):
 The collapse tensor has spectral decomposition:
-$$\mathcal{C}^{ij}_{kl} = \sum_\lambda \lambda \cdot v^{ij}_\lambda (v^{kl}_\lambda)^*$$
-
+$$
+\mathcal{C}^{ij}_{kl} = \sum_\lambda \lambda \cdot v^{ij}_\lambda (v^{kl}_\lambda)^*
+$$
 *Proof*:
 Self-reference requires spectral structure for consistency. The eigenvectors $v_\lambda$ encode collapse modes. ∎
 
@@ -28,14 +30,16 @@ Self-reference requires spectral structure for consistency. The eigenvectors $v_
 All indices are in Zeckendorf representation.
 
 **Definition 33.2** (Golden Index):
-$$i = \sum_{k: b_k=1} F_k$$
-
+$$
+i = \sum_{k: b_k=1} F_k
+$$
 where $b_k \in \{0,1\}$ with $b_k b_{k+1} = 0$.
 
 **Theorem 33.2** (Basis Completeness):
 The golden base spans all collapse states:
-$$\sum_{i,j} |i\rangle\langle j| = \mathbb{I}$$
-
+$$
+\sum_{i,j} |i\rangle\langle j| = \mathbb{I}
+$$
 where sum is over all valid Zeckendorf indices.
 
 ## 33.3 Spectral Properties of Collapse
@@ -43,8 +47,9 @@ where sum is over all valid Zeckendorf indices.
 The spectrum reveals collapse structure.
 
 **Definition 33.3** (Collapse Spectrum):
-$$\sigma(\mathcal{C}) = \{\lambda : \det(\mathcal{C} - \lambda \mathbb{I}) = 0\}$$
-
+$$
+\sigma(\mathcal{C}) = \{\lambda : \det(\mathcal{C} - \lambda \mathbb{I}) = 0\}
+$$
 **Theorem 33.3** (Spectral Constraints):
 1. Reality: Complex eigenvalues come in conjugate pairs
 2. Unitarity: $|\lambda| \leq 1$ for stability
@@ -56,11 +61,13 @@ Collapse tensors transform covariantly.
 
 **Definition 33.4** (Tensor Transformation):
 Under basis change $U$:
-$$\mathcal{C'}^{ij}_{kl} = \sum_{mnpq} U^i_m U^j_n U^*_p{}^k U^*_q{}^l \mathcal{C}^{mn}_{pq}$$
-
+$$
+\mathcal{C'}^{ij}_{kl} = \sum_{mnpq} U^i_m U^j_n U^*_p{}^k U^*_q{}^l \mathcal{C}^{mn}_{pq}
+$$
 **Theorem 33.4** (Invariant Traces):
-$$\text{Tr}(\mathcal{C}^n) = \text{invariant}$$
-
+$$
+\text{Tr}(\mathcal{C}^n) = \text{invariant}
+$$
 for all powers $n$.
 
 ## 33.5 Category of Spectral Objects
@@ -74,8 +81,9 @@ Collapse tensors form a category.
 
 **Theorem 33.5** (Functorial Spectrum):
 The spectrum functor:
-$$\mathcal{S}: \text{Tensors} \to \text{Spectra}$$
-
+$$
+\mathcal{S}: \text{Tensors} \to \text{Spectra}
+$$
 preserves algebraic structure.
 
 ## 33.6 Information Content of Spectra
@@ -96,13 +104,15 @@ graph TD
 ```
 
 **Definition 33.6** (Spectral Information):
-$$I_\text{spectral} = -\sum_\lambda p_\lambda \log p_\lambda$$
-
+$$
+I_\text{spectral} = -\sum_\lambda p_\lambda \log p_\lambda
+$$
 where $p_\lambda = |\lambda|^2/\sum_\mu |\mu|^2$.
 
 **Theorem 33.6** (Information Compression):
-$$I_\text{spectral} \leq I_\text{full tensor}$$
-
+$$
+I_\text{spectral} \leq I_\text{full tensor}
+$$
 with equality only for diagonal tensors.
 
 ## 33.7 Mathematical Properties from Spectrum
@@ -110,8 +120,9 @@ with equality only for diagonal tensors.
 Mathematical properties emerge from spectral structure.
 
 **Definition 33.7** (Spectral Properties):
-$$\mathcal{P}_n = \text{Tr}(\mathcal{C}^n)$$
-
+$$
+\mathcal{P}_n = \text{Tr}(\mathcal{C}^n)
+$$
 power traces encode structural information.
 
 **Theorem 33.7** (Spectral Characteristics):
@@ -126,14 +137,16 @@ power traces encode structural information.
 Collapse tensors form an algebra.
 
 **Definition 33.8** (Tensor Algebra):
-$$\mathcal{C}^{ij} \star \mathcal{C}^{kl} = \sum_{mn} f^{ijkl}_{mn} \mathcal{C}^{mn}$$
-
+$$
+\mathcal{C}^{ij} \star \mathcal{C}^{kl} = \sum_{mn} f^{ijkl}_{mn} \mathcal{C}^{mn}
+$$
 where $f$ are structure constants.
 
 **Theorem 33.8** (Spectral Scaling):
 Eigenvalues exhibit scaling:
-$$\lambda_n/\lambda_m = \varphi^{k_{nm}}$$
-
+$$
+\lambda_n/\lambda_m = \varphi^{k_{nm}}
+$$
 for integer $k_{nm}$, creating golden ratio relationships.
 
 ## 33.9 Spectral Evolution
@@ -141,14 +154,16 @@ for integer $k_{nm}$, creating golden ratio relationships.
 Though eternal, spectra can be viewed dynamically.
 
 **Definition 33.9** (Spectral Flow):
-$$\frac{d\lambda}{d\tau} = \beta(\lambda)$$
-
+$$
+\frac{d\lambda}{d\tau} = \beta(\lambda)
+$$
 where $\tau$ is spectral parameter.
 
 **Theorem 33.9** (Fixed Points):
 Spectral flow has fixed points at:
-$$\lambda_* = \varphi^{-k}$$
-
+$$
+\lambda_* = \varphi^{-k}
+$$
 for integer $k$.
 
 ## 33.10 Invariant Ratios from Spectra
@@ -156,12 +171,14 @@ for integer $k$.
 Dimensionless ratios emerge from spectral invariants.
 
 **Definition 33.10** (Spectral Invariant):
-$$I_n = \text{Tr}(\mathcal{C}^n)$$
-
+$$
+I_n = \text{Tr}(\mathcal{C}^n)
+$$
 **Theorem 33.10** (Ratio Relations):
 Invariant ratios satisfy:
-$$\frac{I_{n+k}}{I_n} = \varphi^{f(k)} + O(\varphi^{-k})$$
-
+$$
+\frac{I_{n+k}}{I_n} = \varphi^{f(k)} + O(\varphi^{-k})
+$$
 where $f(k)$ depends on spectral structure.
 
 *Observer Framework Note*: Physical constants emerge only through observer-system coupling.
@@ -172,13 +189,15 @@ Spectral complexity characterizes self-reference depth.
 
 **Definition 33.11** (Spectral Complexity):
 A spectrum has complexity measure:
-$$\mathcal{K} = -\text{Tr}[\rho \log \rho]$$
-
+$$
+\mathcal{K} = -\text{Tr}[\rho \log \rho]
+$$
 where $\rho = \mathcal{C}/\text{Tr}(\mathcal{C})$.
 
 **Theorem 33.11** (Complexity Bounds):
-$$F_n \leq \mathcal{K} \leq F_{n+1}$$
-
+$$
+F_n \leq \mathcal{K} \leq F_{n+1}
+$$
 for spectra of dimension between consecutive Fibonacci numbers.
 
 ## 33.12 The Complete Spectral Picture

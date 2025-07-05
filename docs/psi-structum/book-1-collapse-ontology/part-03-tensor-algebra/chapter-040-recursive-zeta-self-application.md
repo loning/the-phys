@@ -12,8 +12,9 @@ sidebar_label: "040. Recursive ζ"
 From $\psi = \psi(\psi)$, the ζ-function must self-apply.
 
 **Definition 40.1** (Recursive ζ):
-$$\zeta[\zeta](s) = \zeta(\zeta(s))$$
-
+$$
+\zeta[\zeta](s) = \zeta(\zeta(s))
+$$
 This is ζ evaluated at ζ of s.
 
 **Theorem 40.1** (Well-Definition):
@@ -28,23 +29,27 @@ Self-application creates fixed points.
 
 **Definition 40.2** (ζ Fixed Point):
 $s_*$ is a fixed point if:
-$$\zeta(s_*) = s_*$$
-
+$$
+\zeta(s_*) = s_*
+$$
 **Theorem 40.2** (Fixed Point Existence):
 At least one fixed point exists in the region:
-$$\{s : 1/\varphi < \text{Re}(s) < \varphi\}$$
-
+$$
+\{s : 1/\varphi < \text{Re}(s) < \varphi\}
+$$
 ## 40.3 Iteration Tower
 
 Repeated self-application builds a tower.
 
 **Definition 40.3** (ζ Tower):
-$$\zeta^{[n]}(s) = \underbrace{\zeta(\zeta(...\zeta}_{n \text{ times}}(s)...))$$
-
+$$
+\zeta^{[n]}(s) = \underbrace{\zeta(\zeta(...\zeta}_{n \text{ times}}(s)...))
+$$
 **Theorem 40.3** (Tower Convergence):
 For suitable $s$:
-$$\lim_{n \to \infty} \zeta^{[n]}(s) = s_\infty$$
-
+$$
+\lim_{n \to \infty} \zeta^{[n]}(s) = s_\infty
+$$
 where $s_\infty$ is an attracting fixed point.
 
 ## 40.4 Tensor Structure of Self-Application
@@ -52,8 +57,9 @@ where $s_\infty$ is an attracting fixed point.
 Self-application has tensor representation.
 
 **Definition 40.4** (Self-Application Tensor):
-$$\mathcal{Z}^{ij}_{kl}[s] = \zeta^{ik}(\zeta^{jl}(s))$$
-
+$$
+\mathcal{Z}^{ij}_{kl}[s] = \zeta^{ik}(\zeta^{jl}(s))
+$$
 **Theorem 40.4** (Tensor Properties):
 1. Non-linear in indices
 2. Preserves golden structure
@@ -89,11 +95,13 @@ Self-applications form a monoid under composition.
 Self-application generates information.
 
 **Definition 40.6** (Self-Information):
-$$I_\text{self}[s] = -\log|\zeta'[\zeta](s)|$$
-
+$$
+I_\text{self}[s] = -\log|\zeta'[\zeta](s)|
+$$
 **Theorem 40.6** (Information Growth):
-$$I_\text{self}[\zeta^{[n]}(s)] \sim n \log \varphi$$
-
+$$
+I_\text{self}[\zeta^{[n]}(s)] \sim n \log \varphi
+$$
 Information grows linearly with iteration depth.
 
 ## 40.7 Functional Structure
@@ -101,13 +109,15 @@ Information grows linearly with iteration depth.
 Self-application creates functional patterns.
 
 **Definition 40.7** (Functional Composition):
-$$\mathcal{F}[\zeta](s) = \sum_n c_n \zeta^{[n]}(s)$$
-
+$$
+\mathcal{F}[\zeta](s) = \sum_n c_n \zeta^{[n]}(s)
+$$
 Weighted sum of iterations.
 
 **Theorem 40.7** (Composition Bounds):
-$$|\mathcal{F}[\zeta](s)| \leq \sum_n |c_n| \cdot |\zeta^{[n]}(s)|$$
-
+$$
+|\mathcal{F}[\zeta](s)| \leq \sum_n |c_n| \cdot |\zeta^{[n]}(s)|
+$$
 Bound on composed functions.
 
 ## 40.8 Mathematical Interpretation
@@ -115,14 +125,16 @@ Bound on composed functions.
 Self-application describes recursive structure.
 
 **Definition 40.8** (Self-Reference Measure):
-$$\mathcal{S}[s] = \text{Re}[\zeta[\zeta](s)]$$
-
+$$
+\mathcal{S}[s] = \text{Re}[\zeta[\zeta](s)]
+$$
 Real part of self-applied value.
 
 **Theorem 40.8** (Fixed Point Shift):
 Self-application shifts fixed points:
-$$s_* = s_0 + \mathcal{S}[s_0]/\varphi$$
-
+$$
+s_* = s_0 + \mathcal{S}[s_0]/\varphi
+$$
 *Observer Framework Note*: Physical interpretation requires additional framework.
 
 ## 40.9 Ratios from Self-Application
@@ -130,12 +142,14 @@ $$s_* = s_0 + \mathcal{S}[s_0]/\varphi$$
 Ratios emerge from self-application structure.
 
 **Definition 40.9** (Iteration Ratio):
-$$\rho_n(s) = \frac{\zeta^{[n]}(s)}{\zeta^{[n-1]}(s)}$$
-
+$$
+\rho_n(s) = \frac{\zeta^{[n]}(s)}{\zeta^{[n-1]}(s)}
+$$
 **Theorem 40.9** (Ratio Convergence):
 For suitable $s$ in basin of attraction:
-$$\lim_{n \to \infty} \rho_n(s) = \zeta'(s_*)$$
-
+$$
+\lim_{n \to \infty} \rho_n(s) = \zeta'(s_*)
+$$
 where $s_*$ is the attracting fixed point.
 
 ## 40.10 Complexity from Self-Application
@@ -143,8 +157,9 @@ where $s_*$ is the attracting fixed point.
 Complexity emerges from recursive iteration.
 
 **Definition 40.10** (Iteration Complexity):
-$$\mathcal{C}_n = \sum_{k=0}^n \frac{1}{k!} \log|\zeta^{[k]}'(s)|$$
-
+$$
+\mathcal{C}_n = \sum_{k=0}^n \frac{1}{k!} \log|\zeta^{[k]}'(s)|
+$$
 Weighted sum of derivative magnitudes.
 
 **Theorem 40.10** (Complexity Levels):
@@ -161,14 +176,16 @@ Self-application creates strange loops.
 
 **Definition 40.11** (Strange Loop):
 A cycle in self-application:
-$$\zeta^{[p]}(s) = s$$
-
+$$
+\zeta^{[p]}(s) = s
+$$
 for minimal period $p > 1$.
 
 **Theorem 40.11** (Loop Structure):
 Strange loops occur at:
-$$s_\text{loop} = \varphi^{1-n} e^{2\pi i k/p}$$
-
+$$
+s_\text{loop} = \varphi^{1-n} e^{2\pi i k/p}
+$$
 ## 40.12 The Complete Self-Application Picture
 
 Recursive ζ self-application reveals:

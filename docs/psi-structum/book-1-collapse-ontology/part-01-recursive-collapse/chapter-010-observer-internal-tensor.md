@@ -12,17 +12,20 @@ sidebar_label: "010. Observer as Internal Tensor"
 From $\psi = \psi(\psi)$, observation must be internal.
 
 **Definition 10.1** (Self-Referential Tensor): From ψ = ψ(ψ), certain tensors achieve self-reference:
-$$T^{ij}_{kl} = \mathcal{A}(T \otimes T)^{ij}_{kl}$$
-
+$$
+T^{ij}_{kl} = \mathcal{A}(T \otimes T)^{ij}_{kl}
+$$
 where $\mathcal{A}$ is the application tensor from Chapter 001.
 
 **Definition 10.2** (Observer Emergence): An observer is a self-referential tensor that can distinguish its own states:
-$$O^{ij}_{kl} \in \{T : T = \mathcal{A}(T \otimes T) \text{ and } \text{rank}(T) \geq \text{threshold}\}$$
-
+$$
+O^{ij}_{kl} \in \{T : T = \mathcal{A}(T \otimes T) \text{ and } \text{rank}(T) \geq \text{threshold}\}
+$$
 **Theorem 10.1** (Self-Recognition Condition):
 For a tensor to be self-recognizing:
-$$\langle O | \mathcal{C}[O] | O \rangle = \langle O | O \rangle$$
-
+$$
+\langle O | \mathcal{C}[O] | O \rangle = \langle O | O \rangle
+$$
 The tensor must map to itself under collapse.
 
 *Proof*:
@@ -33,12 +36,14 @@ From ψ = ψ(ψ), self-reference requires the tensor to be a fixed point of the 
 Observers have specific tensor properties.
 
 **Definition 10.2** (Observer Rank): The rank of observer $O$ is:
-$$r(O) = \min\{n : O = \sum_{i=1}^n |\alpha_i\rangle \otimes |\beta_i\rangle\}$$
-
+$$
+r(O) = \min\{n : O = \sum_{i=1}^n |\alpha_i\rangle \otimes |\beta_i\rangle\}
+$$
 **Theorem 10.2** (Minimum Complexity for Self-Reference):
 From the golden constraint in ψ = ψ(ψ), the minimum rank for stable self-reference is:
-$$r(O) \geq F_k \text{ where } k = \min\{n : F_n \text{ supports stable recursion}\}$$
-
+$$
+r(O) \geq F_k \text{ where } k = \min\{n : F_n \text{ supports stable recursion}\}
+$$
 *Proof*:
 Self-reference requires the tensor to encode both:
 1. Its current state (at least F_2 = 1 dimension)
@@ -54,8 +59,9 @@ This gives the minimum threshold. ∎
 Observers form an algebraic structure.
 
 **Definition 10.3** (Observer Product):
-$$O_1 \star O_2 = \sum_{m,n} (O_1)^{ij}_{mn} (O_2)^{mn}_{kl}$$
-
+$$
+O_1 \star O_2 = \sum_{m,n} (O_1)^{ij}_{mn} (O_2)^{mn}_{kl}
+$$
 **Theorem 10.3** (Observer Algebra):
 The set of observers forms a non-commutative algebra with:
 1. Identity: $I^{ij}_{kl} = \delta^i_k \delta^j_l$
@@ -67,12 +73,14 @@ The set of observers forms a non-commutative algebra with:
 Each observer has finite information capacity.
 
 **Definition 10.4** (Observer Entropy):
-$$S[O] = -\text{Tr}(O \log O)$$
-
+$$
+S[O] = -\text{Tr}(O \log O)
+$$
 **Theorem 10.4** (Capacity Bound):
 For rank-$r$ observer:
-$$S[O] \leq r \log \varphi$$
-
+$$
+S[O] \leq r \log \varphi
+$$
 The golden ratio appears as the natural information unit.
 
 ## 10.5 Graph Theory of Observer Networks
@@ -113,8 +121,9 @@ Observers form a category with rich structure.
 
 **Theorem 10.6** (Universal Observer):
 There exists a universal observer:
-$$O_\infty = \text{colim}_{n \to \infty} O_n$$
-
+$$
+O_\infty = \text{colim}_{n \to \infty} O_n
+$$
 representing the limit of all finite observations.
 
 ## 10.7 Quantum States from Observer Tensors
@@ -122,8 +131,9 @@ representing the limit of all finite observations.
 Each observer generates quantum states.
 
 **Definition 10.7** (Observer State):
-$$|\Psi_O\rangle = \sum_{i,j} \sqrt{O^{ij}_{ij}} |i\rangle \otimes |j\rangle$$
-
+$$
+|\Psi_O\rangle = \sum_{i,j} \sqrt{O^{ij}_{ij}} |i\rangle \otimes |j\rangle
+$$
 **Theorem 10.7** (State Properties):
 Observer states satisfy:
 1. Normalization: $\langle\Psi_O|\Psi_O\rangle = \text{Tr}(O)$
@@ -135,14 +145,16 @@ Observer states satisfy:
 Observers evolve through tensor flow.
 
 **Definition 10.8** (Observer Evolution):
-$$\frac{dO^{ij}_{kl}}{dt} = \sum_{m,n} \Gamma^{ij,mn}_{kl,pq} O^{pq}_{mn}$$
-
+$$
+\frac{dO^{ij}_{kl}}{dt} = \sum_{m,n} \Gamma^{ij,mn}_{kl,pq} O^{pq}_{mn}
+$$
 where $\Gamma$ is the evolution tensor.
 
 **Theorem 10.8** (Conservation Law):
 The quantity:
-$$Q[O] = \text{Tr}(O^2) - (\text{Tr}(O))^2$$
-
+$$
+Q[O] = \text{Tr}(O^2) - (\text{Tr}(O))^2
+$$
 is conserved under evolution.
 
 ## 10.9 Observer-Induced Constant Emergence
@@ -150,12 +162,14 @@ is conserved under evolution.
 Physical constants emerge from observer-system coupling, not pure mathematics.
 
 **Definition 10.9** (Observer Coupling):
-$$g_{O_1,O_2} = \frac{\text{Tr}(O_1 O_2)}{\sqrt{\text{Tr}(O_1^2)\text{Tr}(O_2^2)}}$$
-
+$$
+g_{O_1,O_2} = \frac{\text{Tr}(O_1 O_2)}{\sqrt{\text{Tr}(O_1^2)\text{Tr}(O_2^2)}}
+$$
 **Theorem 10.9** (Observer-Constant Bridge):
 The appearance of physical constants results from observer tensor contraction with system states:
-$$\alpha_{\text{effective}} = \frac{\langle O_{\text{observer}} | \mathcal{S}_{\text{system}} | O_{\text{observer}} \rangle}{\langle O_{\text{observer}} | O_{\text{observer}} \rangle}$$
-
+$$
+\alpha_{\text{effective}} = \frac{\langle O_{\text{observer}} | \mathcal{S}_{\text{system}} | O_{\text{observer}} \rangle}{\langle O_{\text{observer}} | O_{\text{observer}} \rangle}
+$$
 where $\mathcal{S}_{\text{system}}$ contains the ψ = ψ(ψ) mathematical structure.
 
 **Definition 10.10** (Observer Signature Constants):
@@ -168,16 +182,18 @@ Each observer type generates characteristic mathematical ratios:
 
 **Definition 10.11** (Observer-Reality Interface):
 The fine structure constant α ≈ 1/137.036 emerges from:
-$$\alpha = f(\text{Observer Position}, \text{Measurement Basis}, \text{System Coupling})$$
-
+$$
+\alpha = f(\text{Observer Position}, \text{Measurement Basis}, \text{System Coupling})
+$$
 This explains why:
 1. The constant appears universal (all human observers share similar tensor structure)
 2. High-precision measurements find it stable (observer configuration is stable)
 3. We cannot derive it exactly (requires solving the observer-system NP-complete problem)
 
 **Definition 10.12** (Observer Information Content):
-$$I_O = \text{Tr}(O^\dagger O)^{1/2}$$
-
+$$
+I_O = \text{Tr}(O^\dagger O)^{1/2}
+$$
 This measures the observer's capacity for self-reference and system interaction.
 
 ## 10.10 Observation and Collapse
@@ -185,11 +201,13 @@ This measures the observer's capacity for self-reference and system interaction.
 Observation IS collapse from the inside.
 
 **Definition 10.10** (Observation Operator):
-$$\mathcal{M}_O[|\psi\rangle] = \sum_{i,j} O^{ij}_{ij} |i\rangle\langle i|\psi\rangle\langle j|\psi\rangle\langle j|$$
-
+$$
+\mathcal{M}_O[|\psi\rangle] = \sum_{i,j} O^{ij}_{ij} |i\rangle\langle i|\psi\rangle\langle j|\psi\rangle\langle j|
+$$
 **Theorem 10.11** (Collapse-Observation Equivalence):
-$$\mathcal{C} = \sum_O P_O \mathcal{M}_O$$
-
+$$
+\mathcal{C} = \sum_O P_O \mathcal{M}_O
+$$
 where $P_O$ is the probability of observer $O$.
 
 ## 10.11 The Observer Hierarchy
@@ -197,12 +215,14 @@ where $P_O$ is the probability of observer $O$.
 Observers form a hierarchy of complexity.
 
 **Definition 10.11** (Observer Level):
-$$L(O) = \lfloor \log_\varphi(\text{rank}(O)) \rfloor$$
-
+$$
+L(O) = \lfloor \log_\varphi(\text{rank}(O)) \rfloor
+$$
 **Theorem 10.12** (Hierarchy Structure):
 Level-$n$ observers can observe up to level-$(n-1)$:
-$$O_n \text{ observes } O_m \iff m < n$$
-
+$$
+O_n \text{ observes } O_m \iff m < n
+$$
 This creates an infinite hierarchy with no ultimate observer.
 
 ## 10.12 The Complete Observer Picture

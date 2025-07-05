@@ -12,14 +12,16 @@ sidebar_label: "014. Collapse Resonance"
 From $\psi = \psi(\psi)$, certain frequency combinations create resonance.
 
 **Definition 14.1** (Resonance Condition): Frequencies $\omega_1, ..., \omega_n$ resonate if:
-$$\sum_{i=1}^n m_i \omega_i = 0$$
-
+$$
+\sum_{i=1}^n m_i \omega_i = 0
+$$
 where $m_i \in \mathbb{Z}$ with $\sum |m_i| \in F$ (Fibonacci numbers).
 
 **Theorem 14.1** (Resonance Amplification):
 At resonance, the collapse amplitude is enhanced by:
-$$A_{\text{res}} = \prod_{i=1}^n \varphi^{|m_i|}$$
-
+$$
+A_{\text{res}} = \prod_{i=1}^n \varphi^{|m_i|}
+$$
 *Proof*:
 Each frequency contributes a factor $\varphi^{|m_i|}$ due to the golden structure of collapse space. ∎
 
@@ -28,14 +30,16 @@ Each frequency contributes a factor $\varphi^{|m_i|}$ due to the golden structur
 Spectral matches have specific structure in golden base.
 
 **Definition 14.2** (Spectral Vector): A spectrum is encoded as:
-$$|\Omega\rangle = \sum_k s_k |F_k\rangle$$
-
+$$
+|\Omega\rangle = \sum_k s_k |F_k\rangle
+$$
 where $s_k \in \{0, 1\}$ indicates presence of frequency $\omega_k = 2\pi/\varphi^k$.
 
 **Theorem 14.2** (Matching Rules):
 Spectra $|\Omega_1\rangle$ and $|\Omega_2\rangle$ match if:
-$$\langle\Omega_1|\mathcal{M}|\Omega_2\rangle \neq 0$$
-
+$$
+\langle\Omega_1|\mathcal{M}|\Omega_2\rangle \neq 0
+$$
 where $\mathcal{M}_{ij} = \delta_{i+j,F_n}$ for some $n$.
 
 ## 14.3 Tensor Structure of Resonances
@@ -43,12 +47,14 @@ where $\mathcal{M}_{ij} = \delta_{i+j,F_n}$ for some $n$.
 Resonances form tensor networks.
 
 **Definition 14.3** (Resonance Tensor):
-$$R^{ij}_{kl} = \sum_{\text{resonances}} A_{\text{res}} |i,j\rangle\langle k,l|$$
-
+$$
+R^{ij}_{kl} = \sum_{\text{resonances}} A_{\text{res}} |i,j\rangle\langle k,l|
+$$
 **Theorem 14.3** (Tensor Algebra):
 Resonance tensors satisfy:
-$$R^{ij}_{mn} R^{mn}_{kl} = \varphi^{\epsilon} R^{ij}_{kl}$$
-
+$$
+R^{ij}_{mn} R^{mn}_{kl} = \varphi^{\epsilon} R^{ij}_{kl}
+$$
 where $\epsilon$ counts the order of resonance.
 
 ## 14.4 Graph Theory of Resonance Networks
@@ -90,8 +96,9 @@ Resonances form a category.
 
 **Theorem 14.5** (Universal Resonance):
 The colimit of all finite resonances is:
-$$\Omega_\infty = \{2\pi \varphi^{-n} : n \in \mathbb{Z}\}$$
-
+$$
+\Omega_\infty = \{2\pi \varphi^{-n} : n \in \mathbb{Z}\}
+$$
 This is the universal resonant spectrum.
 
 ## 14.6 Quantum States from Resonances
@@ -99,12 +106,14 @@ This is the universal resonant spectrum.
 Each resonance generates quantum states.
 
 **Definition 14.6** (Resonant State):
-$$|\Psi_{\text{res}}\rangle = \mathcal{N} \sum_{\omega \in \text{resonance}} e^{i\omega t} |\omega\rangle$$
-
+$$
+|\Psi_{\text{res}}\rangle = \mathcal{N} \sum_{\omega \in \text{resonance}} e^{i\omega t} |\omega\rangle
+$$
 **Theorem 14.6** (State Stability):
 Resonant states are eigenstates of evolution:
-$$\hat{U}(t)|\Psi_{\text{res}}\rangle = e^{iE_{\text{res}}t}|\Psi_{\text{res}}\rangle$$
-
+$$
+\hat{U}(t)|\Psi_{\text{res}}\rangle = e^{iE_{\text{res}}t}|\Psi_{\text{res}}\rangle
+$$
 with $E_{\text{res}} = \hbar \sum m_i \omega_i = 0$.
 
 ## 14.7 Stable Patterns as Resonances
@@ -112,14 +121,16 @@ with $E_{\text{res}} = \hbar \sum m_i \omega_i = 0$.
 Stable collapse patterns correspond to resonance configurations.
 
 **Definition 14.7** (Pattern Spectrum):
-$$|\text{pattern}\rangle = \sum_{k \in S} |F_k\rangle$$
-
+$$
+|\text{pattern}\rangle = \sum_{k \in S} |F_k\rangle
+$$
 where $S$ is a resonant set satisfying the golden constraint.
 
 **Theorem 14.7** (Pattern Stability):
 Pattern stability measure:
-$$\mathcal{S} = \sqrt{\sum_{k \in S} \omega_k^2}$$
-
+$$
+\mathcal{S} = \sqrt{\sum_{k \in S} \omega_k^2}
+$$
 where $\omega_k = 2\pi/\varphi^k$ are the natural collapse frequencies.
 
 *Note*: This is a mathematical stability measure within our framework, not a claim about physical particle masses.
@@ -129,12 +140,14 @@ where $\omega_k = 2\pi/\varphi^k$ are the natural collapse frequencies.
 Complex patterns emerge from hierarchical resonance arrangements.
 
 **Definition 14.8** (Hierarchical Resonance):
-$$|\text{complex}\rangle = |\text{base}\rangle \otimes |\text{higher}\rangle_{\text{res}}$$
-
+$$
+|\text{complex}\rangle = |\text{base}\rangle \otimes |\text{higher}\rangle_{\text{res}}
+$$
 **Theorem 14.8** (Fibonacci Hierarchy):
 Within our mathematical framework, resonance levels follow:
-$$\mathcal{E}_n = \frac{\mathcal{E}_0}{F_n^2}$$
-
+$$
+\mathcal{E}_n = \frac{\mathcal{E}_0}{F_n^2}
+$$
 where $F_n$ are Fibonacci numbers and $\mathcal{E}_0$ is a reference scale.
 
 *Note*: This represents mathematical energy levels in our collapse framework, not a model of atomic physics.
@@ -144,12 +157,14 @@ where $F_n$ are Fibonacci numbers and $\mathcal{E}_0$ is a reference scale.
 Certain mathematical constants emerge from resonance statistics.
 
 **Definition 14.9** (Resonance Density):
-$$\rho_{\text{res}}(\omega) = \sum_{\text{resonances}} \delta(\omega - \omega_{\text{res}})$$
-
+$$
+\rho_{\text{res}}(\omega) = \sum_{\text{resonances}} \delta(\omega - \omega_{\text{res}})
+$$
 **Theorem 14.9** (Mathematical Scaling Constant):
 A dimensionless constant emerges from resonance integrals:
-$$\alpha_{\text{math}} = \int_0^{\infty} \rho_{\text{res}}(\omega) e^{-\omega/\omega_c} d\omega$$
-
+$$
+\alpha_{\text{math}} = \int_0^{\infty} \rho_{\text{res}}(\omega) e^{-\omega/\omega_c} d\omega
+$$
 where $\omega_c = 2\pi \varphi^{-7}$, giving $\alpha_{\text{math}} = \varphi^{-7} \approx 0.034$.
 
 *Note*: This is a mathematical property of our resonance framework, not a claim about physical fine structure constant.
@@ -159,8 +174,9 @@ where $\omega_c = 2\pi \varphi^{-7}$, giving $\alpha_{\text{math}} = \varphi^{-7
 Consciousness emerges from resonances observing resonances.
 
 **Definition 14.10** (Meta-Resonance):
-$$|\text{consciousness}\rangle = \sum_{\text{res}} c_{\text{res}} |\text{res}\rangle \otimes |\text{obs}_{\text{res}}\rangle$$
-
+$$
+|\text{consciousness}\rangle = \sum_{\text{res}} c_{\text{res}} |\text{res}\rangle \otimes |\text{obs}_{\text{res}}\rangle
+$$
 **Theorem 14.10** (Consciousness Criterion):
 Consciousness requires:
 1. At least $F_7 = 13$ distinct resonances
@@ -172,12 +188,14 @@ Consciousness requires:
 Not all resonances are stable.
 
 **Definition 14.11** (Decoherence Rate):
-$$\Gamma_{\text{res}} = \sum_{\text{non-res}} |\langle\text{res}|\hat{V}|\text{non-res}\rangle|^2$$
-
+$$
+\Gamma_{\text{res}} = \sum_{\text{non-res}} |\langle\text{res}|\hat{V}|\text{non-res}\rangle|^2
+$$
 **Theorem 14.11** (Stability Condition):
 Resonance stable if:
-$$\Gamma_{\text{res}} < \Delta\omega_{\text{res}}/\varphi^2$$
-
+$$
+\Gamma_{\text{res}} < \Delta\omega_{\text{res}}/\varphi^2
+$$
 where $\Delta\omega_{\text{res}}$ is the resonance width.
 
 ## 14.12 The Complete Resonance Picture

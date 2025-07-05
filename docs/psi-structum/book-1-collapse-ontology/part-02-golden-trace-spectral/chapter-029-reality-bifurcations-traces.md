@@ -13,8 +13,9 @@ From $\psi = \psi(\psi)$, high-order self-reference creates branching.
 
 **Definition 29.1** (Trace Bifurcation):
 A bifurcation occurs when:
-$$\mathcal{T}^{(n)} \to \{\mathcal{T}_1^{(n+1)}, \mathcal{T}_2^{(n+1)}\}$$
-
+$$
+\mathcal{T}^{(n)} \to \{\mathcal{T}_1^{(n+1)}, \mathcal{T}_2^{(n+1)}\}
+$$
 as parameter crosses critical value.
 
 **Theorem 29.1** (Bifurcation Necessity):
@@ -35,15 +36,17 @@ Different bifurcation types create different physics.
 
 **Theorem 29.2** (Golden Cascade):
 Period-doubling follows:
-$$\delta_n = \frac{\mu_{n+1} - \mu_n}{\mu_{n+2} - \mu_{n+1}} \to \varphi^2$$
-
+$$
+\delta_n = \frac{\mu_{n+1} - \mu_n}{\mu_{n+2} - \mu_{n+1}} \to \varphi^2
+$$
 ## 29.3 Trace Order and Complexity
 
 Higher trace orders enable more bifurcations.
 
 **Definition 29.3** (Trace Order):
-$$\text{ord}(\mathcal{T}) = \max\{n : \mathcal{T}^{(n)} \neq 0\}$$
-
+$$
+\text{ord}(\mathcal{T}) = \max\{n : \mathcal{T}^{(n)} \neq 0\}
+$$
 **Theorem 29.3** (Complexity Threshold):
 - Order 1-4: Simple dynamics
 - Order 5-7: First bifurcations
@@ -55,8 +58,9 @@ $$\text{ord}(\mathcal{T}) = \max\{n : \mathcal{T}^{(n)} \neq 0\}$$
 Bifurcations have natural tensor structure.
 
 **Definition 29.4** (Bifurcation Tensor):
-$$B^{ijk}_{\alpha\beta} = \langle\mathcal{T}^{(n)}_i|\mathcal{B}|\mathcal{T}_{\alpha,j}^{(n+1)}, \mathcal{T}_{\beta,k}^{(n+1)}\rangle$$
-
+$$
+B^{ijk}_{\alpha\beta} = \langle\mathcal{T}^{(n)}_i|\mathcal{B}|\mathcal{T}_{\alpha,j}^{(n+1)}, \mathcal{T}_{\beta,k}^{(n+1)}\rangle
+$$
 **Theorem 29.4** (Tensor Properties):
 1. Conservation: $\sum_{\alpha\beta} B^{ijk}_{\alpha\beta} = \delta^{ijk}$
 2. Symmetry: Under branch exchange
@@ -96,13 +100,15 @@ graph TD
 ```
 
 **Definition 29.6** (Superposed Pattern):
-$$\mathcal{P} = \sum_{\text{branches}} w_\alpha \mathcal{T}_\alpha$$
-
+$$
+\mathcal{P} = \sum_{\text{branches}} w_\alpha \mathcal{T}_\alpha
+$$
 where $w_\alpha$ are branch weights.
 
 **Theorem 29.6** (Weight Distribution):
-$$w_\alpha = \frac{|B^{ijk}_\alpha|}{\sum_\beta |B^{ijk}_\beta|}$$
-
+$$
+w_\alpha = \frac{|B^{ijk}_\alpha|}{\sum_\beta |B^{ijk}_\beta|}
+$$
 Weights from normalized bifurcation tensor elements.
 
 *Observer Framework Note*: Physical interpretation as quantum superposition and Born rule requires quantum mechanics from observer-system coupling.
@@ -112,12 +118,14 @@ Weights from normalized bifurcation tensor elements.
 Each bifurcation creates mathematical branches.
 
 **Definition 29.7** (Branch Set):
-$$\mathcal{B}_\alpha = \{\mathcal{T} : \mathcal{T} \text{ descended from branch } \alpha\}$$
-
+$$
+\mathcal{B}_\alpha = \{\mathcal{T} : \mathcal{T} \text{ descended from branch } \alpha\}
+$$
 **Theorem 29.7** (Branch Count):
 After $n$ bifurcations:
-$$N_\text{branches} \sim \varphi^n$$
-
+$$
+N_\text{branches} \sim \varphi^n
+$$
 Exponential growth with golden base.
 
 *Observer Framework Note*: Physical interpretation as "many worlds" or parallel realities requires specific philosophical framework from observer coupling.
@@ -127,8 +135,9 @@ Exponential growth with golden base.
 Mathematical critical values mark bifurcation locations.
 
 **Definition 29.8** (Critical Parameter):
-$$\mu_c = \frac{1}{\varphi^k}$$
-
+$$
+\mu_c = \frac{1}{\varphi^k}
+$$
 where $k$ labels the bifurcation order.
 
 **Theorem 29.8** (Critical Value Hierarchy):
@@ -145,8 +154,9 @@ All values are dimensionless mathematical parameters.
 High-order traces can become chaotic.
 
 **Definition 29.9** (Lyapunov Exponent):
-$$\lambda = \lim_{n \to \infty} \frac{1}{n} \log\left|\frac{d\mathcal{T}^{(n)}}{d\mathcal{T}^{(0)}}\right|$$
-
+$$
+\lambda = \lim_{n \to \infty} \frac{1}{n} \log\left|\frac{d\mathcal{T}^{(n)}}{d\mathcal{T}^{(0)}}\right|
+$$
 **Theorem 29.9** (Chaos Criterion):
 Chaos when $\lambda > 0$, typically for trace order $> F_6 = 8$.
 
@@ -155,12 +165,14 @@ Chaos when $\lambda > 0$, typically for trace order $> F_6 = 8$.
 Consciousness emerges at the edge of chaos.
 
 **Definition 29.10** (Criticality Measure):
-$$C = \frac{\lambda}{\lambda + 1/\varphi}$$
-
+$$
+C = \frac{\lambda}{\lambda + 1/\varphi}
+$$
 **Theorem 29.10** (Consciousness Window):
 Consciousness possible when:
-$$\frac{1}{\varphi^2} < C < \frac{1}{\varphi}$$
-
+$$
+\frac{1}{\varphi^2} < C < \frac{1}{\varphi}
+$$
 Between order and chaos.
 
 ## 29.11 Information Processing in Bifurcations
@@ -168,11 +180,13 @@ Between order and chaos.
 Bifurcations process and create information.
 
 **Definition 29.11** (Information Generation):
-$$\Delta I = \sum_\alpha p_\alpha \log p_\alpha - \log 1$$
-
+$$
+\Delta I = \sum_\alpha p_\alpha \log p_\alpha - \log 1
+$$
 **Theorem 29.11** (Information Bound):
-$$\Delta I \leq \log(\text{branches}) = \log(\varphi + 1)$$
-
+$$
+\Delta I \leq \log(\text{branches}) = \log(\varphi + 1)
+$$
 Maximum information per bifurcation.
 
 ## 29.12 The Complete Bifurcation Picture

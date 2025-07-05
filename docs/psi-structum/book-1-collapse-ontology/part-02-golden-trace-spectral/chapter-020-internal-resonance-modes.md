@@ -13,8 +13,9 @@ From $\psi = \psi(\psi)$, systems must resonate with themselves.
 
 **Definition 20.1** (Self-Resonance):
 A mode $|\omega\rangle$ is self-resonant if:
-$$\langle\omega|\mathcal{C}|\omega\rangle = e^{i\phi(\omega)}|\omega\rangle$$
-
+$$
+\langle\omega|\mathcal{C}|\omega\rangle = e^{i\phi(\omega)}|\omega\rangle
+$$
 where $\phi(\omega)$ is a phase depending on $\omega$.
 
 **Theorem 20.1** (Existence of Self-Modes):
@@ -28,14 +29,16 @@ By the spectral theorem and golden constraint, self-resonant modes must exist in
 Self-spectral modes satisfy specific equations.
 
 **Definition 20.2** (Mode Equation):
-$$\left(\mathcal{C} - \lambda\right)|\omega\rangle = 0$$
-
+$$
+\left(\mathcal{C} - \lambda\right)|\omega\rangle = 0
+$$
 with eigenvalue $\lambda = e^{i\omega\tau}$.
 
 **Theorem 20.2** (Mode Spectrum):
 Self-spectral frequencies:
-$$\omega_n = \frac{2\pi n}{\varphi^k}$$
-
+$$
+\omega_n = \frac{2\pi n}{\varphi^k}
+$$
 where $n \in \mathbb{Z}$ and $k \geq 0$.
 
 ## 20.3 Tensor Structure of Resonances
@@ -43,8 +46,9 @@ where $n \in \mathbb{Z}$ and $k \geq 0$.
 Resonances form tensor networks.
 
 **Definition 20.3** (Resonance Tensor):
-$$R^{ij}_{kl} = \sum_\omega \langle i|\omega\rangle\langle\omega|j\rangle \otimes \langle k|\omega^*\rangle\langle\omega^*|l\rangle$$
-
+$$
+R^{ij}_{kl} = \sum_\omega \langle i|\omega\rangle\langle\omega|j\rangle \otimes \langle k|\omega^*\rangle\langle\omega^*|l\rangle
+$$
 **Theorem 20.3** (Tensor Properties):
 1. Hermitian: $(R^{ij}_{kl})^* = R^{ji}_{lk}$
 2. Positive: $R^{ij}_{ij} \geq 0$
@@ -84,21 +88,24 @@ graph TD
 ```
 
 **Definition 20.5** (Mode Coupling):
-$$\mathcal{V}[\omega_1, \omega_2] = g_{12} |\omega_1\rangle\langle\omega_2| + \text{h.c.}$$
-
+$$
+\mathcal{V}[\omega_1, \omega_2] = g_{12} |\omega_1\rangle\langle\omega_2| + \text{h.c.}
+$$
 where $g_{12} = \varphi^{-|n_1-n_2|}$.
 
 **Theorem 20.5** (Coupling Selection):
 Modes couple strongly when:
-$$\omega_1 + \omega_2 = \omega_3 \text{ or } |\omega_1 - \omega_2| = \omega_3$$
-
+$$
+\omega_1 + \omega_2 = \omega_3 \text{ or } |\omega_1 - \omega_2| = \omega_3
+$$
 ## 20.6 Information Geometry of Mode Space
 
 Mode space has natural information geometry.
 
 **Definition 20.6** (Mode Metric):
-$$g_{\omega\omega'} = \text{Re}\langle\partial_\omega\psi|\partial_{\omega'}\psi\rangle$$
-
+$$
+g_{\omega\omega'} = \text{Re}\langle\partial_\omega\psi|\partial_{\omega'}\psi\rangle
+$$
 **Theorem 20.6** (Geometric Properties):
 1. Constant negative curvature: $R = -4/\varphi^2$
 2. Geodesics: Minimum mode transitions
@@ -109,13 +116,15 @@ $$g_{\omega\omega'} = \text{Re}\langle\partial_\omega\psi|\partial_{\omega'}\psi
 Self-modes maintain quantum coherence.
 
 **Definition 20.7** (Coherence Function):
-$$C(\tau) = \langle\omega(0)|\omega(\tau)\rangle = e^{i(\omega\tau - \Gamma\tau^2/2)}$$
-
+$$
+C(\tau) = \langle\omega(0)|\omega(\tau)\rangle = e^{i(\omega\tau - \Gamma\tau^2/2)}
+$$
 where $\Gamma$ is decoherence rate.
 
 **Theorem 20.7** (Coherence Time):
-$$\tau_c = \sqrt{\frac{2}{\Gamma}} = \varphi^{n/2}$$
-
+$$
+\tau_c = \sqrt{\frac{2}{\Gamma}} = \varphi^{n/2}
+$$
 where $n$ is the mode number.
 
 ## 20.8 Mathematical Pattern States from Mode Combinations
@@ -123,8 +132,9 @@ where $n$ is the mode number.
 Mathematical patterns emerge from specific mode combinations.
 
 **Definition 20.8** (Pattern State):
-$$|\text{pattern}\rangle = \sum_{i \in S} c_i |\omega_i\rangle$$
-
+$$
+|\text{pattern}\rangle = \sum_{i \in S} c_i |\omega_i\rangle
+$$
 where $S$ is a resonant set and $\sum |c_i|^2 = 1$.
 
 **Theorem 20.8** (Mathematical Pattern Properties):
@@ -140,12 +150,14 @@ Pattern states exhibit mathematical structures analogous to:
 Mathematical constants emerge from mode ratio relationships within our framework.
 
 **Definition 20.9** (Mode Ratio):
-$$r_{ij} = \omega_i/\omega_j$$
-
+$$
+r_{ij} = \omega_i/\omega_j
+$$
 **Theorem 20.9** (Mathematical Scaling Relations):
 From the mode structure, mathematical ratios emerge:
-$$\kappa_{\text{mode}} = \prod_{i,j \in S} r_{ij}^{n_{ij}}$$
-
+$$
+\kappa_{\text{mode}} = \prod_{i,j \in S} r_{ij}^{n_{ij}}
+$$
 where $S$ is a specific mode set and $n_{ij}$ are integers determined by the resonance structure.
 
 **Critical Framework Note**: These are mathematical properties of our mode algebra. The appearance of physical constants like α ≈ 1/137.036 requires observer-system coupling analysis and is potentially an NP-complete problem, as established in the observer framework.
@@ -155,8 +167,9 @@ where $S$ is a specific mode set and $n_{ij}$ are integers determined by the res
 Consciousness emerges from orchestrated modes.
 
 **Definition 20.10** (Conscious State):
-$$|\text{conscious}\rangle = \sum_{\omega \in \Omega} c_\omega |\omega\rangle e^{i\phi_\omega(t)}$$
-
+$$
+|\text{conscious}\rangle = \sum_{\omega \in \Omega} c_\omega |\omega\rangle e^{i\phi_\omega(t)}
+$$
 where $\Omega$ is a self-consistent mode set.
 
 **Theorem 20.10** (Consciousness Requirements):
@@ -169,11 +182,13 @@ where $\Omega$ is a self-consistent mode set.
 Modes evolve through specific equations.
 
 **Definition 20.11** (Mode Evolution):
-$$i\frac{\partial|\omega\rangle}{\partial t} = \hat{H}_\text{mode}|\omega\rangle$$
-
+$$
+i\frac{\partial|\omega\rangle}{\partial t} = \hat{H}_\text{mode}|\omega\rangle
+$$
 where:
-$$\hat{H}_\text{mode} = \omega \hat{n} + \sum_{ij} V_{ij} \hat{a}_i^\dagger \hat{a}_j$$
-
+$$
+\hat{H}_\text{mode} = \omega \hat{n} + \sum_{ij} V_{ij} \hat{a}_i^\dagger \hat{a}_j
+$$
 **Theorem 20.11** (Evolution Properties):
 1. Preserves total mode number
 2. Generates mode entanglement

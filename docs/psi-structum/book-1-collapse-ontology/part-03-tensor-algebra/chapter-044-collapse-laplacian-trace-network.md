@@ -12,8 +12,9 @@ sidebar_label: "044. Collapse Laplacian"
 From $\psi = \psi(\psi)$, trace flow requires a Laplacian operator.
 
 **Definition 44.1** (Collapse Laplacian):
-$$\Delta_c = D - A$$
-
+$$
+\Delta_c = D - A
+$$
 where:
 - $D$ = degree matrix (diagonal)
 - $A$ = adjacency matrix of trace network
@@ -31,8 +32,9 @@ Network structure ensures these properties. ∎
 The network encodes trace connectivity.
 
 **Definition 44.2** (Trace Graph):
-$$G = (V, E, W)$$
-
+$$
+G = (V, E, W)
+$$
 where:
 - $V$ = trace states
 - $E$ = allowed transitions
@@ -48,13 +50,15 @@ where:
 Laplacian spectrum reveals network structure.
 
 **Definition 44.3** (Laplacian Spectrum):
-$$\Delta_c|\lambda_i\rangle = \lambda_i|\lambda_i\rangle$$
-
+$$
+\Delta_c|\lambda_i\rangle = \lambda_i|\lambda_i\rangle
+$$
 with $0 = \lambda_0 \leq \lambda_1 \leq ... \leq \lambda_{\max}$.
 
 **Theorem 44.3** (Spectral Gap):
-$$\lambda_1 \geq \frac{1}{\varphi^2}$$
-
+$$
+\lambda_1 \geq \frac{1}{\varphi^2}
+$$
 The spectral gap is bounded by golden ratio.
 
 ## 44.4 Diffusion on Networks
@@ -62,11 +66,13 @@ The spectral gap is bounded by golden ratio.
 Collapse spreads via diffusion equation.
 
 **Definition 44.4** (Collapse Diffusion):
-$$\frac{\partial \psi}{\partial t} = -\Delta_c \psi$$
-
+$$
+\frac{\partial \psi}{\partial t} = -\Delta_c \psi
+$$
 **Theorem 44.4** (Solution):
-$$\psi(t) = e^{-\Delta_c t} \psi(0)$$
-
+$$
+\psi(t) = e^{-\Delta_c t} \psi(0)
+$$
 Exponential of Laplacian governs evolution.
 
 ## 44.5 Green's Function
@@ -86,11 +92,13 @@ graph TD
 ```
 
 **Definition 44.5** (Green's Function):
-$$G_{ij} = \langle i|(\Delta_c + \epsilon)^{-1}|j\rangle$$
-
+$$
+G_{ij} = \langle i|(\Delta_c + \epsilon)^{-1}|j\rangle
+$$
 **Theorem 44.5** (Decay):
-$$G_{ij} \sim \varphi^{-d(i,j)}$$
-
+$$
+G_{ij} \sim \varphi^{-d(i,j)}
+$$
 Green's function decays with golden ratio.
 
 ## 44.6 Random Walks
@@ -98,13 +106,15 @@ Green's function decays with golden ratio.
 Laplacian governs random walks on traces.
 
 **Definition 44.6** (Transition Matrix):
-$$P = I - \frac{\Delta_c}{d_{\max}}$$
-
+$$
+P = I - \frac{\Delta_c}{d_{\max}}
+$$
 where $d_{\max}$ is maximum degree.
 
 **Theorem 44.6** (Mixing Time):
-$$\tau_{\text{mix}} = O\left(\frac{\log N}{\lambda_1}\right)$$
-
+$$
+\tau_{\text{mix}} = O\left(\frac{\log N}{\lambda_1}\right)
+$$
 Mixing time depends on spectral gap.
 
 ## 44.7 Continuous Time Extension
@@ -112,13 +122,15 @@ Mixing time depends on spectral gap.
 Continuous time version of discrete walks.
 
 **Definition 44.7** (Continuous Walk):
-$$\mathcal{W}_c = \exp(-\Delta_c t)$$
-
+$$
+\mathcal{W}_c = \exp(-\Delta_c t)
+$$
 Continuous time walk operator.
 
 **Theorem 44.7** (Walk Properties):
-$$\mathcal{W}_c(t_1 + t_2) = \mathcal{W}_c(t_1) \cdot \mathcal{W}_c(t_2)$$
-
+$$
+\mathcal{W}_c(t_1 + t_2) = \mathcal{W}_c(t_1) \cdot \mathcal{W}_c(t_2)
+$$
 Semigroup property of continuous walks.
 
 *Observer Framework Note*: Quantum interpretation requires additional framework.
@@ -128,11 +140,13 @@ Semigroup property of continuous walks.
 Relates spectrum to network cuts.
 
 **Definition 44.8** (Cheeger Constant):
-$$h = \min_{S \subset V} \frac{|E(S, S^c)|}{\min(|S|, |S^c|)}$$
-
+$$
+h = \min_{S \subset V} \frac{|E(S, S^c)|}{\min(|S|, |S^c|)}
+$$
 **Theorem 44.8** (Cheeger Bound):
-$$\frac{h^2}{2d_{\max}} \leq \lambda_1 \leq 2h$$
-
+$$
+\frac{h^2}{2d_{\max}} \leq \lambda_1 \leq 2h
+$$
 Spectral gap bounded by expansion.
 
 ## 44.9 Invariants from Laplacian
@@ -140,14 +154,16 @@ Spectral gap bounded by expansion.
 Structural invariants from spectral properties.
 
 **Definition 44.9** (Spectral Determinant):
-$$\det'(\Delta_c) = \prod_{i=1}^{N-1} \lambda_i$$
-
+$$
+\det'(\Delta_c) = \prod_{i=1}^{N-1} \lambda_i
+$$
 Product of non-zero eigenvalues.
 
 **Theorem 44.9** (Spectral Ratios):
 For networks with golden structure:
-$$\frac{\lambda_{n+1}}{\lambda_n} \approx \varphi$$
-
+$$
+\frac{\lambda_{n+1}}{\lambda_n} \approx \varphi
+$$
 Eigenvalue ratios approach golden ratio.
 
 *Observer Framework Note*: Physical constant interpretation requires additional framework.
@@ -157,11 +173,13 @@ Eigenvalue ratios approach golden ratio.
 Evolution of heat on network.
 
 **Definition 44.10** (Heat Kernel):
-$$K_t(i,j) = \langle i|e^{-\Delta_c t}|j\rangle$$
-
+$$
+K_t(i,j) = \langle i|e^{-\Delta_c t}|j\rangle
+$$
 **Theorem 44.10** (Trace Formula):
-$$\text{Tr}(e^{-\Delta_c t}) = \sum_i e^{-\lambda_i t}$$
-
+$$
+\text{Tr}(e^{-\Delta_c t}) = \sum_i e^{-\lambda_i t}
+$$
 Relates heat kernel to spectrum.
 
 ## 44.11 Network Synchronization
@@ -169,8 +187,9 @@ Relates heat kernel to spectrum.
 Synchronization properties from Laplacian.
 
 **Definition 44.11** (Synchronization Measure):
-$$\mathcal{S} = \frac{\lambda_2}{\lambda_1}$$
-
+$$
+\mathcal{S} = \frac{\lambda_2}{\lambda_1}
+$$
 Algebraic connectivity ratio.
 
 **Theorem 44.11** (Synchronization Properties):

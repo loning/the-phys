@@ -12,8 +12,9 @@ sidebar_label: "045. Spectral Kernel"
 From $\psi = \psi(\psi)$, propagation requires spectral kernels.
 
 **Definition 45.1** (Spectral Propagator):
-$$K(z, w; t) = \sum_n \frac{e^{-\lambda_n t}}{z - \lambda_n} \cdot \frac{1}{w - \lambda_n}$$
-
+$$
+K(z, w; t) = \sum_n \frac{e^{-\lambda_n t}}{z - \lambda_n} \cdot \frac{1}{w - \lambda_n}
+$$
 where $\lambda_n$ are spectral values.
 
 **Theorem 45.1** (Kernel Properties):
@@ -29,8 +30,9 @@ Spectral decomposition ensures these properties. ∎
 Kernels respect Zeckendorf representation.
 
 **Definition 45.2** (Golden Kernel):
-$$K_\varphi(m, n; t) = \sum_{k \in F} \varphi^{-k} e^{-\lambda_k t} |F_m\rangle\langle F_n|$$
-
+$$
+K_\varphi(m, n; t) = \sum_{k \in F} \varphi^{-k} e^{-\lambda_k t} |F_m\rangle\langle F_n|
+$$
 where $F$ is the Fibonacci sequence.
 
 **Theorem 45.2** (Optimal Propagation):
@@ -41,11 +43,13 @@ Golden kernels minimize propagation time while maximizing information transfer.
 Kernels compose via convolution.
 
 **Definition 45.3** (Spectral Convolution):
-$$(K_1 * K_2)(z, w; t) = \int K_1(z, u; s) K_2(u, w; t-s) du ds$$
-
+$$
+(K_1 * K_2)(z, w; t) = \int K_1(z, u; s) K_2(u, w; t-s) du ds
+$$
 **Theorem 45.3** (Semigroup Property):
-$$K(t_1) * K(t_2) = K(t_1 + t_2)$$
-
+$$
+K(t_1) * K(t_2) = K(t_1 + t_2)
+$$
 Kernels form a convolution semigroup.
 
 ## 45.4 Resolvent Analysis
@@ -53,14 +57,16 @@ Kernels form a convolution semigroup.
 The resolvent encodes all spectral information.
 
 **Definition 45.4** (Resolvent Kernel):
-$$R(z) = (z - \Lambda)^{-1} = \int_0^\infty e^{-zt} K(t) dt$$
-
+$$
+R(z) = (z - \Lambda)^{-1} = \int_0^\infty e^{-zt} K(t) dt
+$$
 where $\Lambda$ is the spectral operator.
 
 **Theorem 45.4** (Spectral Recovery):
 The spectrum is:
-$$\sigma(\Lambda) = \{z : ||R(z)|| = \infty\}$$
-
+$$
+\sigma(\Lambda) = \{z : ||R(z)|| = \infty\}
+$$
 ## 45.5 Category of Kernels
 
 Kernels form a category.
@@ -91,11 +97,13 @@ There exists a universal kernel generating all others.
 Kernels carry information through spacetime.
 
 **Definition 45.6** (Information Kernel):
-$$I[K] = -\int K(z, w; t) \log K(z, w; t) dz dw$$
-
+$$
+I[K] = -\int K(z, w; t) \log K(z, w; t) dz dw
+$$
 **Theorem 45.6** (Information Bounds):
-$$I[K(t)] \leq I[K(0)] e^{-\gamma t}$$
-
+$$
+I[K(t)] \leq I[K(0)] e^{-\gamma t}
+$$
 where $\gamma = 1/\varphi$ is the decay rate.
 
 ## 45.7 Matrix Element Kernels
@@ -103,13 +111,15 @@ where $\gamma = 1/\varphi$ is the decay rate.
 Matrix elements define kernel structure.
 
 **Definition 45.7** (Matrix Kernel):
-$$G_{ij}(t) = \langle i | K(t) | j \rangle$$
-
+$$
+G_{ij}(t) = \langle i | K(t) | j \rangle
+$$
 Matrix elements of kernel operator.
 
 **Theorem 45.7** (Diagonal Form):
-$$G_{ij}(s) = \frac{\delta_{ij}}{s - \lambda_i}$$
-
+$$
+G_{ij}(s) = \frac{\delta_{ij}}{s - \lambda_i}
+$$
 in Laplace transform space.
 
 *Observer Framework Note*: Field theory interpretation requires additional framework.
@@ -119,8 +129,9 @@ in Laplace transform space.
 Kernels can depend on network distance.
 
 **Definition 45.8** (Distance Kernel):
-$$K_d(i, j; t) = \Theta(t) e^{-\alpha d(i,j)} \varphi^{-d(i,j)}$$
-
+$$
+K_d(i, j; t) = \Theta(t) e^{-\alpha d(i,j)} \varphi^{-d(i,j)}
+$$
 where $d(i,j)$ is graph distance.
 
 **Theorem 45.8** (Decay Properties):
@@ -131,11 +142,13 @@ Distance kernels decay exponentially with golden ratio scaling.
 Structural invariants from kernel properties.
 
 **Definition 45.9** (Kernel Determinant):
-$$\det K = \prod_n (1 - e^{-\lambda_n t})$$
-
+$$
+\det K = \prod_n (1 - e^{-\lambda_n t})
+$$
 **Theorem 45.9** (Spectral Density):
-$$\rho(0) = \lim_{t \to 0} \frac{d\log\det K}{dt}$$
-
+$$
+\rho(0) = \lim_{t \to 0} \frac{d\log\det K}{dt}
+$$
 Spectral density at origin.
 
 *Observer Framework Note*: Physical constant interpretation requires additional framework.
@@ -145,13 +158,15 @@ Spectral density at origin.
 Kernels with perturbations.
 
 **Definition 45.10** (Perturbed Kernel):
-$$K_P(i, j; t) = K_0(i, j; t) + \epsilon \Delta K(i, j; t)$$
-
+$$
+K_P(i, j; t) = K_0(i, j; t) + \epsilon \Delta K(i, j; t)
+$$
 where $\Delta K$ is perturbation.
 
 **Theorem 45.10** (Perturbation Bounds):
-$$||K_P - K_0|| \leq \epsilon ||\Delta K||$$
-
+$$
+||K_P - K_0|| \leq \epsilon ||\Delta K||
+$$
 Perturbation theory for kernels.
 
 *Observer Framework Note*: Stochastic interpretation requires additional framework.
@@ -161,14 +176,16 @@ Perturbation theory for kernels.
 Kernels can have composite structure.
 
 **Definition 45.11** (Composite Kernel):
-$$K_C = K_1 \otimes K_2 \otimes K_3$$
-
+$$
+K_C = K_1 \otimes K_2 \otimes K_3
+$$
 Tensor product of component kernels.
 
 **Theorem 45.11** (Complexity Measure):
 For composite kernels:
-$$\mathcal{C}[K_C] = \text{rank}(K_1) \cdot \text{rank}(K_2) \cdot \text{rank}(K_3)$$
-
+$$
+\mathcal{C}[K_C] = \text{rank}(K_1) \cdot \text{rank}(K_2) \cdot \text{rank}(K_3)
+$$
 Complexity as rank product.
 
 *Observer Framework Note*: Consciousness interpretation requires additional framework.

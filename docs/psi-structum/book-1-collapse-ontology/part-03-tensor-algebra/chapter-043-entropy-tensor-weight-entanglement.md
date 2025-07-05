@@ -12,8 +12,9 @@ sidebar_label: "043. Entropy Tensor"
 From $\psi = \psi(\psi)$, entropy emerges from weight entanglement.
 
 **Definition 43.1** (Entropy Tensor):
-$$S^{ij}_{kl} = -\sum_P w_P^{ij} \log w_P^{kl} \cdot \delta_{P^{ij}, P^{kl}}$$
-
+$$
+S^{ij}_{kl} = -\sum_P w_P^{ij} \log w_P^{kl} \cdot \delta_{P^{ij}, P^{kl}}
+$$
 where $w_P$ are path weights and $\delta_{P,P'}$ is the path coincidence indicator.
 
 **Theorem 43.1** (Tensor Properties):
@@ -29,13 +30,15 @@ Follows from properties of entropy and path weights. ∎
 Entanglement quantifies weight correlations.
 
 **Definition 43.2** (Weight Entanglement):
-$$E[w_1, w_2] = S(w_1) + S(w_2) - S(w_1, w_2)$$
-
+$$
+E[w_1, w_2] = S(w_1) + S(w_2) - S(w_1, w_2)
+$$
 where $S(w)$ is the Shannon entropy of weight distribution.
 
 **Theorem 43.2** (Entanglement Bounds):
-$$0 \leq E[w_1, w_2] \leq \min(S(w_1), S(w_2))$$
-
+$$
+0 \leq E[w_1, w_2] \leq \min(S(w_1), S(w_2))
+$$
 Maximum entanglement when weights are perfectly correlated.
 
 ## 43.3 Tensor Decomposition
@@ -43,20 +46,23 @@ Maximum entanglement when weights are perfectly correlated.
 The entropy tensor has canonical decomposition.
 
 **Definition 43.3** (Spectral Decomposition):
-$$S^{ij}_{kl} = \sum_\alpha \sigma_\alpha v_\alpha^{ij} (v_\alpha^{kl})^*$$
-
+$$
+S^{ij}_{kl} = \sum_\alpha \sigma_\alpha v_\alpha^{ij} (v_\alpha^{kl})^*
+$$
 where $\sigma_\alpha \geq 0$ are singular values.
 
 **Theorem 43.3** (Rank Structure):
-$$\text{rank}(S) = \text{Number of independent entanglement patterns}$$
-
+$$
+\text{rank}(S) = \text{Number of independent entanglement patterns}
+$$
 ## 43.4 Information Geometry
 
 Entropy tensor defines information metric.
 
 **Definition 43.4** (Fisher Information):
-$$g_{ij} = \frac{\partial^2 S}{\partial w_i \partial w_j}$$
-
+$$
+g_{ij} = \frac{\partial^2 S}{\partial w_i \partial w_j}
+$$
 **Theorem 43.4** (Metric Properties):
 1. Riemannian: Positive definite
 2. Natural: Invariant under reparametrization
@@ -92,14 +98,16 @@ Maximum entropy tensor is terminal object.
 Matrix version of weight entropy.
 
 **Definition 43.6** (Matrix Entropy):
-$$S_{\text{mat}}^{ij,kl} = -\text{Tr}[W^{ij}_{kl} \log W^{ij}_{kl}]$$
-
+$$
+S_{\text{mat}}^{ij,kl} = -\text{Tr}[W^{ij}_{kl} \log W^{ij}_{kl}]
+$$
 where $W$ is the weight matrix.
 
 **Theorem 43.6** (Entropy Symmetry):
 For symmetric decomposition:
-$$S_{AB} = S_{BA}$$
-
+$$
+S_{AB} = S_{BA}
+$$
 where $A, B$ are index blocks.
 
 *Observer Framework Note*: Quantum interpretation requires additional framework.
@@ -109,8 +117,9 @@ where $A, B$ are index blocks.
 Entropy under scale changes.
 
 **Definition 43.7** (Scale Flow):
-$$\frac{dS^{ij}_{kl}}{d\log \lambda} = \mathcal{F}^{ij}_{kl}[S, \varphi]$$
-
+$$
+\frac{dS^{ij}_{kl}}{d\log \lambda} = \mathcal{F}^{ij}_{kl}[S, \varphi]
+$$
 where $\lambda$ is a scale parameter.
 
 **Theorem 43.7** (Monotonicity):
@@ -118,7 +127,8 @@ For coarse-graining:
 
 $$
 S(\lambda_2) \geq S(\lambda_1)
-$$ 
+$$
+ 
 
 when $\lambda_2 > \lambda_1$
 
@@ -129,14 +139,16 @@ Entropy increases under coarse-graining.
 Entropy tensor satisfies key properties.
 
 **Definition 43.8** (Entropy Relations):
-$$\Delta S = S_{\text{final}} - S_{\text{initial}}$$
-
+$$
+\Delta S = S_{\text{final}} - S_{\text{initial}}
+$$
 where $S = \text{Tr}(S^{ij}_{ij})$.
 
 **Theorem 43.8** (Monotonicity):
 For any collapse process:
-$$\Delta S \geq 0$$
-
+$$
+\Delta S \geq 0
+$$
 Total entropy is non-decreasing.
 
 *Observer Framework Note*: Thermodynamic interpretation requires additional framework.
@@ -146,14 +158,16 @@ Total entropy is non-decreasing.
 Structural invariants from entropy relations.
 
 **Definition 43.9** (Entropy Invariant):
-$$\mathcal{I}_S = \frac{S_{\text{max}}}{S_{\text{min}}}$$
-
+$$
+\mathcal{I}_S = \frac{S_{\text{max}}}{S_{\text{min}}}
+$$
 for bounded entropy systems.
 
 **Theorem 43.9** (Golden Ratio):
 For optimal entropy distribution:
-$$\frac{S_1}{S_2} = \varphi$$
-
+$$
+\frac{S_1}{S_2} = \varphi
+$$
 when the system exhibits golden ratio scaling.
 
 *Observer Framework Note*: Physical constant interpretation requires additional framework.
@@ -163,14 +177,16 @@ when the system exhibits golden ratio scaling.
 Boundary structure and entropy.
 
 **Definition 43.10** (Boundary Entropy):
-$$S_{\text{boundary}} = \sum_{\partial} w_i \log w_i$$
-
+$$
+S_{\text{boundary}} = \sum_{\partial} w_i \log w_i
+$$
 sum over boundary paths.
 
 **Theorem 43.10** (Area Scaling):
 For $d$-dimensional boundaries:
-$$S_{\text{boundary}} \sim L^{d-1}$$
-
+$$
+S_{\text{boundary}} \sim L^{d-1}
+$$
 where $L$ is the characteristic length scale.
 
 *Observer Framework Note*: Holographic interpretation requires additional framework.
@@ -180,14 +196,16 @@ where $L$ is the characteristic length scale.
 Complexity emerges at intermediate entropy.
 
 **Definition 43.11** (Complexity Measure):
-$$C = S_{\text{total}} \cdot (1 - S_{\text{total}}/S_{\text{max}})$$
-
+$$
+C = S_{\text{total}} \cdot (1 - S_{\text{total}}/S_{\text{max}})
+$$
 Maximal at intermediate entropy.
 
 **Theorem 43.11** (Complexity Peak):
 Complexity is maximized when:
-$$\frac{S}{S_{\max}} = \frac{1}{2}$$
-
+$$
+\frac{S}{S_{\max}} = \frac{1}{2}
+$$
 Neither maximum order nor maximum entropy.
 
 *Observer Framework Note*: Consciousness interpretation requires additional framework.

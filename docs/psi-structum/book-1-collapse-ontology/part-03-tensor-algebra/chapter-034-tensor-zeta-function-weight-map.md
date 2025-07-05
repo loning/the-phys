@@ -12,8 +12,9 @@ sidebar_label: "034. Tensor ζ-Function"
 From $\psi = \psi(\psi)$, paths must be weighted by their self-consistency.
 
 **Definition 34.1** (Tensor ζ-Function):
-$$\zeta^{ij}_{kl}(s) = \sum_{P: (i,j) \to (k,l)} W_P \cdot n_P^{-s}$$
-
+$$
+\zeta^{ij}_{kl}(s) = \sum_{P: (i,j) \to (k,l)} W_P \cdot n_P^{-s}
+$$
 where:
 - $P$ are paths from state $(i,j)$ to $(k,l)$
 - $W_P$ is the path weight
@@ -31,13 +32,15 @@ Weights are determined by Zeckendorf structure.
 
 **Definition 34.2** (Golden Weight):
 For path $P = \{F_{k_1}, F_{k_2}, ..., F_{k_n}\}$:
-$$W_P = \prod_{i=1}^{n-1} g(k_i, k_{i+1})$$
-
+$$
+W_P = \prod_{i=1}^{n-1} g(k_i, k_{i+1})
+$$
 where $g(k_i, k_{i+1}) = \varphi^{-|k_i - k_{i+1}|}$.
 
 **Theorem 34.2** (Weight Hierarchy):
-$$W_{P_1} / W_{P_2} = \varphi^{\Delta n}$$
-
+$$
+W_{P_1} / W_{P_2} = \varphi^{\Delta n}
+$$
 where $\Delta n$ is the difference in path complexities.
 
 ## 34.3 Spectral Encoding
@@ -45,21 +48,24 @@ where $\Delta n$ is the difference in path complexities.
 The ζ-function encodes discrete paths continuously.
 
 **Definition 34.3** (Spectral Transform):
-$$\mathcal{S}: \{P, W_P\} \mapsto \zeta(s)$$
-
+$$
+\mathcal{S}: \{P, W_P\} \mapsto \zeta(s)
+$$
 maps discrete weighted paths to continuous function.
 
 **Theorem 34.3** (Information Preservation):
 The spectral encoding is injective:
-$$\zeta_1(s) = \zeta_2(s) \,\forall s \Rightarrow \{P_1, W_1\} = \{P_2, W_2\}$$
-
+$$
+\zeta_1(s) = \zeta_2(s) \,\forall s \Rightarrow \{P_1, W_1\} = \{P_2, W_2\}
+$$
 ## 34.4 Tensor Structure of ζ
 
 The ζ-function forms a tensor in path space.
 
 **Definition 34.4** (ζ-Tensor):
-$$\zeta^{ijkl}_{mnpq}(s,t) = \sum_{P_1, P_2} W_{P_1} W_{P_2} n_{P_1}^{-s} n_{P_2}^{-t}$$
-
+$$
+\zeta^{ijkl}_{mnpq}(s,t) = \sum_{P_1, P_2} W_{P_1} W_{P_2} n_{P_1}^{-s} n_{P_2}^{-t}
+$$
 **Theorem 34.4** (Tensor Properties):
 1. Multilinear in indices
 2. Covariant under basis change
@@ -75,8 +81,9 @@ Weight maps form a category.
 - Composition: Path concatenation
 
 **Theorem 34.5** (ζ as Functor):
-$$\zeta: \text{WeightedPaths} \to \text{MeromorphicFunctions}$$
-
+$$
+\zeta: \text{WeightedPaths} \to \text{MeromorphicFunctions}
+$$
 is a faithful functor.
 
 ## 34.6 Analytic Properties
@@ -97,8 +104,9 @@ graph TD
 ```
 
 **Definition 34.6** (Analytic Continuation):
-$$\zeta(s) = \frac{1}{\Gamma(s)} \int_0^\infty t^{s-1} \Theta(t) dt$$
-
+$$
+\zeta(s) = \frac{1}{\Gamma(s)} \int_0^\infty t^{s-1} \Theta(t) dt
+$$
 where $\Theta(t) = \sum_P W_P e^{-n_P t}$.
 
 **Theorem 34.6** (Meromorphic Extension):
@@ -115,8 +123,9 @@ Different regions of $s$ have different mathematical properties.
 
 **Theorem 34.7** (Zero Distribution):
 Zeros exhibit patterns related to path structure:
-$$N(T) = \#\{\rho : \zeta(\rho) = 0, |\text{Im}(\rho)| \leq T\} \sim T \log T$$
-
+$$
+N(T) = \#\{\rho : \zeta(\rho) = 0, |\text{Im}(\rho)| \leq T\} \sim T \log T
+$$
 *Observer Framework Note*: Physical interpretation as particle states requires quantum mechanics from observer coupling.
 
 ## 34.8 Functional Equation
@@ -124,13 +133,15 @@ $$N(T) = \#\{\rho : \zeta(\rho) = 0, |\text{Im}(\rho)| \leq T\} \sim T \log T$$
 The ζ-function satisfies a functional equation.
 
 **Definition 34.8** (Completed Function):
-$$\xi(s) = \phi^{-s/2} \Gamma_\phi(s/2) \zeta(s)$$
-
+$$
+\xi(s) = \phi^{-s/2} \Gamma_\phi(s/2) \zeta(s)
+$$
 where $\Gamma_\phi$ is the golden gamma function.
 
 **Theorem 34.8** (Functional Equation):
-$$\xi^{ij}_{kl}(s) = \xi^{kl}_{ij}(1-s)$$
-
+$$
+\xi^{ij}_{kl}(s) = \xi^{kl}_{ij}(1-s)
+$$
 This relates paths to their reversals.
 
 ## 34.9 Special Values and Ratios
@@ -138,14 +149,16 @@ This relates paths to their reversals.
 The ζ-function has special values at integers.
 
 **Definition 34.9** (Special Values):
-$$\zeta^{ij}_{kl}(n) = \sum_\text{paths} W_P \cdot L_P^{-n}$$
-
+$$
+\zeta^{ij}_{kl}(n) = \sum_\text{paths} W_P \cdot L_P^{-n}
+$$
 for positive integer $n$.
 
 **Theorem 34.9** (Value Relations):
 Special value ratios exhibit patterns:
-$$\frac{\zeta(n+k)}{\zeta(n)} = \varphi^{f(n,k)} + O(n^{-1})$$
-
+$$
+\frac{\zeta(n+k)}{\zeta(n)} = \varphi^{f(n,k)} + O(n^{-1})
+$$
 where $f(n,k)$ depends on path structure.
 
 *Observer Framework Note*: Physical constants emerge only through observer-system coupling.
@@ -155,21 +168,24 @@ where $f(n,k)$ depends on path structure.
 The ζ-function admits spectral decomposition.
 
 **Definition 34.10** (Spectral Form):
-$$\zeta^{ij}_{kl}(s) = \sum_n \frac{a_n}{\lambda_n^s} + \text{entire part}$$
-
+$$
+\zeta^{ij}_{kl}(s) = \sum_n \frac{a_n}{\lambda_n^s} + \text{entire part}
+$$
 where $\lambda_n$ are spectral values.
 
 **Theorem 34.10** (Spectral Properties):
 Spectral values satisfy:
-$$\lambda_{n+1}/\lambda_n \to \varphi \text{ as } n \to \infty$$
-
+$$
+\lambda_{n+1}/\lambda_n \to \varphi \text{ as } n \to \infty
+$$
 ## 34.11 Information Theory
 
 The ζ-function encodes path information optimally.
 
 **Definition 34.11** (Path Information):
-$$I[\zeta] = -\int_\sigma \rho(s) \log \rho(s) ds$$
-
+$$
+I[\zeta] = -\int_\sigma \rho(s) \log \rho(s) ds
+$$
 where $\rho(s) = |\zeta(s)|^2 / \int |\zeta|^2$.
 
 **Theorem 34.11** (Maximum Entropy):

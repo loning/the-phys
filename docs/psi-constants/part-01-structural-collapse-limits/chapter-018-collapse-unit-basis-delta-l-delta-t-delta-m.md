@@ -103,12 +103,15 @@ This gives the result above. ∎
 2. **Action Relationship**: 
 $$
 \hbar_* = \Delta m \cdot (\Delta \ell)^2 \cdot (\Delta t)^{-1} = \frac{\varphi^3}{\sqrt{\pi}} \cdot \frac{1}{16\varphi^2\pi} \cdot 8\varphi\sqrt{\pi} = \frac{\varphi^2}{2\pi}
-$$ 
+$$
+ 
 ✓
 
 3. **Gravitational Relationship**: 
-   $$\frac{(\Delta \ell)^3}{\Delta m \cdot (\Delta t)^2} = \varphi^{-2} \cdot G_* = \varphi^{-4}$$ 
    
+$$
+\frac{(\Delta \ell)^3}{\Delta m \cdot (\Delta t)^2} = \varphi^{-2} \cdot G_* = \varphi^{-4}
+$$
    This shows that the φ-structure is built into the unit system itself. ✓
 
 *Proof*:

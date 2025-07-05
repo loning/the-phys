@@ -64,17 +64,21 @@ Paths form a natural basis under ζ-convolution.
 ## Key Mathematical Structures
 
 ### The Tensor ζ-Function
-$$\zeta^{ij}_{\text{tensor}}(s) = \sum_{P: i \to j} T^{ij}_P \left[n_F[P]\right]^{-s}$$
-
+$$
+\zeta^{ij}_{\text{tensor}}(s) = \sum_{P: i \to j} T^{ij}_P \left[n_F[P]\right]^{-s}
+$$
 ### Spectral Convolution
-$$(\zeta_1 * \zeta_2)^{ij}(s) = \sum_k \zeta_1^{ik}(s) \cdot \zeta_2^{kj}(s)$$
-
+$$
+(\zeta_1 * \zeta_2)^{ij}(s) = \sum_k \zeta_1^{ik}(s) \cdot \zeta_2^{kj}(s)
+$$
 ### Hermitian Constraint
-$$(\zeta^{ij})^* = \zeta^{ji}$$
-
+$$
+(\zeta^{ij})^* = \zeta^{ji}
+$$
 ### Recursive Application
-$$\zeta[\zeta](s) = \zeta(\zeta(s))$$
-
+$$
+\zeta[\zeta](s) = \zeta(\zeta(s))
+$$
 ## The Path Forward
 
 This part reveals that all of physics can be reformulated as tensor algebra in golden base vector space. The ζ-function is not imposed but emerges naturally as the spectral encoding of collapse paths. By the end, we will have a complete algebraic framework for reality itself.

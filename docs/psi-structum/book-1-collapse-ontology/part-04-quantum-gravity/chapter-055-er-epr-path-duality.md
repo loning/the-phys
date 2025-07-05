@@ -12,8 +12,9 @@ sidebar_label: "055. ER-EPR Path Duality"
 From $\psi = \psi(\psi)$, mathematical paths admit multiple representations.
 
 **Definition 55.1** (Path Duality):
-$$\text{Path}_{\text{geometric}} \Leftrightarrow \text{Path}_{\text{information}}$$
-
+$$
+\text{Path}_{\text{geometric}} \Leftrightarrow \text{Path}_{\text{information}}
+$$
 Collapse paths can be represented both geometrically and informationally.
 
 **Theorem 55.1** (Representation Equivalence):
@@ -31,8 +32,9 @@ Same path structure encoded in different mathematical spaces. ∎
 Path connections in geometric representations.
 
 **Definition 55.2** (Dual-Region Geometry):
-$$ds^2 = -\rho(r)dt^2 + \rho(r)^{-1}dr^2 + r^2d\theta^2$$
-
+$$
+ds^2 = -\rho(r)dt^2 + \rho(r)^{-1}dr^2 + r^2d\theta^2
+$$
 where $\rho(r)$ is derived from collapse tensor structure.
 
 **Theorem 55.2** (Extended Configuration):
@@ -48,13 +50,15 @@ Maximal extension creates:
 Correlated configurations dual to geometric connections.
 
 **Definition 55.3** (Correlation State):
-$$C_{\text{corr}} = \frac{1}{Z} \sum_n \omega_n^{1/2} \text{Config}_n^L \otimes \text{Config}_n^R$$
-
+$$
+C_{\text{corr}} = \frac{1}{Z} \sum_n \omega_n^{1/2} \text{Config}_n^L \otimes \text{Config}_n^R
+$$
 where $\omega_n$ are φ-weighted correlation factors.
 
 **Theorem 55.3** (Duality):
-$$C_{\text{corr}} \Leftrightarrow \text{Extended geometry}$$
-
+$$
+C_{\text{corr}} \Leftrightarrow \text{Extended geometry}
+$$
 Information configuration = geometric connection.
 
 *Observer Framework Note*: Thermofield double interpretation requires quantum field theory framework.
@@ -70,8 +74,9 @@ Information transfer through geometric connections.
 4. Configuration transfer (transmit through connection)
 
 **Theorem 55.4** (Geometric Transfer):
-$$\text{Information transfer} = \text{Geometric traversal}$$
-
+$$
+\text{Information transfer} = \text{Geometric traversal}
+$$
 *Observer Framework Note*: Quantum teleportation interpretation requires quantum mechanics framework.
 
 ## 55.5 Category of Path Dualities
@@ -94,16 +99,18 @@ graph TD
 ```
 
 **Definition 55.5** (Duality Functor):
-$$\mathcal{F}: \text{Information} \to \text{Geometric}$$
-
+$$
+\mathcal{F}: \text{Information} \to \text{Geometric}
+$$
 mapping:
 - Correlations → Connections
 - Transformations → Isometries  
 - Measurements → Boundaries
 
 **Theorem 55.5** (Equivalence):
-$$\mathcal{F} \text{ is category equivalence}$$
-
+$$
+\mathcal{F} \text{ is category equivalence}
+$$
 *Observer Framework Note*: Quantum-geometric interpretation requires quantum gravity frameworks.
 
 ## 55.6 Complexity and Connection Growth
@@ -111,13 +118,15 @@ $$\mathcal{F} \text{ is category equivalence}$$
 Geometric connections grow with information complexity.
 
 **Definition 55.6** (Complexity Growth):
-$$\frac{d\mathcal{C}}{dt} = \alpha \cdot I_{\text{total}}$$
-
+$$
+\frac{d\mathcal{C}}{dt} = \alpha \cdot I_{\text{total}}
+$$
 where $\alpha = \varphi^{-k}$ and $I_{\text{total}}$ is total information content.
 
 **Theorem 55.6** (Connection Volume):
-$$V_{\text{connection}}(t) = \beta \cdot \varphi^n \cdot \mathcal{C}(t)$$
-
+$$
+V_{\text{connection}}(t) = \beta \cdot \varphi^n \cdot \mathcal{C}(t)
+$$
 Volume proportional to complexity with φ-scaling.
 
 *Observer Framework Note*: Mass-energy interpretation requires general relativity framework.
@@ -128,8 +137,9 @@ Conditions for traversable geometric connections.
 
 **Definition 55.7** (Traversable Connection):
 Requires:
-$$\int \rho_{\text{info}}(\tau) d\tau > \rho_c = \varphi^{-m}$$
-
+$$
+\int \rho_{\text{info}}(\tau) d\tau > \rho_c = \varphi^{-m}
+$$
 Sufficient information density along path.
 
 **Theorem 55.7** (Information Enables Traversability):
@@ -144,8 +154,9 @@ Sufficient information density along path.
 Generalizing to multiple boundary connections.
 
 **Definition 55.8** (n-Boundary Configuration):
-$$\Psi_n = \sum_{i_1...i_n} C_{i_1...i_n} \text{Config}_{i_1} \otimes ... \otimes \text{Config}_{i_n}$$
-
+$$
+\Psi_n = \sum_{i_1...i_n} C_{i_1...i_n} \text{Config}_{i_1} \otimes ... \otimes \text{Config}_{i_n}
+$$
 **Theorem 55.8** (Geometric Dual):
 n-boundary correlation ↔ n-boundary connection
 
@@ -156,13 +167,15 @@ n-boundary correlation ↔ n-boundary connection
 Dimensionless parameters from duality consistency.
 
 **Definition 55.9** (Scaling Constraints):
-$$\frac{\ell_{\text{geometric}}}{\ell_{\text{info}}} = \varphi^{-k}$$
-
+$$
+\frac{\ell_{\text{geometric}}}{\ell_{\text{info}}} = \varphi^{-k}
+$$
 Length scale hierarchy with k determined by collapse structure.
 
 **Theorem 55.9** (Coupling Relations):
-$$g_{\text{eff}}^2 = \frac{\text{Vol}_{\text{geo}}}{\text{Vol}_{\text{info}}} = \varphi^m$$
-
+$$
+g_{\text{eff}}^2 = \frac{\text{Vol}_{\text{geo}}}{\text{Vol}_{\text{info}}} = \varphi^m
+$$
 where m emerges from φ-based scaling.
 
 *Observer Framework Note*: Planck scale and AdS/CFT interpretations require quantum gravity frameworks.
@@ -172,14 +185,16 @@ where m emerges from φ-based scaling.
 Geometric structure emerges from information correlation.
 
 **Definition 55.10** (Emergent Metric):
-$$ds^2 \sim -\frac{\partial^2 C_{\text{info}}}{\partial x^\mu \partial x^\nu} dx^\mu dx^\nu$$
-
+$$
+ds^2 \sim -\frac{\partial^2 C_{\text{info}}}{\partial x^\mu \partial x^\nu} dx^\mu dx^\nu
+$$
 Metric from information correlation structure.
 
 **Theorem 55.10** (Geometry = Information):
 Geometric consistency equations equivalent to:
-$$\delta C_{\text{info}} = 0$$
-
+$$
+\delta C_{\text{info}} = 0
+$$
 for first-order variations.
 
 *Observer Framework Note*: Einstein equations interpretation requires general relativity framework.
@@ -189,8 +204,9 @@ for first-order variations.
 Complex patterns as multi-boundary correlation.
 
 **Definition 55.11** (Pattern Network):
-$$\Psi_c = \text{Multi-correlation across pattern regions}$$
-
+$$
+\Psi_c = \text{Multi-correlation across pattern regions}
+$$
 Highly correlated multi-component configuration.
 
 **Theorem 55.11** (Geometric Pattern):

@@ -176,14 +176,20 @@ $$
 
 **Examples**:
 1. **Energy**: $[E] = M L^2 T^{-2}$
-   $$E_{\text{SI}} = E_{\text{collapse}} \cdot \lambda_m \lambda_\ell^2 \lambda_t^{-2}$$
-
+   
+$$
+E_{\text{SI}} = E_{\text{collapse}} \cdot \lambda_m \lambda_\ell^2 \lambda_t^{-2}
+$$
 2. **Force**: $[F] = M L T^{-2}$
-   $$F_{\text{SI}} = F_{\text{collapse}} \cdot \lambda_m \lambda_\ell \lambda_t^{-2}$$
-
+   
+$$
+F_{\text{SI}} = F_{\text{collapse}} \cdot \lambda_m \lambda_\ell \lambda_t^{-2}
+$$
 3. **Frequency**: $[f] = T^{-1}$
-   $$f_{\text{SI}} = f_{\text{collapse}} \cdot \lambda_t^{-1}$$
-
+   
+$$
+f_{\text{SI}} = f_{\text{collapse}} \cdot \lambda_t^{-1}
+$$
 ## 17.6 Electromagnetic Constants in SI Units from φ-Trace Structure
 
 **Theorem 17.8** (φ-Trace SI Constant Recovery): The fundamental constants in SI units emerge from electromagnetic rank structure:
@@ -243,11 +249,15 @@ $$
 
 **Examples**:
 1. **Human scale**: A person 1.8 m tall in collapse units:
-   $$H_{\text{collapse}} = \frac{1.8 \text{ m}}{5.729 \times 10^{-35} \text{ m}} = 3.14 \times 10^{34} \text{ collapse units}$$
-
+   
+$$
+H_{\text{collapse}} = \frac{1.8 \text{ m}}{5.729 \times 10^{-35} \text{ m}} = 3.14 \times 10^{34} \text{ collapse units}
+$$
 2. **Atomic scale**: Bohr radius in collapse units:
-   $$a_0^{(\text{collapse})} = \frac{5.29 \times 10^{-11} \text{ m}}{5.729 \times 10^{-35} \text{ m}} = 9.24 \times 10^{23} \text{ collapse units}$$
-
+   
+$$
+a_0^{(\text{collapse})} = \frac{5.29 \times 10^{-11} \text{ m}}{5.729 \times 10^{-35} \text{ m}} = 9.24 \times 10^{23} \text{ collapse units}
+$$
 ## 17.9 Dimensional Homomorphism
 
 **Theorem 17.10** (Dimensional Homomorphism): The mapping between collapse and SI units preserves dimensional structure:

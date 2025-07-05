@@ -74,13 +74,13 @@ This proves Φ preserves tensor products. ∎
 
 ## 24.3 Category-Theoretic Formulation
 
-**Definition 24.3** (Functor Between Unit Categories): Define the functor F: **Unit** → **Dim** by:
-- On objects: F(𝒰) = dimensional structure of 𝒰
-- On morphisms: F(φ) = induced dimensional homomorphism
+**Definition 24.3** (Functor Between Unit Categories): Define the functor $F$: **Unit** → **Dim** by:
+- On objects: $F(\mathcal{U}) = $ dimensional structure of $\mathcal{U}$
+- On morphisms: $F(\varphi) = $ induced dimensional homomorphism
 
-**Theorem 24.3** (Functorial Properties): F is a faithful functor preserving:
-1. Composition: F(φ ∘ ψ) = F(φ) ∘ F(ψ)
-2. Identities: F(id_𝒰) = id_{F(𝒰)}
+**Theorem 24.3** (Functorial Properties): $F$ is a faithful functor preserving:
+1. Composition: $F(\varphi \circ \psi) = F(\varphi) \circ F(\psi)$
+2. Identities: $F(\text{id}_{\mathcal{U}}) = \text{id}_{F(\mathcal{U})}$
 3. Homomorphism structure
 
 *Proof*:
@@ -176,12 +176,12 @@ $$
 d = L^{\sum_i a_i F_i} \cdot T^{\sum_j b_j F_j} \cdot M^{\sum_k c_k F_k}
 $$
 
-where F_n are Fibonacci numbers and a_i, b_j, c_k ∈ {0,1} with no consecutive 1s.
+where F_n are Fibonacci numbers and $a_i, b_j, c_k \in \{0,1\}$ with no consecutive 1s.
 
 **Theorem 24.7** (Zeckendorf Homomorphism): The map Z: d → (a, b, c) is a homomorphism from dimensional expressions to Zeckendorf vectors.
 
 *Proof*:
-For d₁ = L^{n₁} T^{m₁} M^{p₁} and d₂ = L^{n₂} T^{m₂} M^{p₂}:
+For $d_1 = L^{n_1} T^{m_1} M^{p_1}$ and $d_2 = L^{n_2} T^{m_2} M^{p_2}$:
 
 $$
 Z(d_1 \otimes d_2) = Z(L^{n_1+n_2} T^{m_1+m_2} M^{p_1+p_2}) = Z(d_1) \oplus Z(d_2)
@@ -191,10 +191,10 @@ where ⊕ is Zeckendorf addition (with carry handling). ∎
 
 ## 24.8 Natural Transformations Between Dimensions
 
-**Definition 24.8** (Natural Dimension Transform): A natural transformation η: F ⟹ G between dimension functors satisfies:
+**Definition 24.8** (Natural Dimension Transform): A natural transformation $\eta: F \Rightarrow G$ between dimension functors satisfies:
 
 $$
-\eta_{𝒰_2} \circ F(\phi) = G(\phi) \circ \eta_{𝒰_1}
+\eta_{\mathcal{U}_2} \circ F(\varphi) = G(\varphi) \circ \eta_{\mathcal{U}_1}
 $$
 
 for all morphisms φ: 𝒰₁ → 𝒰₂.

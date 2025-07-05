@@ -12,8 +12,9 @@ sidebar_label: "041. Path Categories"
 From $\psi = \psi(\psi)$, paths between states form categories.
 
 **Definition 41.1** (Path Category):
-$$\mathcal{P}ath = (\text{Obj}, \text{Mor}, \circ, id)$$
-
+$$
+\mathcal{P}ath = (\text{Obj}, \text{Mor}, \circ, id)
+$$
 where:
 - Obj = tensor states
 - Mor = collapse paths
@@ -33,13 +34,15 @@ Path composition is naturally associative, and doing nothing is the identity. âˆ
 Each morphism carries weight from collapse dynamics.
 
 **Definition 41.2** (Weighted Morphism):
-$$\text{Mor}(T_1, T_2) = \{(P, w_P) : P \text{ is path } T_1 \to T_2\}$$
-
+$$
+\text{Mor}(T_1, T_2) = \{(P, w_P) : P \text{ is path } T_1 \to T_2\}
+$$
 where $w_P = \varphi^{-\ell(P)}$ with $\ell(P)$ the golden length.
 
 **Theorem 41.2** (Morphism Composition):
-$$(P_1, w_1) \circ (P_2, w_2) = (P_1 \circ P_2, w_1 \cdot w_2)$$
-
+$$
+(P_1, w_1) \circ (P_2, w_2) = (P_1 \circ P_2, w_1 \cdot w_2)
+$$
 Weights multiply under composition.
 
 ## 41.3 Functor Structure
@@ -62,8 +65,9 @@ Natural transformations connect functors.
 
 **Definition 41.4** (Natural Transformation):
 $\eta: F \Rightarrow G$ assigns to each object $T$ a morphism $\eta_T: F(T) \to G(T)$ such that:
-$$G(f) \circ \eta_T = \eta_{T'} \circ F(f)$$
-
+$$
+G(f) \circ \eta_T = \eta_{T'} \circ F(f)
+$$
 **Theorem 41.4** (Mathematical Interpretation):
 Natural transformations represent:
 - Systematic morphism families
@@ -90,8 +94,9 @@ graph TD
 ```
 
 **Definition 41.5** (2-Category):
-$$\mathcal{P}ath\text{-}Cat = \text{Cat}(\mathcal{P}ath)$$
-
+$$
+\mathcal{P}ath\text{-}Cat = \text{Cat}(\mathcal{P}ath)
+$$
 with:
 - 0-cells: Path categories
 - 1-cells: Functors
@@ -105,8 +110,9 @@ All diagrams of natural transformations commute up to higher morphisms.
 Universal constructions in path categories.
 
 **Definition 41.6** (Path Limit):
-$$\lim_{\leftarrow} \mathcal{D} = \text{Universal cone over diagram } \mathcal{D}$$
-
+$$
+\lim_{\leftarrow} \mathcal{D} = \text{Universal cone over diagram } \mathcal{D}
+$$
 **Theorem 41.6** (Existence):
 Path categories have:
 1. Products: $T_1 \times T_2$
@@ -119,14 +125,16 @@ Path categories have:
 Path categories are monoidal.
 
 **Definition 41.7** (Tensor Product):
-$$\otimes: \mathcal{P}ath \times \mathcal{P}ath \to \mathcal{P}ath$$
-
+$$
+\otimes: \mathcal{P}ath \times \mathcal{P}ath \to \mathcal{P}ath
+$$
 with unit object $I$ (vacuum state).
 
 **Theorem 41.7** (Braiding):
 Path categories have braiding:
-$$\sigma_{T_1,T_2}: T_1 \otimes T_2 \to T_2 \otimes T_1$$
-
+$$
+\sigma_{T_1,T_2}: T_1 \otimes T_2 \to T_2 \otimes T_1
+$$
 This provides symmetry structure.
 
 ## 41.8 Enriched Categories
@@ -134,14 +142,16 @@ This provides symmetry structure.
 Path categories can be enriched over various structures.
 
 **Definition 41.8** (Enriched Hom):
-$$\text{Hom}_\mathcal{V}(T_1, T_2) = \mathcal{V}\text{-object of paths}$$
-
+$$
+\text{Hom}_\mathcal{V}(T_1, T_2) = \mathcal{V}\text{-object of paths}
+$$
 where $\mathcal{V}$ is a monoidal category.
 
 **Theorem 41.8** (Weight Structure):
 Morphism spaces carry weight structure:
-$$w: \text{Hom}(T_1, T_2) \to \mathbb{R}_{>0}$$
-
+$$
+w: \text{Hom}(T_1, T_2) \to \mathbb{R}_{>0}
+$$
 *Observer Framework Note*: Quantum amplitude interpretation requires additional framework.
 
 ## 41.9 Invariants from Categories
@@ -149,14 +159,16 @@ $$w: \text{Hom}(T_1, T_2) \to \mathbb{R}_{>0}$$
 Categorical invariants capture structural properties.
 
 **Definition 41.9** (Categorical Invariant):
-$$I[\mathcal{C}] = \text{Functor } \mathcal{C} \to \mathbb{R}$$
-
+$$
+I[\mathcal{C}] = \text{Functor } \mathcal{C} \to \mathbb{R}
+$$
 preserving categorical structure.
 
 **Theorem 41.9** (Invariant Ratios):
 For categories $\mathcal{C}_1, \mathcal{C}_2$:
-$$\rho(\mathcal{C}_1, \mathcal{C}_2) = \frac{|\text{Obj}(\mathcal{C}_1)|}{|\text{Obj}(\mathcal{C}_2)|} \cdot \varphi^{-k}$$
-
+$$
+\rho(\mathcal{C}_1, \mathcal{C}_2) = \frac{|\text{Obj}(\mathcal{C}_1)|}{|\text{Obj}(\mathcal{C}_2)|} \cdot \varphi^{-k}
+$$
 for appropriate $k$.
 
 *Observer Framework Note*: Physical constant interpretation requires additional framework.

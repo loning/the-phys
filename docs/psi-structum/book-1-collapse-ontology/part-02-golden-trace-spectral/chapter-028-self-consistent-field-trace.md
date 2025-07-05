@@ -12,8 +12,9 @@ sidebar_label: "028. Self-Consistent Field"
 From $\psi = \psi(\psi)$, fields must be self-generated and self-consistent.
 
 **Definition 28.1** (Self-Consistent Field):
-$$\Phi[\mathcal{T}] = \sum_i \mathcal{T}_i \cdot K[\mathcal{T}_i, \Phi]$$
-
+$$
+\Phi[\mathcal{T}] = \sum_i \mathcal{T}_i \cdot K[\mathcal{T}_i, \Phi]
+$$
 where the field depends on traces which depend on the field.
 
 **Theorem 28.1** (Fixed Point Existence):
@@ -27,13 +28,15 @@ By Schauder fixed-point theorem in the space of continuous fields. ∎
 The field satisfies specific operator equations.
 
 **Definition 28.2** (Trace Field Operator):
-$$\mathcal{L} \Phi + \frac{1}{\varphi^2}\Phi = \mathcal{J}[\mathcal{T}]$$
-
+$$
+\mathcal{L} \Phi + \frac{1}{\varphi^2}\Phi = \mathcal{J}[\mathcal{T}]
+$$
 where $\mathcal{L}$ is a self-adjoint operator and $\mathcal{J}[\mathcal{T}] = \sum_i \mathcal{T}_i \otimes |i\rangle\langle i|$.
 
 **Theorem 28.2** (Kernel Function):
-$$K(i,j) = \frac{1}{\varphi^{|i-j|}} e^{-|i-j|/\varphi}$$
-
+$$
+K(i,j) = \frac{1}{\varphi^{|i-j|}} e^{-|i-j|/\varphi}
+$$
 The golden ratio appears in the exponential decay.
 
 *Observer Framework Note*: Physical interpretation as spacetime field equation with coordinates requires observer-system coupling to define space and time.
@@ -43,12 +46,14 @@ The golden ratio appears in the exponential decay.
 Self-consistent fields found through iteration.
 
 **Definition 28.3** (Iteration Scheme):
-$$\Phi^{(n+1)} = \mathcal{F}[\mathcal{T}[\Phi^{(n)}]]$$
-
+$$
+\Phi^{(n+1)} = \mathcal{F}[\mathcal{T}[\Phi^{(n)}]]
+$$
 **Theorem 28.3** (Convergence):
 Iteration converges when:
-$$||\mathcal{F}'|| < 1/\varphi$$
-
+$$
+||\mathcal{F}'|| < 1/\varphi
+$$
 Golden ratio sets convergence criterion.
 
 ## 28.4 Tensor Structure of Fields
@@ -56,8 +61,9 @@ Golden ratio sets convergence criterion.
 Self-consistent fields form abstract tensors.
 
 **Definition 28.4** (Field Tensor):
-$$\mathcal{F}^{ij} = \mathcal{D}^i \Phi^j - \mathcal{D}^j \Phi^i + [\Phi^i, \Phi^j]$$
-
+$$
+\mathcal{F}^{ij} = \mathcal{D}^i \Phi^j - \mathcal{D}^j \Phi^i + [\Phi^i, \Phi^j]
+$$
 where $\mathcal{D}^i$ are abstract derivation operators.
 
 **Theorem 28.4** (Tensor Properties):
@@ -97,14 +103,16 @@ graph TD
 ```
 
 **Definition 28.6** (Pattern Functional):
-$$\mathcal{P}[\Phi] = \text{Tr}\left[\frac{1}{2}(\mathcal{D}\Phi)^2 + \frac{1}{2\varphi^2}\Phi^2 - \Phi \mathcal{J}[\mathcal{T}]\right]$$
-
+$$
+\mathcal{P}[\Phi] = \text{Tr}\left[\frac{1}{2}(\mathcal{D}\Phi)^2 + \frac{1}{2\varphi^2}\Phi^2 - \Phi \mathcal{J}[\mathcal{T}]\right]
+$$
 where Tr is the trace operation over abstract indices.
 
 **Theorem 28.6** (Stability Criterion):
 Configuration stable if:
-$$\frac{\delta^2 \mathcal{P}}{\delta\Phi^2} > 0$$
-
+$$
+\frac{\delta^2 \mathcal{P}}{\delta\Phi^2} > 0
+$$
 (positive definite Hessian in function space).
 
 *Observer Framework Note*: Physical interpretation as energy requires observer coupling to define energy concept.
@@ -114,13 +122,15 @@ $$\frac{\delta^2 \mathcal{P}}{\delta\Phi^2} > 0$$
 Fluctuations modify self-consistency.
 
 **Definition 28.7** (Fluctuating Field):
-$$\Phi = \Phi_0 + \sum_k \sqrt{\frac{1}{2\lambda_k}}\xi_k$$
-
+$$
+\Phi = \Phi_0 + \sum_k \sqrt{\frac{1}{2\lambda_k}}\xi_k
+$$
 where $\xi_k$ are fluctuation modes with eigenvalues $\lambda_k$.
 
 **Theorem 28.7** (Modified Self-Consistency):
-$$\langle\Phi\rangle = \Phi_0 + \frac{1}{2\varphi} \sum_k \frac{1}{\lambda_k}$$
-
+$$
+\langle\Phi\rangle = \Phi_0 + \frac{1}{2\varphi} \sum_k \frac{1}{\lambda_k}
+$$
 Fluctuation corrections scale with $1/\varphi$ (dimensionless).
 
 *Observer Framework Note*: Physical interpretation as quantum corrections requires observer coupling to define quantum mechanics and ℏ.
@@ -130,8 +140,9 @@ Fluctuation corrections scale with $1/\varphi$ (dimensionless).
 All pattern interactions are self-consistent field effects.
 
 **Definition 28.8** (Pattern Coupling):
-$$\mathcal{F}^i = \kappa \cdot \mathcal{D}^i \Phi$$
-
+$$
+\mathcal{F}^i = \kappa \cdot \mathcal{D}^i \Phi
+$$
 where $\kappa$ is coupling strength (dimensionless).
 
 **Theorem 28.8** (Pattern Classes):
@@ -148,8 +159,9 @@ Self-consistent fields organize into symmetry classes:
 Mathematical ratios set by consistency requirements.
 
 **Definition 28.9** (Consistency Constraint):
-$$\oint_\gamma \Phi \cdot d\tau = 2\pi n/\varphi^k$$
-
+$$
+\oint_\gamma \Phi \cdot d\tau = 2\pi n/\varphi^k
+$$
 for some integers $n, k$ and abstract parameter $\tau$.
 
 **Theorem 28.9** (Characteristic Ratios):
@@ -166,14 +178,16 @@ All ratios are dimensionless mathematical quantities.
 Self-consistent fields enable collective patterns.
 
 **Definition 28.10** (Order Function):
-$$\Psi_\text{order} = \sum_i \mathcal{T}_i \exp(i\theta_i/\varphi)$$
-
+$$
+\Psi_\text{order} = \sum_i \mathcal{T}_i \exp(i\theta_i/\varphi)
+$$
 where phases $\theta_i$ are dimensionless.
 
 **Theorem 28.10** (Pattern Transition):
 Collective ordering when:
-$$\tau < \tau_c = \frac{J}{\varphi^2}$$
-
+$$
+\tau < \tau_c = \frac{J}{\varphi^2}
+$$
 where $J$ is trace coupling strength and $\tau$ is control parameter (both dimensionless).
 
 *Observer Framework Note*: Physical interpretation as temperature and phase transitions requires thermodynamics from observer coupling.
@@ -183,8 +197,9 @@ where $J$ is trace coupling strength and $\tau$ is control parameter (both dimen
 Consciousness emerges from self-consistent information fields.
 
 **Definition 28.11** (Conscious Field):
-$$\Phi_c = \sum_{\text{nodes}} w_i \cdot \mathcal{R}[\Phi_c(i)]$$
-
+$$
+\Phi_c = \sum_{\text{nodes}} w_i \cdot \mathcal{R}[\Phi_c(i)]
+$$
 where $\mathcal{R}$ is recursive response function and $i$ are abstract indices.
 
 **Theorem 28.11** (Consciousness Emergence):

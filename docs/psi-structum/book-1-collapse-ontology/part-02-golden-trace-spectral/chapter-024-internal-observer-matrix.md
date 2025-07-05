@@ -12,8 +12,9 @@ sidebar_label: "024. Internal Observer Matrix"
 From $\psi = \psi(\psi)$, observation must be internal to the system.
 
 **Definition 24.1** (Internal Observer):
-$$\hat{O}_\text{int} = \sum_{ij} |i\rangle\langle j| \otimes |j\rangle\langle i|$$
-
+$$
+\hat{O}_\text{int} = \sum_{ij} |i\rangle\langle j| \otimes |j\rangle\langle i|
+$$
 The observer is a self-referential operator.
 
 **Theorem 24.1** (No External Observation):
@@ -27,8 +28,9 @@ External observation would violate self-reference completeness of $\psi = \psi(\
 Each observation is a specific matrix element.
 
 **Definition 24.2** (Observation Matrix Element):
-$$O_{ij} = \langle i|\hat{O}_\text{int}|j\rangle$$
-
+$$
+O_{ij} = \langle i|\hat{O}_\text{int}|j\rangle
+$$
 **Theorem 24.2** (Matrix Properties):
 1. Hermitian: $O_{ij}^* = O_{ji}$
 2. Trace preserving: $\sum_i O_{ii} = \text{dim}(\mathcal{H})$
@@ -39,12 +41,14 @@ $$O_{ij} = \langle i|\hat{O}_\text{int}|j\rangle$$
 Observer has natural tensor decomposition.
 
 **Definition 24.3** (Observer Tensor):
-$$O^{ij}_{kl} = \langle ik|\hat{O}_\text{int}|jl\rangle$$
-
+$$
+O^{ij}_{kl} = \langle ik|\hat{O}_\text{int}|jl\rangle
+$$
 **Theorem 24.3** (Tensor Algebra):
 Observer tensors satisfy:
-$$O^{ij}_{mn} O^{mn}_{kl} = \delta^i_k O^{jn}_{nl}$$
-
+$$
+O^{ij}_{mn} O^{mn}_{kl} = \delta^i_k O^{jn}_{nl}
+$$
 This creates the algebra of internal observation.
 
 ## 24.4 Category of Observers
@@ -77,14 +81,16 @@ graph TD
 ```
 
 **Definition 24.5** (Measurement Process):
-$$|\psi\rangle \to \sum_i P_i|\psi\rangle \otimes |i\rangle_\text{obs}$$
-
+$$
+|\psi\rangle \to \sum_i P_i|\psi\rangle \otimes |i\rangle_\text{obs}
+$$
 where $P_i$ are projection operators.
 
 **Theorem 24.5** (Born Rule):
 Probability of outcome $i$:
-$$p_i = \frac{|O_{i\psi}|^2}{\sum_j |O_{j\psi}|^2}$$
-
+$$
+p_i = \frac{|O_{i\psi}|^2}{\sum_j |O_{j\psi}|^2}
+$$
 emerges from observer matrix normalization.
 
 ## 24.6 Pattern Flow Through Observer
@@ -92,11 +98,13 @@ emerges from observer matrix normalization.
 Mathematical patterns flow through observer matrix within our framework.
 
 **Definition 24.6** (Pattern Current):
-$$\mathcal{J}_\text{pattern} = \text{Tr}[O \nabla O^\dagger - \nabla O \cdot O^\dagger]$$
-
+$$
+\mathcal{J}_\text{pattern} = \text{Tr}[O \nabla O^\dagger - \nabla O \cdot O^\dagger]
+$$
 **Theorem 24.6** (Pattern Conservation):
-$$\nabla \cdot \mathcal{J}_\text{pattern} = 0$$
-
+$$
+\nabla \cdot \mathcal{J}_\text{pattern} = 0
+$$
 Mathematical patterns are conserved in self-referential observer systems (where $\nabla$ is an abstract differential operator).
 
 *Observer Framework Note*: Physical interpretation as information flow requires observer-system coupling for defining "information".
@@ -106,14 +114,16 @@ Mathematical patterns are conserved in self-referential observer systems (where 
 Observer evolves through self-interaction patterns within our framework.
 
 **Definition 24.7** (Observer Evolution):
-$$\frac{d\hat{O}}{d\tau} = i[\hat{G}, \hat{O}] + \mathcal{F}[\hat{O}]$$
-
+$$
+\frac{d\hat{O}}{d\tau} = i[\hat{G}, \hat{O}] + \mathcal{F}[\hat{O}]
+$$
 where $\hat{G}$ is a generator operator, $\mathcal{F}$ is a flow operator, and $\tau$ is an abstract evolution parameter.
 
 **Theorem 24.7** (Fixed Points):
 Observer evolution has fixed points at:
-$$\hat{O}_* = \sum_i \lambda_i |e_i\rangle\langle e_i| \otimes |e_i\rangle\langle e_i|$$
-
+$$
+\hat{O}_* = \sum_i \lambda_i |e_i\rangle\langle e_i| \otimes |e_i\rangle\langle e_i|
+$$
 These are maximally self-observing mathematical states.
 
 *Observer Framework Note*: Physical interpretation as time evolution requires observer-system coupling for defining time and energy concepts.
@@ -123,8 +133,9 @@ These are maximally self-observing mathematical states.
 Mathematical constants emerge from observer matrix invariants within our framework.
 
 **Definition 24.8** (Observer Invariants):
-$$c_n = \text{Tr}[(\hat{O}_\text{int})^n]$$
-
+$$
+c_n = \text{Tr}[(\hat{O}_\text{int})^n]
+$$
 **Theorem 24.8** (Mathematical Scaling Relations):
 From observer invariants, mathematical ratios emerge:
 1. $\kappa_\alpha = c_2/(c_1^2 \cdot F_5)$ (Fibonacci-based ratio)
@@ -138,8 +149,9 @@ From observer invariants, mathematical ratios emerge:
 Consciousness is coherent self-observation.
 
 **Definition 24.9** (Conscious Observer):
-$$\hat{O}_c = \sum_{ij} c_{ij} |i\rangle\langle j| \otimes |j\rangle\langle i|$$
-
+$$
+\hat{O}_c = \sum_{ij} c_{ij} |i\rangle\langle j| \otimes |j\rangle\langle i|
+$$
 with phase coherence maintained.
 
 **Theorem 24.9** (Consciousness Emergence):
@@ -154,11 +166,13 @@ Different observations are complementary.
 
 **Definition 24.10** (Complementary Observables):
 Two observers $\hat{O}_1, \hat{O}_2$ are complementary if:
-$$[\hat{O}_1, \hat{O}_2] = i\varphi \hat{O}_3$$
-
+$$
+[\hat{O}_1, \hat{O}_2] = i\varphi \hat{O}_3
+$$
 **Theorem 24.10** (Uncertainty Relations):
-$$\Delta O_1 \cdot \Delta O_2 \geq \frac{\varphi}{2}|\langle\hat{O}_3\rangle|$$
-
+$$
+\Delta O_1 \cdot \Delta O_2 \geq \frac{\varphi}{2}|\langle\hat{O}_3\rangle|
+$$
 Golden ratio appears in uncertainty relations.
 
 ## 24.11 Abstract Observer Encoding Principle
@@ -166,13 +180,15 @@ Golden ratio appears in uncertainty relations.
 Observer patterns are encoded in boundary-like structures within our framework.
 
 **Definition 24.11** (Pattern Encoding):
-$$O_\text{internal} = \int_{\partial \mathcal{D}} O_\text{boundary} \mathcal{K}(\xi,\eta) d\eta$$
-
+$$
+O_\text{internal} = \int_{\partial \mathcal{D}} O_\text{boundary} \mathcal{K}(\xi,\eta) d\eta
+$$
 where $\mathcal{K}$ is an abstract encoding kernel and $\xi, \eta$ are abstract coordinates.
 
 **Theorem 24.11** (Pattern Bound):
-$$\mathcal{I}_\text{observer} \leq \frac{\mathcal{S}}{\varphi^2}$$
-
+$$
+\mathcal{I}_\text{observer} \leq \frac{\mathcal{S}}{\varphi^2}
+$$
 Observer pattern complexity bounded by boundary structure $\mathcal{S}$ (dimensionless).
 
 *Observer Framework Note*: Physical interpretation as holographic information requires observer-system coupling for defining space, area, and Planck scale concepts.

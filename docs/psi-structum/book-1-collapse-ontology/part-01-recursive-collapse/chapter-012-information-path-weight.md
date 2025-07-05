@@ -12,16 +12,18 @@ sidebar_label: "012. Information = Path Weight"
 From $\psi = \psi(\psi)$, information emerges from counting weighted paths.
 
 **Definition 12.1** (Path Information):
-$$I = N \times W$$
-
+$$
+I = N \times W
+$$
 where:
 - $N$ = number of distinct collapse paths
 - $W$ = average weight per path
 
 **Theorem 12.1** (Information Emergence):
 For any collapse process:
-$$I[\mathcal{C}] = \sum_{\text{paths } P} w_P \log w_P$$
-
+$$
+I[\mathcal{C}] = \sum_{\text{paths } P} w_P \log w_P
+$$
 where $w_P$ is the weight of path $P$.
 
 *Proof*:
@@ -32,11 +34,13 @@ Each path contributes information proportional to its weight and the logarithm o
 The number of paths follows golden structure.
 
 **Definition 12.2** (Valid Paths): Paths satisfying golden constraint:
-$$N_n = \#\{\text{paths of length } n \text{ without consecutive 1s}\}$$
-
+$$
+N_n = \#\{\text{paths of length } n \text{ without consecutive 1s}\}
+$$
 **Theorem 12.2** (Fibonacci Growth):
-$$N_n = F_{n+2}$$
-
+$$
+N_n = F_{n+2}
+$$
 The number of paths IS the Fibonacci sequence.
 
 *Proof*:
@@ -48,14 +52,16 @@ Total: $N_n = N_{n-1} + N_{n-2}$, with $N_0 = 1, N_1 = 2$. ∎
 Each path carries specific weight.
 
 **Definition 12.3** (Path Weight Tensor):
-$$W_P = \prod_{i \in P} T^{(i)}_{j_i,k_i}$$
-
+$$
+W_P = \prod_{i \in P} T^{(i)}_{j_i,k_i}
+$$
 where $T^{(i)}$ are transition tensors along the path.
 
 **Theorem 12.3** (Weight Distribution):
 From the collapse tensor structure, path weights satisfy:
-$$P(w) = \frac{1}{Z} w^{-\alpha}$$
-
+$$
+P(w) = \frac{1}{Z} w^{-\alpha}
+$$
 where the exponent emerges from golden constraint properties. For paths satisfying the self-reference condition from ψ = ψ(ψ), the exponent α relates to φ through the recursive structure, though the specific value requires further derivation from collapse dynamics.
 
 ## 12.4 Information Tensor
@@ -63,8 +69,9 @@ where the exponent emerges from golden constraint properties. For paths satisfyi
 Information has natural tensor structure.
 
 **Definition 12.4** (Information Tensor):
-$$I^{ij}_{kl} = \sum_{P: (i,j) \to (k,l)} w_P \log w_P$$
-
+$$
+I^{ij}_{kl} = \sum_{P: (i,j) \to (k,l)} w_P \log w_P
+$$
 **Theorem 12.4** (Tensor Properties):
 1. Symmetric: $I^{ij}_{kl} = I^{ji}_{lk}$
 2. Positive: $I^{ij}_{ij} \geq 0$
@@ -75,13 +82,15 @@ $$I^{ij}_{kl} = \sum_{P: (i,j) \to (k,l)} w_P \log w_P$$
 Information flows through the collapse network.
 
 **Definition 12.5** (Information Current):
-$$J^\mu_I = \sum_P w_P v_P^\mu \log w_P$$
-
+$$
+J^\mu_I = \sum_P w_P v_P^\mu \log w_P
+$$
 where $v_P^\mu$ is the velocity of path $P$.
 
 **Theorem 12.5** (Conservation Law):
-$$\partial_\mu J^\mu_I = \sigma_I$$
-
+$$
+\partial_\mu J^\mu_I = \sigma_I
+$$
 where $\sigma_I \geq 0$ is information production.
 
 ## 12.6 Category Theory of Information
@@ -94,8 +103,9 @@ Information forms a category.
 - Composition: Information addition
 
 **Theorem 12.6** (Categorical Limit):
-$$I_\infty = \text{colim}_{n \to \infty} I_n = \log \varphi$$
-
+$$
+I_\infty = \text{colim}_{n \to \infty} I_n = \log \varphi
+$$
 The golden ratio appears as the universal information unit.
 
 ## 12.7 Graph Theory of Information Networks
@@ -134,8 +144,9 @@ Information networks exhibit scale-free properties consistent with golden ratio 
 Information has entropy-like properties within our mathematical framework.
 
 **Definition 12.8** (Information Entropy):
-$$S_{\text{info}} = \sum_P w_P \log w_P$$
-
+$$
+S_{\text{info}} = \sum_P w_P \log w_P
+$$
 This measures the information content of the path distribution.
 
 **Theorem 12.8** (Entropy Properties):
@@ -151,13 +162,15 @@ Information entropy satisfies:
 Quantum information emerges from path superposition.
 
 **Definition 12.9** (Quantum Information):
-$$I_Q = -\text{Tr}(\rho \log \rho)$$
-
+$$
+I_Q = -\text{Tr}(\rho \log \rho)
+$$
 where $\rho_{ij} = \sum_P w_P \langle i|P\rangle\langle P|j\rangle$.
 
 **Theorem 12.9** (Holevo Bound):
-$$I_Q \leq \log N$$
-
+$$
+I_Q \leq \log N
+$$
 where $N$ is the number of distinguishable paths.
 
 ## 12.10 Information Bounds and Mathematical Limits
@@ -166,18 +179,21 @@ Information has natural mathematical bounds within our framework.
 
 **Definition 12.10** (Information Density):
 For a region containing N paths:
-$$\rho_I = \frac{I_{\text{total}}}{N}$$
-
+$$
+\rho_I = \frac{I_{\text{total}}}{N}
+$$
 **Theorem 12.10** (Information Bound):
 Maximum information per path is bounded by:
-$$I_{\max} \leq \log(\varphi^n)$$
-
+$$
+I_{\max} \leq \log(\varphi^n)
+$$
 where n is the path complexity.
 
 **Theorem 12.11** (Propagation Constraint):
 Information transfer between paths satisfies:
-$$\Delta I \leq \log(\varphi) \times \Delta t$$
-
+$$
+\Delta I \leq \log(\varphi) \times \Delta t
+$$
 where Δt measures the collapse time steps.
 
 *Note*: These are mathematical constraints within our collapse framework, not claims about physical space or time.
@@ -187,8 +203,9 @@ where Δt measures the collapse time steps.
 Collapse paths fall into complexity classes.
 
 **Definition 12.11** (Complexity Class):
-$$\mathcal{C}_k = \{P : I[P] \in [F_k, F_{k+1})\}$$
-
+$$
+\mathcal{C}_k = \{P : I[P] \in [F_k, F_{k+1})\}
+$$
 **Theorem 12.12** (Class Hierarchy):
 1. $\mathcal{C}_0$: Trivial paths (no information)
 2. $\mathcal{C}_1 - \mathcal{C}_4$: Simple paths

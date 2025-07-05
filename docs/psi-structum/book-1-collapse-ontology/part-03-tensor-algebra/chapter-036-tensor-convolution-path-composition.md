@@ -12,13 +12,15 @@ sidebar_label: "036. Tensor Convolution"
 From $\psi = \psi(\psi)$, path composition must be tensor convolution.
 
 **Definition 36.1** (Tensor Convolution):
-$$(\mathcal{T}_1 * \mathcal{T}_2)^{ik} = \sum_j \mathcal{T}_1^{ij} \otimes \mathcal{T}_2^{jk}$$
-
+$$
+(\mathcal{T}_1 * \mathcal{T}_2)^{ik} = \sum_j \mathcal{T}_1^{ij} \otimes \mathcal{T}_2^{jk}
+$$
 This combines paths through intermediate state $j$.
 
 **Theorem 36.1** (Path Correspondence):
-$$T^{ik}_{P_1 \circ P_2} = \sum_{j: P_1 \to j \to P_2} T^{ij}_{P_1} \cdot T^{jk}_{P_2}$$
-
+$$
+T^{ik}_{P_1 \circ P_2} = \sum_{j: P_1 \to j \to P_2} T^{ij}_{P_1} \cdot T^{jk}_{P_2}
+$$
 *Proof*:
 Path composition requires summing over all intermediate states, giving convolution. ∎
 
@@ -27,35 +29,41 @@ Path composition requires summing over all intermediate states, giving convoluti
 Convolution respects Zeckendorf structure.
 
 **Definition 36.2** (Golden Convolution):
-$$(\mathcal{T}_1 *_\varphi \mathcal{T}_2)^{ik} = \sum_{j: \text{valid}} \mathcal{T}_1^{ij} \mathcal{T}_2^{jk} \cdot g(i,j,k)$$
-
+$$
+(\mathcal{T}_1 *_\varphi \mathcal{T}_2)^{ik} = \sum_{j: \text{valid}} \mathcal{T}_1^{ij} \mathcal{T}_2^{jk} \cdot g(i,j,k)
+$$
 where $g(i,j,k) = \varphi^{-d(i,j,k)}$ with $d$ the golden distance.
 
 **Theorem 36.2** (Associativity):
-$$(\mathcal{T}_1 *_\varphi \mathcal{T}_2) *_\varphi \mathcal{T}_3 = \mathcal{T}_1 *_\varphi (\mathcal{T}_2 *_\varphi \mathcal{T}_3)$$
-
+$$
+(\mathcal{T}_1 *_\varphi \mathcal{T}_2) *_\varphi \mathcal{T}_3 = \mathcal{T}_1 *_\varphi (\mathcal{T}_2 *_\varphi \mathcal{T}_3)
+$$
 ## 36.3 Spectral Convolution
 
 In spectral space, convolution simplifies.
 
 **Definition 36.3** (Spectral Convolution):
-$$\widetilde{(\mathcal{T}_1 * \mathcal{T}_2)}(\omega) = \widetilde{\mathcal{T}_1}(\omega) \cdot \widetilde{\mathcal{T}_2}(\omega)$$
-
+$$
+\widetilde{(\mathcal{T}_1 * \mathcal{T}_2)}(\omega) = \widetilde{\mathcal{T}_1}(\omega) \cdot \widetilde{\mathcal{T}_2}(\omega)
+$$
 **Theorem 36.3** (Convolution Theorem):
 Fourier transform converts convolution to multiplication:
-$$\mathcal{F}[\mathcal{T}_1 * \mathcal{T}_2] = \mathcal{F}[\mathcal{T}_1] \cdot \mathcal{F}[\mathcal{T}_2]$$
-
+$$
+\mathcal{F}[\mathcal{T}_1 * \mathcal{T}_2] = \mathcal{F}[\mathcal{T}_1] \cdot \mathcal{F}[\mathcal{T}_2]
+$$
 ## 36.4 ζ-Function Under Convolution
 
 The ζ-function behaves naturally under convolution.
 
 **Definition 36.4** (ζ-Convolution):
-$$\zeta^{ik}_{*}(s) = \sum_j \zeta_1^{ij}(s) \cdot \zeta_2^{jk}(s)$$
-
+$$
+\zeta^{ik}_{*}(s) = \sum_j \zeta_1^{ij}(s) \cdot \zeta_2^{jk}(s)
+$$
 **Theorem 36.4** (Multiplicativity):
 For independent paths:
-$$\zeta_{P_1 \circ P_2}(s) = \zeta_{P_1}(s) \cdot \zeta_{P_2}(s)$$
-
+$$
+\zeta_{P_1 \circ P_2}(s) = \zeta_{P_1}(s) \cdot \zeta_{P_2}(s)
+$$
 ## 36.5 Category Theory of Convolution
 
 Convolution creates a monoidal category.
@@ -88,13 +96,15 @@ $(\text{Tensors}, *, \delta)$ forms a monoidal category.
 Convolution describes information propagation.
 
 **Definition 36.6** (Information Convolution):
-$$I_{1*2} = I_1 + I_2 - I_{\text{overlap}}$$
-
+$$
+I_{1*2} = I_1 + I_2 - I_{\text{overlap}}
+$$
 where $I_{\text{overlap}}$ is mutual information.
 
 **Theorem 36.6** (Information Inequality):
-$$I_{1*2} \leq I_1 + I_2$$
-
+$$
+I_{1*2} \leq I_1 + I_2
+$$
 with equality for independent tensors.
 
 ## 36.7 Algebraic Properties
@@ -102,14 +112,16 @@ with equality for independent tensors.
 Convolution preserves algebraic structure.
 
 **Definition 36.7** (Structure Preservation):
-$$\mathcal{A}^{ik}_{\text{total}} = \sum_j \mathcal{A}^{ij}_1 \cdot \mathcal{A}^{jk}_2 \cdot w_j$$
-
+$$
+\mathcal{A}^{ik}_{\text{total}} = \sum_j \mathcal{A}^{ij}_1 \cdot \mathcal{A}^{jk}_2 \cdot w_j
+$$
 where $w_j = \varphi^{-j}$ is the golden weight.
 
 **Theorem 36.7** (Norm Bounds):
 For normalized tensors:
-$$||\mathcal{T}_1 * \mathcal{T}_2|| \leq ||\mathcal{T}_1|| \cdot ||\mathcal{T}_2||$$
-
+$$
+||\mathcal{T}_1 * \mathcal{T}_2|| \leq ||\mathcal{T}_1|| \cdot ||\mathcal{T}_2||
+$$
 *Observer Framework Note*: Physical interpretation as quantum amplitudes requires observer-system coupling.
 
 ## 36.8 Mathematical Processes
@@ -131,12 +143,14 @@ Convolution preserves path connectivity patterns.
 Fixed points reveal structural invariants.
 
 **Definition 36.9** (Fixed Point):
-$$\mathcal{T}_* * \mathcal{T}_* = \lambda \mathcal{T}_*$$
-
+$$
+\mathcal{T}_* * \mathcal{T}_* = \lambda \mathcal{T}_*
+$$
 **Theorem 36.9** (Invariant Ratios):
 Fixed point eigenvalues satisfy:
-$$\lambda_{n+1}/\lambda_n = \varphi^{-1}$$
-
+$$
+\lambda_{n+1}/\lambda_n = \varphi^{-1}
+$$
 for consecutive fixed points.
 
 *Observer Framework Note*: Physical constants emerge only through observer-system coupling.
@@ -146,11 +160,13 @@ for consecutive fixed points.
 Higher-order convolutions create non-linearity.
 
 **Definition 36.10** (Self-Convolution):
-$$\mathcal{T}^{*n} = \underbrace{\mathcal{T} * \mathcal{T} * ... * \mathcal{T}}_{n \text{ times}}$$
-
+$$
+\mathcal{T}^{*n} = \underbrace{\mathcal{T} * \mathcal{T} * ... * \mathcal{T}}_{n \text{ times}}
+$$
 **Theorem 36.10** (Scaling):
-$$||\mathcal{T}^{*n}|| \sim \varphi^{n(n-1)/2}$$
-
+$$
+||\mathcal{T}^{*n}|| \sim \varphi^{n(n-1)/2}
+$$
 showing super-linear growth.
 
 ## 36.11 Self-Referential Structures
@@ -165,8 +181,9 @@ A convolution exhibits self-reference if:
 
 **Theorem 36.11** (Complexity Measure):
 Self-referential complexity:
-$$\mathcal{K} = -\text{Tr}[\rho * \log(\rho)]$$
-
+$$
+\mathcal{K} = -\text{Tr}[\rho * \log(\rho)]
+$$
 where $\rho = \mathcal{T}/\text{Tr}(\mathcal{T})$.
 
 *Observer Framework Note*: Consciousness interpretation requires additional framework beyond mathematics.

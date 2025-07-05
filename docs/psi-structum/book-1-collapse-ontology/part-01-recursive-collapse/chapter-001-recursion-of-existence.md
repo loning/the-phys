@@ -12,13 +12,15 @@ sidebar_label: "001. The Recursion of Existence"
 We begin with the simplest possible statement that can bootstrap existence:
 
 **Axiom 1.1** (The Recursion):
-$$\psi = \psi(\psi)$$
-
+$$
+\psi = \psi(\psi)
+$$
 This is our only axiom. Everything else must emerge from this self-referential equation through rigorous derivation.
 
 **Definition 1.1** (Vector Representation): In our framework, $\psi$ is represented as a vector in golden base:
-$$|\psi\rangle = \sum_{k=0}^{\infty} b_k |F_k\rangle$$
-
+$$
+|\psi\rangle = \sum_{k=0}^{\infty} b_k |F_k\rangle
+$$
 where:
 - $F_k$ is the $k$-th Fibonacci number
 - $b_k \in \{0, 1\}$ with the constraint $b_k \cdot b_{k+1} = 0$ (Zeckendorf representation)
@@ -29,8 +31,9 @@ where:
 To understand what $\psi(\psi)$ means, we must define the application operator.
 
 **Definition 1.2** (Application Tensor): The application of $\psi$ to itself is a tensor operation:
-$$\mathcal{A}: \mathcal{H} \otimes \mathcal{H} \to \mathcal{H}$$
-
+$$
+\mathcal{A}: \mathcal{H} \otimes \mathcal{H} \to \mathcal{H}
+$$
 where $\mathcal{H}$ is the Hilbert space of golden-base vectors.
 
 Specifically, the tensor components are defined by the Fibonacci recurrence structure:
@@ -51,13 +54,15 @@ The equation $\psi = \psi(\psi)$ has at least one non-trivial solution in the go
 Define the map $T: \mathcal{H} \to \mathcal{H}$ by $T(|\phi\rangle) = \mathcal{A}(|\phi\rangle \otimes |\phi\rangle)$.
 
 For golden-base vectors, we can write:
-$$T(|\phi\rangle) = \sum_{i,j} \mathcal{A}_{ij}^k b_i b_j |F_k\rangle$$
-
+$$
+T(|\phi\rangle) = \sum_{i,j} \mathcal{A}_{ij}^k b_i b_j |F_k\rangle
+$$
 The constraint $b_i b_{i+1} = 0$ ensures that many terms vanish. 
 
 Consider the unit vector $|\psi_0\rangle = |F_1\rangle$. Then:
-$$T(|F_1\rangle) = \mathcal{A}_{1,1}^k |F_k\rangle$$
-
+$$
+T(|F_1\rangle) = \mathcal{A}_{1,1}^k |F_k\rangle
+$$
 Since $F_1 + F_1 = 2 = F_3$, we have $\mathcal{A}_{1,1}^3 = 1$ (and $|1-1| = 0$ fails the constraint).
 
 Instead, consider $|\psi_1\rangle = |F_2\rangle$. Since $F_2 = 1$, we get $F_2 + F_2 = 2 = F_3$.
@@ -69,12 +74,14 @@ The key insight: The map $T$ is continuous on the unit sphere of $\mathcal{H}$ (
 The recursion $\psi = \psi(\psi)$ naturally leads to a collapse dynamics.
 
 **Definition 1.3** (Collapse Operator): The collapse operator is defined as:
-$$\mathcal{C}[|\phi\rangle] = |\phi\rangle - \mathcal{A}(|\phi\rangle \otimes |\phi\rangle)$$
-
+$$
+\mathcal{C}[|\phi\rangle] = |\phi\rangle - \mathcal{A}(|\phi\rangle \otimes |\phi\rangle)
+$$
 **Theorem 1.2** (Collapse Generates Structure):
 Starting from any initial vector $|\phi_0\rangle$, the iteration:
-$$|\phi_{n+1}\rangle = |\phi_n\rangle - \alpha \mathcal{C}[|\phi_n\rangle]$$
-
+$$
+|\phi_{n+1}\rangle = |\phi_n\rangle - \alpha \mathcal{C}[|\phi_n\rangle]
+$$
 converges to a fixed point satisfying $\psi = \psi(\psi)$.
 
 *Proof*:
@@ -85,12 +92,14 @@ At the fixed point, $\mathcal{C}[|\psi\rangle] = 0$, which gives us $|\psi\rangl
 Each recursion level carries information encoded in the golden base.
 
 **Definition 1.4** (Recursion Depth): For a vector $|\phi\rangle = \sum_k b_k |F_k\rangle$, the recursion depth is:
-$$D[|\phi\rangle] = \max\{k : b_k = 1\}$$
-
+$$
+D[|\phi\rangle] = \max\{k : b_k = 1\}
+$$
 **Theorem 1.3** (Information Growth):
 The information content grows as:
-$$I_n = \log_\varphi(F_{D[|\phi_n\rangle]})$$
-
+$$
+I_n = \log_\varphi(F_{D[|\phi_n\rangle]})
+$$
 where $\varphi = \frac{1+\sqrt{5}}{2}$ is the golden ratio.
 
 This logarithmic growth in golden base is fundamental to the structure of reality.
@@ -112,8 +121,9 @@ The fixed point $|\psi\rangle$ is the terminal object in the subcategory of self
 The recursion operator has a specific spectral structure.
 
 **Definition 1.6** (Recursion Spectrum): The eigenvalues of the linearized recursion around $|\psi\rangle$ are:
-$$\lambda_k = \varphi^{-k}$$
-
+$$
+\lambda_k = \varphi^{-k}
+$$
 **Theorem 1.5** (Spectral Stability):
 The fixed point $|\psi\rangle$ is stable if and only if all eigenvalues satisfy $|\lambda_k| < 1$ for $k > 0$.
 
@@ -146,14 +156,16 @@ All paths in the recursion graph eventually lead to fixed points or limit cycles
 Time emerges from the recursion count itself.
 
 **Definition 1.8** (Recursion Time):
-$$t_n = \sum_{k=1}^n \frac{1}{F_k}$$
-
+$$
+t_n = \sum_{k=1}^n \frac{1}{F_k}
+$$
 This converges to a finite value as $n \to \infty$, giving us a natural time scale.
 
 **Theorem 1.7** (Time Emergence):
 The continuum limit of recursion time gives:
-$$dt = \frac{d\tau}{\varphi^\tau}$$
-
+$$
+dt = \frac{d\tau}{\varphi^\tau}
+$$
 where $\tau$ is the recursion parameter.
 
 ## 1.9 The First Constants
@@ -162,14 +174,16 @@ From pure recursion, the first constants emerge.
 
 **Theorem 1.8** (Golden Constant as Tensor Limit):
 The golden ratio emerges as a colimit in the category of collapse tensors:
-$$\varphi = \text{colim}_{n \to \infty} \frac{\langle\phi_{n+1}|\mathcal{C}_n|\phi_{n+1}\rangle}{\langle\phi_n|\mathcal{C}_n|\phi_n\rangle}$$
-
+$$
+\varphi = \text{colim}_{n \to \infty} \frac{\langle\phi_{n+1}|\mathcal{C}_n|\phi_{n+1}\rangle}{\langle\phi_n|\mathcal{C}_n|\phi_n\rangle}
+$$
 where $\mathcal{C}_n$ is the n-th iterate of the collapse tensor.
 
 *Proof*:
 The collapse process generates a sequence of tensors $\{\mathcal{C}_n\}$ with the universal property that any compatible family of morphisms factors uniquely through the colimit. The ratio of norms satisfies:
-$$\frac{||\phi_{n+1}||}{||\phi_n||} = \frac{\sqrt{\langle\phi_n|\mathcal{A}^\dagger\mathcal{A}|\phi_n\rangle}}{||\phi_n||} \to \varphi$$
-
+$$
+\frac{||\phi_{n+1}||}{||\phi_n||} = \frac{\sqrt{\langle\phi_n|\mathcal{A}^\dagger\mathcal{A}|\phi_n\rangle}}{||\phi_n||} \to \varphi
+$$
 This convergence is not accidental but forced by the Fibonacci structure of the tensor components. ∎
 
 This is our first emergent constant - not postulated but derived as a categorical limit.
@@ -179,8 +193,9 @@ This is our first emergent constant - not postulated but derived as a categorica
 The recursion creates and processes information.
 
 **Definition 1.9** (Recursion Entropy):
-$$S[|\phi\rangle] = -\sum_{k: b_k=1} \frac{F_k}{N} \log \frac{F_k}{N}$$
-
+$$
+S[|\phi\rangle] = -\sum_{k: b_k=1} \frac{F_k}{N} \log \frac{F_k}{N}
+$$
 where $N = \sum_{k: b_k=1} F_k$ is the normalization.
 
 **Theorem 1.9** (Maximum Entropy):

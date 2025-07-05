@@ -12,25 +12,29 @@ sidebar_label: "007. Collapse Trace φ-Structure"
 We derive the golden ratio purely from collapse trace properties.
 
 **Definition 7.1** (Trace Step): A trace step is a transition:
-$$|s_n\rangle \to |s_{n+1}\rangle = \mathcal{C}[|s_n\rangle]$$
-
+$$
+|s_n\rangle \to |s_{n+1}\rangle = \mathcal{C}[|s_n\rangle]
+$$
 **Theorem 7.1** (Trace Recursion):
 For stable traces, the step sizes satisfy:
-$$||s_{n+2}|| = ||s_{n+1}|| + ||s_n||$$
-
+$$
+||s_{n+2}|| = ||s_{n+1}|| + ||s_n||
+$$
 *Proof*:
 From $\psi = \psi(\psi)$, stable patterns must satisfy self-similarity. The simplest non-trivial self-similar recursion in vector norms gives the Fibonacci relation. ∎
 
 **Corollary**: The ratio of consecutive step sizes converges to:
-$$\lim_{n \to \infty} \frac{||s_{n+1}||}{||s_n||} = \varphi = \frac{1 + \sqrt{5}}{2}$$
-
+$$
+\lim_{n \to \infty} \frac{||s_{n+1}||}{||s_n||} = \varphi = \frac{1 + \sqrt{5}}{2}
+$$
 ## 7.2 Golden Base Trace Encoding
 
 Every trace has a unique golden base representation.
 
 **Definition 7.2** (Trace Vector): A trace $\mathcal{T}$ is encoded as:
-$$|\mathcal{T}\rangle = \sum_{k} t_k |F_k\rangle$$
-
+$$
+|\mathcal{T}\rangle = \sum_{k} t_k |F_k\rangle
+$$
 where $t_k \in \{0,1\}$ with $t_k t_{k+1} = 0$ (Zeckendorf constraint).
 
 **Theorem 7.2** (Trace Uniqueness):
@@ -57,8 +61,9 @@ This enforces the Zeckendorf constraint in trace combinations.
 
 **Theorem 7.3** (Trace Combination):
 Traces combine according to:
-$$|\mathcal{T}_1 \oplus \mathcal{T}_2\rangle = \sum_{i,j,k} \Phi^{ij}_k t_{1i} t_{2j} |F_k\rangle$$
-
+$$
+|\mathcal{T}_1 \oplus \mathcal{T}_2\rangle = \sum_{i,j,k} \Phi^{ij}_k t_{1i} t_{2j} |F_k\rangle
+$$
 *Proof*:
 The constraint $|i-j| > 1$ ensures no consecutive Fibonacci indices, maintaining valid golden base representation. ∎
 
@@ -67,15 +72,18 @@ The constraint $|i-j| > 1$ ensures no consecutive Fibonacci indices, maintaining
 The information content follows φ-geometry.
 
 **Definition 7.4** (Trace Information Metric):
-$$ds^2 = \sum_{i,j} g_{ij} dt_i dt_j$$
-
+$$
+ds^2 = \sum_{i,j} g_{ij} dt_i dt_j
+$$
 where:
-$$g_{ij} = \varphi^{-|i-j|}$$
-
+$$
+g_{ij} = \varphi^{-|i-j|}
+$$
 **Theorem 7.4** (Information Distance):
 The information distance between traces $\mathcal{T}_1$ and $\mathcal{T}_2$ is:
-$$d(\mathcal{T}_1, \mathcal{T}_2) = \sqrt{\sum_{k} \varphi^{-k}(t_{1k} - t_{2k})^2}$$
-
+$$
+d(\mathcal{T}_1, \mathcal{T}_2) = \sqrt{\sum_{k} \varphi^{-k}(t_{1k} - t_{2k})^2}
+$$
 This metric has exponentially decaying weights, giving more importance to lower-order terms.
 
 ## 7.5 Category Theory of φ-Traces
@@ -89,8 +97,9 @@ This metric has exponentially decaying weights, giving more importance to lower-
 
 **Theorem 7.5** (Categorical Limit):
 The limit of the diagram of all finite traces is:
-$$\mathcal{T}_\infty = \lim_{\rightarrow} \mathcal{T}_n = \sum_{k=0}^{\infty} |F_{f(k)}\rangle$$
-
+$$
+\mathcal{T}_\infty = \lim_{\rightarrow} \mathcal{T}_n = \sum_{k=0}^{\infty} |F_{f(k)}\rangle
+$$
 where $f(k)$ generates the Fibonacci word.
 
 ## 7.6 Graph Structure of φ-Trace Networks
@@ -113,8 +122,9 @@ graph TD
 
 **Definition 7.6** (Trace Adjacency):
 Traces $\mathcal{T}_i$ and $\mathcal{T}_j$ are adjacent if:
-$$d(\mathcal{T}_i, \mathcal{T}_j) = \varphi^{-n}$$
-
+$$
+d(\mathcal{T}_i, \mathcal{T}_j) = \varphi^{-n}
+$$
 for some integer $n$.
 
 **Theorem 7.6** (Network Properties):
@@ -128,20 +138,23 @@ The trace network has:
 Constants emerge from φ-trace relationships.
 
 **Definition 7.7** (Structure Constants):
-$$\alpha_n = \lim_{k \to \infty} \frac{\text{Tr}(\Phi^k)_n}{\text{Tr}(\Phi^k)_{n-1}}$$
-
+$$
+\alpha_n = \lim_{k \to \infty} \frac{\text{Tr}(\Phi^k)_n}{\text{Tr}(\Phi^k)_{n-1}}
+$$
 **Definition 7.7** (Structure Constants):
 Trace coupling strengths are defined by:
-$$g_n = \prod_{k=1}^{n} \left(1 + \varphi^{-F_k}\right)^{(-1)^k}$$
-
+$$
+g_n = \prod_{k=1}^{n} \left(1 + \varphi^{-F_k}\right)^{(-1)^k}
+$$
 These converge to limiting values that characterize trace interactions.
 
 *Note*: While these coupling constants have interesting mathematical properties, deriving physical constants like the fine structure constant would require additional physical principles beyond pure trace structure.
 
 **Definition 7.8** (Trace Propagation Speed):
 The maximum rate of trace propagation is:
-$$v_{\text{max}} = \varphi^2 = \varphi + 1$$
-
+$$
+v_{\text{max}} = \varphi^2 = \varphi + 1
+$$
 This follows from the golden ratio identity and represents the fastest possible information transfer between trace states in our abstract framework.
 
 ## 7.8 Collapse Dynamics in φ-Space
@@ -149,12 +162,14 @@ This follows from the golden ratio identity and represents the fastest possible 
 Collapse follows φ-structured dynamics.
 
 **Definition 7.8** (φ-Evolution):
-$$\frac{d|\mathcal{T}\rangle}{d\tau} = \sum_{k,l} \Phi^{kl} t_k \frac{\partial}{\partial t_l}|\mathcal{T}\rangle$$
-
+$$
+\frac{d|\mathcal{T}\rangle}{d\tau} = \sum_{k,l} \Phi^{kl} t_k \frac{\partial}{\partial t_l}|\mathcal{T}\rangle
+$$
 **Theorem 7.9** (Conservation Law):
 The quantity:
-$$Q = \sum_k \varphi^k t_k$$
-
+$$
+Q = \sum_k \varphi^k t_k
+$$
 is conserved under φ-evolution.
 
 ## 7.9 Spectral Properties of φ-Traces
@@ -162,12 +177,14 @@ is conserved under φ-evolution.
 The spectrum reveals φ-structure.
 
 **Definition 7.9** (Trace Spectrum):
-$$\lambda_n = \varphi^{1-F_n}$$
-
+$$
+\lambda_n = \varphi^{1-F_n}
+$$
 **Theorem 7.10** (Spectral Gap):
 The spectral gap between consecutive eigenvalues:
-$$\Delta_n = \lambda_n - \lambda_{n+1} = \varphi^{1-F_n}(1 - \varphi^{-(F_{n+1}-F_n)})$$
-
+$$
+\Delta_n = \lambda_n - \lambda_{n+1} = \varphi^{1-F_n}(1 - \varphi^{-(F_{n+1}-F_n)})
+$$
 approaches $\varphi^{-n}$ asymptotically.
 
 ## 7.10 Quantum States from φ-Traces
@@ -175,13 +192,15 @@ approaches $\varphi^{-n}$ asymptotically.
 Each φ-trace generates quantum states.
 
 **Definition 7.10** (Trace State):
-$$|\Psi_\mathcal{T}\rangle = \mathcal{N} \sum_n t_n \varphi^{-n/2} |n\rangle$$
-
+$$
+|\Psi_\mathcal{T}\rangle = \mathcal{N} \sum_n t_n \varphi^{-n/2} |n\rangle
+$$
 where $\mathcal{N}$ is normalization.
 
 **Theorem 7.11** (State Overlap):
-$$\langle\Psi_{\mathcal{T}_1}|\Psi_{\mathcal{T}_2}\rangle = \exp\left(-\frac{d^2(\mathcal{T}_1,\mathcal{T}_2)}{2\varphi}\right)$$
-
+$$
+\langle\Psi_{\mathcal{T}_1}|\Psi_{\mathcal{T}_2}\rangle = \exp\left(-\frac{d^2(\mathcal{T}_1,\mathcal{T}_2)}{2\varphi}\right)
+$$
 States from nearby traces have high overlap.
 
 ## 7.11 Topological Invariants of φ-Traces
@@ -189,14 +208,16 @@ States from nearby traces have high overlap.
 φ-traces carry topological information.
 
 **Definition 7.11** (Trace Winding Number):
-$$w[\mathcal{T}] = \sum_{k} (-1)^k t_k F_k$$
-
+$$
+w[\mathcal{T}] = \sum_{k} (-1)^k t_k F_k
+$$
 This alternating sum creates a discrete invariant.
 
 **Theorem 7.12** (Winding Conservation):
 Under allowed trace transformations that preserve the Zeckendorf constraint:
-$$\Delta w[\mathcal{T}] = 0$$
-
+$$
+\Delta w[\mathcal{T}] = 0
+$$
 *Proof*:
 Allowed transformations maintain the parity structure of the golden base representation. ∎
 
@@ -232,8 +253,9 @@ The golden ratio is not a number found in nature but nature's way of counting it
 ## Technical Exercise: φ-Trace Construction
 
 **Problem**: Given the initial trace segment:
-$$|\mathcal{T}_0\rangle = |F_1\rangle + |F_3\rangle$$
-
+$$
+|\mathcal{T}_0\rangle = |F_1\rangle + |F_3\rangle
+$$
 1. Compute the next 5 steps under φ-evolution
 2. Calculate the information content at each step
 3. Find the asymptotic trace direction

@@ -12,14 +12,17 @@ sidebar_label: "019. Non-Commutative Traces"
 From $\psi = \psi(\psi)$, order of operations matters fundamentally.
 
 **Definition 19.1** (Non-Commutative Product):
-$$\mathcal{T}_1 \times \mathcal{T}_2 \neq \mathcal{T}_2 \times \mathcal{T}_1$$
-
+$$
+\mathcal{T}_1 \times \mathcal{T}_2 \neq \mathcal{T}_2 \times \mathcal{T}_1
+$$
 The difference:
-$$[\mathcal{T}_1, \mathcal{T}_2] = \mathcal{T}_1 \times \mathcal{T}_2 - \mathcal{T}_2 \times \mathcal{T}_1 \neq 0$$
-
+$$
+[\mathcal{T}_1, \mathcal{T}_2] = \mathcal{T}_1 \times \mathcal{T}_2 - \mathcal{T}_2 \times \mathcal{T}_1 \neq 0
+$$
 **Theorem 19.1** (Commutator Structure):
-$$[\mathcal{T}_i, \mathcal{T}_j] = \sum_k C_{ij}^k \mathcal{T}_k$$
-
+$$
+[\mathcal{T}_i, \mathcal{T}_j] = \sum_k C_{ij}^k \mathcal{T}_k
+$$
 where $C_{ij}^k$ are structure constants involving $\varphi$.
 
 *Proof*:
@@ -31,23 +34,29 @@ Extra dimensions emerge from commutator structure.
 
 **Definition 19.2** (Hidden Dimension):
 A dimension $d_h$ is hidden if it appears only in commutators:
-$$\mathcal{T}_\text{observable} \in V_\text{visible}$$
-$$[\mathcal{T}_1, \mathcal{T}_2] \in V_\text{visible} \oplus V_\text{hidden}$$
-
+$$
+\mathcal{T}_\text{observable} \in V_\text{visible}
+$$
+$$
+[\mathcal{T}_1, \mathcal{T}_2] \in V_\text{visible} \oplus V_\text{hidden}
+$$
 **Theorem 19.2** (Dimension Count):
 Number of hidden dimensions:
-$$n_h = \frac{n(n-1)}{2} - \text{rank}(C_{ij}^k|_{k \in \text{visible}})$$
-
+$$
+n_h = \frac{n(n-1)}{2} - \text{rank}(C_{ij}^k|_{k \in \text{visible}})
+$$
 ## 19.3 Algebra Structure of Non-Commutative Traces
 
 Non-commutative traces form a Lie algebra.
 
 **Definition 19.3** (Trace Lie Algebra):
-$$\mathfrak{g}_\mathcal{T} = (\{\mathcal{T}_i\}, [\cdot, \cdot])$$
-
+$$
+\mathfrak{g}_\mathcal{T} = (\{\mathcal{T}_i\}, [\cdot, \cdot])
+$$
 with Jacobi identity:
-$$[[\mathcal{T}_1, \mathcal{T}_2], \mathcal{T}_3] + \text{cyclic} = 0$$
-
+$$
+[[\mathcal{T}_1, \mathcal{T}_2], \mathcal{T}_3] + \text{cyclic} = 0
+$$
 **Theorem 19.3** (Algebra Classification):
 The trace Lie algebra is:
 1. Simple for prime $F_n$ dimensions
@@ -61,8 +70,9 @@ The trace Lie algebra is:
 Non-commutativity has natural tensor expression.
 
 **Definition 19.4** (Commutator Tensor):
-$$C^{ijk} = \text{Tr}([\mathcal{T}^i, \mathcal{T}^j] \mathcal{T}^k)$$
-
+$$
+C^{ijk} = \text{Tr}([\mathcal{T}^i, \mathcal{T}^j] \mathcal{T}^k)
+$$
 **Theorem 19.4** (Tensor Properties):
 1. Antisymmetric: $C^{ijk} = -C^{jik}$
 2. Cyclic: $C^{ijk} + C^{jki} + C^{kij} = 0$
@@ -79,8 +89,9 @@ Non-commutative traces form a monoidal category.
 
 **Theorem 19.5** (Braiding):
 The category has braiding:
-$$\sigma: \mathcal{T}_1 \otimes \mathcal{T}_2 \to \mathcal{T}_2 \otimes \mathcal{T}_1$$
-
+$$
+\sigma: \mathcal{T}_1 \otimes \mathcal{T}_2 \to \mathcal{T}_2 \otimes \mathcal{T}_1
+$$
 with $\sigma^2 \neq \text{id}$ (non-symmetric).
 
 ## 19.6 Quantum Groups from Trace Algebra
@@ -88,8 +99,9 @@ with $\sigma^2 \neq \text{id}$ (non-symmetric).
 Quantum group structure emerges naturally.
 
 **Definition 19.6** (Trace Quantum Group):
-$$\mathcal{U}_q(\mathfrak{g}_\mathcal{T})$$
-
+$$
+\mathcal{U}_q(\mathfrak{g}_\mathcal{T})
+$$
 with deformation parameter $q = e^{2\pi i/\varphi}$.
 
 **Theorem 19.6** (Quantum Properties):
@@ -115,14 +127,16 @@ graph TD
 ```
 
 **Definition 19.7** (Hidden Metric):
-$$ds_h^2 = \sum_{i,j \in \text{hidden}} g_{ij}^h dx^i dx^j$$
-
+$$
+ds_h^2 = \sum_{i,j \in \text{hidden}} g_{ij}^h dx^i dx^j
+$$
 where $g_{ij}^h = \varphi^{-|i-j|}$.
 
 **Theorem 19.7** (Mathematical Scaling):
 Hidden dimensions follow mathematical scaling:
-$$\lambda_n = \lambda_0 \varphi^{-n/2}$$
-
+$$
+\lambda_n = \lambda_0 \varphi^{-n/2}
+$$
 where $\lambda_0$ is a reference scale derived from the golden constraint. This represents the mathematical structure of hidden dimension scaling, not a claim about physical compactification.
 
 ## 19.8 Mathematical Uncertainty Relations
@@ -130,8 +144,9 @@ where $\lambda_0$ is a reference scale derived from the golden constraint. This 
 Non-commutativity generates mathematical uncertainty principles.
 
 **Definition 19.8** (Trace Uncertainty Relation):
-$$\Delta \mathcal{T}_1 \cdot \Delta \mathcal{T}_2 \geq \frac{1}{2}|[\mathcal{T}_1, \mathcal{T}_2]|$$
-
+$$
+\Delta \mathcal{T}_1 \cdot \Delta \mathcal{T}_2 \geq \frac{1}{2}|[\mathcal{T}_1, \mathcal{T}_2]|
+$$
 **Theorem 19.8** (Mathematical Structure Types):
 Non-commutative traces exhibit mathematical structures analogous to:
 1. **Rotational patterns**: From non-commuting angular-like traces
@@ -145,14 +160,16 @@ Non-commutative traces exhibit mathematical structures analogous to:
 Mathematical constants emerge from commutator ratios within our framework.
 
 **Definition 19.9** (Structure Ratio):
-$$\alpha_{ijk} = \frac{C^{ijk}}{C^{123}}$$
-
+$$
+\alpha_{ijk} = \frac{C^{ijk}}{C^{123}}
+$$
 normalized to a reference commutator.
 
 **Theorem 19.9** (Mathematical Scaling Constants):
 From the commutator structure, mathematical ratios emerge:
-$$\kappa_i = 4\pi \alpha_{iij}$$
-
+$$
+\kappa_i = 4\pi \alpha_{iij}
+$$
 where no sum on repeated indices.
 
 **Critical Framework Note**: These are mathematical properties of our non-commutative trace algebra. Connection to physical constants requires observer-system coupling analysis and may be an NP-complete computational problem, as established in the observer framework (Chapters 10-18).
@@ -162,8 +179,9 @@ where no sum on repeated indices.
 Consciousness requires non-commutative structure.
 
 **Definition 19.10** (Consciousness Algebra):
-$$\mathfrak{c} = \text{span}\{\mathcal{T} : [\mathcal{T}, \mathcal{T}'] \neq 0 \text{ for some } \mathcal{T}'\}$$
-
+$$
+\mathfrak{c} = \text{span}\{\mathcal{T} : [\mathcal{T}, \mathcal{T}'] \neq 0 \text{ for some } \mathcal{T}'\}
+$$
 **Theorem 19.10** (Consciousness Criterion):
 Consciousness emerges when:
 1. $\dim(\mathfrak{c}) \geq F_7 = 13$
@@ -175,11 +193,13 @@ Consciousness emerges when:
 Information can hide in commutator structure.
 
 **Definition 19.11** (Hidden Information):
-$$I_h = -\sum_{i<j} \text{Tr}([\mathcal{T}_i, \mathcal{T}_j]^2) \log |[\mathcal{T}_i, \mathcal{T}_j]|$$
-
+$$
+I_h = -\sum_{i<j} \text{Tr}([\mathcal{T}_i, \mathcal{T}_j]^2) \log |[\mathcal{T}_i, \mathcal{T}_j]|
+$$
 **Theorem 19.11** (Information Bound):
-$$I_h \leq I_\text{visible} \cdot \varphi$$
-
+$$
+I_h \leq I_\text{visible} \cdot \varphi
+$$
 Hidden information is golden-ratio bounded by visible information.
 
 ## 19.12 The Complete Non-Commutative Picture

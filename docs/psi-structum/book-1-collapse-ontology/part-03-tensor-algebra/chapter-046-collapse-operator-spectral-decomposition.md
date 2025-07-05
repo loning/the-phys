@@ -12,13 +12,15 @@ sidebar_label: "046. Collapse Operator"
 From $\psi = \psi(\psi)$, collapse requires an operator acting on itself.
 
 **Definition 46.1** (Collapse Operator):
-$$C = \sum_n c_n E_{nn}$$
-
+$$
+C = \sum_n c_n E_{nn}
+$$
 where $c_n = \varphi^{-d(n, n_0)}$ with $d$ the graph distance and $E_{ij}$ are matrix units.
 
 **Theorem 46.1** (Self-Consistency):
-$$C^2 = \varphi \cdot C$$
-
+$$
+C^2 = \varphi \cdot C
+$$
 The matrix satisfies golden ratio algebra.
 
 *Proof*:
@@ -29,8 +31,9 @@ From recursion and normalization requirements. ∎
 The operator has discrete and continuous spectra.
 
 **Definition 46.2** (Spectral Form):
-$$C = \sum_i \lambda_i P_i$$
-
+$$
+C = \sum_i \lambda_i P_i
+$$
 where $P_i$ are projection matrices onto eigenspaces.
 
 **Theorem 46.2** (Spectrum Structure):
@@ -43,14 +46,17 @@ where $P_i$ are projection matrices onto eigenspaces.
 Eigenvectors form complete basis.
 
 **Definition 46.3** (Collapse Eigenvectors):
-$$C v_n = \lambda_n v_n$$
-
+$$
+C v_n = \lambda_n v_n
+$$
 with orthogonality:
-$$v_m^T v_n = \delta_{mn}$$
-
+$$
+v_m^T v_n = \delta_{mn}
+$$
 **Theorem 46.3** (Completeness):
-$$\sum_n v_n v_n^T = I$$
-
+$$
+\sum_n v_n v_n^T = I
+$$
 Spectral decomposition identity.
 
 ## 46.4 Matrix Structure
@@ -58,16 +64,19 @@ Spectral decomposition identity.
 Collapse operator has specific matrix properties.
 
 **Definition 46.4** (Transpose Structure):
-$$C^T \neq C$$
-
+$$
+C^T \neq C
+$$
 but satisfies:
-$$C^T C = D$$
-
+$$
+C^T C = D
+$$
 where $D$ is diagonal matrix.
 
 **Theorem 46.4** (Symmetry Properties):
-$$C = \Sigma C \Sigma^{-1}$$
-
+$$
+C = \Sigma C \Sigma^{-1}
+$$
 for appropriate similarity transformation $\Sigma$.
 
 ## 46.5 Category of Collapse Operators
@@ -95,8 +104,9 @@ graph TD
 - Composition: Matrix multiplication
 
 **Theorem 46.5** (Functor to Diagonal):
-$$F: \text{Collapse} \to \text{Diagonal}$$
-
+$$
+F: \text{Collapse} \to \text{Diagonal}
+$$
 maps general matrices to diagonal form.
 
 ## 46.6 Information Theory
@@ -104,13 +114,15 @@ maps general matrices to diagonal form.
 Matrix operations transform information.
 
 **Definition 46.6** (Information Change):
-$$\Delta I = H(p_{\text{after}}) - H(p_{\text{before}})$$
-
+$$
+\Delta I = H(p_{\text{after}}) - H(p_{\text{before}})
+$$
 where $H$ is Shannon entropy of probability vectors.
 
 **Theorem 46.6** (Information Bounds):
-$$-\log d \leq \Delta I \leq 0$$
-
+$$
+-\log d \leq \Delta I \leq 0
+$$
 where $d$ is dimension.
 
 *Observer Framework Note*: Quantum entropy interpretation requires additional framework.
@@ -120,13 +132,15 @@ where $d$ is dimension.
 Non-orthogonal eigenvectors require generalization.
 
 **Definition 46.7** (Generalized Eigenproblem):
-$$C v = \lambda M v$$
-
+$$
+C v = \lambda M v
+$$
 where $M$ is metric matrix.
 
 **Theorem 46.7** (Biorthogonality):
-$$u_m^T M v_n = \delta_{mn}$$
-
+$$
+u_m^T M v_n = \delta_{mn}
+$$
 Left and right eigenvectors.
 
 ## 46.8 Matrix Dynamics
@@ -134,13 +148,15 @@ Left and right eigenvectors.
 Evolution under matrix exponential.
 
 **Definition 46.8** (Matrix Evolution):
-$$v(t) = e^{-\alpha C t} v(0)$$
-
+$$
+v(t) = e^{-\alpha C t} v(0)
+$$
 where $\alpha$ is scaling parameter.
 
 **Theorem 46.8** (Exponential Decay):
-$$||v(t)|| = ||v(0)|| e^{-\gamma t}$$
-
+$$
+||v(t)|| = ||v(0)|| e^{-\gamma t}
+$$
 where $\gamma$ depends on spectral properties.
 
 *Observer Framework Note*: Physical time interpretation requires additional framework.
@@ -150,11 +166,13 @@ where $\gamma$ depends on spectral properties.
 Physical constants from spectrum.
 
 **Definition 46.9** (Spectral Gaps):
-$$\Delta_n = \lambda_n - \lambda_{n-1}$$
-
+$$
+\Delta_n = \lambda_n - \lambda_{n-1}
+$$
 **Theorem 46.9** (Gap Ratios):
-$$\frac{\Delta_{n+1}}{\Delta_n} = \varphi$$
-
+$$
+\frac{\Delta_{n+1}}{\Delta_n} = \varphi
+$$
 Golden ratio gap hierarchy.
 
 *Observer Framework Note*: Mass interpretation requires additional framework.
@@ -164,13 +182,15 @@ Golden ratio gap hierarchy.
 Frequent application converges to projection.
 
 **Definition 46.10** (Convergence Limit):
-$$\lim_{n \to \infty} (C/n)^n = P_{\text{subspace}}$$
-
+$$
+\lim_{n \to \infty} (C/n)^n = P_{\text{subspace}}
+$$
 Projection onto dominant subspace.
 
 **Theorem 46.10** (Convergence Scale):
-$$\tau_c = \frac{1}{\Delta \lambda} \cdot \varphi$$
-
+$$
+\tau_c = \frac{1}{\Delta \lambda} \cdot \varphi
+$$
 Characteristic convergence scale.
 
 *Observer Framework Note*: Quantum Zeno interpretation requires additional framework.
@@ -180,14 +200,16 @@ Characteristic convergence scale.
 Matrices can have composite tensor structure.
 
 **Definition 46.11** (Composite Matrix):
-$$C_c = C \otimes O$$
-
+$$
+C_c = C \otimes O
+$$
 where $O$ is auxiliary matrix.
 
 **Theorem 46.11** (Complexity Measure):
 Composite systems have complexity:
-$$\mathcal{C} = \text{Tr}[C_c D \log D]$$
-
+$$
+\mathcal{C} = \text{Tr}[C_c D \log D]
+$$
 where $D$ is density-like matrix.
 
 *Observer Framework Note*: Consciousness interpretation requires additional framework.

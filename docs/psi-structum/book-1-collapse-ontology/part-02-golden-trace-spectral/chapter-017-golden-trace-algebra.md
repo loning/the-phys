@@ -12,14 +12,16 @@ sidebar_label: "017. Golden Trace Algebra"
 From $\psi = \psi(\psi)$, every collapse leaves a trace structured by $\varphi$.
 
 **Definition 17.1** (Golden Trace): A trace $\mathcal{T}$ has golden structure if:
-$$\mathcal{T} = \sum_{k=0}^n t_k |F_k\rangle$$
-
+$$
+\mathcal{T} = \sum_{k=0}^n t_k |F_k\rangle
+$$
 where $t_k \in \{0, 1\}$ and no consecutive $t_k = t_{k+1} = 1$.
 
 **Theorem 17.1** (Trace Algebra):
 Golden traces form an algebra under:
-$$\mathcal{T}_1 \star \mathcal{T}_2 = \sum_{k} (t_{1,k} \oplus t_{2,k}) |F_k\rangle$$
-
+$$
+\mathcal{T}_1 \star \mathcal{T}_2 = \sum_{k} (t_{1,k} \oplus t_{2,k}) |F_k\rangle
+$$
 where $\oplus$ is golden addition (with carry prevention).
 
 *Proof*:
@@ -30,8 +32,9 @@ The golden constraint ensures closure under this operation. ∎
 Traces fold through specific golden transformations.
 
 **Definition 17.2** (Fold Operation):
-$$\mathcal{F}_\varphi[\mathcal{T}] = \sum_k t_k |F_{k+1}\rangle + \sum_k t_k t_{k+1} |F_{k-1}\rangle$$
-
+$$
+\mathcal{F}_\varphi[\mathcal{T}] = \sum_k t_k |F_{k+1}\rangle + \sum_k t_k t_{k+1} |F_{k-1}\rangle
+$$
 This shifts and combines according to golden rules.
 
 **Theorem 17.2** (Folding Properties):
@@ -44,14 +47,18 @@ This shifts and combines according to golden rules.
 Traces multiply through golden convolution.
 
 **Definition 17.3** (Golden Convolution):
-$$(\mathcal{T}_1 * \mathcal{T}_2)_k = \sum_{i+j=k} t_{1,i} \cdot t_{2,j} \cdot g_{ij}$$
-
+$$
+(\mathcal{T}_1 * \mathcal{T}_2)_k = \sum_{i+j=k} t_{1,i} \cdot t_{2,j} \cdot g_{ij}
+$$
 where $g_{ij} = 1$ if $F_i + F_j = F_k$, else $g_{ij} = 0$.
 
 **Theorem 17.3** (Convolution Properties):
-$$\mathcal{T}_1 * \mathcal{T}_2 = \mathcal{T}_2 * \mathcal{T}_1$$
-$$(\mathcal{T}_1 * \mathcal{T}_2) * \mathcal{T}_3 = \mathcal{T}_1 * (\mathcal{T}_2 * \mathcal{T}_3)$$
-
+$$
+\mathcal{T}_1 * \mathcal{T}_2 = \mathcal{T}_2 * \mathcal{T}_1
+$$
+$$
+(\mathcal{T}_1 * \mathcal{T}_2) * \mathcal{T}_3 = \mathcal{T}_1 * (\mathcal{T}_2 * \mathcal{T}_3)
+$$
 The operation is commutative and associative.
 
 ## 17.4 Tensor Structure of Traces
@@ -59,12 +66,14 @@ The operation is commutative and associative.
 Traces naturally form tensors.
 
 **Definition 17.4** (Trace Tensor):
-$$T^{ij} = \sum_{\mathcal{T}} t_i t_j |\mathcal{T}\rangle\langle\mathcal{T}|$$
-
+$$
+T^{ij} = \sum_{\mathcal{T}} t_i t_j |\mathcal{T}\rangle\langle\mathcal{T}|
+$$
 **Theorem 17.4** (Tensor Decomposition):
 Every trace tensor decomposes uniquely:
-$$T^{ij} = T^{(ij)} + T^{[ij]}$$
-
+$$
+T^{ij} = T^{(ij)} + T^{[ij]}
+$$
 where $(ij)$ is symmetric and $[ij]$ is antisymmetric.
 
 ## 17.5 Category Theory of Golden Traces
@@ -99,13 +108,15 @@ graph TD
 ```
 
 **Definition 17.6** (Origami Complexity):
-$$\Omega[\mathcal{T}] = \min\{n : \mathcal{F}_\varphi^n[\mathcal{T}_0] = \mathcal{T}\}$$
-
+$$
+\Omega[\mathcal{T}] = \min\{n : \mathcal{F}_\varphi^n[\mathcal{T}_0] = \mathcal{T}\}
+$$
 The minimum folds needed to create $\mathcal{T}$ from simple $\mathcal{T}_0$.
 
 **Theorem 17.6** (Complexity Bounds):
-$$F_n \leq \Omega[\mathcal{T}] \leq F_{n+1}$$
-
+$$
+F_n \leq \Omega[\mathcal{T}] \leq F_{n+1}
+$$
 where $n$ is the highest active mode in $\mathcal{T}$.
 
 ## 17.7 Spectral Properties of Folded Traces
@@ -113,12 +124,14 @@ where $n$ is the highest active mode in $\mathcal{T}$.
 Folding affects spectral structure.
 
 **Definition 17.7** (Fold Spectrum):
-$$\sigma(\mathcal{F}_\varphi[\mathcal{T}]) = \{\lambda : \mathcal{F}_\varphi[\mathcal{T}]|\lambda\rangle = \lambda|\lambda\rangle\}$$
-
+$$
+\sigma(\mathcal{F}_\varphi[\mathcal{T}]) = \{\lambda : \mathcal{F}_\varphi[\mathcal{T}]|\lambda\rangle = \lambda|\lambda\rangle\}
+$$
 **Theorem 17.7** (Spectral Evolution):
 Under folding:
-$$\lambda_{n+1} = \varphi \lambda_n \mod 1$$
-
+$$
+\lambda_{n+1} = \varphi \lambda_n \mod 1
+$$
 Eigenvalues evolve by golden ratio modulo 1.
 
 ## 17.8 Information Geometry of Trace Space
@@ -126,8 +139,9 @@ Eigenvalues evolve by golden ratio modulo 1.
 Trace space has natural geometric structure.
 
 **Definition 17.8** (Trace Metric):
-$$ds^2 = \sum_{i,j} g_{ij} dt_i dt_j$$
-
+$$
+ds^2 = \sum_{i,j} g_{ij} dt_i dt_j
+$$
 where $g_{ij} = \varphi^{|i-j|}$.
 
 **Theorem 17.8** (Geometric Properties):
@@ -140,8 +154,9 @@ where $g_{ij} = \varphi^{|i-j|}$.
 Special mathematical patterns correspond to self-similar trace structures.
 
 **Definition 17.9** (Pattern Trace):
-$$\mathcal{T}_{\text{pattern}} = \sum_{k \in S} |F_k\rangle$$
-
+$$
+\mathcal{T}_{\text{pattern}} = \sum_{k \in S} |F_k\rangle
+$$
 where $S$ is a self-similar set under folding.
 
 **Theorem 17.9** (Pattern Classification):
@@ -154,12 +169,14 @@ where $S$ is a self-similar set under folding.
 Dimensionless mathematical constants emerge naturally from trace algebra.
 
 **Definition 17.10** (Trace Coupling):
-$$g = \langle\mathcal{T}_1|\mathcal{T}_2\rangle / ||\mathcal{T}_1|| \cdot ||\mathcal{T}_2||$$
-
+$$
+g = \langle\mathcal{T}_1|\mathcal{T}_2\rangle / ||\mathcal{T}_1|| \cdot ||\mathcal{T}_2||
+$$
 **Theorem 17.10** (Mathematical Scaling Constants):
 Natural dimensionless constants that emerge from our framework:
-$$\alpha_{\text{math}} = \frac{1}{F_7 \cdot \varphi} = \frac{1}{13 \times 1.618} \approx 0.0475$$
-
+$$
+\alpha_{\text{math}} = \frac{1}{F_7 \cdot \varphi} = \frac{1}{13 \times 1.618} \approx 0.0475
+$$
 This represents a mathematical property of our trace algebra, not a claim about physical constants.
 
 ## 17.11 Consciousness as Trace Superposition
@@ -167,8 +184,9 @@ This represents a mathematical property of our trace algebra, not a claim about 
 Consciousness arises from coherent trace superposition.
 
 **Definition 17.11** (Conscious Trace):
-$$\mathcal{T}_c = \sum_i c_i \mathcal{T}_i$$
-
+$$
+\mathcal{T}_c = \sum_i c_i \mathcal{T}_i
+$$
 where phases $c_i$ maintain coherence.
 
 **Theorem 17.11** (Consciousness Criterion):

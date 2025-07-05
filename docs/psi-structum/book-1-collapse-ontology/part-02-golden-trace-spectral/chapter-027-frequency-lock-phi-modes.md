@@ -13,8 +13,9 @@ From $\psi = \psi(\psi)$, frequencies must lock to maintain self-consistency.
 
 **Definition 27.1** (φ-Lock Condition):
 Frequencies $\omega_1, \omega_2$ are φ-locked if:
-$$\frac{\omega_1}{\omega_2} = \varphi^n$$
-
+$$
+\frac{\omega_1}{\omega_2} = \varphi^n
+$$
 for some integer $n$.
 
 **Theorem 27.1** (Locking Stability):
@@ -28,16 +29,18 @@ The golden ratio's self-similar property $\varphi^2 = \varphi + 1$ ensures recur
 Modes couple and lock through nonlinear interactions.
 
 **Definition 27.2** (Coupling Function):
-$$\mathcal{F}_\text{couple} = \sum_{ij} g_{ij} \tau_i \tau_j + \sum_{ijk} \lambda_{ijk} \tau_i \tau_j \tau_k$$
-
+$$
+\mathcal{F}_\text{couple} = \sum_{ij} g_{ij} \tau_i \tau_j + \sum_{ijk} \lambda_{ijk} \tau_i \tau_j \tau_k
+$$
 where $g_{ij} \sim \varphi^{-|i-j|}$ and $\tau_i$ are mode amplitudes.
 
 *Note*: This is a mathematical coupling function. Physical interpretation as Hamiltonian with quantum operators requires observer-system coupling analysis.
 
 **Theorem 27.2** (Arnold Tongues):
 Locking occurs in regions:
-$$\left|\omega_1 - n\omega_2\right| < K\varphi^{-|n|}$$
-
+$$
+\left|\omega_1 - n\omega_2\right| < K\varphi^{-|n|}
+$$
 where $K$ is coupling strength.
 
 ## 27.3 Pattern Space Structure
@@ -45,14 +48,16 @@ where $K$ is coupling strength.
 Locked modes create structured pattern space.
 
 **Definition 27.3** (Pattern Space):
-$$\Gamma = \{(\theta_i, A_i) : \theta_i \in [0, 2\pi], A_i > 0\}$$
-
+$$
+\Gamma = \{(\theta_i, A_i) : \theta_i \in [0, 2\pi], A_i > 0\}
+$$
 where $\theta_i$ are phases, $A_i$ are amplitudes.
 
 **Theorem 27.3** (Stability Structure):
 For weak coupling, patterns with frequencies:
-$$\omega_i/\omega_j = \varphi^{n_{ij}}$$
-
+$$
+\omega_i/\omega_j = \varphi^{n_{ij}}
+$$
 remain stable under perturbations.
 
 *Observer Framework Note*: Physical interpretation as phase space with action-angle variables requires classical mechanics framework from observer coupling.
@@ -62,8 +67,9 @@ remain stable under perturbations.
 Frequency locking has natural tensor structure.
 
 **Definition 27.4** (Locking Tensor):
-$$L^{ij}_{kl} = \langle\omega_i, \omega_j|\mathcal{L}|\omega_k, \omega_l\rangle$$
-
+$$
+L^{ij}_{kl} = \langle\omega_i, \omega_j|\mathcal{L}|\omega_k, \omega_l\rangle
+$$
 where $\mathcal{L}$ is the locking operator.
 
 **Theorem 27.4** (Tensor Properties):
@@ -102,14 +108,16 @@ graph TD
 ```
 
 **Definition 27.6** (Sync Network):
-$$S = (V, E, W)$$
-
+$$
+S = (V, E, W)
+$$
 where $V$ are modes, $E$ are couplings, $W$ are weights.
 
 **Theorem 27.6** (Network Sync):
 Global synchronization when:
-$$\lambda_2(L) > K_c/\varphi$$
-
+$$
+\lambda_2(L) > K_c/\varphi
+$$
 where $\lambda_2(L)$ is second eigenvalue of Laplacian.
 
 ## 27.7 Mathematical Pattern Manifestations
@@ -117,14 +125,16 @@ where $\lambda_2(L)$ is second eigenvalue of Laplacian.
 Frequency locking creates stable mathematical patterns.
 
 **Definition 27.7** (Stable Pattern):
-$$\mathcal{P}_\text{stable} = \sum_{i \in \text{locked}} c_i \tau(\omega_i)$$
-
+$$
+\mathcal{P}_\text{stable} = \sum_{i \in \text{locked}} c_i \tau(\omega_i)
+$$
 where $\tau(\omega_i)$ are locked frequency modes.
 
 **Theorem 27.7** (Pattern Invariant):
 Stable patterns have invariant:
-$$\mathcal{I} = \sqrt{\sum_i \omega_i^2}$$
-
+$$
+\mathcal{I} = \sqrt{\sum_i \omega_i^2}
+$$
 where all $\omega_i$ are φ-locked (dimensionless).
 
 *Observer Framework Note*: Physical interpretation as particles with mass requires observer-system coupling to define particle and mass concepts.
@@ -134,14 +144,16 @@ where all $\omega_i$ are φ-locked (dimensionless).
 Locking drives pattern transitions.
 
 **Definition 27.8** (Order Function):
-$$\Psi = \text{Tr}[e^{i(\theta_1 - \varphi\theta_2)}]$$
-
+$$
+\Psi = \text{Tr}[e^{i(\theta_1 - \varphi\theta_2)}]
+$$
 where Tr is the trace operation.
 
 **Theorem 27.8** (Transition Point):
 Pattern transition at:
-$$g_c = \frac{\omega_0}{\varphi^3}$$
-
+$$
+g_c = \frac{\omega_0}{\varphi^3}
+$$
 where system shifts from unlocked to locked patterns.
 
 *Observer Framework Note*: Physical interpretation as quantum phase transition requires quantum mechanics framework from observer coupling.
@@ -151,8 +163,9 @@ where system shifts from unlocked to locked patterns.
 Mathematical ratios emerge from lock patterns.
 
 **Definition 27.9** (Lock Ratio):
-$$R_{ij} = \omega_i/\omega_j = \varphi^{n_{ij}}$$
-
+$$
+R_{ij} = \omega_i/\omega_j = \varphi^{n_{ij}}
+$$
 **Theorem 27.9** (Ratio Relations):
 Characteristic mathematical ratios include:
 1. $\kappa_1 = F_5 \cdot \varphi = 5\varphi \approx 8.09$ 
@@ -168,8 +181,9 @@ All ratios are dimensionless mathematical quantities.
 Complex self-organizing patterns exhibit φ-locked frequencies.
 
 **Definition 27.10** (Pattern Locking):
-$$\omega_\text{pattern} \in \{n\omega_0, \varphi^k\omega_0\}$$
-
+$$
+\omega_\text{pattern} \in \{n\omega_0, \varphi^k\omega_0\}
+$$
 for self-sustaining patterns.
 
 **Theorem 27.10** (Pattern Frequency Ratios):
@@ -185,8 +199,9 @@ Stable pattern hierarchies show:
 Consciousness requires coherent phase locking.
 
 **Definition 27.11** (Conscious Locking):
-$$C = \sum_{ij} |L_{ij}|^2 \Theta(|L_{ij}| - L_c)$$
-
+$$
+C = \sum_{ij} |L_{ij}|^2 \Theta(|L_{ij}| - L_c)
+$$
 where $L_c = 1/\varphi$ is threshold.
 
 **Theorem 27.11** (Consciousness Criterion):

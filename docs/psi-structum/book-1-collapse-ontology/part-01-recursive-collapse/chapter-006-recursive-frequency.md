@@ -12,15 +12,18 @@ sidebar_label: "006. Recursive Frequency"
 We derive frequency directly from $\psi = \psi(\psi)$ without assuming time.
 
 **Definition 6.1** (Recursion Step): Each application of $\psi$ to itself is a step:
-$$|\psi_{n+1}\rangle = \mathcal{A}(|\psi_n\rangle \otimes |\psi_n\rangle)$$
-
+$$
+|\psi_{n+1}\rangle = \mathcal{A}(|\psi_n\rangle \otimes |\psi_n\rangle)
+$$
 **Definition 6.2** (Phase Accumulation): Between steps, phase accumulates:
-$$\phi_n = \arg\langle\psi_n|\psi_{n+1}\rangle$$
-
+$$
+\phi_n = \arg\langle\psi_n|\psi_{n+1}\rangle
+$$
 **Theorem 6.1** (Frequency Emergence):
 The fundamental frequency emerges as:
-$$\omega = \lim_{n \to \infty} \frac{1}{n} \sum_{k=0}^{n-1} \phi_k$$
-
+$$
+\omega = \lim_{n \to \infty} \frac{1}{n} \sum_{k=0}^{n-1} \phi_k
+$$
 *Proof*:
 The phases $\phi_k$ converge to a limit due to the fixed point nature of $\psi = \psi(\psi)$. The average phase per step defines frequency without reference to external time. ∎
 
@@ -29,14 +32,16 @@ The phases $\phi_k$ converge to a limit due to the fixed point nature of $\psi =
 Frequencies in our framework are encoded as golden base vectors.
 
 **Definition 6.3** (Frequency Vector): A frequency is represented as:
-$$|\omega\rangle = \sum_{k} f_k |F_k\rangle$$
-
+$$
+|\omega\rangle = \sum_{k} f_k |F_k\rangle
+$$
 where $f_k \in \{0, 1\}$ with constraint $f_k f_{k+1} = 0$.
 
 **Theorem 6.2** (Frequency Quantization):
 Allowed frequencies form a discrete spectrum:
-$$\omega_n = \omega_0 \cdot \varphi^{-n}$$
-
+$$
+\omega_n = \omega_0 \cdot \varphi^{-n}
+$$
 where $\omega_0 = 2\pi$ (in natural units) and $n$ is encoded in golden base.
 
 ## 6.3 Tensor Structure of Frequency Space
@@ -44,14 +49,16 @@ where $\omega_0 = 2\pi$ (in natural units) and $n$ is encoded in golden base.
 Frequencies combine through tensor operations.
 
 **Definition 6.4** (Frequency Tensor):
-$$\Omega^{ij}_{kl} = \langle F_i, F_j | \hat{\Omega} | F_k, F_l \rangle$$
-
+$$
+\Omega^{ij}_{kl} = \langle F_i, F_j | \hat{\Omega} | F_k, F_l \rangle
+$$
 where $\hat{\Omega}$ is the frequency combination operator.
 
 **Theorem 6.3** (Frequency Addition):
 For frequencies $|\omega_1\rangle$ and $|\omega_2\rangle$:
-$$|\omega_1 + \omega_2\rangle = \sum_{k} (f_{1k} \oplus_\varphi f_{2k}) |F_k\rangle$$
-
+$$
+|\omega_1 + \omega_2\rangle = \sum_{k} (f_{1k} \oplus_\varphi f_{2k}) |F_k\rangle
+$$
 where $\oplus_\varphi$ is golden base addition with carry rules.
 
 ## 6.4 Collapse Dynamics in Frequency Domain
@@ -59,28 +66,33 @@ where $\oplus_\varphi$ is golden base addition with carry rules.
 The collapse operator acts specifically in frequency space.
 
 **Definition 6.5** (Frequency Collapse):
-$$\mathcal{C}_\omega[|\omega\rangle] = \sum_{k,l} C^{kl} f_k f_l |F_{k+l}\rangle$$
-
+$$
+\mathcal{C}_\omega[|\omega\rangle] = \sum_{k,l} C^{kl} f_k f_l |F_{k+l}\rangle
+$$
 where indices combine according to collapse tensor structure.
 
 **Theorem 6.4** (Frequency Evolution):
 Under collapse, frequencies evolve as:
-$$\frac{d|\omega\rangle}{d\tau} = -i[\hat{H}_{\text{freq}}, |\omega\rangle]$$
-
+$$
+\frac{d|\omega\rangle}{d\tau} = -i[\hat{H}_{\text{freq}}, |\omega\rangle]
+$$
 where $\hat{H}_{\text{freq}}$ has matrix elements:
-$$H_{kl} = \varphi^{-|k-l|} \delta_{k \pm l, F_m}$$
-
+$$
+H_{kl} = \varphi^{-|k-l|} \delta_{k \pm l, F_m}
+$$
 ## 6.5 Information Content of Frequencies
 
 Each frequency carries specific information.
 
 **Definition 6.6** (Frequency Information):
-$$I[\omega] = \sum_{k: f_k=1} \log_\varphi(F_k)$$
-
+$$
+I[\omega] = \sum_{k: f_k=1} \log_\varphi(F_k)
+$$
 **Theorem 6.5** (Information Conservation):
 Under frequency combination:
-$$I[\omega_1 + \omega_2] = I[\omega_1] + I[\omega_2] - I_{\text{overlap}}$$
-
+$$
+I[\omega_1 + \omega_2] = I[\omega_1] + I[\omega_2] - I_{\text{overlap}}
+$$
 where $I_{\text{overlap}}$ accounts for shared modes.
 
 ## 6.6 Graph Theory of Frequency Networks
@@ -121,8 +133,9 @@ Frequencies form a category with rich structure.
 
 **Theorem 6.7** (Functorial Properties):
 The collapse operator defines a functor:
-$$\mathcal{C}: \mathbf{Freq} \to \mathbf{Freq}$$
-
+$$
+\mathcal{C}: \mathbf{Freq} \to \mathbf{Freq}
+$$
 preserving the golden base structure.
 
 ## 6.8 Physical Constants from Frequency Ratios
@@ -130,17 +143,20 @@ preserving the golden base structure.
 Constants emerge from special frequency relationships.
 
 **Definition 6.9** (Fundamental Ratios):
-$$r_{mn} = \frac{\omega_m}{\omega_n} = \varphi^{n-m}$$
-
+$$
+r_{mn} = \frac{\omega_m}{\omega_n} = \varphi^{n-m}
+$$
 **Theorem 6.8** (Speed of Light):
 The speed of light emerges as:
-$$c = \lim_{n \to \infty} \frac{\omega_{n+1} \cdot \lambda_{n+1}}{\omega_n \cdot \lambda_n} = \varphi^2$$
-
+$$
+c = \lim_{n \to \infty} \frac{\omega_{n+1} \cdot \lambda_{n+1}}{\omega_n \cdot \lambda_n} = \varphi^2
+$$
 where $\lambda_n$ are the corresponding wavelengths.
 
 **Theorem 6.9** (Planck Constant):
-$$\hbar = \lim_{n \to \infty} \frac{E_n}{\omega_n} = \frac{1}{\varphi}$$
-
+$$
+\hbar = \lim_{n \to \infty} \frac{E_n}{\omega_n} = \frac{1}{\varphi}
+$$
 where $E_n$ is the energy at frequency $\omega_n$.
 
 ## 6.9 Resonance and Mode Locking
@@ -149,26 +165,30 @@ Special frequency combinations create resonance.
 
 **Definition 6.10** (Resonance Condition):
 Frequencies $\omega_1, ..., \omega_k$ resonate if:
-$$\sum_{i=1}^k m_i \omega_i = 0$$
-
+$$
+\sum_{i=1}^k m_i \omega_i = 0
+$$
 where $m_i$ are Fibonacci numbers.
 
 **Theorem 6.10** (Mode Locking):
 Resonant frequencies lock into stable patterns with period:
-$$T = \frac{2\pi}{\gcd(\omega_1, ..., \omega_k)}$$
-
+$$
+T = \frac{2\pi}{\gcd(\omega_1, ..., \omega_k)}
+$$
 ## 6.10 Quantum States from Frequency Modes
 
 Each frequency mode generates quantum states.
 
 **Definition 6.11** (Frequency State):
-$$|\Psi_\omega\rangle = \sum_n a_n(\omega) |n\rangle_{\text{golden}}$$
-
+$$
+|\Psi_\omega\rangle = \sum_n a_n(\omega) |n\rangle_{\text{golden}}
+$$
 where $a_n(\omega) = e^{i\omega \tau_n}/\sqrt{Z}$.
 
 **Theorem 6.11** (State Orthogonality):
-$$\langle\Psi_{\omega_1}|\Psi_{\omega_2}\rangle = \delta_{\omega_1,\omega_2}$$
-
+$$
+\langle\Psi_{\omega_1}|\Psi_{\omega_2}\rangle = \delta_{\omega_1,\omega_2}
+$$
 Different frequencies generate orthogonal quantum states.
 
 ## 6.11 Time Emergence from Frequency
@@ -176,13 +196,15 @@ Different frequencies generate orthogonal quantum states.
 Time emerges as the conjugate to frequency.
 
 **Definition 6.12** (Emergent Time):
-$$t = \frac{\partial \phi}{\partial \omega}$$
-
+$$
+t = \frac{\partial \phi}{\partial \omega}
+$$
 where $\phi$ is the accumulated phase.
 
 **Theorem 6.12** (Uncertainty Relation):
-$$\Delta\omega \cdot \Delta t \geq \frac{1}{2\varphi}$$
-
+$$
+\Delta\omega \cdot \Delta t \geq \frac{1}{2\varphi}
+$$
 This is our fundamental uncertainty, with $1/\varphi$ playing the role of $\hbar$.
 
 ## 6.12 The Complete Frequency Picture

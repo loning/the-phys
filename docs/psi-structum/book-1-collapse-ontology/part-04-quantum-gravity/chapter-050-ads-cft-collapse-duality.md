@@ -12,8 +12,9 @@ sidebar_label: "050. AdS/CFT Duality"
 From $\psi = \psi(\psi)$, interior structure corresponds to boundary encoding.
 
 **Definition 50.1** (Interior/Boundary Correspondence):
-$$Z_{\text{interior}}[f_0] = \langle \text{Transform}[f_0, O]\rangle_{\text{boundary}}$$
-
+$$
+Z_{\text{interior}}[f_0] = \langle \text{Transform}[f_0, O]\rangle_{\text{boundary}}
+$$
 Interior generating function relates to boundary correlation.
 
 **Theorem 50.1** (Duality Dictionary):
@@ -31,8 +32,9 @@ Recursive consistency creates interior/boundary correspondence. ∎
 Hyperbolic geometry emerges from recursive symmetry.
 
 **Definition 50.2** (Hyperbolic Metric):
-$$ds^2 = \frac{L^2}{z^2}(dz^2 + dx_i^2)$$
-
+$$
+ds^2 = \frac{L^2}{z^2}(dz^2 + dx_i^2)
+$$
 where $L$ is a characteristic scale parameter.
 
 **Theorem 50.2** (Symmetry Group):
@@ -59,14 +61,16 @@ Every function generates a state through exponential mapping.
 Information content relates to geometric properties.
 
 **Definition 50.4** (Information-Area Relation):
-$$I_A = \frac{\text{Length}(\gamma_A)}{\alpha}$$
-
+$$
+I_A = \frac{\text{Length}(\gamma_A)}{\alpha}
+$$
 where $\gamma_A$ is minimal curve and $\alpha$ is scaling factor.
 
 **Theorem 50.4** (Reconstruction Region):
 Interior region reconstructible from boundary region $A$:
-$$\mathcal{R}_A = \text{Mathematical domain}(\Sigma_A)$$
-
+$$
+\mathcal{R}_A = \text{Mathematical domain}(\Sigma_A)
+$$
 *Observer Framework Note*: Entanglement interpretation requires quantum mechanics framework.
 
 ## 50.5 Category Theory Perspective
@@ -89,26 +93,32 @@ graph TD
 ```
 
 **Definition 50.5** (Duality Functor):
-$$F: \text{Interior} \to \text{Boundary}$$
-
+$$
+F: \text{Interior} \to \text{Boundary}
+$$
 with inverse $G: \text{Boundary} \to \text{Interior}$.
 
 **Theorem 50.5** (Equivalence):
-$$F \circ G \simeq \text{Id}_{\text{Boundary}}$$
-$$G \circ F \simeq \text{Id}_{\text{Interior}}$$
-
+$$
+F \circ G \simeq \text{Id}_{\text{Boundary}}
+$$
+$$
+G \circ F \simeq \text{Id}_{\text{Interior}}
+$$
 ## 50.6 Information Theory
 
 Information conserved across duality.
 
 **Definition 50.6** (Interior Information):
-$$I_{\text{interior}} = -\sum_i p_i \log p_i$$
-
+$$
+I_{\text{interior}} = -\sum_i p_i \log p_i
+$$
 where $p_i$ are probability distributions in the interior.
 
 **Theorem 50.6** (Information Equality):
-$$I_{\text{interior}}[\mathcal{R}] = I_{\text{boundary}}[\partial\mathcal{R}]$$
-
+$$
+I_{\text{interior}}[\mathcal{R}] = I_{\text{boundary}}[\partial\mathcal{R}]
+$$
 for any region $\mathcal{R}$.
 
 *Observer Framework Note*: Density matrix interpretation requires quantum mechanics framework.
@@ -118,8 +128,9 @@ for any region $\mathcal{R}$.
 Interior reconstructed from boundary.
 
 **Definition 50.7** (Function Reconstruction):
-$$f(x) = \int_{\partial} K(x,y) g(y) dy$$
-
+$$
+f(x) = \int_{\partial} K(x,y) g(y) dy
+$$
 Kernel function $K$ reconstructs interior from boundary data.
 
 **Theorem 50.7** (Redundant Encoding):
@@ -135,14 +146,16 @@ Interior has redundant representation:
 Curvature from information variation.
 
 **Definition 50.8** (Emergent Curvature):
-$$\delta g_{ij} = \frac{\delta I_{\text{info}}}{\delta L_{\text{length}}}$$
-
+$$
+\delta g_{ij} = \frac{\delta I_{\text{info}}}{\delta L_{\text{length}}}
+$$
 Metric variation from information variation.
 
 **Theorem 50.8** (Curvature = Information):
 Curvature equations emerge from:
-$$\delta I = 0$$
-
+$$
+\delta I = 0
+$$
 for information conservation principle.
 
 *Observer Framework Note*: Einstein equations interpretation requires general relativity framework.
@@ -152,8 +165,9 @@ for information conservation principle.
 Dimensionless ratios from duality structure.
 
 **Definition 50.9** (Characteristic Parameter):
-$$c = \frac{L_{\text{interior}}}{L_{\text{boundary}}}$$
-
+$$
+c = \frac{L_{\text{interior}}}{L_{\text{boundary}}}
+$$
 Ratio of interior to boundary characteristic lengths.
 
 **Theorem 50.9** (Parameter Relations):
@@ -168,8 +182,9 @@ Structural parameters exhibit golden ratio patterns:
 High-density interior regions correspond to thermal boundary states.
 
 **Definition 50.10** (Thermal Distribution):
-$$\rho_{\text{thermal}} = \frac{e^{-\beta E}}{Z}$$
-
+$$
+\rho_{\text{thermal}} = \frac{e^{-\beta E}}{Z}
+$$
 with parameter $\beta$ and energy $E$.
 
 **Theorem 50.10** (Density/Thermal Correspondence):
@@ -184,13 +199,15 @@ with parameter $\beta$ and energy $E$.
 Complex information patterns span interior/boundary.
 
 **Definition 50.11** (Complex State):
-$$\Psi_c = \sum_i \alpha_i f_{\text{interior},i} \otimes g_{\text{boundary},i}$$
-
+$$
+\Psi_c = \sum_i \alpha_i f_{\text{interior},i} \otimes g_{\text{boundary},i}
+$$
 Correlated across duality.
 
 **Theorem 50.11** (Total Complexity):
-$$C_{\text{total}} = C_{\text{interior}} + C_{\text{boundary}} + C_{\text{mutual}}$$
-
+$$
+C_{\text{total}} = C_{\text{interior}} + C_{\text{boundary}} + C_{\text{mutual}}
+$$
 Complexity from all three terms.
 
 *Observer Framework Note*: Consciousness interpretation requires consciousness theory beyond current scope.

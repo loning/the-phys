@@ -12,14 +12,16 @@ sidebar_label: "061. Time as Ordering"
 From $\psi = \psi(\psi)$, time emerges from collapse ordering.
 
 **Definition 61.1** (Temporal Order):
-$$t_1 < t_2 \Leftrightarrow C_1 \prec C_2$$
-
+$$
+t_1 < t_2 \Leftrightarrow C_1 \prec C_2
+$$
 where $C_i$ are collapse events and $\prec$ is causal ordering.
 
 **Theorem 61.1** (Emergence):
 Time is not fundamental but emergent:
-$$\text{Time} = \text{Order}(\text{Collapses})$$
-
+$$
+\text{Time} = \text{Order}(\text{Collapses})
+$$
 *Proof*:
 No time without change, no change without collapse. ∎
 
@@ -28,13 +30,15 @@ No time without change, no change without collapse. ∎
 Time at the quantum scale.
 
 **Definition 61.2** (Quantum Clock):
-$$|\psi(t)\rangle = e^{-iHt/\hbar}|\psi(0)\rangle$$
-
+$$
+|\psi(t)\rangle = e^{-iHt/\hbar}|\psi(0)\rangle
+$$
 Unitary evolution between collapses.
 
 **Theorem 61.2** (Time-Energy Uncertainty):
-$$\Delta E \cdot \Delta t \geq \frac{\hbar}{2}$$
-
+$$
+\Delta E \cdot \Delta t \geq \frac{\hbar}{2}
+$$
 Precise time requires uncertain energy.
 
 ## 61.3 Thermal Time
@@ -42,13 +46,15 @@ Precise time requires uncertain energy.
 Time from statistical mechanics.
 
 **Definition 61.3** (Thermal Clock):
-$$\tau = -\hbar \frac{\partial \log Z}{\partial E}$$
-
+$$
+\tau = -\hbar \frac{\partial \log Z}{\partial E}
+$$
 where $Z$ is partition function.
 
 **Theorem 61.3** (Temperature-Time):
-$$\frac{\partial}{\partial \tau} = \frac{1}{k_B T} \frac{\partial}{\partial t}$$
-
+$$
+\frac{\partial}{\partial \tau} = \frac{1}{k_B T} \frac{\partial}{\partial t}
+$$
 Thermal time runs slower when hot.
 
 ## 61.4 Gravitational Time
@@ -56,13 +62,15 @@ Thermal time runs slower when hot.
 Time in curved spacetime.
 
 **Definition 61.4** (Proper Time):
-$$d\tau^2 = -g_{\mu\nu} dx^\mu dx^\nu / c^2$$
-
+$$
+d\tau^2 = -g_{\mu\nu} dx^\mu dx^\nu / c^2
+$$
 Time measured by local clocks.
 
 **Theorem 61.4** (Gravitational Dilation):
-$$\frac{dt}{d\tau} = \frac{1}{\sqrt{1 - 2GM/rc^2}}$$
-
+$$
+\frac{dt}{d\tau} = \frac{1}{\sqrt{1 - 2GM/rc^2}}
+$$
 Time slows near massive objects.
 
 ## 61.5 Category of Sequential Structures
@@ -98,8 +106,9 @@ Different patterns → Different sequence orderings
 Why does sequence have direction?
 
 **Definition 61.6** (Complexity Arrow):
-$$\mathcal{C}(\tau_2) > \mathcal{C}(\tau_1) \text{ for } \tau_2 > \tau_1$$
-
+$$
+\mathcal{C}(\tau_2) > \mathcal{C}(\tau_1) \text{ for } \tau_2 > \tau_1
+$$
 Complexity increases define later development.
 
 **Theorem 61.6** (Multiple Arrows):
@@ -117,13 +126,15 @@ All align due to initial φ-structure.
 Is sequence smooth or granular?
 
 **Definition 61.7** (φ-Sequence Unit):
-$$\tau_{\varphi} = \varphi^{-k}$$
-
+$$
+\tau_{\varphi} = \varphi^{-k}
+$$
 Minimum meaningful development step.
 
 **Theorem 61.7** (Discrete Spectrum):
-$$\tau_n = n \cdot \tau_{\varphi}$$
-
+$$
+\tau_n = n \cdot \tau_{\varphi}
+$$
 Sequence may be discrete at φ-structure scale.
 
 *Observer Framework Note*: Planck scale interpretation requires quantum gravity framework.
@@ -133,14 +144,16 @@ Sequence may be discrete at φ-structure scale.
 Mathematical sequencelessness.
 
 **Definition 61.8** (Sequenceless Configuration):
-$$\mathcal{H}[\Psi] = 0$$
-
+$$
+\mathcal{H}[\Psi] = 0
+$$
 No external sequence parameter.
 
 **Theorem 61.8** (Internal Sequence):
 Sequence emerges from correlations:
-$$\tau \sim \langle\xi_1|\xi_2\rangle_{\varphi}$$
-
+$$
+\tau \sim \langle\xi_1|\xi_2\rangle_{\varphi}
+$$
 between pattern subsystems.
 
 *Observer Framework Note*: Wheeler-DeWitt interpretation requires quantum gravity framework.
@@ -150,13 +163,15 @@ between pattern subsystems.
 Time parameters from collapse ordering properties.
 
 **Definition 61.9** (Natural Time Unit):
-$$t_{\varphi} = \frac{1}{\varphi^k}$$
-
+$$
+t_{\varphi} = \frac{1}{\varphi^k}
+$$
 where k is determined by development scale.
 
 **Theorem 61.9** (Time Hierarchy):
-$$t_{\text{system}} \sim \varphi^{-3}, \quad t_{\text{complex}} \sim \varphi^{-5}, \quad t_{\text{self-ref}} \sim \varphi^{-8}$$
-
+$$
+t_{\text{system}} \sim \varphi^{-3}, \quad t_{\text{complex}} \sim \varphi^{-5}, \quad t_{\text{self-ref}} \sim \varphi^{-8}
+$$
 Natural φ-time scales for different development levels.
 
 *Observer Framework Note*: Planck time interpretation requires quantum gravity framework.
@@ -166,8 +181,9 @@ Natural φ-time scales for different development levels.
 Sequence perception from development rate.
 
 **Definition 61.10** (Referential Sequence):
-$$\tau_r = \int \frac{d\mathcal{I}}{d\tau} d\tau$$
-
+$$
+\tau_r = \int \frac{d\mathcal{I}}{d\tau} d\tau
+$$
 where $\mathcal{I}$ is integrated self-reference.
 
 **Theorem 61.10** (Sequence Dilation):
@@ -184,12 +200,14 @@ Is sequence real or emergent?
 
 **Definition 61.11** (Block Pattern):
 All developments exist mathematically:
-$$\mathcal{M} = \bigcup_{\tau} \mathcal{S}_{\tau}$$
-
+$$
+\mathcal{M} = \bigcup_{\tau} \mathcal{S}_{\tau}
+$$
 **Theorem 61.11** (Presentism):
 Only current development exists, created by self-reference:
-$$\text{Reality} = \text{Current} + \text{Memory}$$
-
+$$
+\text{Reality} = \text{Current} + \text{Memory}
+$$
 Both views unified by development ordering.
 
 *Observer Framework Note*: Philosophy of time interpretation requires temporal framework.

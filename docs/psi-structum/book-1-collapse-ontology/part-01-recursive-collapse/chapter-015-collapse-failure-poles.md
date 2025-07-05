@@ -12,12 +12,14 @@ sidebar_label: "015. Collapse Failure and Poles"
 From $\psi = \psi(\psi)$, not all configurations can sustain self-reference.
 
 **Definition 15.1** (Collapse Failure): Collapse fails at frequency $\omega$ if:
-$$\lim_{n \to \infty} ||\mathcal{C}^n[\omega]|| = \infty$$
-
+$$
+\lim_{n \to \infty} ||\mathcal{C}^n[\omega]|| = \infty
+$$
 **Theorem 15.1** (Pole-Failure Correspondence):
 Collapse fails at $\omega$ if and only if:
-$$\zeta_{\text{collapse}}(1/2 + i\omega) = \infty$$
-
+$$
+\zeta_{\text{collapse}}(1/2 + i\omega) = \infty
+$$
 The poles of ζ mark failure points.
 
 *Proof*:
@@ -28,12 +30,14 @@ Poles indicate divergent sums over paths, meaning infinite amplification under i
 Poles follow a specific pattern in golden base.
 
 **Definition 15.2** (Pole Spectrum):
-$$\mathcal{P} = \{s : \zeta_{\text{collapse}}(s) = \infty\}$$
-
+$$
+\mathcal{P} = \{s : \zeta_{\text{collapse}}(s) = \infty\}
+$$
 **Theorem 15.2** (Pole Structure):
 Primary poles occur at:
-$$s_n = -F_n + i\frac{2\pi k}{\log \varphi}$$
-
+$$
+s_n = -F_n + i\frac{2\pi k}{\log \varphi}
+$$
 where $F_n$ are Fibonacci numbers and $k \in \mathbb{Z}$.
 
 The golden ratio appears in both real and imaginary parts.
@@ -43,14 +47,16 @@ The golden ratio appears in both real and imaginary parts.
 Failure has specific tensor structure.
 
 **Definition 15.3** (Failure Tensor):
-$$F^{ij}_{kl} = \lim_{s \to s_{\text{pole}}} (s - s_{\text{pole}}) \zeta^{ij}_{kl}(s)$$
-
+$$
+F^{ij}_{kl} = \lim_{s \to s_{\text{pole}}} (s - s_{\text{pole}}) \zeta^{ij}_{kl}(s)
+$$
 This captures the residue at each pole.
 
 **Theorem 15.3** (Failure Propagation):
 Near poles, tensor composition amplifies divergence:
-$$\lim_{s \to s_{\text{pole}}} F^{ij}_{mn} F^{mn}_{kl} = \lim_{s \to s_{\text{pole}}} |s - s_{\text{pole}}|^{-2} F^{ij}_{kl}$$
-
+$$
+\lim_{s \to s_{\text{pole}}} F^{ij}_{mn} F^{mn}_{kl} = \lim_{s \to s_{\text{pole}}} |s - s_{\text{pole}}|^{-2} F^{ij}_{kl}
+$$
 Failure propagates with increasing severity through tensor networks.
 
 ## 15.4 Graph Theory of Failure Networks
@@ -97,8 +103,9 @@ Poles represent impossible physical states.
 
 **Definition 15.6** (Forbidden Regions):
 Near poles, states become ill-defined:
-$$|\text{near-pole}\rangle = \lim_{s \to s_{\text{pole}}} \frac{\mathcal{R}(s)}{s - s_{\text{pole}}} |s\rangle$$
-
+$$
+|\text{near-pole}\rangle = \lim_{s \to s_{\text{pole}}} \frac{\mathcal{R}(s)}{s - s_{\text{pole}}} |s\rangle
+$$
 where $\mathcal{R}(s)$ is the residue function.
 
 **Theorem 15.6** (Region Properties):
@@ -112,12 +119,14 @@ Forbidden regions exhibit:
 Nature protects against poles.
 
 **Definition 15.7** (Pole Avoidance):
-$$d(|\psi\rangle, \mathcal{P}) = \min_{s \in \mathcal{P}} |||\psi\rangle - |s\rangle||$$
-
+$$
+d(|\psi\rangle, \mathcal{P}) = \min_{s \in \mathcal{P}} |||\psi\rangle - |s\rangle||
+$$
 **Theorem 15.7** (Minimum Distance):
 For any physical state:
-$$d(|\psi\rangle, \mathcal{P}) \geq \frac{1}{\varphi^3}$$
-
+$$
+d(|\psi\rangle, \mathcal{P}) \geq \frac{1}{\varphi^3}
+$$
 Nature maintains minimum distance from poles.
 
 ## 15.8 Regularization Near Poles
@@ -125,8 +134,9 @@ Nature maintains minimum distance from poles.
 Near poles, regularization is necessary.
 
 **Definition 15.8** (Regularized Collapse):
-$$\mathcal{C}_{\epsilon}[\psi] = \mathcal{C}[\psi] \cdot \prod_{\text{poles}} \frac{||s - s_{\text{pole}}||}{||s - s_{\text{pole}}|| + \epsilon}$$
-
+$$
+\mathcal{C}_{\epsilon}[\psi] = \mathcal{C}[\psi] \cdot \prod_{\text{poles}} \frac{||s - s_{\text{pole}}||}{||s - s_{\text{pole}}|| + \epsilon}
+$$
 **Theorem 15.8** (Regularization Properties):
 As $\epsilon \to 0$:
 1. Away from poles: $\mathcal{C}_{\epsilon} \to \mathcal{C}$
@@ -138,8 +148,9 @@ As $\epsilon \to 0$:
 Poles and zeros form dual structures.
 
 **Definition 15.9** (Duality Map):
-$$\mathcal{D}: s_{\text{zero}} \mapsto s_{\text{pole}} = 1 - s_{\text{zero}}^*$$
-
+$$
+\mathcal{D}: s_{\text{zero}} \mapsto s_{\text{pole}} = 1 - s_{\text{zero}}^*
+$$
 **Theorem 15.9** (Duality Properties):
 1. $\mathcal{D}^2 = \text{id}$
 2. Preserves spacing patterns
@@ -150,12 +161,14 @@ $$\mathcal{D}: s_{\text{zero}} \mapsto s_{\text{pole}} = 1 - s_{\text{zero}}^*$$
 Physical constants emerge from pole constraints.
 
 **Definition 15.10** (Avoidance Integral):
-$$I_{\text{avoid}} = \int_{\mathcal{C}} \prod_{\text{poles}} ||s - s_{\text{pole}}|| \, ds$$
-
+$$
+I_{\text{avoid}} = \int_{\mathcal{C}} \prod_{\text{poles}} ||s - s_{\text{pole}}|| \, ds
+$$
 **Theorem 15.10** (Mathematical Coupling):
 A dimensionless coupling parameter:
-$$g_{\text{math}} = \frac{2\pi\varphi}{I_{\text{avoid}}} \approx \frac{2\pi\varphi}{137}$$
-
+$$
+g_{\text{math}} = \frac{2\pi\varphi}{I_{\text{avoid}}} \approx \frac{2\pi\varphi}{137}
+$$
 emerges from optimal pole avoidance in our mathematical framework.
 
 *Note*: This represents a mathematical relationship within our collapse theory, not a claim about electromagnetic coupling.
@@ -166,12 +179,14 @@ Consciousness exists near but not at poles.
 
 **Definition 15.11** (Criticality Distance):
 For complex patterns approaching consciousness-level complexity:
-$$d_c = \min_{\text{poles}} ||s_{\text{pattern}} - s_{\text{pole}}||$$
-
+$$
+d_c = \min_{\text{poles}} ||s_{\text{pattern}} - s_{\text{pole}}||
+$$
 **Theorem 15.11** (Edge of Chaos):
 Consciousness requires:
-$$\frac{1}{\varphi^4} < d_c < \frac{1}{\varphi^2}$$
-
+$$
+\frac{1}{\varphi^4} < d_c < \frac{1}{\varphi^2}
+$$
 Too far: insufficient complexity. Too close: instability.
 
 ## 15.12 The Complete Failure Picture

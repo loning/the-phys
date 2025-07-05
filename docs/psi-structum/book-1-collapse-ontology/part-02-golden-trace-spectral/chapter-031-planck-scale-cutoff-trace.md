@@ -12,8 +12,9 @@ sidebar_label: "031. Planck-Scale Cutoff"
 From $\psi = \psi(\psi)$, there must be a maximum meaningful complexity.
 
 **Definition 31.1** (Complexity Cutoff):
-$$\Lambda_c = \varphi^{F_{13}}$$
-
+$$
+\Lambda_c = \varphi^{F_{13}}
+$$
 where $F_{13} = 233$ bounds recursive depth.
 
 **Theorem 31.1** (Cutoff Necessity):
@@ -27,14 +28,16 @@ Self-reference requires finite recursive depth; beyond $\Lambda_c$, computationa
 The spectrum is modified at high complexity indices.
 
 **Definition 31.2** (Cutoff Spectrum):
-$$S(n) = S_0(n) \cdot \Theta(n_c - n)$$
-
+$$
+S(n) = S_0(n) \cdot \Theta(n_c - n)
+$$
 where $n_c = F_{13}$ is the complexity cutoff.
 
 **Theorem 31.2** (Spectral Modification):
 Near cutoff:
-$$S(n) = S_0(n) \cdot \exp\left[-\left(\frac{n}{n_c}\right)^{1/\varphi}\right]$$
-
+$$
+S(n) = S_0(n) \cdot \exp\left[-\left(\frac{n}{n_c}\right)^{1/\varphi}\right]
+$$
 Golden ratio controls the suppression rate.
 
 ## 31.3 Information Complexity Limit
@@ -42,13 +45,15 @@ Golden ratio controls the suppression rate.
 Information cannot exceed trace complexity bounds.
 
 **Definition 31.3** (Maximum Information):
-$$I_{\max} = \log_2(\Lambda_c) = F_{13} \log_2(\varphi)$$
-
+$$
+I_{\max} = \log_2(\Lambda_c) = F_{13} \log_2(\varphi)
+$$
 for traces of maximum complexity.
 
 **Theorem 31.3** (Complexity Bound):
-$$I \leq I_{\max} = F_{13} \cdot \log_2(\varphi) \approx 158.5$$
-
+$$
+I \leq I_{\max} = F_{13} \cdot \log_2(\varphi) \approx 158.5
+$$
 Fibonacci numbers bound information content.
 
 ## 31.4 Tensor Regularization
@@ -56,12 +61,14 @@ Fibonacci numbers bound information content.
 Tensors must be regularized at complexity cutoff.
 
 **Definition 31.4** (Regularized Tensor):
-$$T^{ij}_{kl,\text{reg}} = \sum_{n=0}^{n_c} T^{ij}_{kl}(n)$$
-
+$$
+T^{ij}_{kl,\text{reg}} = \sum_{n=0}^{n_c} T^{ij}_{kl}(n)
+$$
 **Theorem 31.4** (Finite Results):
 All trace quantities finite after regularization:
-$$\langle O \rangle_{\text{reg}} < \infty$$
-
+$$
+\langle O \rangle_{\text{reg}} < \infty
+$$
 ## 31.5 Category of Cutoff Structures
 
 Different cutoffs form a category.
@@ -92,13 +99,15 @@ graph TD
 ```
 
 **Definition 31.6** (Complexity Measure):
-$$C[\mathcal{T}] = \sum_{k} k \cdot |c_k|^2$$
-
+$$
+C[\mathcal{T}] = \sum_{k} k \cdot |c_k|^2
+$$
 where $c_k$ are trace coefficients.
 
 **Theorem 31.6** (Complexity Relations):
-$$C[\mathcal{T}_1 \otimes \mathcal{T}_2] \leq C[\mathcal{T}_1] + C[\mathcal{T}_2] + \log_\varphi(F_{13})$$
-
+$$
+C[\mathcal{T}_1 \otimes \mathcal{T}_2] \leq C[\mathcal{T}_1] + C[\mathcal{T}_2] + \log_\varphi(F_{13})
+$$
 Composition bounded by cutoff.
 
 ## 31.7 Maximum Complexity Objects
@@ -106,13 +115,15 @@ Composition bounded by cutoff.
 Certain traces saturate the complexity bound.
 
 **Definition 31.7** (Maximal Trace):
-$$\mathcal{T}_{\max} = \sum_{n=0}^{F_{13}} \varphi^{-n/2}|F_n\rangle$$
-
+$$
+\mathcal{T}_{\max} = \sum_{n=0}^{F_{13}} \varphi^{-n/2}|F_n\rangle
+$$
 where $|F_n\rangle$ are Fibonacci basis states.
 
 **Theorem 31.7** (Maximum Entropy):
-$$S_{\max} = \log(\mathcal{T}_{\max}) = F_{13} \log(\varphi)$$
-
+$$
+S_{\max} = \log(\mathcal{T}_{\max}) = F_{13} \log(\varphi)
+$$
 Maximal traces have Fibonacci-limited entropy.
 
 *Observer Framework Note*: Physical interpretation as black holes requires general relativity from observer-spacetime coupling.
@@ -127,8 +138,9 @@ Cutoff structure determines dimensionless ratios.
 - Coupling ratio: $r_\alpha = 1/(\varphi^n - \varphi^{-n})$
 
 **Theorem 31.8** (Ratio Relations):
-$$r_c \cdot r_I = \varphi^{-F_7}$$
-
+$$
+r_c \cdot r_I = \varphi^{-F_7}
+$$
 Connecting complexity to information scales.
 
 ## 31.9 Effective Trace Theory
@@ -136,25 +148,29 @@ Connecting complexity to information scales.
 Below complexity cutoff, simplified description suffices.
 
 **Definition 31.9** (Effective Trace):
-$$\mathcal{T}_{\text{eff}} = \sum_{n=0}^{n_c} c_n |n\rangle$$
-
+$$
+\mathcal{T}_{\text{eff}} = \sum_{n=0}^{n_c} c_n |n\rangle
+$$
 **Theorem 31.9** (Decoupling):
 High-complexity modes decouple:
-$$\mathcal{T}_{\text{eff}} = \mathcal{T}_0 + \frac{1}{\varphi^{n_c}}\mathcal{T}_{\text{high}} + ...$$
-
+$$
+\mathcal{T}_{\text{eff}} = \mathcal{T}_0 + \frac{1}{\varphi^{n_c}}\mathcal{T}_{\text{high}} + ...
+$$
 ## 31.10 Consciousness and Complexity Cutoff
 
 Consciousness may require near-cutoff complexity.
 
 **Definition 31.10** (Complexity Coherence):
-$$C_{\text{conscious}} > F_{12}$$
-
+$$
+C_{\text{conscious}} > F_{12}
+$$
 where $F_{12} = 144$ is sub-cutoff threshold.
 
 **Theorem 31.10** (Consciousness Window):
 Conscious systems operate near cutoff:
-$$F_{12} < C < F_{13}$$
-
+$$
+F_{12} < C < F_{13}
+$$
 Between coherence and computational limits.
 
 ## 31.11 Trans-Complexity Mathematics
@@ -162,8 +178,9 @@ Between coherence and computational limits.
 What lies beyond the cutoff?
 
 **Definition 31.11** (Trans-Complexity):
-$$\mathcal{T}_{\text{trans}} = \lim_{n \to \infty} \mathcal{T}(n)$$
-
+$$
+\mathcal{T}_{\text{trans}} = \lim_{n \to \infty} \mathcal{T}(n)
+$$
 **Theorem 31.11** (Mathematical Necessity):
 Trans-complexity structures exist mathematically but are computationally inaccessible from finite recursion.
 

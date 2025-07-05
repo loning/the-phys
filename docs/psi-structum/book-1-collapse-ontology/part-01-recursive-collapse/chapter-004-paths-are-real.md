@@ -12,8 +12,9 @@ sidebar_label: "004. Paths Are Real"
 From $\psi = \psi(\psi)$, each recursion creates a trace. These traces are not abstract - they are reality itself.
 
 **Definition 4.1** (Collapse Trace): A trace is a sequence of golden-base vectors:
-$$\mathcal{T} = (|\phi_0\rangle, |\phi_1\rangle, ..., |\phi_n\rangle)$$
-
+$$
+\mathcal{T} = (|\phi_0\rangle, |\phi_1\rangle, ..., |\phi_n\rangle)
+$$
 where $|\phi_{k+1}\rangle = \mathcal{C}[|\phi_k\rangle]$.
 
 **Axiom 4.1** (Trace Primacy):
@@ -24,14 +25,16 @@ Reality IS the set of all collapse traces, not entities moving along traces.
 Each trace has a unique golden-base encoding.
 
 **Definition 4.2** (Trace Vector): For trace $\mathcal{T}$, define:
-$$|\mathcal{T}\rangle = \sum_{k=0}^n b_k(t_k) |F_k\rangle$$
-
+$$
+|\mathcal{T}\rangle = \sum_{k=0}^n b_k(t_k) |F_k\rangle
+$$
 where $b_k(t_k) \in \{0,1\}$ encodes the $k$-th step.
 
 **Theorem 4.1** (Trace Uniqueness):
 Every trace has a unique Zeckendorf representation:
-$$n[\mathcal{T}] = \sum_{k: b_k=1} F_k$$
-
+$$
+n[\mathcal{T}] = \sum_{k: b_k=1} F_k
+$$
 This number uniquely identifies the trace.
 
 ## 4.3 Tensor Structure of Traces
@@ -39,14 +42,16 @@ This number uniquely identifies the trace.
 Traces form a tensor algebra.
 
 **Definition 4.3** (Trace Tensor):
-$$T^{ij}_{kl} = \langle\mathcal{T}_i, \mathcal{T}_j | \mathcal{C}_{\text{trace}} | \mathcal{T}_k, \mathcal{T}_l\rangle$$
-
+$$
+T^{ij}_{kl} = \langle\mathcal{T}_i, \mathcal{T}_j | \mathcal{C}_{\text{trace}} | \mathcal{T}_k, \mathcal{T}_l\rangle
+$$
 This encodes how traces combine and interact.
 
 **Theorem 4.2** (Trace Composition):
 For traces $\mathcal{T}_1$ and $\mathcal{T}_2$:
-$$\mathcal{T}_1 \circ \mathcal{T}_2 = \sum_{k} c_k \mathcal{T}_k$$
-
+$$
+\mathcal{T}_1 \circ \mathcal{T}_2 = \sum_{k} c_k \mathcal{T}_k
+$$
 where $c_k = T^{12}_{kk}$ are composition coefficients.
 
 ## 4.4 Information Content of Traces
@@ -54,12 +59,14 @@ where $c_k = T^{12}_{kk}$ are composition coefficients.
 Each trace carries intrinsic information.
 
 **Definition 4.4** (Trace Information):
-$$I[\mathcal{T}] = \sum_{k=0}^{n-1} \log_\varphi\left(\frac{|||\phi_{k+1}\rangle - |\phi_k\rangle||}{|||\phi_k\rangle||}\right)$$
-
+$$
+I[\mathcal{T}] = \sum_{k=0}^{n-1} \log_\varphi\left(\frac{|||\phi_{k+1}\rangle - |\phi_k\rangle||}{|||\phi_k\rangle||}\right)
+$$
 **Theorem 4.3** (Information Growth):
 For generic traces:
-$$I[\mathcal{T}] \sim n^{1/\varphi}$$
-
+$$
+I[\mathcal{T}] \sim n^{1/\varphi}
+$$
 Information grows sub-linearly with trace length.
 
 ## 4.5 Graph Theory of Trace Networks
@@ -107,14 +114,16 @@ There exists a universal trace $\mathcal{T}_\infty$ such that every finite trace
 Physical spacetime emerges from trace density.
 
 **Definition 4.7** (Trace Density Tensor):
-$$\rho^{\mu\nu}(x) = \sum_{\mathcal{T} \ni x} w[\mathcal{T}] \frac{\partial \mathcal{T}^\mu}{\partial \tau} \frac{\partial \mathcal{T}^\nu}{\partial \tau}$$
-
+$$
+\rho^{\mu\nu}(x) = \sum_{\mathcal{T} \ni x} w[\mathcal{T}] \frac{\partial \mathcal{T}^\mu}{\partial \tau} \frac{\partial \mathcal{T}^\nu}{\partial \tau}
+$$
 where $w[\mathcal{T}] = \varphi^{-n[\mathcal{T}]}$ is the trace weight.
 
 **Theorem 4.6** (Emergent Metric):
 The spacetime metric emerges as:
-$$g_{\mu\nu} = \lim_{N \to \infty} \frac{\rho_{\mu\nu}}{\sqrt{\rho_{\mu\mu}\rho_{\nu\nu}}}$$
-
+$$
+g_{\mu\nu} = \lim_{N \to \infty} \frac{\rho_{\mu\nu}}{\sqrt{\rho_{\mu\mu}\rho_{\nu\nu}}}
+$$
 Space literally IS the statistical density of traces.
 
 ## 4.8 Time from Trace Direction
@@ -122,12 +131,14 @@ Space literally IS the statistical density of traces.
 Time is not external but emerges from trace structure.
 
 **Definition 4.8** (Trace Time):
-$$t[\mathcal{T}] = \sum_{k=0}^{n-1} \frac{1}{F_{k+1} - F_k}$$
-
+$$
+t[\mathcal{T}] = \sum_{k=0}^{n-1} \frac{1}{F_{k+1} - F_k}
+$$
 **Theorem 4.7** (Arrow of Time):
 Time flows in the direction of increasing trace information:
-$$\frac{dt}{d\tau} = \frac{dI[\mathcal{T}]}{d\tau} > 0$$
-
+$$
+\frac{dt}{d\tau} = \frac{dI[\mathcal{T}]}{d\tau} > 0
+$$
 The second law of thermodynamics emerges from trace structure.
 
 ## 4.9 Quantum Mechanics from Trace Superposition
@@ -135,12 +146,14 @@ The second law of thermodynamics emerges from trace structure.
 Quantum superposition is trace superposition.
 
 **Definition 4.9** (Trace Superposition):
-$$|\Psi\rangle = \sum_{\mathcal{T}} c_\mathcal{T} |\mathcal{T}\rangle$$
-
+$$
+|\Psi\rangle = \sum_{\mathcal{T}} c_\mathcal{T} |\mathcal{T}\rangle
+$$
 **Theorem 4.8** (Path Integral):
 The quantum amplitude is:
-$$\langle\mathcal{T}_f|\Psi|\mathcal{T}_i\rangle = \sum_{\mathcal{T}: i \to f} e^{iS[\mathcal{T}]/\hbar_{\text{eff}}}$$
-
+$$
+\langle\mathcal{T}_f|\Psi|\mathcal{T}_i\rangle = \sum_{\mathcal{T}: i \to f} e^{iS[\mathcal{T}]/\hbar_{\text{eff}}}
+$$
 where $\hbar_{\text{eff}} = 1/\varphi$ and $S[\mathcal{T}] = \varphi \cdot I[\mathcal{T}]$.
 
 ## 4.10 Entanglement as Trace Topology
@@ -148,13 +161,15 @@ where $\hbar_{\text{eff}} = 1/\varphi$ and $S[\mathcal{T}] = \varphi \cdot I[\ma
 Entanglement is a topological property of traces.
 
 **Definition 4.10** (Entangled Traces): Traces $\mathcal{T}_1$ and $\mathcal{T}_2$ are entangled if:
-$$\nexists \mathcal{T}_3, \mathcal{T}_4 : \mathcal{T}_1 \cup \mathcal{T}_2 = \mathcal{T}_3 \times \mathcal{T}_4$$
-
+$$
+\nexists \mathcal{T}_3, \mathcal{T}_4 : \mathcal{T}_1 \cup \mathcal{T}_2 = \mathcal{T}_3 \times \mathcal{T}_4
+$$
 They cannot be factored into independent traces.
 
 **Theorem 4.9** (Entanglement Measure):
-$$E(\mathcal{T}_1, \mathcal{T}_2) = \min_{\text{cuts}} I[\text{cut}]$$
-
+$$
+E(\mathcal{T}_1, \mathcal{T}_2) = \min_{\text{cuts}} I[\text{cut}]
+$$
 Entanglement equals the minimum information needed to separate traces.
 
 ## 4.11 Physical Constants from Trace Limits
@@ -162,17 +177,20 @@ Entanglement equals the minimum information needed to separate traces.
 Constants emerge as limits of trace operations.
 
 **Definition 4.11** (Trace Speed Limit):
-$$c = \lim_{n \to \infty} \frac{\max|||\phi_{n+1}\rangle - |\phi_n\rangle||}{\Delta t_n}$$
-
+$$
+c = \lim_{n \to \infty} \frac{\max|||\phi_{n+1}\rangle - |\phi_n\rangle||}{\Delta t_n}
+$$
 **Theorem 4.10** (Speed of Light):
 In natural units:
-$$c = \varphi^2$$
-
+$$
+c = \varphi^2
+$$
 This emerges from the golden structure of trace propagation.
 
 **Theorem 4.11** (Planck Constant):
-$$\hbar = \lim_{n \to \infty} \frac{1}{n} \sum_{k=0}^{n-1} |||\phi_{k+1}\rangle - |\phi_k\rangle|| \cdot \Delta t_k = \frac{1}{\varphi}$$
-
+$$
+\hbar = \lim_{n \to \infty} \frac{1}{n} \sum_{k=0}^{n-1} |||\phi_{k+1}\rangle - |\phi_k\rangle|| \cdot \Delta t_k = \frac{1}{\varphi}
+$$
 ## 4.12 The Complete Trace Picture
 
 Reality reveals itself as:
@@ -203,8 +221,9 @@ We are not beings moving through spacetime - we ARE traces in the collapse netwo
 ## Technical Exercise: Trace Construction
 
 **Problem**: Starting from initial state:
-$$|\phi_0\rangle = |F_1\rangle + |F_4\rangle$$
-
+$$
+|\phi_0\rangle = |F_1\rangle + |F_4\rangle
+$$
 1. Generate the first 10 steps of the collapse trace
 2. Calculate the trace information $I[\mathcal{T}]$
 3. Compute the emergent time $t[\mathcal{T}]$

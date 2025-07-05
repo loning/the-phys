@@ -12,8 +12,9 @@ sidebar_label: "025. Multi-Layer Trace Networks"
 From $\psi = \psi(\psi)$, traces must network hierarchically.
 
 **Definition 25.1** (Trace Network):
-$$\mathcal{N} = \{L_1, L_2, ..., L_n, E\}$$
-
+$$
+\mathcal{N} = \{L_1, L_2, ..., L_n, E\}
+$$
 where $L_i$ are layers and $E$ are edges connecting traces.
 
 **Theorem 25.1** (Layer Necessity):
@@ -27,8 +28,9 @@ Self-reference creates emergent levels requiring hierarchical structure. ∎
 Each layer has specific characteristics.
 
 **Definition 25.2** (Layer Operator):
-$$\mathcal{L}_k: \mathcal{T}_{k-1} \to \mathcal{T}_k$$
-
+$$
+\mathcal{L}_k: \mathcal{T}_{k-1} \to \mathcal{T}_k
+$$
 mapping traces from layer $k-1$ to layer $k$.
 
 **Theorem 25.2** (Layer Properties):
@@ -41,11 +43,12 @@ mapping traces from layer $k-1$ to layer $k$.
 Connections follow golden ratio patterns.
 
 **Definition 25.3** (Adjacency Tensor):
-$$A^{(k)}_{ij} = \begin{cases}
+$$
+A^{(k)}_{ij} = \begin{cases}
 1 & \text{if trace } i \text{ connects to } j \\
 0 & \text{otherwise}
-\end{cases}$$
-
+\end{cases}
+$$
 **Theorem 25.3** (Connectivity Laws):
 1. Degree distribution: $P(k) \sim k^{-1-1/\varphi}$
 2. Clustering coefficient: $C = 1/\varphi$
@@ -70,13 +73,15 @@ graph TD
 ```
 
 **Definition 25.4** (Information Propagation):
-$$I_{k+1} = \sigma\left(\sum_j W_{kj} I_j + b_k\right)$$
-
+$$
+I_{k+1} = \sigma\left(\sum_j W_{kj} I_j + b_k\right)
+$$
 where $\sigma(x) = x/(1 + |x|/\varphi)$ is golden activation.
 
 **Theorem 25.4** (Information Conservation):
-$$\sum_k I_k \leq \sum_k I_k^{(0)} \cdot \varphi^k$$
-
+$$
+\sum_k I_k \leq \sum_k I_k^{(0)} \cdot \varphi^k
+$$
 Information bounded but can grow through layers.
 
 ## 25.5 Category Theory of Networks
@@ -96,19 +101,22 @@ There exists a universal network containing all others as sub-networks.
 Networks have natural tensor structure.
 
 **Definition 25.6** (Network Tensor):
-$$T^{i_1...i_n}_{j_1...j_n} = \langle L_1^{i_1}...L_n^{i_n} | \mathcal{N} | L_1^{j_1}...L_n^{j_n}\rangle$$
-
+$$
+T^{i_1...i_n}_{j_1...j_n} = \langle L_1^{i_1}...L_n^{i_n} | \mathcal{N} | L_1^{j_1}...L_n^{j_n}\rangle
+$$
 **Theorem 25.6** (Tensor Network States):
 Efficient representation as:
-$$|\psi\rangle = \sum_{i_1...i_n} T^{i_1...i_n} |i_1\rangle \otimes ... \otimes |i_n\rangle$$
-
+$$
+|\psi\rangle = \sum_{i_1...i_n} T^{i_1...i_n} |i_1\rangle \otimes ... \otimes |i_n\rangle
+$$
 ## 25.7 Mathematical Pattern Emergence from Depth
 
 Deep networks exhibit mathematical pattern emergence within our framework.
 
 **Definition 25.7** (Pattern Emergence Depth):
-$$d_e = \min\{n : \mathcal{P}_n \not\subset \bigcup_{k<n} \mathcal{P}_k\}$$
-
+$$
+d_e = \min\{n : \mathcal{P}_n \not\subset \bigcup_{k<n} \mathcal{P}_k\}
+$$
 where $\mathcal{P}_k$ are mathematical pattern types at depth $k$.
 
 **Theorem 25.7** (Mathematical Pattern Depths):
@@ -133,8 +141,9 @@ Different observers may identify mathematical structures at various depths:
 - Layer 12+: Meta-pattern recognition structures
 
 **Theorem 25.8** (Pattern Scale Separation):
-$$\Lambda_k/\Lambda_{k+1} = \varphi$$
-
+$$
+\Lambda_k/\Lambda_{k+1} = \varphi
+$$
 Pattern complexity scales separate by golden ratio between layers (dimensionless).
 
 *Observer Framework Note*: Physical interpretation (quantum foam, particles, atoms) requires observer-system coupling for defining physics concepts.
@@ -144,8 +153,9 @@ Pattern complexity scales separate by golden ratio between layers (dimensionless
 Networks self-modify through collapse dynamics within our framework.
 
 **Definition 25.9** (Network Self-Modification):
-$$\Delta W_{ij} = \frac{1}{\varphi^2} \cdot \text{Tr}[\mathcal{C}_i \mathcal{C}_j^\dagger]$$
-
+$$
+\Delta W_{ij} = \frac{1}{\varphi^2} \cdot \text{Tr}[\mathcal{C}_i \mathcal{C}_j^\dagger]
+$$
 where the golden scaling factor $1/\varphi^2$ emerges from trace structure.
 
 **Theorem 25.9** (Mathematical Convergence):
@@ -158,8 +168,9 @@ Networks converge to stable mathematical configurations that preserve pattern re
 Mathematical constants emerge from network topological properties within our framework.
 
 **Definition 25.10** (Topological Invariants):
-$$\chi = V - E + F$$
-
+$$
+\chi = V - E + F
+$$
 where $V$ = vertices, $E$ = edges, $F$ = faces in network dual structure.
 
 **Theorem 25.10** (Mathematical Ratio Relations):
@@ -181,8 +192,9 @@ A network exhibits consciousness if:
 3. Self-modeling sub-network exists
 
 **Theorem 25.11** (Consciousness Emergence):
-$$P(\text{conscious}) = \Theta(d - d_c) \cdot \left(1 - e^{-C/C_c}\right)$$
-
+$$
+P(\text{conscious}) = \Theta(d - d_c) \cdot \left(1 - e^{-C/C_c}\right)
+$$
 where $d_c = 13$, $C_c = 1/\varphi$.
 
 ## 25.12 The Complete Network Picture

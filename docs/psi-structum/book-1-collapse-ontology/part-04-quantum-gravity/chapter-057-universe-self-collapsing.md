@@ -12,14 +12,16 @@ sidebar_label: "057. Universe Self-Collapsing"
 From $\psi = \psi(\psi)$, mathematical reality is one self-referential structure.
 
 **Definition 57.1** (Complete Configuration):
-$$\Psi_{\text{complete}} = \sum_{\{c_i\}} W[\{c_i\}] \cdot \text{Config}_{\{c_i\}}$$
-
+$$
+\Psi_{\text{complete}} = \sum_{\{c_i\}} W[\{c_i\}] \cdot \text{Config}_{\{c_i\}}
+$$
 where $\{c_i\}$ are all possible mathematical configurations and $W[\{c_i\}]$ are φ-weighted amplitudes.
 
 **Theorem 57.1** (No External Reference):
 The complete pattern has no external reference:
-$$\text{Ref}_{\text{complete}} \subset \Psi_{\text{complete}}$$
-
+$$
+\text{Ref}_{\text{complete}} \subset \Psi_{\text{complete}}
+$$
 *Proof*:
 Reference systems are configuration patterns within the complete structure. ∎
 
@@ -30,14 +32,16 @@ Reference systems are configuration patterns within the complete structure. ∎
 Mathematical equation for complete patterns.
 
 **Definition 57.2** (Self-Consistency Condition):
-$$\mathcal{H}[\Psi] = 0$$
-
+$$
+\mathcal{H}[\Psi] = 0
+$$
 where $\mathcal{H}[\Psi] = -\frac{1}{2\varphi^2} \nabla^2_{\text{config}} \Psi + \text{SelfRef}(\Psi) \cdot \Psi$.
 
 **Theorem 57.2** (Parameter Independence):
 Complete patterns are parameter-independent:
-$$\frac{\partial \Psi}{\partial \tau} = 0$$
-
+$$
+\frac{\partial \Psi}{\partial \tau} = 0
+$$
 for any external parameter τ. Internal structure emerges from self-reference.
 
 *Observer Framework Note*: Wheeler-DeWitt equation interpretation requires quantum gravity framework.
@@ -47,14 +51,16 @@ for any external parameter τ. Internal structure emerges from self-reference.
 No external boundary for complete patterns.
 
 **Definition 57.3** (Self-Bounded State):
-$$\Psi_{\text{sb}}[\text{config}] = \int_{\text{closed}} \mathcal{D}\text{pattern} \, e^{-\mathcal{I}[\text{pattern}]/\varphi}$$
-
+$$
+\Psi_{\text{sb}}[\text{config}] = \int_{\text{closed}} \mathcal{D}\text{pattern} \, e^{-\mathcal{I}[\text{pattern}]/\varphi}
+$$
 Integral over closed configuration patterns with φ-weighted action.
 
 **Theorem 57.3** (Unique Self-Reference):
 Self-boundary condition selects unique pattern minimizing:
-$$\mathcal{S} = -\log|\Psi_{\text{sb}}|^2$$
-
+$$
+\mathcal{S} = -\log|\Psi_{\text{sb}}|^2
+$$
 where the action $\mathcal{I}$ involves only φ-structure.
 
 *Observer Framework Note*: Hartle-Hawking state interpretation requires quantum gravity framework.
@@ -64,14 +70,16 @@ where the action $\mathcal{I}$ involves only φ-structure.
 Distinct configurations from pattern interference.
 
 **Definition 57.4** (Configuration Sequence):
-$$\alpha = (\alpha_1, \alpha_2, ..., \alpha_n)$$
-
+$$
+\alpha = (\alpha_1, \alpha_2, ..., \alpha_n)
+$$
 Sequence of pattern projection operations with φ-weights.
 
 **Theorem 57.4** (Separation Condition):
 Configuration sequences separate when:
-$$\text{Re}\langle\Psi|\alpha^\star \beta|\Psi\rangle_{\varphi} \approx 0$$
-
+$$
+\text{Re}\langle\Psi|\alpha^\star \beta|\Psi\rangle_{\varphi} \approx 0
+$$
 for $\alpha \neq \beta$, where $\langle\cdot|\cdot\rangle_{\varphi}$ is the φ-weighted inner product.
 
 *Observer Framework Note*: Decoherent histories interpretation requires quantum mechanics framework.
@@ -102,8 +110,9 @@ graph TD
 
 **Theorem 57.5** (Selection Principle):
 Accessible patterns satisfy:
-$$P(\text{access}|\alpha) \propto |\langle\alpha|\Psi\rangle|^2_{\varphi} \cdot C_{\text{complexity}}(\alpha)$$
-
+$$
+P(\text{access}|\alpha) \propto |\langle\alpha|\Psi\rangle|^2_{\varphi} \cdot C_{\text{complexity}}(\alpha)
+$$
 where $C_{\text{complexity}}$ measures pattern complexity.
 
 *Observer Framework Note*: Anthropic selection interpretation requires conscious observer theory.
@@ -113,14 +122,16 @@ where $C_{\text{complexity}}$ measures pattern complexity.
 Self-generating collapse at all scales.
 
 **Definition 57.6** (Growth Potential):
-$$V(\xi) = V_0\left(1 - \left(\frac{\xi}{\xi_0}\right)^{\varphi^{-1}}\right)$$
-
+$$
+V(\xi) = V_0\left(1 - \left(\frac{\xi}{\xi_0}\right)^{\varphi^{-1}}\right)
+$$
 Pattern growth with φ-inverse exponent.
 
 **Theorem 57.6** (Self-Reproduction Regime):
 Pattern fluctuations dominate when:
-$$\frac{G^3}{8\pi^2|\dot{\xi}|} > \varphi$$
-
+$$
+\frac{G^3}{8\pi^2|\dot{\xi}|} > \varphi
+$$
 where $G$ is growth rate and $\dot{\xi}$ is pattern velocity.
 
 *Observer Framework Note*: Inflation theory interpretation requires cosmological framework.
@@ -130,13 +141,15 @@ where $G$ is growth rate and $\dot{\xi}$ is pattern velocity.
 Many configurations as collapse branches.
 
 **Definition 57.7** (Multi-Pattern Structure):
-$$\Psi = \sum_i \alpha_i \cdot \text{Pattern}_i$$
-
+$$
+\Psi = \sum_i \alpha_i \cdot \text{Pattern}_i
+$$
 Superposition of mathematical configurations with φ-weighted amplitudes.
 
 **Theorem 57.7** (Branch Orthogonality):
-$$\langle\text{Pattern}_i|\text{Pattern}_j\rangle_{\varphi} \to \delta_{ij}$$
-
+$$
+\langle\text{Pattern}_i|\text{Pattern}_j\rangle_{\varphi} \to \delta_{ij}
+$$
 as pattern separation progresses.
 
 *Observer Framework Note*: Many-worlds interpretation requires quantum mechanics framework.
@@ -146,14 +159,16 @@ as pattern separation progresses.
 Pattern evolution from collapse directionality.
 
 **Definition 57.8** (Complexity Gradient):
-$$\vec{\nabla} C = \text{Development direction}$$
-
+$$
+\vec{\nabla} C = \text{Development direction}
+$$
 Pattern development points toward increasing complexity with φ-structure.
 
 **Theorem 57.8** (Simple Origin Hypothesis):
 Low initial complexity required:
-$$C_{\text{initial}} \ll C_{\max} \approx \varphi^k$$
-
+$$
+C_{\text{initial}} \ll C_{\max} \approx \varphi^k
+$$
 for appropriate complexity scale k.
 
 *Observer Framework Note*: Entropy and thermodynamics interpretation requires statistical mechanics framework.
@@ -168,8 +183,9 @@ Dimensionless parameters from complete pattern collapse.
 - Background density: $\rho_b \approx 1 - \varphi^{-2}$
 
 **Theorem 57.9** (Balance Condition):
-$$\rho_s \approx \rho_b$$
-
+$$
+\rho_s \approx \rho_b
+$$
 at current development stage because of φ-structure balance.
 
 *Observer Framework Note*: Cosmological parameters interpretation requires cosmological framework.
@@ -179,13 +195,15 @@ at current development stage because of φ-structure balance.
 Complex patterns from mathematical fluctuations.
 
 **Definition 57.10** (Pattern Spectrum):
-$$P_{\text{pattern}}(k) = \frac{G^2}{8\pi^2\epsilon_{\varphi}} \bigg|_{k=\varphi G}$$
-
+$$
+P_{\text{pattern}}(k) = \frac{G^2}{8\pi^2\epsilon_{\varphi}} \bigg|_{k=\varphi G}
+$$
 where $G$ is pattern growth parameter and $\epsilon_{\varphi}$ is φ-structure parameter.
 
 **Theorem 57.10** (Scale Invariance):
-$$n_s - 1 = -6\epsilon_{\varphi} + 2\eta_{\varphi} \approx -\frac{2}{\varphi^2}$$
-
+$$
+n_s - 1 = -6\epsilon_{\varphi} + 2\eta_{\varphi} \approx -\frac{2}{\varphi^2}
+$$
 Nearly scale-invariant with φ-tilt.
 
 *Observer Framework Note*: Primordial spectrum interpretation requires inflation theory framework.
@@ -196,8 +214,9 @@ Internal reference affects pattern evolution.
 
 **Definition 57.11** (Self-Referential Pattern):
 Internal reference transforms complete pattern:
-$$\Psi \to \Psi_{\text{self-ref}}$$
-
+$$
+\Psi \to \Psi_{\text{self-ref}}
+$$
 through φ-weighted self-reference operations.
 
 **Theorem 57.11** (Self-Reference Necessity):

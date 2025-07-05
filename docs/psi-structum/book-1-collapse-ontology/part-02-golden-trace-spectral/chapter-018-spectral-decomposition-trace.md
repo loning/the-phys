@@ -12,12 +12,14 @@ sidebar_label: "018. Spectral Decomposition"
 From $\psi = \psi(\psi)$, trace products generate new spectral structures.
 
 **Definition 18.1** (Trace Product):
-$$\mathcal{T}_1 \otimes \mathcal{T}_2 = \sum_{i,j} t_{1,i} t_{2,j} |F_i, F_j\rangle$$
-
+$$
+\mathcal{T}_1 \otimes \mathcal{T}_2 = \sum_{i,j} t_{1,i} t_{2,j} |F_i, F_j\rangle
+$$
 **Theorem 18.1** (Product Spectrum):
 The spectrum of a trace product is:
-$$\sigma(\mathcal{T}_1 \otimes \mathcal{T}_2) = \{\lambda_i \mu_j : \lambda_i \in \sigma(\mathcal{T}_1), \mu_j \in \sigma(\mathcal{T}_2)\}$$
-
+$$
+\sigma(\mathcal{T}_1 \otimes \mathcal{T}_2) = \{\lambda_i \mu_j : \lambda_i \in \sigma(\mathcal{T}_1), \mu_j \in \sigma(\mathcal{T}_2)\}
+$$
 *Proof*:
 Eigenvalues multiply under tensor product, creating the full spectral grid. ∎
 
@@ -26,8 +28,9 @@ Eigenvalues multiply under tensor product, creating the full spectral grid. ∎
 Every trace product has canonical spectral form.
 
 **Definition 18.2** (Spectral Decomposition):
-$$\mathcal{T}_1 \otimes \mathcal{T}_2 = \sum_k \lambda_k |v_k\rangle\langle v_k|$$
-
+$$
+\mathcal{T}_1 \otimes \mathcal{T}_2 = \sum_k \lambda_k |v_k\rangle\langle v_k|
+$$
 where $|v_k\rangle$ are eigenvectors.
 
 **Theorem 18.2** (Decomposition Uniqueness):
@@ -42,12 +45,14 @@ Eigenvalues follow golden patterns.
 
 **Definition 18.3** (Golden Spectrum):
 A spectrum is golden if eigenvalues satisfy:
-$$\lambda_{n+1} = \varphi \lambda_n \text{ or } \lambda_n/\varphi$$
-
+$$
+\lambda_{n+1} = \varphi \lambda_n \text{ or } \lambda_n/\varphi
+$$
 **Theorem 18.3** (Spectral Constraint):
 For golden traces:
-$$\prod_i \lambda_i = \varphi^{\pm k}$$
-
+$$
+\prod_i \lambda_i = \varphi^{\pm k}
+$$
 for some integer $k$.
 
 ## 18.4 Tensor Network of Spectra
@@ -55,8 +60,9 @@ for some integer $k$.
 Spectra form complex tensor networks.
 
 **Definition 18.4** (Spectral Tensor):
-$$S^{ij}_{kl} = \sum_{\lambda \in \sigma} \lambda \langle i|\lambda\rangle\langle\lambda|j\rangle \otimes \langle k|\lambda\rangle\langle\lambda|l\rangle$$
-
+$$
+S^{ij}_{kl} = \sum_{\lambda \in \sigma} \lambda \langle i|\lambda\rangle\langle\lambda|j\rangle \otimes \langle k|\lambda\rangle\langle\lambda|l\rangle
+$$
 **Theorem 18.4** (Network Properties):
 1. Contraction preserves golden structure
 2. Loops create resonances at $\varphi^n$
@@ -86,8 +92,9 @@ Spectral decompositions form a category.
 
 **Theorem 18.5** (Functorial Properties):
 The spectral decomposition functor:
-$$\mathcal{S}: \text{Traces} \to \text{Spectra}$$
-
+$$
+\mathcal{S}: \text{Traces} \to \text{Spectra}
+$$
 preserves products and golden structure.
 
 ## 18.6 Non-Linear Spectral Interactions
@@ -95,8 +102,9 @@ preserves products and golden structure.
 Higher-order products create non-linear effects.
 
 **Definition 18.6** (Spectral Mixing):
-$$\mathcal{M}[\lambda_1, ..., \lambda_n] = \sum_{k=1}^n \lambda_k + \sum_{i<j} \frac{\lambda_i \lambda_j}{\varphi} + ...$$
-
+$$
+\mathcal{M}[\lambda_1, ..., \lambda_n] = \sum_{k=1}^n \lambda_k + \sum_{i<j} \frac{\lambda_i \lambda_j}{\varphi} + ...
+$$
 **Theorem 18.6** (Mixing Rules):
 1. Two-spectrum mixing: $\lambda_1 \pm \lambda_2$
 2. Three-spectrum: Includes $\lambda_1\lambda_2/\lambda_3$
@@ -107,14 +115,16 @@ $$\mathcal{M}[\lambda_1, ..., \lambda_n] = \sum_{k=1}^n \lambda_k + \sum_{i<j} \
 Spectral density reveals structure.
 
 **Definition 18.7** (Spectral Measure):
-$$d\mu(\lambda) = \sum_{\lambda_i \in \sigma} w_i \delta(\lambda - \lambda_i)$$
-
+$$
+d\mu(\lambda) = \sum_{\lambda_i \in \sigma} w_i \delta(\lambda - \lambda_i)
+$$
 where $w_i$ are spectral weights.
 
 **Theorem 18.7** (Density Properties):
 The integrated density:
-$$N(\lambda) = \int_0^\lambda d\mu(\lambda') \sim \lambda^{1/\varphi}$$
-
+$$
+N(\lambda) = \int_0^\lambda d\mu(\lambda') \sim \lambda^{1/\varphi}
+$$
 follows a power law with golden exponent.
 
 ## 18.8 Observer-Dependent Field Representations
@@ -122,8 +132,9 @@ follows a power law with golden exponent.
 Field theory emerges from observer-selected spectral representations.
 
 **Definition 18.8** (Observer Field Representation):
-$$\phi(x) = \sum_\lambda a_\lambda e^{i\lambda x} + a_\lambda^\dagger e^{-i\lambda x}$$
-
+$$
+\phi(x) = \sum_\lambda a_\lambda e^{i\lambda x} + a_\lambda^\dagger e^{-i\lambda x}
+$$
 where the spectral basis $\{\lambda\}$ is chosen by the observer's measurement protocol.
 
 **Theorem 18.8** (Observer-Field Properties):
@@ -145,8 +156,9 @@ A spectral feature at $\lambda_p$ appears as a "particle" to an observer if:
 
 **Theorem 18.9** (Observer-Dependent Spectral Scaling):
 For observers with golden tensor structure, identified patterns follow:
-$$\lambda_n = \lambda_0 \varphi^{n/2}$$
-
+$$
+\lambda_n = \lambda_0 \varphi^{n/2}
+$$
 This is a mathematical property of golden-based pattern recognition, not a claim about physical masses.
 
 *Critical Note*: Different observer types (different tensor structures) will identify different patterns as "particles" and assign different scaling relationships.
@@ -156,14 +168,16 @@ This is a mathematical property of golden-based pattern recognition, not a claim
 Mathematical constants emerge from observer analysis of spectral relationships.
 
 **Definition 18.10** (Observer Spectral Ratio):
-$$r_{ij} = \lambda_i/\lambda_j$$
-
+$$
+r_{ij} = \lambda_i/\lambda_j
+$$
 where $\lambda_i, \lambda_j$ are observer-identified spectral features.
 
 **Theorem 18.10** (Observer Mathematical Constants):
 From spectral ratio analysis, observers compute:
-$$\alpha_{\text{obs}} = \frac{2\pi}{\log r_{ij}}$$
-
+$$
+\alpha_{\text{obs}} = \frac{2\pi}{\log r_{ij}}
+$$
 **Critical Framework**:
 1. These are mathematical ratios computed by the observer
 2. Physical interpretation requires observer-system coupling analysis  
@@ -178,8 +192,9 @@ Consciousness requires spectral coherence.
 
 **Definition 18.11** (Coherent Spectrum):
 A spectrum is coherent if phases maintain:
-$$\arg(\lambda_i) - \arg(\lambda_j) = 2\pi n_{ij}/\varphi$$
-
+$$
+\arg(\lambda_i) - \arg(\lambda_j) = 2\pi n_{ij}/\varphi
+$$
 **Theorem 18.11** (Consciousness Emergence):
 Consciousness arises when:
 1. Spectral coherence across $\geq F_7$ modes

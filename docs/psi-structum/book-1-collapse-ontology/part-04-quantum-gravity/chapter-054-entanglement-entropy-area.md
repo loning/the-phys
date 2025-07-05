@@ -12,13 +12,15 @@ sidebar_label: "054. Entanglement Entropy Area"
 From $\psi = \psi(\psi)$, subsystems correlate through shared information.
 
 **Definition 54.1** (Information Correlation):
-$$C_A = -\sum_i p_i \log p_i$$
-
+$$
+C_A = -\sum_i p_i \log p_i
+$$
 where $\{p_i\}$ are probability distributions over region $A$.
 
 **Theorem 54.1** (Information Bound):
-$$0 \leq C_A \leq \log(N_A)$$
-
+$$
+0 \leq C_A \leq \log(N_A)
+$$
 where $N_A$ is the number of possible states in region $A$.
 
 *Proof*:
@@ -31,13 +33,15 @@ Information content maximized by uniform distribution. ∎
 Information correlation scales with boundary area.
 
 **Definition 54.2** (Area Scaling Law):
-$$C_A = \alpha \cdot \text{Area}(\partial A) + \text{corrections}$$
-
+$$
+C_A = \alpha \cdot \text{Area}(\partial A) + \text{corrections}
+$$
 for optimal information configurations.
 
 **Theorem 54.2** (Scaling Coefficient):
-$$\alpha = \frac{\beta}{\varphi^n}$$
-
+$$
+\alpha = \frac{\beta}{\varphi^n}
+$$
 where $n$ is determined by geometric constraints and $\beta$ is dimensionless.
 
 *Observer Framework Note*: Ground state interpretation requires quantum many-body theory framework.
@@ -47,14 +51,16 @@ where $n$ is determined by geometric constraints and $\beta$ is dimensionless.
 Non-optimal configurations exhibit volume scaling.
 
 **Definition 54.3** (Volume Scaling Law):
-$$C_A = \sigma \cdot \text{Vol}(A) + \text{boundary terms}$$
-
+$$
+C_A = \sigma \cdot \text{Vol}(A) + \text{boundary terms}
+$$
 where $\sigma$ is information density parameter.
 
 **Theorem 54.3** (Uniform Distribution):
 Random configurations satisfy:
-$$C_A \approx C_{\text{uniform}} \cdot \frac{|A|}{|A \cup B|}$$
-
+$$
+C_A \approx C_{\text{uniform}} \cdot \frac{|A|}{|A \cup B|}
+$$
 *Observer Framework Note*: Eigenstate thermalization interpretation requires quantum statistical mechanics framework.
 
 ## 54.4 Shared Information Between Regions
@@ -62,8 +68,9 @@ $$C_A \approx C_{\text{uniform}} \cdot \frac{|A|}{|A \cup B|}$$
 Correlated information content between regions.
 
 **Definition 54.4** (Shared Information):
-$$I(A:B) = C_A + C_B - C_{A \cup B}$$
-
+$$
+I(A:B) = C_A + C_B - C_{A \cup B}
+$$
 **Theorem 54.4** (Information Properties):
 1. $I(A:B) \geq 0$ (positivity)
 2. $I(A:B) = 0 \Leftrightarrow$ independent regions
@@ -97,8 +104,9 @@ graph TD
 
 **Theorem 54.5** (Correlation Monotonicity):
 Correlation cannot increase under local operations:
-$$C_A(\mathcal{T}(\text{config})) \leq C_A(\text{config})$$
-
+$$
+C_A(\mathcal{T}(\text{config})) \leq C_A(\text{config})
+$$
 *Observer Framework Note*: LOCC operations interpretation requires quantum mechanics framework.
 
 ## 54.6 Structured Information Representation
@@ -106,14 +114,16 @@ $$C_A(\mathcal{T}(\text{config})) \leq C_A(\text{config})$$
 Area-scaled information has efficient representation.
 
 **Definition 54.6** (Hierarchical Structure):
-$$\text{Config} = \sum_{i_1...i_N} w[A^{[1]}_{i_1} \cdots A^{[N]}_{i_N}] \text{Pattern}_{i_1...i_N}$$
-
+$$
+\text{Config} = \sum_{i_1...i_N} w[A^{[1]}_{i_1} \cdots A^{[N]}_{i_N}] \text{Pattern}_{i_1...i_N}
+$$
 Complexity parameter $\chi = e^{C_A}$.
 
 **Theorem 54.6** (Area Scaling ↔ Hierarchy):
 Area-scaled configurations approximable by hierarchical structures with:
-$$\chi = f(\epsilon) \cdot e^{\alpha L^{d-1}}$$
-
+$$
+\chi = f(\epsilon) \cdot e^{\alpha L^{d-1}}
+$$
 where $f$ and $\alpha$ involve φ-based factors.
 
 *Observer Framework Note*: Matrix Product State interpretation requires quantum many-body theory framework.
@@ -124,14 +134,16 @@ Scale-invariant configurations have universal features.
 
 **Definition 54.7** (Scale-Invariant Information):
 For interval $[0, \ell]$ with scale parameter $s$:
-$$C_A = \frac{\kappa}{\varphi^n} \log\left(\frac{\ell}{s}\right) + \text{const}$$
-
+$$
+C_A = \frac{\kappa}{\varphi^n} \log\left(\frac{\ell}{s}\right) + \text{const}
+$$
 where $\kappa$ and $n$ are geometric parameters.
 
 **Theorem 54.7** (Scale Flow):
 Scale transformation decreases complexity:
-$$\kappa_{\text{fine}} > \kappa_{\text{coarse}}$$
-
+$$
+\kappa_{\text{fine}} > \kappa_{\text{coarse}}
+$$
 *Observer Framework Note*: Conformal field theory interpretation requires CFT framework.
 
 ## 54.8 Information Subadditivity
@@ -139,12 +151,14 @@ $$\kappa_{\text{fine}} > \kappa_{\text{coarse}}$$
 Fundamental inequality for information correlation.
 
 **Definition 54.8** (Subadditivity):
-$$C_{ABC} + C_B \leq C_{AB} + C_{BC}$$
-
+$$
+C_{ABC} + C_B \leq C_{AB} + C_{BC}
+$$
 **Theorem 54.8** (Conditional Independence):
 Equality $\Leftrightarrow$ conditional independence structure:
-$$\text{Config}_{ABC} = \text{Config}_{AB} \circ_B \text{Config}_{BC}$$
-
+$$
+\text{Config}_{ABC} = \text{Config}_{AB} \circ_B \text{Config}_{BC}
+$$
 where $\circ_B$ represents conditional composition.
 
 *Observer Framework Note*: Quantum strong subadditivity interpretation requires quantum mechanics framework.
@@ -154,13 +168,15 @@ where $\circ_B$ represents conditional composition.
 Dimensionless parameters from information correlation scaling.
 
 **Definition 54.9** (Topological Information):
-$$C_A = \alpha|\partial A| - \gamma + \text{corrections}$$
-
+$$
+C_A = \alpha|\partial A| - \gamma + \text{corrections}
+$$
 where $\gamma$ is universal parameter.
 
 **Theorem 54.9** (Geometric Phases):
-$$\gamma = \log\left(\sum_k \varphi^{n_k}\right)^{1/2}$$
-
+$$
+\gamma = \log\left(\sum_k \varphi^{n_k}\right)^{1/2}
+$$
 for appropriate φ-powers $\{n_k\}$.
 
 *Observer Framework Note*: Anyonic interpretation requires topological quantum field theory framework.
@@ -170,14 +186,16 @@ for appropriate φ-powers $\{n_k\}$.
 Effective generator for regional information.
 
 **Definition 54.10** (Information Generator):
-$$\text{Config}_A = \frac{e^{-G_{\text{info}}}}{Z}$$
-
+$$
+\text{Config}_A = \frac{e^{-G_{\text{info}}}}{Z}
+$$
 where $G_{\text{info}}$ generates the information distribution.
 
 **Theorem 54.10** (Geometric Generator):
 For half-space region:
-$$G_{\text{info}} = \lambda \int_{x^1>0} x^1 \rho_{\text{info}}(x) d^{d-1}x$$
-
+$$
+G_{\text{info}} = \lambda \int_{x^1>0} x^1 \rho_{\text{info}}(x) d^{d-1}x
+$$
 where $\lambda$ is dimensionless parameter and $\rho_{\text{info}}$ is information density.
 
 *Observer Framework Note*: Modular Hamiltonian interpretation requires quantum field theory framework.
@@ -187,8 +205,9 @@ where $\lambda$ is dimensionless parameter and $\rho_{\text{info}}$ is informati
 Complex patterns require specific information correlation.
 
 **Definition 54.11** (Integrated Correlation):
-$$\Phi = \min_{\text{partition}} I(A:B)$$
-
+$$
+\Phi = \min_{\text{partition}} I(A:B)
+$$
 Minimal shared information over all partitions.
 
 **Theorem 54.11** (Complexity Criterion):

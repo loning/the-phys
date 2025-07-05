@@ -12,15 +12,17 @@ sidebar_label: "008. Non-Repeating Golden Trace"
 From $\psi = \psi(\psi)$, we derive why repetition destroys stability.
 
 **Definition 8.1** (Repetition): A trace shows repetition if:
-$$\exists n < m : |\mathcal{T}_n\rangle = |\mathcal{T}_m\rangle$$
-
+$$
+\exists n < m : |\mathcal{T}_n\rangle = |\mathcal{T}_m\rangle
+$$
 **Theorem 8.1** (Repetition Instability):
 If a trace repeats, it cannot satisfy $\psi = \psi(\psi)$ stably.
 
 *Proof*:
 If $|\psi_n\rangle = |\psi_m\rangle$ for $n < m$, then applying $\psi$:
-$$|\psi_{n+1}\rangle = \psi(|\psi_n\rangle) = \psi(|\psi_m\rangle) = |\psi_{m+1}\rangle$$
-
+$$
+|\psi_{n+1}\rangle = \psi(|\psi_n\rangle) = \psi(|\psi_m\rangle) = |\psi_{m+1}\rangle
+$$
 This creates a finite cycle. But $\psi = \psi(\psi)$ requires infinite depth of self-reference. Finite cycles collapse to fixed points, losing the recursive structure. ∎
 
 ## 8.2 The Zeckendorf Constraint
@@ -28,8 +30,9 @@ This creates a finite cycle. But $\psi = \psi(\psi)$ requires infinite depth of 
 Non-repetition manifests as the golden base constraint.
 
 **Definition 8.2** (Golden Constraint): In representation:
-$$|\mathcal{T}\rangle = \sum_k b_k |F_k\rangle$$
-
+$$
+|\mathcal{T}\rangle = \sum_k b_k |F_k\rangle
+$$
 we require $b_k b_{k+1} = 0$ (no consecutive 1s).
 
 **Theorem 8.2** (Constraint Necessity):
@@ -37,8 +40,9 @@ The golden constraint is necessary for non-repeating traces.
 
 *Proof*:
 With consecutive 1s allowed, we get:
-$$|F_k\rangle + |F_{k+1}\rangle = |F_{k+2}\rangle$$
-
+$$
+|F_k\rangle + |F_{k+1}\rangle = |F_{k+2}\rangle
+$$
 This creates equivalence classes, leading to repetition in trace evolution. The constraint ensures each configuration is unique. ∎
 
 ## 8.3 Information Maximization
@@ -46,8 +50,9 @@ This creates equivalence classes, leading to repetition in trace evolution. The 
 Non-repetition maximizes information content.
 
 **Definition 8.3** (Trace Entropy):
-$$S[\mathcal{T}] = -\sum_{k: b_k=1} p_k \log p_k$$
-
+$$
+S[\mathcal{T}] = -\sum_{k: b_k=1} p_k \log p_k
+$$
 where $p_k = F_k/\sum_j F_j$.
 
 **Theorem 8.3** (Maximum Entropy):
@@ -55,7 +60,9 @@ Among all traces of length $n$, golden-constrained traces maximize entropy.
 
 *Proof*:
 The number of valid configurations of length $n$ is $F_{n+2}$. This is maximal among all non-repeating constraints, giving:
-$$S_{\max}(n) = \log F_{n+2} \sim n \log \varphi$$
+$$
+S_{\max}(n) = \log F_{n+2} \sim n \log \varphi
+$$
 ∎
 
 ## 8.4 Tensor Analysis of Non-Repetition
@@ -63,13 +70,15 @@ $$S_{\max}(n) = \log F_{n+2} \sim n \log \varphi$$
 Non-repetition has specific tensor structure.
 
 **Definition 8.4** (Non-Repetition Projector):
-$$P^{ij}_{kl} = \delta^i_k \delta^j_l (1 - \delta_{i,j-1})(1 - \delta_{j,i-1})$$
-
+$$
+P^{ij}_{kl} = \delta^i_k \delta^j_l (1 - \delta_{i,j-1})(1 - \delta_{j,i-1})
+$$
 This projects out consecutive indices.
 
 **Theorem 8.4** (Projector Properties):
-$$P^2 = P, \quad \text{Tr}(P) = F_{n+2} \text{ for } n \times n \text{ matrices}$$
-
+$$
+P^2 = P, \quad \text{Tr}(P) = F_{n+2} \text{ for } n \times n \text{ matrices}
+$$
 ## 8.5 Graph Theory of Non-Repeating Paths
 
 Non-repeating traces form specific graph structures.
@@ -119,8 +128,9 @@ Non-repetition leads to physical properties.
 
 **Definition 8.7** (Trace Exclusion):
 No two identical non-repeating traces can coexist in the same configuration space:
-$$|\mathcal{T}_1\rangle = |\mathcal{T}_2\rangle \Rightarrow \text{configuration conflict}$$
-
+$$
+|\mathcal{T}_1\rangle = |\mathcal{T}_2\rangle \Rightarrow \text{configuration conflict}
+$$
 **Theorem 8.7** (Antisymmetry Property):
 Non-repeating traces exhibit antisymmetric combination rules under certain operations.
 
@@ -132,24 +142,28 @@ The golden constraint prevents symmetric overlap patterns, creating natural excl
 Non-repetition affects the spectrum.
 
 **Definition 8.8** (Constrained Spectrum):
-$$\lambda_n^{\text{constrained}} = \varphi^{-f(n)}$$
-
+$$
+\lambda_n^{\text{constrained}} = \varphi^{-f(n)}
+$$
 where $f(n)$ counts valid configurations.
 
 **Theorem 8.8** (Spectral Gaps):
 The spectrum has gaps at:
-$$\Delta_n = \varphi^{-F_n}(1 - \varphi^{-1}) \approx 0.382 \cdot \varphi^{-F_n}$$
-
+$$
+\Delta_n = \varphi^{-F_n}(1 - \varphi^{-1}) \approx 0.382 \cdot \varphi^{-F_n}
+$$
 ## 8.9 Information Flow in Non-Repeating Systems
 
 Information propagates specially in non-repeating systems.
 
 **Definition 8.9** (Information Velocity):
-$$v_I = \lim_{n \to \infty} \frac{I[\mathcal{T}_n] - I[\mathcal{T}_0]}{n}$$
-
+$$
+v_I = \lim_{n \to \infty} \frac{I[\mathcal{T}_n] - I[\mathcal{T}_0]}{n}
+$$
 **Theorem 8.9** (Information Speed Limit):
-$$v_I \leq \log \varphi \approx 0.481$$
-
+$$
+v_I \leq \log \varphi \approx 0.481
+$$
 This is the maximum rate of information growth.
 
 ## 8.10 Quantum States from Non-Repetition
@@ -157,28 +171,32 @@ This is the maximum rate of information growth.
 Non-repeating traces generate specific quantum states.
 
 **Definition 8.10** (Golden Basis):
-$$|n\rangle_{\text{gold}} = |b_k b_{k-1} ... b_1 b_0\rangle$$
-
+$$
+|n\rangle_{\text{gold}} = |b_k b_{k-1} ... b_1 b_0\rangle
+$$
 where the binary string satisfies the golden constraint.
 
 **Theorem 8.10** (Basis Completeness):
 The golden basis spans the physical Hilbert space:
-$$\mathcal{H}_{\text{phys}} = \text{span}\{|n\rangle_{\text{gold}}\}$$
-
+$$
+\mathcal{H}_{\text{phys}} = \text{span}\{|n\rangle_{\text{gold}}\}
+$$
 ## 8.11 Emergence of Physical Laws
 
 Physical laws emerge from non-repetition constraints.
 
 **Theorem 8.11** (Conservation Laws):
 The quantity:
-$$Q = \sum_{k: b_k=1} F_k$$
-
+$$
+Q = \sum_{k: b_k=1} F_k
+$$
 is conserved modulo trace interactions.
 
 **Theorem 8.12** (Trace Constraint Relation):
 For golden-constrained traces, there exists a fundamental trade-off:
-$$\Delta n \cdot \Delta \phi \sim \frac{\pi}{\varphi}$$
-
+$$
+\Delta n \cdot \Delta \phi \sim \frac{\pi}{\varphi}
+$$
 where $n$ represents trace position and $\phi$ represents phase accumulation.
 
 *Note*: This mathematical constraint emerges from the golden base structure but requires additional theoretical development to establish it as a true uncertainty principle with physical significance.

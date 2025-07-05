@@ -12,15 +12,17 @@ sidebar_label: "042. Spectral Functor"
 From $\psi = \psi(\psi)$, path families must map to spectra functorially.
 
 **Definition 42.1** (Spectral Functor):
-$$\mathcal{S}: \text{PathFam} \to \text{Spectra}$$
-
+$$
+\mathcal{S}: \text{PathFam} \to \text{Spectra}
+$$
 mapping:
 - Objects: Path families $\to$ Spectral sets
 - Morphisms: Family maps $\to$ Spectral maps
 
 **Theorem 42.1** (Functoriality):
-$$\mathcal{S}(F_1 \circ F_2) = \mathcal{S}(F_1) \circ \mathcal{S}(F_2)$$
-
+$$
+\mathcal{S}(F_1 \circ F_2) = \mathcal{S}(F_1) \circ \mathcal{S}(F_2)
+$$
 *Proof*:
 Spectral composition preserves path family structure. ∎
 
@@ -29,8 +31,9 @@ Spectral composition preserves path family structure. ∎
 Families group related paths coherently.
 
 **Definition 42.2** (Path Family):
-$$\mathcal{F} = \{P_\alpha : T_i \to T_j\}_{\alpha \in A}$$
-
+$$
+\mathcal{F} = \{P_\alpha : T_i \to T_j\}_{\alpha \in A}
+$$
 where $A$ is an index set with golden structure.
 
 **Theorem 42.2** (Family Properties):
@@ -43,8 +46,9 @@ where $A$ is an index set with golden structure.
 Each family maps to a spectral object.
 
 **Definition 42.3** (Spectral Image):
-$$\mathcal{S}(\mathcal{F}) = \{\lambda \in \mathbb{C} : \sum_{P \in \mathcal{F}} w_P \lambda^{-\ell(P)} = 0\}$$
-
+$$
+\mathcal{S}(\mathcal{F}) = \{\lambda \in \mathbb{C} : \sum_{P \in \mathcal{F}} w_P \lambda^{-\ell(P)} = 0\}
+$$
 **Theorem 42.3** (Spectral Properties):
 The spectral image has:
 1. Discrete part: Isolated eigenvalues
@@ -56,15 +60,18 @@ The spectral image has:
 The spectral functor relates to the ζ-function.
 
 **Definition 42.4** (ζ-Transform):
-$$\eta: \mathcal{S} \Rightarrow \zeta$$
-
+$$
+\eta: \mathcal{S} \Rightarrow \zeta
+$$
 given by:
-$$\eta_\mathcal{F}(s) = \sum_{P \in \mathcal{F}} w_P n_P^{-s}$$
-
+$$
+\eta_\mathcal{F}(s) = \sum_{P \in \mathcal{F}} w_P n_P^{-s}
+$$
 **Theorem 42.4** (Naturality):
 The diagram commutes:
-$$\zeta(f(\mathcal{F})) = f^*(\zeta(\mathcal{F}))$$
-
+$$
+\zeta(f(\mathcal{F})) = f^*(\zeta(\mathcal{F}))
+$$
 for family morphisms $f$.
 
 ## 42.5 Adjoint Functors
@@ -84,8 +91,9 @@ graph TD
 ```
 
 **Definition 42.5** (Adjunction):
-$$L \dashv \mathcal{S} \dashv R$$
-
+$$
+L \dashv \mathcal{S} \dashv R
+$$
 where:
 - $L$: Free spectrum on paths
 - $R$: Path reconstruction from spectrum
@@ -99,8 +107,9 @@ where:
 The spectral functor preserves monoidal structure.
 
 **Definition 42.6** (Monoidal Preservation):
-$$\mathcal{S}(\mathcal{F}_1 \otimes \mathcal{F}_2) \cong \mathcal{S}(\mathcal{F}_1) \otimes \mathcal{S}(\mathcal{F}_2)$$
-
+$$
+\mathcal{S}(\mathcal{F}_1 \otimes \mathcal{F}_2) \cong \mathcal{S}(\mathcal{F}_1) \otimes \mathcal{S}(\mathcal{F}_2)
+$$
 **Theorem 42.6** (Coherence):
 The isomorphism satisfies:
 - Associativity pentagon
@@ -112,11 +121,13 @@ The isomorphism satisfies:
 Higher spectral invariants from derived functors.
 
 **Definition 42.7** (Derived Spectral Functor):
-$$R^n\mathcal{S}(\mathcal{F}) = H^n(\text{Spectral complex of } \mathcal{F})$$
-
+$$
+R^n\mathcal{S}(\mathcal{F}) = H^n(\text{Spectral complex of } \mathcal{F})
+$$
 **Theorem 42.7** (Spectral Sequence):
-$$E_2^{p,q} = H^p(R^q\mathcal{S}) \Rightarrow H^{p+q}(\mathcal{S})$$
-
+$$
+E_2^{p,q} = H^p(R^q\mathcal{S}) \Rightarrow H^{p+q}(\mathcal{S})
+$$
 This computes higher spectral invariants.
 
 ## 42.8 Kan Extensions
@@ -124,8 +135,9 @@ This computes higher spectral invariants.
 Extending partial spectral data.
 
 **Definition 42.8** (Left Kan Extension):
-$$\text{Lan}_J \mathcal{S} = \text{colim}_{(j,f)} \mathcal{S}(j)$$
-
+$$
+\text{Lan}_J \mathcal{S} = \text{colim}_{(j,f)} \mathcal{S}(j)
+$$
 **Theorem 42.8** (Universal Property):
 Any functor factoring through $J$ factors uniquely through $\text{Lan}_J \mathcal{S}$.
 
@@ -134,14 +146,16 @@ Any functor factoring through $J$ factors uniquely through $\text{Lan}_J \mathca
 Functorial invariants capture structural properties.
 
 **Definition 42.9** (Functorial Invariant):
-$$I_\mathcal{S} = \text{Nat}(\mathcal{S}, \mathcal{S})$$
-
+$$
+I_\mathcal{S} = \text{Nat}(\mathcal{S}, \mathcal{S})
+$$
 Natural transformations from $\mathcal{S}$ to itself.
 
 **Theorem 42.9** (Invariant Ratios):
 For spectral functors $\mathcal{S}_1, \mathcal{S}_2$:
-$$\rho(\mathcal{S}_1, \mathcal{S}_2) = \frac{\text{rank}(\mathcal{S}_1)}{\text{rank}(\mathcal{S}_2)} \cdot \varphi^{-k}$$
-
+$$
+\rho(\mathcal{S}_1, \mathcal{S}_2) = \frac{\text{rank}(\mathcal{S}_1)}{\text{rank}(\mathcal{S}_2)} \cdot \varphi^{-k}
+$$
 for appropriate $k$.
 
 *Observer Framework Note*: Physical constant interpretation requires additional framework.
@@ -151,12 +165,14 @@ for appropriate $k$.
 Discretization as a functor.
 
 **Definition 42.10** (Discretization Functor):
-$$D: \text{ContinuousSpectra} \to \text{DiscreteSpectra}$$
-
+$$
+D: \text{ContinuousSpectra} \to \text{DiscreteSpectra}
+$$
 **Theorem 42.10** (Discretization):
 For continuous spectrum $\sigma_c$:
-$$D(\sigma_c) = \{\lambda_n : \lambda_n \in \sigma_c \cap \varphi^{-\mathbb{N}}\}$$
-
+$$
+D(\sigma_c) = \{\lambda_n : \lambda_n \in \sigma_c \cap \varphi^{-\mathbb{N}}\}
+$$
 Extracts discrete golden-spaced points.
 
 *Observer Framework Note*: Quantum interpretation requires additional framework.
@@ -166,8 +182,9 @@ Extracts discrete golden-spaced points.
 Self-referential structure as endofunctor.
 
 **Definition 42.11** (Self-Referential Functor):
-$$\mathcal{R}: \text{Spectra} \to \text{Spectra}$$
-
+$$
+\mathcal{R}: \text{Spectra} \to \text{Spectra}
+$$
 with:
 1. Idempotent property: $\mathcal{R} \circ \mathcal{R} \simeq \mathcal{R}$
 2. Structure preservation
@@ -175,8 +192,9 @@ with:
 
 **Theorem 42.11** (Fixed Points):
 The functor has fixed points:
-$$\mathcal{R}(\Sigma_*) = \Sigma_*$$
-
+$$
+\mathcal{R}(\Sigma_*) = \Sigma_*
+$$
 for certain spectra $\Sigma_*$.
 
 *Observer Framework Note*: Consciousness interpretation requires additional framework.

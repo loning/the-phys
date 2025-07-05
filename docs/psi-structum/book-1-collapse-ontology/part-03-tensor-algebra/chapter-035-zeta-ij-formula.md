@@ -12,8 +12,9 @@ sidebar_label: "035. ζ Function Formula"
 From $\psi = \psi(\psi)$, we derive the explicit ζ-function.
 
 **Definition 35.1** (Complete Formula):
-$$\zeta^{ij}(s) = \sum_{P: i \to j} T^{ij}_P \left[n_F[P]\right]^{-s}$$
-
+$$
+\zeta^{ij}(s) = \sum_{P: i \to j} T^{ij}_P \left[n_F[P]\right]^{-s}
+$$
 where:
 - $P$ runs over all paths from state $i$ to state $j$
 - $T^{ij}_P$ is the tensor weight of path $P$
@@ -30,8 +31,9 @@ Path enumeration in golden base is unique, weights are determined by tensor stru
 The tensor weights encode path amplitudes.
 
 **Definition 35.2** (Path Tensor):
-$$T^{ij}_P = \prod_{(a,b) \in P} t^{ab}$$
-
+$$
+T^{ij}_P = \prod_{(a,b) \in P} t^{ab}
+$$
 where $t^{ab}$ are elementary transition tensors.
 
 **Theorem 35.2** (Weight Properties):
@@ -45,8 +47,9 @@ The length function respects golden structure.
 
 **Definition 35.3** (Fibonacci Length):
 For path $P = \{s_0 \to s_1 \to ... \to s_n\}$:
-$$n_F[P] = \sum_{k=0}^{n-1} F_{|s_{k+1} - s_k|}$$
-
+$$
+n_F[P] = \sum_{k=0}^{n-1} F_{|s_{k+1} - s_k|}
+$$
 **Theorem 35.3** (Length Properties):
 1. Additivity: $n_F[P_1 \circ P_2] = n_F[P_1] + n_F[P_2]$
 2. Minimum: $n_F[P] \geq F_{|j-i|}$
@@ -57,13 +60,15 @@ $$n_F[P] = \sum_{k=0}^{n-1} F_{|s_{k+1} - s_k|}$$
 The ζ-function has explicit series form.
 
 **Definition 35.4** (Series Form):
-$$\zeta^{ij}(s) = \sum_{n=1}^\infty a_n^{ij} n^{-s}$$
-
+$$
+\zeta^{ij}(s) = \sum_{n=1}^\infty a_n^{ij} n^{-s}
+$$
 where $a_n^{ij} = \sum_{P: n_F[P]=n} T^{ij}_P$.
 
 **Theorem 35.4** (Coefficient Growth):
-$$a_n^{ij} \sim C_{ij} \varphi^n n^{-3/2}$$
-
+$$
+a_n^{ij} \sim C_{ij} \varphi^n n^{-3/2}
+$$
 as $n \to \infty$.
 
 ## 35.5 Matrix Form
@@ -90,12 +95,13 @@ graph TD
 ```
 
 **Definition 35.5** (ζ-Matrix):
-$$\mathbf{\zeta}(s) = \begin{pmatrix}
+$$
+\mathbf{\zeta}(s) = \begin{pmatrix}
 \zeta^{11}(s) & \zeta^{12}(s) & \cdots \\
 \zeta^{21}(s) & \zeta^{22}(s) & \cdots \\
 \vdots & \vdots & \ddots
-\end{pmatrix}$$
-
+\end{pmatrix}
+$$
 **Theorem 35.5** (Matrix Properties):
 1. Trace: $\text{Tr}[\mathbf{\zeta}(s)] = \sum_{\text{closed}} T_P n_F[P]^{-s}$
 2. Determinant: Encodes spectral structure
@@ -108,8 +114,9 @@ $$\mathbf{\zeta}(s) = \begin{pmatrix}
 The formula satisfies recursion relations.
 
 **Definition 35.6** (Recursion):
-$$\zeta^{ij}(s) = \sum_k t^{ik} F_k^{-s} \zeta^{kj}(s)$$
-
+$$
+\zeta^{ij}(s) = \sum_k t^{ik} F_k^{-s} \zeta^{kj}(s)
+$$
 **Theorem 35.6** (Fixed Point):
 Self-consistent solution exists and is unique for $\text{Re}(s) > 1/\varphi$.
 
@@ -119,12 +126,14 @@ The formula reveals poles and zeros.
 
 **Definition 35.7** (Pole Structure):
 Poles occur when:
-$$\sum_P T^{ii}_P n_F[P]^{-s_0} = \infty$$
-
+$$
+\sum_P T^{ii}_P n_F[P]^{-s_0} = \infty
+$$
 **Theorem 35.7** (Pole Locations):
 Simple poles at:
-$$s_n = \frac{1}{\varphi} - n$$
-
+$$
+s_n = \frac{1}{\varphi} - n
+$$
 for $n = 0, 1, 2, ...$
 
 ## 35.8 Special Values
@@ -132,8 +141,9 @@ for $n = 0, 1, 2, ...$
 Special values at integers emerge from path structure.
 
 **Definition 35.8** (Integer Values):
-$$\zeta^{ij}(n) = \sum_P T^{ij}_P \left[n_F[P]\right]^{-n}$$
-
+$$
+\zeta^{ij}(n) = \sum_P T^{ij}_P \left[n_F[P]\right]^{-n}
+$$
 **Theorem 35.8** (Value Relations):
 Special values exhibit patterns:
 1. $\zeta^{ii}(n+1)/\zeta^{ii}(n) = \varphi^{-1} + O(n^{-1})$
@@ -152,8 +162,9 @@ Each term has mathematical significance.
 - $s$: Complex parameter
 
 **Theorem 35.9** (Trace Function):
-$$\mathcal{T}(s) = \text{Tr}[\mathbf{\zeta}(s)]$$
-
+$$
+\mathcal{T}(s) = \text{Tr}[\mathbf{\zeta}(s)]
+$$
 encodes closed path information.
 
 *Observer Framework Note*: Physical interpretation as partition function requires quantum mechanics from observer coupling.
@@ -163,24 +174,28 @@ encodes closed path information.
 Efficient computation strategies.
 
 **Definition 35.10** (Truncation):
-$$\zeta^{ij}_N(s) = \sum_{P: n_F[P] \leq N} T^{ij}_P \left[n_F[P]\right]^{-s}$$
-
+$$
+\zeta^{ij}_N(s) = \sum_{P: n_F[P] \leq N} T^{ij}_P \left[n_F[P]\right]^{-s}
+$$
 **Theorem 35.10** (Error Bound):
-$$|\zeta^{ij}(s) - \zeta^{ij}_N(s)| \leq C \cdot N^{1-\text{Re}(s)} \varphi^{-N}$$
-
+$$
+|\zeta^{ij}(s) - \zeta^{ij}_N(s)| \leq C \cdot N^{1-\text{Re}(s)} \varphi^{-N}
+$$
 ## 35.11 Residue Structure
 
 Residues at poles encode structural information.
 
 **Definition 35.11** (Residue Calculation):
-$$R^{ij}_{s_0} = \lim_{s \to s_0} (s - s_0) \zeta^{ij}(s)$$
-
+$$
+R^{ij}_{s_0} = \lim_{s \to s_0} (s - s_0) \zeta^{ij}(s)
+$$
 at poles $s_0 = 1/\varphi - n$.
 
 **Theorem 35.11** (Residue Relations):
 Residues satisfy:
-$$\frac{R^{ij}_{s_0}}{R^{kl}_{s_0}} = \varphi^{f(i,j,k,l)}$$
-
+$$
+\frac{R^{ij}_{s_0}}{R^{kl}_{s_0}} = \varphi^{f(i,j,k,l)}
+$$
 where $f$ depends on path connectivity.
 
 *Observer Framework Note*: Physical constants emerge only through observer-system coupling, not from residues alone.

@@ -96,21 +96,26 @@ This book contains 64 chapters organized into four parts:
 ## Core Mathematical Framework
 
 ### The Fundamental Identity
-$$\psi = \psi(\psi)$$
-
+$$
+\psi = \psi(\psi)
+$$
 ### Golden Base Vector Representation
 Every state vector $|\psi\rangle$ in our framework:
-$$|\psi\rangle = \sum_\{k=0\}^\{\infty\} b_k |F_k\rangle$$
+$$
+|\psi\rangle = \sum_\{k=0\}^\{\infty\} b_k |F_k\rangle
+$$
 where $b_k \in \{0,1\}$ with constraint $b_k b_\{k+1\} = 0$ (Zeckendorf representation).
 
 ### The Collapse Tensor ζ-Function
-$$\zeta^\{ij\}_\{\text\{tensor\}\}(s) = \sum_\{P: i \to j\} T^\{ij\}_P \left[n_\{F\}[P]\right]^\{-s\}$$
-
+$$
+\zeta^\{ij\}_\{\text\{tensor\}\}(s) = \sum_\{P: i \to j\} T^\{ij\}_P \left[n_\{F\}[P]\right]^\{-s\}
+$$
 where all quantities are tensor operations on golden base vectors.
 
 ### The Observer Equation
-$$\Psi_\{\text\{obs\}\}^\{ii\} = \zeta^\{ii\}_\{\text\{self\}\}(\zeta^\{ii\}_\{\text\{self\}\}(s))$$
-
+$$
+\Psi_\{\text\{obs\}\}^\{ii\} = \zeta^\{ii\}_\{\text\{self\}\}(\zeta^\{ii\}_\{\text\{self\}\}(s))
+$$
 ## Reading Guide
 
 Each chapter builds rigorously from first principles, deriving all structures from the fundamental recursion $\psi = \psi(\psi)$. Physical constants emerge as limits and colimits of collapse tensor operations.

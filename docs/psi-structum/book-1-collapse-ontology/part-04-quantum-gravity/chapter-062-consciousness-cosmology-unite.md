@@ -12,14 +12,16 @@ sidebar_label: "062. Consciousness-Cosmology Unity"
 From $\psi = \psi(\psi)$, consciousness and cosmos are one.
 
 **Definition 62.1** (Cosmic Consciousness):
-$$\Psi_{\text{universe}} = \sum_i |\text{cosmos}_i\rangle \otimes |\text{consciousness}_i\rangle$$
-
+$$
+\Psi_{\text{universe}} = \sum_i |\text{cosmos}_i\rangle \otimes |\text{consciousness}_i\rangle
+$$
 Entangled state of universe and awareness.
 
 **Theorem 62.1** (Necessity):
 Consciousness is not accidental but necessary:
-$$P(\text{consciousness} | \text{universe exists}) = 1$$
-
+$$
+P(\text{consciousness} | \text{universe exists}) = 1
+$$
 *Proof*:
 Self-referential universe must become self-aware. ∎
 
@@ -36,8 +38,9 @@ Fine-tuning is self-tuning.
 
 **Theorem 62.2** (Self-Selection):
 Observable universes satisfy:
-$$\mathcal{L}[\{c_i\}] \subset \mathcal{L}_{\text{conscious}}$$
-
+$$
+\mathcal{L}[\{c_i\}] \subset \mathcal{L}_{\text{conscious}}
+$$
 Only conscious-permitting laws observed.
 
 ## 62.3 Holographic Consciousness
@@ -45,8 +48,9 @@ Only conscious-permitting laws observed.
 Mind as boundary of inner cosmos.
 
 **Definition 62.3** (Mind-Boundary):
-$$S_{\text{mind}} = \frac{A_{\text{neural}}}{4\ell_{\text{neural}}^2}$$
-
+$$
+S_{\text{mind}} = \frac{A_{\text{neural}}}{4\ell_{\text{neural}}^2}
+$$
 Information capacity from surface area.
 
 **Theorem 62.3** (Inner Universe):
@@ -62,8 +66,9 @@ Consciousness implements AdS/CFT:
 Thoughts undergo cosmic selection.
 
 **Definition 62.4** (Idea Evolution):
-$$|\text{idea}(t)\rangle = \sum_i a_i(t) |\text{variant}_i\rangle$$
-
+$$
+|\text{idea}(t)\rangle = \sum_i a_i(t) |\text{variant}_i\rangle
+$$
 Superposition of conceptual variants.
 
 **Theorem 62.4** (Survival):
@@ -103,20 +108,23 @@ graph TD
 
 **Theorem 62.5** (Fixed Point):
 Consciousness is cosmic fixed point:
-$$\mathcal{F}(\text{conscious universe}) = \text{conscious universe}$$
-
+$$
+\mathcal{F}(\text{conscious universe}) = \text{conscious universe}
+$$
 ## 62.6 Information Integration Cosmology
 
 Universe as integrated information.
 
 **Definition 62.6** (Cosmic Φ):
-$$\Phi_{\text{universe}} = \sum_{\text{subsystems}} \Phi_i - \sum_{\text{partitions}} I_{ij}$$
-
+$$
+\Phi_{\text{universe}} = \sum_{\text{subsystems}} \Phi_i - \sum_{\text{partitions}} I_{ij}
+$$
 Total integrated information.
 
 **Theorem 62.6** (Growth Law):
-$$\frac{d\Phi}{dt} > 0$$
-
+$$
+\frac{d\Phi}{dt} > 0
+$$
 until heat death.
 
 ## 62.7 Time and Mind
@@ -124,14 +132,16 @@ until heat death.
 Subjective time creates cosmic time.
 
 **Definition 62.7** (Temporal Binding):
-$$\Delta t_{\text{experience}} \approx \frac{\hbar}{\Delta E_{\text{neural}}}$$
-
+$$
+\Delta t_{\text{experience}} \approx \frac{\hbar}{\Delta E_{\text{neural}}}
+$$
 Consciousness creates temporal moments.
 
 **Theorem 62.7** (Now Creation):
 The present moment exists because:
-$$|\text{now}\rangle = \int_{-\epsilon}^{+\epsilon} |t\rangle dt$$
-
+$$
+|\text{now}\rangle = \int_{-\epsilon}^{+\epsilon} |t\rangle dt
+$$
 Consciousness integrates time slices.
 
 ## 62.8 Dark Matter of Mind
@@ -139,8 +149,9 @@ Consciousness integrates time slices.
 Unconscious as uncollapsed mental states.
 
 **Definition 62.8** (Mental Dark Matter):
-$$|\psi_{\text{unconscious}}\rangle = \sum_i \alpha_i |\text{potential thought}_i\rangle$$
-
+$$
+|\psi_{\text{unconscious}}\rangle = \sum_i \alpha_i |\text{potential thought}_i\rangle
+$$
 Superposition of unthought thoughts.
 
 **Theorem 62.8** (Influence):
@@ -166,28 +177,32 @@ Physical constants enable awareness.
 
 **Theorem 62.9** (Optimization):
 Constants optimized for:
-$$\max(\Phi \cdot t_{\text{stable}} \cdot N_{\text{conscious}})$$
-
+$$
+\max(\Phi \cdot t_{\text{stable}} \cdot N_{\text{conscious}})
+$$
 ## 62.10 Participatory Universe
 
 Observation creates reality.
 
 **Definition 62.10** (Wheeler's U):
-$$\text{Universe} \xrightarrow{\text{evolution}} \text{Observer} \xrightarrow{\text{observation}} \text{Universe}$$
-
+$$
+\text{Universe} \xrightarrow{\text{evolution}} \text{Observer} \xrightarrow{\text{observation}} \text{Universe}
+$$
 Self-creating loop.
 
 **Theorem 62.10** (Retrocausation):
 Present observations affect past:
-$$|\psi_{\text{past}}\rangle = \sum_i \langle\text{now}|\text{future}_i\rangle |\text{history}_i\rangle$$
-
+$$
+|\psi_{\text{past}}\rangle = \sum_i \langle\text{now}|\text{future}_i\rangle |\text{history}_i\rangle
+$$
 ## 62.11 Ultimate Unity
 
 All distinctions dissolve.
 
 **Definition 62.11** (Unified Field):
-$$\Psi = \Psi(\Psi) = \text{Cosmos} = \text{Consciousness} = \text{Collapse} = \text{Creation}$$
-
+$$
+\Psi = \Psi(\Psi) = \text{Cosmos} = \text{Consciousness} = \text{Collapse} = \text{Creation}
+$$
 **Theorem 62.11** (Identity):
 
 - Observer = Observed

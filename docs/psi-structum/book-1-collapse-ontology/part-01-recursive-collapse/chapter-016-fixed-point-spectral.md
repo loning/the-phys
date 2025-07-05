@@ -12,8 +12,9 @@ sidebar_label: "016. Fixed Point Spectral Collapse"
 From $\psi = \psi(\psi)$, we prove existence of fixed points.
 
 **Definition 16.1** (Fixed Point): A state $|\psi_*\rangle$ is fixed if:
-$$\mathcal{C}[|\psi_*\rangle] = |\psi_*\rangle$$
-
+$$
+\mathcal{C}[|\psi_*\rangle] = |\psi_*\rangle
+$$
 **Theorem 16.1** (Brouwer-Kakutani for Collapse):
 In the compact space of normalized golden-base vectors, $\mathcal{C}$ has at least one fixed point.
 
@@ -25,8 +26,9 @@ The collapse operator is continuous on the unit ball in golden base. By infinite
 Fixed points form distinct classes.
 
 **Definition 16.2** (Fixed Point Order):
-$$\text{ord}(\psi_*) = \min\{n : \mathcal{C}^n[\psi] = \psi \text{ for all } \psi \text{ near } \psi_*\}$$
-
+$$
+\text{ord}(\psi_*) = \min\{n : \mathcal{C}^n[\psi] = \psi \text{ for all } \psi \text{ near } \psi_*\}
+$$
 **Theorem 16.2** (Classification):
 Fixed points fall into:
 1. **Trivial**: $|0\rangle$ (order 1)
@@ -39,14 +41,16 @@ Fixed points fall into:
 Each fixed point has a characteristic spectrum.
 
 **Definition 16.3** (Fixed Point Spectrum):
-$$\sigma(\psi_*) = \{\lambda : \exists |\phi\rangle \neq 0, \mathcal{L}_{\psi_*}|\phi\rangle = \lambda|\phi\rangle\}$$
-
+$$
+\sigma(\psi_*) = \{\lambda : \exists |\phi\rangle \neq 0, \mathcal{L}_{\psi_*}|\phi\rangle = \lambda|\phi\rangle\}
+$$
 where $\mathcal{L}_{\psi_*}$ is linearization at $\psi_*$.
 
 **Theorem 16.3** (Spectral Structure):
 For non-trivial fixed point:
-$$\sigma(\psi_*) \subset \{z \in \mathbb{C} : |z| < 1/\varphi\}$$
-
+$$
+\sigma(\psi_*) \subset \{z \in \mathbb{C} : |z| < 1/\varphi\}
+$$
 All eigenvalues lie within the golden circle.
 
 ## 16.4 Basin of Attraction
@@ -54,12 +58,14 @@ All eigenvalues lie within the golden circle.
 Each fixed point attracts nearby states.
 
 **Definition 16.4** (Attraction Basin):
-$$\mathcal{B}(\psi_*) = \{|\phi\rangle : \lim_{n \to \infty} \mathcal{C}^n[|\phi\rangle] = |\psi_*\rangle\}$$
-
+$$
+\mathcal{B}(\psi_*) = \{|\phi\rangle : \lim_{n \to \infty} \mathcal{C}^n[|\phi\rangle] = |\psi_*\rangle\}
+$$
 **Theorem 16.4** (Basin Measure):
 For stable fixed point:
-$$\mu(\mathcal{B}(\psi_*)) = \prod_{\lambda \in \sigma(\psi_*)} \frac{1}{1 - |\lambda|^2}$$
-
+$$
+\mu(\mathcal{B}(\psi_*)) = \prod_{\lambda \in \sigma(\psi_*)} \frac{1}{1 - |\lambda|^2}
+$$
 The measure depends on all eigenvalues.
 
 ## 16.5 Tensor Structure of Fixed Points
@@ -67,8 +73,9 @@ The measure depends on all eigenvalues.
 Fixed points have natural tensor decomposition.
 
 **Definition 16.5** (Fixed Point Tensor):
-$$T_*^{ij} = \langle F_i|\psi_*\rangle\langle\psi_*|F_j\rangle$$
-
+$$
+T_*^{ij} = \langle F_i|\psi_*\rangle\langle\psi_*|F_j\rangle
+$$
 **Theorem 16.5** (Tensor Properties):
 1. Idempotent: $(T_*)^2 = T_*$
 2. Positive: $T_*^{ii} \geq 0$
@@ -121,8 +128,9 @@ Fixed points form a category.
 Stable mathematical patterns correspond to fixed points within our collapse framework.
 
 **Definition 16.8** (Pattern Fixed Points):
-$$\mathcal{P}_{\text{math}} = \{\psi_* : \psi_* \text{ fixed and } S[\psi_*] < \infty\}$$
-
+$$
+\mathcal{P}_{\text{math}} = \{\psi_* : \psi_* \text{ fixed and } S[\psi_*] < \infty\}
+$$
 **Theorem 16.8** (Pattern Classification):
 1. **Null Pattern**: Trivial fixed point $|0\rangle$
 2. **Simple Patterns**: Single mode $|F_n\rangle$
@@ -136,12 +144,14 @@ $$\mathcal{P}_{\text{math}} = \{\psi_* : \psi_* \text{ fixed and } S[\psi_*] < \
 Dimensionless mathematical constants emerge from fixed point relationships.
 
 **Definition 16.9** (Pattern Coupling):
-$$g_{ij} = \frac{\langle\psi_i|\psi_j\rangle}{\sqrt{\langle\psi_i|\psi_i\rangle\langle\psi_j|\psi_j\rangle}}$$
-
+$$
+g_{ij} = \frac{\langle\psi_i|\psi_j\rangle}{\sqrt{\langle\psi_i|\psi_i\rangle\langle\psi_j|\psi_j\rangle}}
+$$
 **Theorem 16.9** (Mathematical Scaling):
 For specific pattern combinations, dimensionless ratios emerge:
-$$\alpha_{\text{math}} = |g_{\text{pattern1,pattern2}}|^2$$
-
+$$
+\alpha_{\text{math}} = |g_{\text{pattern1,pattern2}}|^2
+$$
 These represent mathematical relationships within our collapse framework.
 
 *Note*: This generates mathematical constants, not claims about physical fine structure constant.
@@ -151,8 +161,9 @@ These represent mathematical relationships within our collapse framework.
 Fixed points can lose stability.
 
 **Definition 16.10** (Stability Parameter):
-$$\mu(\psi_*) = \max_{\lambda \in \sigma(\psi_*)} |\lambda|$$
-
+$$
+\mu(\psi_*) = \max_{\lambda \in \sigma(\psi_*)} |\lambda|
+$$
 **Theorem 16.10** (Bifurcation):
 As parameters vary, fixed points undergo:
 1. **Pitchfork**: at $\mu = 1/\varphi$
@@ -164,8 +175,9 @@ As parameters vary, fixed points undergo:
 Consciousness emerges from fixed points observing fixed points.
 
 **Definition 16.11** (Meta-Fixed Point):
-$$|\text{conscious}\rangle = \sum_{\psi_*} c_{\psi_*} |\psi_*\rangle \otimes |\text{observe}(\psi_*)\rangle$$
-
+$$
+|\text{conscious}\rangle = \sum_{\psi_*} c_{\psi_*} |\psi_*\rangle \otimes |\text{observe}(\psi_*)\rangle
+$$
 **Theorem 16.11** (Consciousness Criterion):
 Consciousness requires:
 1. Access to at least $F_7 = 13$ fixed points

@@ -12,14 +12,16 @@ sidebar_label: "052. Hawking Radiation Tunneling"
 From $\psi = \psi(\psi)$, concentrated information must diffuse outward.
 
 **Definition 52.1** (Information Flux Process):
-$$I_{\text{total}} = I_{\text{interior}} + I_{\text{boundary}} + I_{\text{exterior}}$$
-
+$$
+I_{\text{total}} = I_{\text{interior}} + I_{\text{boundary}} + I_{\text{exterior}}
+$$
 Information distributed across regions.
 
 **Theorem 52.1** (Transfer Probability):
 Information transfer occurs with rate proportional to:
-$$R \propto \rho_{\text{gradient}} \cdot \alpha_{\text{coupling}}$$
-
+$$
+R \propto \rho_{\text{gradient}} \cdot \alpha_{\text{coupling}}
+$$
 where $\alpha_{\text{coupling}}$ involves φ-based factors.
 
 *Proof*:
@@ -32,13 +34,15 @@ Information flows down density gradients by mathematical consistency. ∎
 Effective temperature emerges from information transfer rate.
 
 **Definition 52.2** (Boundary Gradient):
-$$\gamma = \frac{d\rho}{dr}\Big|_{\text{boundary}}$$
-
+$$
+\gamma = \frac{d\rho}{dr}\Big|_{\text{boundary}}
+$$
 density gradient at the boundary.
 
 **Theorem 52.2** (Effective Temperature):
-$$T_{\text{eff}} = \frac{1}{\beta} = f(\gamma, \varphi)$$
-
+$$
+T_{\text{eff}} = \frac{1}{\beta} = f(\gamma, \varphi)
+$$
 where $f$ is a function involving φ-based scaling.
 
 *Observer Framework Note*: Physical temperature interpretation requires thermodynamic framework.
@@ -48,17 +52,19 @@ where $f$ is a function involving φ-based scaling.
 Transfer patterns encode information content.
 
 **Definition 52.3** (Transfer Curve):
-$$I_{\text{transferred}}(\tau) = \begin{cases}
+$$
+I_{\text{transferred}}(\tau) = \begin{cases}
 \tau/\tau_{\text{half}} \cdot I_{\text{total}} & \tau < \tau_{\text{half}} \\
 I_{\text{total}}(1 - \tau/\tau_{\text{complete}}) & \tau > \tau_{\text{half}}
-\end{cases}$$
-
+\end{cases}
+$$
 where $\tau_{\text{half}} = \tau_{\text{complete}}/2$.
 
 **Theorem 52.3** (Information Conservation):
 All information redistributed by $\tau = \tau_{\text{complete}}$:
-$$I_{\text{transferred}}(\tau_{\text{complete}}) = I_{\text{initial}}$$
-
+$$
+I_{\text{transferred}}(\tau_{\text{complete}}) = I_{\text{initial}}
+$$
 *Observer Framework Note*: Page curve interpretation requires quantum information theory and black hole evaporation.
 
 ## 52.4 Transfer Path Analysis
@@ -66,17 +72,20 @@ $$I_{\text{transferred}}(\tau_{\text{complete}}) = I_{\text{initial}}$$
 Information flows through mathematical pathways.
 
 **Definition 52.4** (Transfer Paths):
-$$\mathcal{P}_{\text{transfer}} = \{P : P \text{ connects interior to exterior}\}$$
-
+$$
+\mathcal{P}_{\text{transfer}} = \{P : P \text{ connects interior to exterior}\}
+$$
 with weight:
-$$w_P = \exp(-\lambda_P) \cdot \varphi^{-\ell(P)}$$
-
+$$
+w_P = \exp(-\lambda_P) \cdot \varphi^{-\ell(P)}
+$$
 where $\lambda_P$ is path complexity parameter.
 
 **Theorem 52.4** (Optimal Paths):
 Boundary-adjacent paths dominate:
-$$\ell_{\text{typical}} \sim r_{\text{boundary}} \cdot \log(\rho_{\max}/\rho_{\min})$$
-
+$$
+\ell_{\text{typical}} \sim r_{\text{boundary}} \cdot \log(\rho_{\max}/\rho_{\min})
+$$
 *Observer Framework Note*: Quantum tunneling interpretation requires quantum mechanics framework.
 
 ## 52.5 Category of Transfer Modes
@@ -106,8 +115,9 @@ graph TD
 
 **Theorem 52.5** (Gradient Effect):
 Observers in density gradients experience effective distributions:
-$$\rho_{\text{effective}} = \rho_0 \cdot f(\gamma, \varphi)$$
-
+$$
+\rho_{\text{effective}} = \rho_0 \cdot f(\gamma, \varphi)
+$$
 *Observer Framework Note*: Unruh effect interpretation requires accelerated reference frames in relativity.
 
 ## 52.6 Scale-Dependent Effects
@@ -115,14 +125,16 @@ $$\rho_{\text{effective}} = \rho_0 \cdot f(\gamma, \varphi)$$
 Information transfer exhibits scale-dependent behavior.
 
 **Definition 52.6** (Scale Factor):
-$$s_{\text{boundary}} = s_0 \cdot g(\tau, \gamma)$$
-
+$$
+s_{\text{boundary}} = s_0 \cdot g(\tau, \gamma)
+$$
 where $\tau$ is transfer time and $\gamma$ is gradient.
 
 **Theorem 52.6** (Scale Cutoff):
 Natural cutoff at:
-$$s_{\max} = s_0 \cdot \varphi^n$$
-
+$$
+s_{\max} = s_0 \cdot \varphi^n
+$$
 for integer $n$, prevents extreme scale effects.
 
 *Observer Framework Note*: Trans-Planckian interpretation requires quantum field theory framework.
@@ -132,14 +144,16 @@ for integer $n$, prevents extreme scale effects.
 Transferred information correlated with source.
 
 **Definition 52.7** (Correlation Information):
-$$I_{\text{corr}}(T) = \min(I(T), I(S))$$
-
+$$
+I_{\text{corr}}(T) = \min(I(T), I(S))
+$$
 where $T$ = transferred, $S$ = source.
 
 **Theorem 52.7** (Information Unity):
 Total information conserved:
-$$I_{\text{total}} = \sum_i p_i I_i^{\text{source}} + I_i^{\text{transferred}}$$
-
+$$
+I_{\text{total}} = \sum_i p_i I_i^{\text{source}} + I_i^{\text{transferred}}
+$$
 *Observer Framework Note*: Entanglement interpretation requires quantum mechanics framework.
 
 ## 52.8 Scale Corrections
@@ -147,13 +161,15 @@ $$I_{\text{total}} = \sum_i p_i I_i^{\text{source}} + I_i^{\text{transferred}}$$
 Multi-scale effects modify transfer patterns.
 
 **Definition 52.8** (Corrected Transfer Rate):
-$$\frac{d^2I}{dt\,ds} = \frac{F(s)}{e^{s/s_0} - 1} \cdot (1 + \sum_{n=1}^\infty \epsilon^n h_n(s))$$
-
+$$
+\frac{d^2I}{dt\,ds} = \frac{F(s)}{e^{s/s_0} - 1} \cdot (1 + \sum_{n=1}^\infty \epsilon^n h_n(s))
+$$
 where $\epsilon$ is small scale parameter.
 
 **Theorem 52.8** (Transfer Factors):
-$$F(s) = \frac{s^2 r_{\text{boundary}}^2}{s_0^2} \cdot \varphi^{-k}$$
-
+$$
+F(s) = \frac{s^2 r_{\text{boundary}}^2}{s_0^2} \cdot \varphi^{-k}
+$$
 for mode index $k$.
 
 *Observer Framework Note*: Quantum loop corrections interpretation requires quantum field theory framework.
@@ -163,13 +179,15 @@ for mode index $k$.
 Dimensionless parameters from transfer processes.
 
 **Definition 52.9** (Transfer Scaling):
-$$\sigma_{\text{transfer}} = \frac{\pi^2}{60} \cdot \varphi^{-n}$$
-
+$$
+\sigma_{\text{transfer}} = \frac{\pi^2}{60} \cdot \varphi^{-n}
+$$
 where $n$ is determined by transfer geometry.
 
 **Theorem 52.9** (Information Flow Rate):
-$$\Phi = \sigma_{\text{transfer}} \cdot A \cdot T_{\text{eff}}^4$$
-
+$$
+\Phi = \sigma_{\text{transfer}} \cdot A \cdot T_{\text{eff}}^4
+$$
 Information flux from maximal collapse region.
 
 *Observer Framework Note*: Stefan-Boltzmann constant interpretation requires thermodynamic framework.
@@ -179,13 +197,15 @@ Information flux from maximal collapse region.
 How information redistributes across regions.
 
 **Definition 52.10** (Optimal Transfer Surface):
-$$\chi = \text{argmin}_{\text{surface}} \left[\alpha \cdot \text{Area} + I_{\text{complexity}}\right]$$
-
+$$
+\chi = \text{argmin}_{\text{surface}} \left[\alpha \cdot \text{Area} + I_{\text{complexity}}\right]
+$$
 where $\alpha$ is dimensionless coupling.
 
 **Theorem 52.10** (Recovery Formula):
-$$I_{\text{recovered}} = \min\left(I_{\text{direct}}, I_{\text{indirect}}\right)$$
-
+$$
+I_{\text{recovered}} = \min\left(I_{\text{direct}}, I_{\text{indirect}}\right)
+$$
 Multiple pathways enable information recovery.
 
 *Observer Framework Note*: Island formula interpretation requires holographic principle and quantum gravity.
@@ -195,14 +215,16 @@ Multiple pathways enable information recovery.
 Information processing during redistribution.
 
 **Definition 52.11** (Processing Capacity):
-$$\frac{dI}{dt} = \beta \cdot A \cdot \rho_{\text{gradient}}^2$$
-
+$$
+\frac{dI}{dt} = \beta \cdot A \cdot \rho_{\text{gradient}}^2
+$$
 where $\beta$ involves φ-based scaling factors.
 
 **Theorem 52.11** (Optimal Processing):
 Maximal processing efficiency when:
-$$\varphi^{-k} < \rho_{\text{ratio}} < \varphi^k$$
-
+$$
+\varphi^{-k} < \rho_{\text{ratio}} < \varphi^k
+$$
 for appropriate integer $k$.
 
 *Observer Framework Note*: Consciousness interpretation requires consciousness theory beyond current scope.
