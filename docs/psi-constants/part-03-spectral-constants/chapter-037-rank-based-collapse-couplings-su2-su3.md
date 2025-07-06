@@ -87,7 +87,7 @@ $$
 g_2 = \sum_{i} b_i F_i \cdot \varphi^{-r_i}
 $$
 
-where {b_i} ∈ {0,1} and r_i are rank indices.
+where $\{b_i\} \in \{0,1\}$ and $r_i$ are rank indices.
 
 **Theorem 37.4** (Rank-3 Dominance): The dominant terms satisfy:
 

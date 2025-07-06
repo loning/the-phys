@@ -31,8 +31,8 @@ where $r_{max}$ is the maximum sustainable rank before decoherence.
 
 *Proof*:
 From information theory on Zeckendorf-constrained sequences:
-- Each rank-r path carries $\log_2(F_{r+2})$ bits
-- Golden base conversion gives capacity $\log_\varphi(F_{r+2})$
+- Each rank-r path carries $\log_2(F_{(r+2)})$ bits
+- Golden base conversion gives capacity $\log_\varphi(F_{(r+2)})$
 - Maximum mutual information achieved at uniform distribution ∎
 
 ## 43.2 Bandwidth Theorem for Constants
@@ -82,22 +82,22 @@ graph TD
 **Definition 43.4** (Collapse Sampling Rate): The minimum sampling rate for rank-r paths:
 
 $$
-f_s \geq 2 B_r = 2 \varphi^r / t_P
+f_s \geq 2 B_{r} = 2 \varphi^{r} / t_P
 $$
 
-where $B_r$ is the rank-r bandwidth.
+where $B_{r}$ is the rank-r bandwidth.
 
 **Theorem 43.4** (Nyquist-Collapse Theorem): Complete path reconstruction requires:
 
 $$
-N_{samples} \geq 2 \cdot F_{r+2}
+N_{samples} \geq 2 \cdot F_{(r+2)}
 $$
 
 This gives the minimum measurements needed to determine a collapse state.
 
 *Proof*:
 By Zeckendorf uniqueness:
-- F_{r+2} distinct rank-r paths exist
+- F_\{r+2\} distinct rank-r paths exist
 - Each path needs sign determination
 - Factor 2 from Nyquist theorem ∎
 
@@ -106,15 +106,15 @@ By Zeckendorf uniqueness:
 **Definition 43.5** (Information Velocity): The maximum information propagation speed:
 
 $$
-v_{info} = \lim_{r \to \infty} \frac{\ell_r}{\tau_r}
+v_{info} = \lim_{r \to \infty} \frac{\ell_{r}}{\tau_{r}}
 $$
 
-where $\ell_r = \varphi^r \ell_P$ and $\tau_r$ is traversal time.
+where $\ell_{r} = \varphi^{r} \ell_P$ and $\tau_{r}$ is traversal time.
 
 **Theorem 43.5** (Light Speed as Bandwidth Limit):
 
 $$
-c = \frac{\varphi^2}{2} \cdot \frac{\ell_P}{t_P} \cdot \lim_{r \to \infty} \frac{F_{r+2}}{F_r \cdot F_2}
+c = \frac{\varphi^2}{2} \cdot \frac{\ell_P}{t_P} \cdot \lim_{r \to \infty} \frac{F_{(r+2)}}{F_{r} \cdot F_2}
 $$
 
 *Proof*:
@@ -163,7 +163,7 @@ Maximum sustainable information gradient before collapse gives gravitational cou
 **Definition 43.8** (Electromagnetic Subchannel): The EM channel fraction:
 
 $$
-f_{em} = \frac{C_{em}}{C_{total}} = \frac{\sum_{r=6,7} F_r \varphi^{-r}}{\sum_{r=0}^{\infty} F_r \varphi^{-r}}
+f_{em} = \frac{C_{em}}{C_{total}} = \frac{\sum_{r=6,7} F_{r} \varphi^{-r}}{\sum_{r=0}^{\infty} F_{r} \varphi^{-r}}
 $$
 
 **Theorem 43.8** (Alpha as Channel Ratio):
@@ -199,7 +199,7 @@ This information equipartition determines $M_{GUT}$.
 **Definition 43.10** (Collapse Entropy Rate): The entropy production:
 
 $$
-\dot{S} = k_B \sum_r D_r \varphi^{-r} \log D_r
+\dot{S} = k_B \sum_{r} D_{r} \varphi^{-r} \log D_{r}
 $$
 
 **Theorem 43.10** (Constants from Maximum Entropy): Physical constants maximize entropy production subject to:
@@ -252,7 +252,7 @@ explaining the hierarchy problem through information capacity.
 **Definition 43.12** (Collapse Holographic Principle): Information in rank-r volume bounded by:
 
 $$
-I_{max} = \frac{A}{4 \ell_P^2} = \frac{\pi (\varphi^r \ell_P)^2}{4 \ell_P^2}
+I_{max} = \frac{A}{4 \ell_P^2} = \frac{\pi (\varphi^{r} \ell_P)^2}{4 \ell_P^2}
 $$
 
 **Theorem 43.12** (Constants from Holography): The holographic bound implies:

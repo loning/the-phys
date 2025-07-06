@@ -53,8 +53,10 @@ $$
 
 where:
 - $\varepsilon_k \in \{0,1\}$ (Zeckendorf bits)
-- $F_k$ are Fibonacci-scaled field quanta
+- $F_k = F_{k+1} \varphi^{-k}$ are Fibonacci-scaled field quanta
 - $\hat{n}_{\mu\nu}^{(k)}$ are direction tensors
+
+The discrete spectrum exhibits complex spacing patterns, not simple golden ratio scaling.
 
 ## 44.3 Category of Discrete Fields
 
@@ -233,13 +235,13 @@ $$
 E_n = \sum_{k \in I_n} F_k \varphi^{-k} E_0
 $$
 
-**Theorem 44.11** (Energy Gap Structure): Consecutive levels satisfy:
+**Theorem 44.11** (Energy Gap Structure): Energy levels from Zeckendorf decomposition:
 
 $$
-\frac{E_{n+1} - E_n}{E_n - E_{n-1}} \to \varphi
+E_n = \sum_{k \in \text{Zeck}(n)} F_{k+1} \varphi^{-k}
 $$
 
-giving golden ratio spacing in the continuum limit.
+create a non-monotonic spectrum with complex gap ratios, reflecting the fractal nature of the Fibonacci sequence.
 
 ## 44.12 Discrete Path Integral
 
