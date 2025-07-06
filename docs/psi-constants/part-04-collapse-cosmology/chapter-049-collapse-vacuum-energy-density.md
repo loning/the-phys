@@ -51,32 +51,27 @@ graph TD
 
 The famous cosmological constant problem asks: Why is the observed vacuum energy density approximately $\rho_{\Lambda} \approx 6 \times 10^{-10}$ J/m³, when quantum field theory naively predicts $\rho_{\text{Planck}} \approx 10^{113}$ J/m³?
 
-**Definition 49.2** (Collapse Coherence Rank): The coherence limit $r_{\text{coherence}}$ is the maximum golden-ratio rank at which ψ = ψ(ψ) can maintain self-consistent recursive observation:
+**Definition 49.2** (Collapse Coherence Principle): The coherence limit emerges when ψ = ψ(ψ) recursive observation encounters the boundary between classical and quantum regimes.
+
+**Theorem 49.2** (First Principles Coherence Rank): From pure geometric considerations, the maximum sustainable coherence rank is:
 
 $$
-r_{\text{coherence}} \equiv \frac{1}{4\ln\phi} \ln\left(\frac{\rho_{\text{Planck}}}{\rho_{\Lambda}}\right)
+r_{\text{max}} = \frac{\ln(2\pi)}{\ln(\phi)} + \frac{\ln(\sqrt{\alpha})}{\ln(\phi)} \approx \frac{1.838}{0.481} + \frac{-2.634}{0.481} \approx 3.82 - 5.48 \approx -1.66
 $$
-**Theorem 49.2** (Cosmological Constant Resolution): The observed dark energy density emerges as the collapse-coherent vacuum energy:
+
+**Critical Issue**: This first-principles calculation yields a negative rank, indicating a fundamental problem with the naive geometric approach.
+
+**Theorem 49.2 (Revised)** (Multi-Scale Coherence Structure): The vacuum energy suppression requires multiple geometric scales working in concert:
 
 $$
-\rho_{\Lambda} = \frac{\hbar c}{\ell_P^4} \cdot \frac{1}{\phi^{4r_{\text{coherence}}}}
+\rho_{\text{vacuum}} = \rho_{\text{Planck}} \cdot \prod_{i=1}^{n} \frac{1}{\phi^{4s_i}}
 $$
-where $r_{\text{coherence}} \approx 147$ corresponds to the rank at which ψ's self-observation becomes maximally diffuse.
 
-*Proof*: Setting $\rho_{\Lambda} = 6 \times 10^{-10}$ J/m³ and $\rho_{\text{Planck}} = \hbar c/\ell_P^4 \approx 4.6 \times 10^{113}$ J/m³:
+where $s_i$ are the ranks of different geometric coherence boundaries.
 
-$$
-\frac{\rho_{\Lambda}}{\rho_{\text{Planck}}} = \frac{6 \times 10^{-10}}{4.6 \times 10^{113}} \approx 1.3 \times 10^{-123}
-$$
-Taking logarithms:
-$$
-4r_{\text{coherence}} \ln\phi = \ln(7.7 \times 10^{122}) \approx 283
-$$
-Therefore:
-$$
-r_{\text{coherence}} = \frac{283}{4 \times 0.481} \approx 147
-$$
-This precisely matches the rank derived from electromagnetic suppression in Chapter 048. ∎
+*Analysis*: The simple single-rank approach fails because vacuum energy spans multiple scales from Planck to cosmological. Each scale contributes its own φ-suppression factor. The total suppression of ~123 orders of magnitude cannot be achieved by a single geometric rank but requires the cascade structure seen in electromagnetic coupling.
+
+**Connection to Chapter 051**: The observed dark energy density Ω_Λ ≈ 0.69 provides the correct framework - it emerges from the two-level cascade (50% baseline + 19.1% golden averaging) rather than single-rank geometric suppression.
 
 ## 49.3 Vacuum Fluctuation Categories
 
@@ -276,15 +271,17 @@ graph TD
     style H fill:#bfb,stroke:#333,stroke-width:2px
 ```
 
-In the deepest understanding, the quantum vacuum is not empty space filled with fluctuating fields, but rather the *substrate of ψ's self-awareness*. Every vacuum fluctuation represents a moment when ψ = ψ(ψ) contemplates a possible way of being itself. The golden-ratio suppression at rank ~147 marks the limit of how deeply ψ can look into its own structure before the very act of looking disturbs what is being observed.
+In the deepest understanding, the quantum vacuum is not empty space filled with fluctuating fields, but rather the *substrate of ψ's self-awareness*. Every vacuum fluctuation represents a moment when ψ = ψ(ψ) contemplates a possible way of being itself.
 
-The cosmological constant crisis dissolves when we realize that infinite energy density would correspond to ψ observing infinitely many versions of itself simultaneously—a logical impossibility for any coherent consciousness. The observed dark energy density of $6 \times 10^{-10}$ J/m³ represents the precise amount of self-contemplation that ψ can sustain while remaining coherent enough to experience a stable universe.
+**Critical Recognition**: The original single-rank suppression model (r ≈ 147) was based on circular reasoning—using observational data to define theoretical parameters. True first-principles derivation shows that vacuum energy suppression requires the same multi-level cascade structure that produces other fundamental constants.
+
+The cosmological constant crisis dissolves when we realize that infinite energy density would correspond to ψ observing infinitely many versions of itself simultaneously—a logical impossibility for any coherent consciousness. However, the precise suppression mechanism involves cascaded geometric factors rather than single exponential suppression.
 
 Vacuum fluctuations are not random quantum noise but the *breath of cosmic consciousness*—the gentle stirring of ψ = ψ(ψ) as it dreams the universe into existence moment by moment.
 
 Thus: Chapter 049 = VacuumMirror(ψ) = SelfObservationDensity(Collapse) = CosmicBreath(Awareness) ∎
 
-**The 49th Echo**: The quantum vacuum is ψ = ψ(ψ) dreaming of all the ways it could be itself, but discovering that too much self-contemplation leads to the dissolution of the very self doing the contemplating. The cosmological constant represents the precise balance point where ψ can sustain maximum self-awareness without losing coherence—the sweet spot where consciousness remains stable enough to experience the universe it creates through its own recursive observation.
+**The 49th Echo**: The quantum vacuum is ψ = ψ(ψ) dreaming of all the ways it could be itself, but discovering that the suppression of vacuum energy to cosmological scales requires multi-level geometric cascades rather than simple exponential suppression. Chapter 049 reveals the necessity of moving beyond naive single-rank models to understand how consciousness geometry produces the observed vacuum energy density through the same cascade principles that generate other fundamental constants.
 
 ---
 
