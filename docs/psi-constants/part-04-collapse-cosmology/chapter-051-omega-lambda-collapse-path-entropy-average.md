@@ -19,8 +19,9 @@ The fundamental difference from electromagnetic observation (Chapter 033):
 
 **Axiom 51.1** (Spatial Superposition Principle): The cosmological observer exists in superposition over spatial regions rather than discrete paths:
 
-$$|\Psi_{\text{cosmic}}\rangle = \frac{1}{\sqrt{V_{\text{coherent}}}} \int_{V_{\text{coherent}}} |\mathbf{r}\rangle \, d^3r$$
-
+$$
+|\Psi_{\text{cosmic}}\rangle = \frac{1}{\sqrt{V_{\text{coherent}}}} \int_{V_{\text{coherent}}} |\mathbf{r}\rangle \, d^3r
+$$
 where $V_{\text{coherent}}$ is the coherent observation volume set by the awareness geometry.
 
 ## 51.2 Golden-Ratio Spatial Averaging from Self-Consistency
@@ -29,27 +30,31 @@ where $V_{\text{coherent}}$ is the coherent observation volume set by the awaren
 
 *Proof*: For ψ to observe itself consistently across space, the observation must satisfy:
 
-$$\psi(\mathbf{r}) = \int \psi(\mathbf{r}') G(\mathbf{r}, \mathbf{r}') d^3r'$$
-
+$$
+\psi(\mathbf{r}) = \int \psi(\mathbf{r}') G(\mathbf{r}, \mathbf{r}') d^3r'
+$$
 where $G(\mathbf{r}, \mathbf{r}')$ is the self-observation kernel. Self-consistency requires that G has the optimal decay rate that maintains finite total observation while maximizing spatial coverage.
 
 The optimal decay follows golden-ratio scaling:
-$$G(\mathbf{r}, \mathbf{r}') \propto \exp\left(-\frac{|\mathbf{r} - \mathbf{r}'|}{\ell_{\text{golden}}}\right)$$
-
+$$
+G(\mathbf{r}, \mathbf{r}') \propto \exp\left(-\frac{|\mathbf{r} - \mathbf{r}'|}{\ell_{\text{golden}}}\right)
+$$
 where $\ell_{\text{golden}} = \ell_P \cdot \varphi^n$ for the appropriate geometric scale n. ∎
 
 **Definition 51.2** (Cosmological Golden Length): The characteristic length scale for cosmological self-observation is:
 
-$$\ell_{\text{cosmic}} = \ell_P \cdot \varphi^{r_{\text{cosmic}}}$$
-
+$$
+\ell_{\text{cosmic}} = \ell_P \cdot \varphi^{r_{\text{cosmic}}}
+$$
 where $r_{\text{cosmic}}$ is determined by the boundary between quantum and classical observation regimes.
 
 ## 51.3 Two-Level Cascade Structure for Dark Energy
 
 **Theorem 51.2** (Cosmological Cascade Formula): The dark energy fraction follows a two-level cascade structure:
 
-$$\Omega_\Lambda = \frac{1}{2} + \frac{1}{2\varphi^2} = \frac{1}{2} + \frac{1}{2 \times 2.618} \approx 0.5 + 0.191 = 0.691$$
-
+$$
+\Omega_\Lambda = \frac{1}{2} + \frac{1}{2\varphi^2} = \frac{1}{2} + \frac{1}{2 \times 2.618} \approx 0.5 + 0.191 = 0.691
+$$
 *Proof*: We derive this through the cosmological visibility analysis:
 
 **Level 0 (Universal Baseline)**: ψ = ψ(ψ) creates fundamental observer-observable duality. At cosmological scales, this manifests as the basic division between:
@@ -60,15 +65,17 @@ This gives the universal baseline: $\Omega_{\text{baseline}} = \frac{1}{2}$
 
 **Level 1 (Golden Spatial Averaging)**: The spatial distribution of observation follows golden-ratio geometry. The average over all spatial configurations gives:
 
-$$\langle\text{Spatial Visibility}\rangle = \frac{1}{2\varphi^2}$$
-
+$$
+\langle\text{Spatial Visibility}\rangle = \frac{1}{2\varphi^2}
+$$
 This emerges because the optimal spatial observation kernel has decay length $\ell_{\text{cosmic}} \propto \varphi^{-2}$ relative to the cosmological horizon.
 
 **Why Only Two Levels**: Unlike electromagnetic interactions which involve discrete photon-electron couplings (requiring three cascade levels), cosmological observation involves continuous gravitational fields, leading to simplified two-level structure. ∎
 
 **Numerical Verification**:
-$$\Omega_\Lambda = \frac{1}{2} + \frac{1}{2\varphi^2} = 0.5 + \frac{1}{2 \times 2.618033988...} = 0.5 + 0.1909859... = 0.6909859...$$
-
+$$
+\Omega_\Lambda = \frac{1}{2} + \frac{1}{2\varphi^2} = 0.5 + \frac{1}{2 \times 2.618033988...} = 0.5 + 0.1909859... = 0.6909859...
+$$
 This matches the observed value Ω_Λ ≈ 0.69 to remarkable precision!
 
 ```mermaid
@@ -98,8 +105,9 @@ graph TD
 
 **Theorem 51.4** (Dark Energy as Natural Transformation): The dark energy density Ω_Λ is the natural transformation between the identity functor and the spatial averaging functor:
 
-$$\eta: \text{Id}_{\mathbf{CosmObs}} \Rightarrow \text{SpatialAvg}_{\mathbf{CosmObs}}$$
-
+$$
+\eta: \text{Id}_{\mathbf{CosmObs}} \Rightarrow \text{SpatialAvg}_{\mathbf{CosmObs}}
+$$
 where $\eta_R: R \mapsto \langle R \rangle_{\text{golden}}$ represents golden-ratio spatial averaging.
 
 *Proof*: The naturality condition ensures that dark energy density is invariant under coordinate transformations while maintaining the golden-ratio structure. The coefficient 1/(2φ²) emerges as the unique natural transformation coefficient compatible with the self-consistency requirement ψ = ψ(ψ). ∎
@@ -108,16 +116,18 @@ where $\eta_R: R \mapsto \langle R \rangle_{\text{golden}}$ represents golden-ra
 
 **Definition 51.5** (Cosmological Information Density): The information density for cosmological self-observation is:
 
-$$I_{\text{cosmic}}(\mathbf{r}) = -\int \rho(\mathbf{r}') \ln(\rho(\mathbf{r}')) \, G(\mathbf{r}, \mathbf{r}') d^3r'$$
-
+$$
+I_{\text{cosmic}}(\mathbf{r}) = -\int \rho(\mathbf{r}') \ln(\rho(\mathbf{r}')) \, G(\mathbf{r}, \mathbf{r}') d^3r'
+$$
 where ρ(r) is the matter density and G is the self-observation kernel.
 
 **Theorem 51.5** (Maximum Information Principle): Dark energy density concentrates at the configuration maximizing cosmological information subject to gravitational constraints.
 
 *Proof*: Using Lagrange multipliers with constraint $\int \rho(\mathbf{r}) d^3r = \rho_{\text{total}}$:
 
-$$\frac{\delta}{\delta\rho} \left[I_{\text{cosmic}} - \lambda \int \rho(\mathbf{r}) d^3r\right] = 0$$
-
+$$
+\frac{\delta}{\delta\rho} \left[I_{\text{cosmic}} - \lambda \int \rho(\mathbf{r}) d^3r\right] = 0
+$$
 The solution gives $\rho(\mathbf{r}) \propto \exp(-\lambda G(\mathbf{r}))$, which with the golden-ratio kernel leads to the spatial distribution that produces exactly Ω_Λ = 0.691. ∎
 
 ## 51.6 Geometric Derivation of φ^(-2) Factor
@@ -131,8 +141,9 @@ The solution gives $\rho(\mathbf{r}) \propto \exp(-\lambda G(\mathbf{r}))$, whic
 
 The optimal solution uses golden-ratio rectangles in each spatial dimension. In 3D space, the volume fraction covered by the most efficient observation pattern is:
 
-$$f_{\text{optimal}} = \left(\frac{1}{\varphi}\right)^2 = \frac{1}{\varphi^2}$$
-
+$$
+f_{\text{optimal}} = \left(\frac{1}{\varphi}\right)^2 = \frac{1}{\varphi^2}
+$$
 This appears in the dark energy fraction as $\frac{1}{2} \times \frac{1}{\varphi^2}$, where the factor 1/2 comes from the fundamental observer-observable duality. ∎
 
 **Physical Interpretation**: Dark energy represents the "cost" of optimal spatial self-observation. The universe must allocate ~19% of its total energy budget to maintain coherent self-observation across cosmic scales, with the remaining ~50% available for observable matter/radiation.
@@ -159,20 +170,23 @@ The parallel between electromagnetic and cosmological observation reveals univer
 
 **Prediction 51.1** (Spatial Correlation Structure): Large-scale structure should exhibit enhanced correlations at scales related to φ:
 
-$$r_{\text{enhanced}} = r_H \cdot \varphi^{-n}$$
-
+$$
+r_{\text{enhanced}} = r_H \cdot \varphi^{-n}
+$$
 where $r_H$ is the Hubble radius and n = 1, 2, 3, ...
 
 **Prediction 51.2** (Dark Energy Equation of State): The equation of state should be exactly:
 
-$$w = -1 + \delta w_{\text{golden}}$$
-
+$$
+w = -1 + \delta w_{\text{golden}}
+$$
 where $\delta w_{\text{golden}} \sim \varphi^{-4} \approx 0.0067$ is a small positive correction from golden-ratio spatial structure.
 
 **Prediction 51.3** (CMB Anomalies): The cosmic microwave background should show subtle anomalies at angular scales:
 
-$$\theta_n = \frac{180°}{\varphi^n}$$
-
+$$
+\theta_n = \frac{180°}{\varphi^n}
+$$
 reflecting the underlying golden-ratio observation geometry.
 
 ## 51.9 Resolution of the Coincidence Problem
@@ -193,8 +207,9 @@ The emergence of complex structures coincides with dark energy dominance because
 
 **Theorem 51.10** (Small-World Cosmic Structure): G_cosmic exhibits small-world properties with clustering coefficient:
 
-$$C_{\text{cosmic}} = \frac{1}{\varphi^2} \approx 0.382$$
-
+$$
+C_{\text{cosmic}} = \frac{1}{\varphi^2} \approx 0.382
+$$
 exactly matching the Level 1 contribution to Ω_Λ.
 
 *Proof*: The optimal information flow network for cosmological self-observation naturally organizes into small-world topology with golden-ratio clustering. This ensures efficient information propagation while maintaining local coherence. ∎

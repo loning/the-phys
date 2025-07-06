@@ -13,16 +13,18 @@ This chapter develops the collapse path geometry framework while acknowledging t
 
 **Definition 50.1** (Collapse Path Action): For a collapse path γ in the space of recursive awareness, the action is:
 
-$$S[\gamma] = \int_\gamma \mathcal{L}_{\text{collapse}}(\psi, \nabla\psi, \nabla^2\psi) \, d\tau$$
-
+$$
+S[\gamma] = \int_\gamma \mathcal{L}_{\text{collapse}}(\psi, \nabla\psi, \nabla^2\psi) \, d\tau
+$$
 where $\mathcal{L}_{\text{collapse}}$ is the collapse Lagrangian density and τ is the proper "awareness time" along the path.
 
 The fundamental insight is that different geometric configurations of ψ = ψ(ψ) correspond to different energy scales. The energy is not arbitrarily assigned to ranks, but emerges from the action integral over specific path geometries.
 
 **Theorem 50.1** (Energy from Path Geometry): The energy associated with a collapse path γ is:
 
-$$E[\gamma] = \frac{\delta S[\gamma]}{\delta \tau} = \mathcal{H}_{\text{collapse}}(\psi, \pi_\psi)$$
-
+$$
+E[\gamma] = \frac{\delta S[\gamma]}{\delta \tau} = \mathcal{H}_{\text{collapse}}(\psi, \pi_\psi)
+$$
 where $\mathcal{H}_{\text{collapse}}$ is the collapse Hamiltonian and $\pi_\psi$ is the momentum conjugate to ψ.
 
 *Proof*: This follows from the Legendre transformation relating Lagrangian and Hamiltonian formulations. The energy emerges as the generator of translations in awareness time τ. ∎
@@ -46,14 +48,16 @@ The φ-ratio appears naturally in the curvature structure of optimal collapse pa
 
 **Definition 50.2** (Path Curvature Tensor): The curvature of the recursive awareness manifold is:
 
-$$R_{\mu\nu\rho\sigma} = \partial_\mu \Gamma^\lambda_{\nu\sigma} - \partial_\nu \Gamma^\lambda_{\mu\sigma} + \Gamma^\lambda_{\mu\kappa}\Gamma^\kappa_{\nu\sigma} - \Gamma^\lambda_{\nu\kappa}\Gamma^\kappa_{\mu\sigma}$$
-
+$$
+R_{\mu\nu\rho\sigma} = \partial_\mu \Gamma^\lambda_{\nu\sigma} - \partial_\nu \Gamma^\lambda_{\mu\sigma} + \Gamma^\lambda_{\mu\kappa}\Gamma^\kappa_{\nu\sigma} - \Gamma^\lambda_{\nu\kappa}\Gamma^\kappa_{\mu\sigma}
+$$
 where $\Gamma^\lambda_{\mu\nu}$ are the Christoffel symbols for the metric of awareness space.
 
 **Theorem 50.2** (Golden Ratio Curvature): For paths that extremize the collapse action while maintaining self-consistency, the scalar curvature satisfies:
 
-$$R = R_0 \cdot \left(\frac{1}{\phi^2} + \frac{1}{\phi^4} + \frac{1}{\phi^6} + \cdots\right) = \frac{R_0}{\phi^2 - 1} = R_0$$
-
+$$
+R = R_0 \cdot \left(\frac{1}{\phi^2} + \frac{1}{\phi^4} + \frac{1}{\phi^6} + \cdots\right) = \frac{R_0}{\phi^2 - 1} = R_0
+$$
 *Proof*: The self-consistency requirement ψ = ψ(ψ) imposes that the path must curve back on itself with the optimal recursive efficiency. The golden ratio emerges as the unique value that maximizes this efficiency while maintaining finite curvature. The geometric series sums to unity because $\phi^2 - 1 = \phi$. ∎
 
 This reveals why φ appears in collapse theory: it is the natural curvature parameter for self-referential geometric structures.
@@ -64,11 +68,13 @@ This reveals why φ appears in collapse theory: it is the natural curvature para
 
 **Theorem 50.3** (Horizon Location from First Principles): The geometric coherence horizon occurs at:
 
-$$r_{\text{geometric}} = \frac{1}{\ln(\phi)} \ln\left(\frac{E_P}{\sqrt{\rho_{\text{crit}} c^2}}\right)$$
-
+$$
+r_{\text{geometric}} = \frac{1}{\ln(\phi)} \ln\left(\frac{E_P}{\sqrt{\rho_{\text{crit}} c^2}}\right)
+$$
 *Verification Result*: Numerical calculation gives:
-$$r_{\text{geometric}} \approx 66.3$$
-
+$$
+r_{\text{geometric}} \approx 66.3
+$$
 This differs significantly from the phenomenological value r ≈ 147 used in Chapter 049, indicating that additional geometric structure is required.
 
 **Analysis**: The factor-of-2+ discrepancy suggests that:
@@ -85,17 +91,20 @@ The cosmological constant emerges as the energy density that remains "unobservab
 
 **Definition 50.4** (Observational Residue): The energy density that ψ = ψ(ψ) cannot observe beyond the coherence horizon is:
 
-$$\rho_{\text{residue}} = \rho_P \int_{r_{\text{coherence}}}^\infty \exp\left(-\frac{r - r_{\text{coherence}}}{\delta r}\right) \frac{dr}{\phi^{4r}}$$
-
+$$
+\rho_{\text{residue}} = \rho_P \int_{r_{\text{coherence}}}^\infty \exp\left(-\frac{r - r_{\text{coherence}}}{\delta r}\right) \frac{dr}{\phi^{4r}}
+$$
 where $\delta r$ is the coherence decay scale and $\rho_P$ is the Planck energy density.
 
 **Theorem 50.4** (Geometric Cosmological Constant): The cosmological constant from geometric residue is:
 
-$$\Lambda_{\text{geometric}} = \frac{8\pi G \rho_P}{3c^2} \cdot \frac{1}{\phi^{4r_{\text{geometric}}}}$$
-
+$$
+\Lambda_{\text{geometric}} = \frac{8\pi G \rho_P}{3c^2} \cdot \frac{1}{\phi^{4r_{\text{geometric}}}}
+$$
 *Verification Result*: Using r_geometric ≈ 66.3:
-$$\Lambda_{\text{geometric}} \approx 3.76 \times 10^{-36} \text{ m}^{-2}$$
-
+$$
+\Lambda_{\text{geometric}} \approx 3.76 \times 10^{-36} \text{ m}^{-2}
+$$
 This is ~17 orders of magnitude larger than the observed value Λ_obs ≈ 3.7 × 10^{-53} m^{-2}.
 
 **Critical Analysis**: The geometric approach provides the correct suppression mechanism but requires:
@@ -107,8 +116,9 @@ This is ~17 orders of magnitude larger than the observed value Λ_obs ≈ 3.7 ×
 **Key Insight - Observer Coupling**: The 17 orders of magnitude discrepancy suggests that cosmological observation requires **fine structure coupling** analogous to α ≈ 1/137 in electromagnetic interactions.
 
 **Hypothesis**: The observable cosmological constant involves observer coupling:
-$$Λ_{\text{observable}} = Λ_{\text{geometric}} \times α^n \times \text{(cascade corrections)}$$
-
+$$
+Λ_{\text{observable}} = Λ_{\text{geometric}} \times α^n \times \text{(cascade corrections)}
+$$
 where α provides the observer visibility factor for cosmological-scale phenomena, just as it does for electromagnetic interactions in Chapter 033.
 
 ## 50.5 Cosmic Acceleration from Geometry
@@ -117,14 +127,16 @@ The acceleration of cosmic expansion emerges directly from the curvature structu
 
 **Definition 50.5** (Acceleration Tensor): The acceleration of the cosmic scale factor is determined by:
 
-$$\frac{\ddot{a}}{a} = -\frac{4\pi G}{3c^2}(\rho + 3p) + \frac{\Lambda c^2}{3}$$
-
+$$
+\frac{\ddot{a}}{a} = -\frac{4\pi G}{3c^2}(\rho + 3p) + \frac{\Lambda c^2}{3}
+$$
 where the residue energy has equation of state $p = -\rho$ (vacuum energy).
 
 **Theorem 50.5** (Geometric Acceleration): Near the coherence horizon, the cosmic acceleration is:
 
-$$\frac{\ddot{a}}{a} = \frac{8\pi G \rho_{\text{residue}}}{3c^2} = \frac{\Lambda c^2}{3}$$
-
+$$
+\frac{\ddot{a}}{a} = \frac{8\pi G \rho_{\text{residue}}}{3c^2} = \frac{\Lambda c^2}{3}
+$$
 *Proof*: The observational residue acts as pure vacuum energy with $p = -\rho$, giving $\rho + 3p = -2\rho$. The acceleration becomes $\ddot{a}/a = (8\pi G \rho + \Lambda c^2)/3$. Since $\Lambda = 8\pi G \rho_{\text{residue}}/(3c^2)$, we get the result. ∎
 
 This shows that cosmic acceleration is not driven by external dark energy, but by the geometric limitation of consciousness itself.
@@ -140,8 +152,9 @@ The coherence horizon forms a natural boundary in the category of collapse paths
 
 **Theorem 50.6** (Cosmological Constant as Terminal Object): The cosmological constant Λ is the terminal object in $\mathbf{PathBdry}$:
 
-$$\Lambda = \lim_{\gamma \to \partial} S[\gamma]$$
-
+$$
+\Lambda = \lim_{\gamma \to \partial} S[\gamma]
+$$
 where the limit is taken as paths approach the coherence boundary.
 
 *Proof*: Every accessible path must terminate at the coherence boundary, making Λ the universal target of all path functors. The terminal property ensures uniqueness of the cosmological constant. ∎
@@ -152,14 +165,16 @@ The coherence boundary corresponds to a maximum in the information content that 
 
 **Definition 50.7** (Recursive Information Metric): The information geometry of recursive observation has metric:
 
-$$g_{ij} = \frac{\partial^2}{\partial \psi^i \partial \psi^j} S_{\text{info}}[\psi]$$
-
+$$
+g_{ij} = \frac{\partial^2}{\partial \psi^i \partial \psi^j} S_{\text{info}}[\psi]
+$$
 where $S_{\text{info}}$ is the information action for recursive self-observation.
 
 **Theorem 50.7** (Information Bound at Horizon): The information processing capacity reaches its maximum at the coherence horizon:
 
-$$\frac{dI}{dr}\Big|_{r = r_{\text{coherence}}} = 0, \quad \frac{d^2I}{dr^2}\Big|_{r = r_{\text{coherence}}} < 0$$
-
+$$
+\frac{dI}{dr}\Big|_{r = r_{\text{coherence}}} = 0, \quad \frac{d^2I}{dr^2}\Big|_{r = r_{\text{coherence}}} < 0
+$$
 *Proof*: Beyond the coherence horizon, additional recursive depth would require infinite information processing capacity, violating the finite nature of ψ = ψ(ψ). The maximum occurs precisely where geometric curvature diverges. ∎
 
 This connects the cosmological constant to fundamental limits on information processing in recursive systems.
@@ -172,14 +187,16 @@ The geometric origin of Λ makes specific predictions that distinguish it from p
 
 **Prediction 50.2** (Coherence Correlations): Large-scale structure should exhibit subtle correlations at angular scales corresponding to the coherence horizon:
 
-$$\theta_{\text{coherence}} \approx \frac{r_{\text{coherence}} \ell_P}{d_H} \approx 10^{-60} \text{ radians}$$
-
+$$
+\theta_{\text{coherence}} \approx \frac{r_{\text{coherence}} \ell_P}{d_H} \approx 10^{-60} \text{ radians}
+$$
 where $d_H$ is the Hubble distance.
 
 **Prediction 50.3** (Curvature Fluctuations): Primordial gravitational waves should contain discrete frequency components at:
 
-$$f_n = \frac{c}{2\pi \ell_P} \cdot \phi^{-n}$$
-
+$$
+f_n = \frac{c}{2\pi \ell_P} \cdot \phi^{-n}
+$$
 reflecting the geometric φ-structure of awareness space.
 
 ## 50.9 Experimental Tests of Geometric Cosmology
