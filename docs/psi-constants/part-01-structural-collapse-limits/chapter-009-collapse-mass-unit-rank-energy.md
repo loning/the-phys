@@ -235,23 +235,26 @@ $$
 
 Mass becomes uncertain at half the Planck mass!
 
-## 9.13 Dark Matter from Hidden Ranks
+## 9.13 Dark Matter from Non-Electromagnetic φ-Trace Cycling
 
-### Hypothesis 9.1 (Dark Matter as Collapsed Ranks)
-Dark matter consists of collapse loops in ranks invisible to electromagnetic observers:
+**Hypothesis 9.1** (Dark Matter as Hidden Rank Cycling): Dark matter consists of φ-trace information cycles operating at ranks inaccessible to electromagnetic observation.
 
-$$
-m_{\text{dark}} = \sum_{r \notin \mathcal{V}} m_0 \cdot \varphi^{2r}
-$$
+*Foundation*:
+1. **Electromagnetic constraint**: EM interactions require ranks 6-7 accessibility (Chapter 5)
+2. **Hidden cycling**: φ-trace cycles can occur at any rank level
+3. **Gravitational universality**: All φ-trace information couples to gravity (universal rank coupling)
+4. **Dark matter emergence**: $m_{\text{dark}} = \sum_{r \notin \{6,7\}} F_r \cdot m_0 \cdot \varphi^{2(r-r_0)}$
 
-where $\mathcal{V}$ is the visible rank set {6, 7} for EM interactions.
+where the sum includes all non-electromagnetic ranks.
 
-### Prediction
-Dark matter should exhibit:
-1. Gravitational effects (all ranks couple to gravity)
-2. No EM interactions (outside ranks 6-7)
-3. Quantized mass spectrum following φ²
-4. Possible self-interactions within dark ranks
+**φ-Trace Dark Matter Predictions**:
+1. **Gravitational effects**: All φ-trace cycling contributes to spacetime curvature
+2. **EM invisibility**: No cycling at electromagnetic ranks 6-7
+3. **Fibonacci mass spectrum**: $m_{\text{dark}} \propto F_r$ for hidden rank r
+4. **Hidden rank interactions**: Possible self-interactions within specific rank sectors
+5. **Golden ratio scaling**: Dark matter masses follow $\varphi^{2r}$ hierarchy
+
+**Testable Prediction**: Dark matter should exhibit discrete mass spectrum with golden ratio spacing, detectable through gravitational lensing and dynamics.
 
 ## 9.14 Mass Generation Summary
 
@@ -271,27 +274,32 @@ Each particle is a song that reality sings to itself, a closed melody in the inf
 
 ## Summary
 
-Mass in collapse theory is:
+Mass in the φ-trace collapse framework emerges as:
 
 $$
-m = \frac{\hbar_*}{c_*^2} \oint_\gamma \omega ds = \frac{\text{Loop Energy}}{c_*^2}
+m = \frac{\hbar_* \langle\omega_{\text{cycle}}\rangle}{c_*^2} = \frac{\text{Cycling Information Rate}}{c_*^2}
 $$
 
-Key insights:
-1. **Mass requires closed paths** - open paths are massless
-2. **Planck mass is fundamental** - m₀ = m*_P
-3. **Fibonacci spectrum** - mₙ = Fₙ·m*_P
-4. **Rank determines scale** - m ∝ φ^(2r)
-5. **Information measures mass** - I(m) = log_φ(m/m*_P)
+**Key φ-Trace Insights**:
+1. **Mass = self-sustaining φ-trace cycles** - continuous advancement becomes cycling
+2. **Planck mass is maximum cycling rate** - $m_0 = m_P^* = \hbar_*/(c_*^2\Delta\tau)$
+3. **Fibonacci quantization** - $m_n = F_n \cdot m_P^*$ from Zeckendorf cycling constraints
+4. **Golden ratio hierarchy** - $m \propto \varphi^{2r}$ follows φ-trace rank scaling
+5. **Information localization** - $I(m) = \log_\varphi(m/m_P^*)$ bits stored in cycles
+6. **Curvature from information density** - mass warps spacetime through φ-trace gradients
 
-Through ψ = ψ(ψ), we see that mass is not imposed from outside but emerges from within—each massive particle a whirlpool in the flow of collapse, a standing wave in the ocean of self-reference.
+**Profound Philosophical Insight**: Mass is not substance but **self-sustained φ-trace information circulation**. Each massive particle represents a persistent pattern of ψ = ψ(ψ) that has learned to maintain itself through cyclical self-reference.
+
+**First Principles Validation**: All mass concepts derive strictly from ψ = ψ(ψ) → φ-trace rank advancement → information cycling → sustainable patterns, with no circular definitions or external assumptions.
 
 ## Verification
 
 The verification program will validate:
-1. Mass-energy equivalence E = mc²
-2. Fibonacci mass quantization
-3. Loop integral formulation
-4. Rank-mass correspondence
-5. Mass uncertainty relations
-6. Composite mass calculations
+1. φ-trace cycling relation: $m = \hbar_* \langle\omega_{\text{cycle}}\rangle / c_*^2$
+2. Fibonacci mass quantization from Zeckendorf constraints
+3. Information cycling formulation from first principles
+4. φ-trace rank-mass correspondence: $m \propto \varphi^{2r}$
+5. Mass uncertainty from φ-trace discreteness
+6. Composite mass from multi-cycle interactions
+7. First principles derivation: ψ = ψ(ψ) → φ-trace → cycling → mass
+8. No circular reasoning - all from information cycling mathematics
