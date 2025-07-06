@@ -115,7 +115,7 @@ matching observation. ∎
 
 **Definition 60.4** (Scale Category): Let **ScaleCat** be the category where:
 
-- Objects: Length scales {L_r}
+- Objects: Length scales $\{L_r\}$
 - Morphisms: Scale transformations L_r → L_s
 
 **Theorem 60.4** (Functorial Scale Relations): The degeneracy defines a functor:
@@ -257,7 +257,7 @@ is also quantized by the Fibonacci structure. ∎
 
 **Definition 60.7** (Scale Network): The graph G_scale = (V, E) where:
 
-- Vertices V: Characteristic scales {L_r}
+- Vertices V: Characteristic scales $\{L_r\}$
 - Edges E: Scale ratios with weight w_ij = log(L_i/L_j)
 
 **Theorem 60.7** (Small-World Scale Network): The scale network has:

@@ -340,7 +340,7 @@ detectable as discrete spectral lines.
 
 **Definition 59.10** (Equation of State Network): The graph G_EoS = (V, E) where:
 
-- Vertices V: Different equations of state {w}
+- Vertices V: Different equations of state $\{w\}$
 - Edges E: Allowed transitions with weights exp(-ΔS)
 
 **Theorem 59.10** (Small-World EoS Network): The network has:

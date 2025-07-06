@@ -297,7 +297,7 @@ indicating small oscillations around k = 0.
 
 **Definition 58.10** (Trace Graph): The weighted graph G_trace = (V, E) where:
 
-- Vertices V: Rank states {r}
+- Vertices V: Rank states $\{r\}$
 - Edge weights: w_rr' = Tr[T_r T_r'†]/√(Tr[T_r T_r†]Tr[T_r' T_r'†])
 
 **Theorem 58.10** (Trace Connectivity): The trace graph has clustering coefficient:

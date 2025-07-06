@@ -250,10 +250,10 @@ At the present epoch t₀, η_\{t₀\} = H₀, giving the Hubble constant as the
 
 ## 56.7 Graph Theory of Cosmic Expansion Network
 
-**Definition 56.7** (Expansion Graph): Let G_{exp} = (V, E) where:
+**Definition 56.7** (Expansion Graph): Let $G_{\text{exp}} = (V, E)$ where:
 
 - Vertices V: Energy density states at different scales
-- Edges E: Expansion-driven transitions with weights w_{ij} = exp(-|r_i - r_j|/ξ)
+- Edges E: Expansion-driven transitions with weights $w_{ij} = \exp(-|r_i - r_j|/\xi)$
 
 where ξ is the expansion correlation length.
 
@@ -312,7 +312,7 @@ $$
 H_0(\hat{n}) = H_0 \left[1 + \sum_{lm} a_{lm} Y_{lm}(\hat{n})\right]
 $$
 
-where the coefficients a_{lm} reflect the local collapse path distribution.
+where the coefficients $a_{lm}$ reflect the local collapse path distribution.
 
 **Prediction 56.3** (Time Variation**: H₀ should evolve as:
 

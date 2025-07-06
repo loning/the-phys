@@ -281,7 +281,7 @@ The factorization is unique up to isomorphism, establishing matter's universal p
 ## 55.8 Graph Structure of Component Interactions
 
 **Definition 55.8** (Component Interaction Graph): Let G = (V, E) where:
-- Vertices V = {Λ, m, r, k}
+- Vertices V = $\{\Lambda, m, r, k\}$
 - Edges E = allowed energy transfers with weights w_ij
 
 **Theorem 55.8** (Interaction Network Properties): The component graph has:
