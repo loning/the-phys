@@ -362,20 +362,30 @@ Step-by-step calculation with high-precision cascade structure:
    - $w_7 = \varphi^{-7} = 0.034441853748633018129$
 
 2. High-precision visibility factor:
-   $$\omega_7 = \frac{1}{2} + \frac{1}{4}\cos^2\left(\frac{\pi}{\varphi}\right) + \frac{1}{47\varphi^5} = 0.5347473996816882$$
-
+   
+$$
+\omega_7 = \frac{1}{2} + \frac{1}{4}\cos^2\left(\frac{\pi}{\varphi}\right) + \frac{1}{47\varphi^5} = 0.5347473996816882
+$$
 3. Numerator:
-   $$21 \times w_6 + 34 \times \omega_7 \times w_7 = 1.79446726051516$$
-
+   
+$$
+21 \times w_6 + 34 \times \omega_7 \times w_7 = 1.79446726051516
+$$
 4. Denominator:
-   $$21 + 34 \times \omega_7 = 39.18141591886$$
-
+   
+$$
+21 + 34 \times \omega_7 = 39.18141591886
+$$
 5. Average weight:
-   $$\langle w \rangle = 0.04581376051616$$
-
+   
+$$
+\langle w \rangle = 0.04581376051616
+$$
 6. Fine structure constant:
-   $$\alpha = \frac{0.04581376051616}{2\pi} = 0.007296194289$$
-
+   
+$$
+\alpha = \frac{0.04581376051616}{2\pi} = 0.007296194289
+$$
 Therefore: $\alpha^{-1} = 137.036040578812$ ∎
 
 **Precision Analysis**:
