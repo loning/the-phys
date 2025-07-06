@@ -225,17 +225,25 @@ Step-by-step calculation with 20-digit precision:
    - $w_7 = \varphi^{-7} = 0.034441853748633018129$
 
 2. Numerator:
-   $$21 \times w_6 + 34 \times \omega_7 \times w_7 = 1.79424479018145666132$$
-
+   
+$$
+21 \times w_6 + 34 \times \omega_7 \times w_7 = 1.79424479018145666132
+$$
 3. Denominator:
-   $$21 + 34 \times \omega_7 = 39.11618226816713672633$$
-
+   
+$$
+21 + 34 \times \omega_7 = 39.11618226816713672633
+$$
 4. Average weight:
-   $$\langle w \rangle = 0.04586962955333241665$$
-
+   
+$$
+\langle w \rangle = 0.04586962955333241665
+$$
 5. Fine structure constant:
-   $$\alpha = \frac{0.04586962955333241665}{2\pi} = 0.00730037828120694114$$
-
+   
+$$
+\alpha = \frac{0.04586962955333241665}{2\pi} = 0.00730037828120694114
+$$
 Therefore: $\alpha^{-1} = 136.979203197492$ ∎
 
 ### Complete Calculation Formula
