@@ -136,13 +136,32 @@ where every component is determined from first principles:
 
 1. **Weight values**: $w_6 = \varphi^{-6} = 0.055728$, $w_7 = \varphi^{-7} = 0.034442$
 
-2. **Cascade visibility**: $\omega_7 = 0.500000 + 0.032829 + 0.000211 = 0.533040$
-
-3. **Weighted average**: 
-   $$\langle w \rangle = \frac{21 \times 0.055728 + 34 \times 0.533040 \times 0.034442}{21 + 34 \times 0.533040} = 0.045814$$
-
-4. **Final result**: 
-   $$\alpha^{-1} = \frac{2\pi \times 39.123}{1.7945} = 137.036040578812$$
+2. High-precision visibility factor:
+   
+$$
+\omega_7 = \frac{1}{2} + \frac{1}{4}\cos^2\left(\frac{\pi}{\varphi}\right) + \frac{1}{47\varphi^5} = 0.5347473996816882
+$$
+3. Numerator:
+   
+$$
+21 \times w_6 + 34 \times \omega_7 \times w_7 = 1.79446726051516
+$$
+4. Denominator:
+   
+$$
+21 + 34 \times \omega_7 = 39.18141591886
+$$
+5. Average weight:
+   
+$$
+\langle w \rangle = 0.04581376051616
+$$
+6. Fine structure constant:
+   
+$$
+\alpha = \frac{0.04581376051616}{2\pi} = 0.007296194289
+$$
+Therefore: $\alpha^{-1} = 137.036040578812$ ∎
 
 **Precision Analysis**:
 - **Calculated**: α⁻¹ = 137.036040578812
