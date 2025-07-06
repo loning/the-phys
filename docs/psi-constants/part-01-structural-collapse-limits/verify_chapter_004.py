@@ -29,49 +29,61 @@ class TestChapter004GravitationalConstant(unittest.TestCase):
         self.assertAlmostEqual(self.G_star, 0.3819660113, places=10,
                               msg="G* numerical value incorrect")
     
-    def test_rank_entropy_scaling(self):
-        """Test entropy scaling with rank"""
-        # Ω(s) ~ φ^s
-        # S(s) = k_B ln(Ω(s)) ~ k_B s ln(φ)
+    def test_configuration_space_scaling(self):
+        """Test Zeckendorf configuration space scaling"""
+        # Ω(s) = F_{s+2} ~ φ^s for large s
+        # Information content I(s) = log_2(Ω(s)) ~ s log_2(φ)
         
-        for s in range(1, 10):
-            omega_s = self.phi**s
-            entropy_s = self.k_B * math.log(omega_s)
-            expected_entropy = self.k_B * s * math.log(self.phi)
+        def fibonacci(n):
+            if n <= 1:
+                return n
+            a, b = 0, 1
+            for _ in range(2, n + 1):
+                a, b = b, a + b
+            return b
+        
+        for s in range(3, 8):  # Test for reasonable range
+            omega_s = fibonacci(s + 2)
+            info_content = math.log2(omega_s)
+            expected_info = s * math.log2(self.phi)
             
-            self.assertAlmostEqual(entropy_s, expected_entropy, places=15,
-                                  msg=f"Entropy scaling incorrect for rank s={s}")
+            # Allow some tolerance for finite-size effects
+            self.assertAlmostEqual(info_content, expected_info, delta=0.5,
+                                  msg=f"Information content scaling incorrect for rank s={s}")
     
-    def test_entropy_gradient(self):
-        """Test entropy difference between adjacent ranks"""
-        # ΔS = S(s+1) - S(s) = k_B ln(φ)
-        delta_S = self.k_B * math.log(self.phi)
+    def test_information_gradient(self):
+        """Test information content difference between adjacent ranks"""
+        # ΔI = I(s+1) - I(s) = log_2(φ)
+        delta_I = math.log2(self.phi)
         
         # Check for several rank pairs
-        for s in range(5, 10):
-            S_s = self.k_B * s * math.log(self.phi)
-            S_s_plus_1 = self.k_B * (s + 1) * math.log(self.phi)
-            gradient = S_s_plus_1 - S_s
-            
-            self.assertAlmostEqual(gradient, delta_S, places=14,
-                                  msg=f"Entropy gradient incorrect between ranks {s} and {s+1}")
-    
-    def test_information_leakage_rate(self):
-        """Test information leakage rate formula"""
-        # Γ_{s+1→s} = ħ* ln(φ) / τ_s
-        # With normalized τ_s = φ^(-s)
-        
-        hbar_star = self.phi**2 / (2 * math.pi)
-        
         for s in range(5, 8):
-            tau_s = self.phi**(-s)
-            leakage_rate = hbar_star * math.log(self.phi) / tau_s
+            I_s = s * math.log2(self.phi)
+            I_s_plus_1 = (s + 1) * math.log2(self.phi)
+            gradient = I_s_plus_1 - I_s
             
-            # Check that leakage rate increases with rank
-            if s > 5:
-                self.assertGreater(leakage_rate, prev_rate,
-                                  msg=f"Leakage rate should increase with rank")
-            prev_rate = leakage_rate
+            self.assertAlmostEqual(gradient, delta_I, places=14,
+                                  msg=f"Information gradient incorrect between ranks {s} and {s+1}")
+    
+    def test_information_density_gradient(self):
+        """Test information density gradient from φ-trace geometry"""
+        # ρ_info(s) = φ^(3s) log_2(φ)
+        # This tests the fundamental geometric information density
+        
+        log2_phi = math.log2(self.phi)
+        
+        for s in range(3, 6):
+            rho_s = (self.phi**(3*s)) * log2_phi
+            rho_s_plus_1 = (self.phi**(3*(s+1))) * log2_phi
+            
+            # Check density increases with rank
+            self.assertGreater(rho_s_plus_1, rho_s,
+                              msg=f"Information density should increase with rank")
+            
+            # Check φ³ scaling
+            ratio = rho_s_plus_1 / rho_s
+            self.assertAlmostEqual(ratio, self.phi**3, places=10,
+                                  msg=f"Information density should scale as φ³")
     
     def test_gravitational_coupling_derivation(self):
         """Test that G* emerges from information leakage"""

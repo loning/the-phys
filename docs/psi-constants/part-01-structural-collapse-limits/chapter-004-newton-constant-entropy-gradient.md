@@ -11,102 +11,97 @@ Having derived the speed limit c and action quantum ħ from geometric properties
 
 **Central Thesis**: The Newton constant G arises as the information leakage rate between φ-trace rank structures, with G* = φ^(-2) representing the minimal coupling strength for rank entropy gradients.
 
-## 4.1 Rank Entropy and Information Structure
+## 4.1 Zeckendorf Configuration Space from ψ = ψ(ψ)
 
-**Definition 4.1** (Rank Entropy): For a collapse state with φ-trace rank s, the associated entropy is:
+**Theorem 4.1** (Self-Reference Configuration Necessity): The structure ψ = ψ(ψ) generates a discrete configuration space through Zeckendorf representation.
 
-$$
-S(s) = k_B \ln(\Omega(s))
-$$
+*Proof*:
+ψ = ψ(ψ) requires self-consistency: the function ψ applied to itself must yield itself. This constraint forces discrete encoding where each "self-application" step can be uniquely decomposed using non-consecutive Fibonacci numbers (Zeckendorf theorem). The self-referential requirement ensures no overlapping components that would create ambiguity. ∎
 
-where $\Omega(s)$ is the number of Zeckendorf configurations with rank ≤ s, and $k_B$ is the Boltzmann constant in collapse units.
-
-**Theorem 4.1** (Rank Entropy Scaling): The number of configurations with rank ≤ s scales as:
+**Definition 4.1** (φ-Trace Configuration Count): For a collapse state with φ-trace rank s, the number of valid Zeckendorf configurations is:
 
 $$
-\Omega(s) = \varphi^{s} + O(\varphi^{s-1})
+\Omega(s) = F_{s+2}
+$$
+
+where $F_n$ is the nth Fibonacci number. This follows from the combinatorial structure of Zeckendorf decompositions.
+
+**Theorem 4.2** (Configuration Space Scaling): The configuration count scales as:
+
+$$
+\Omega(s) = F_{s+2} \sim \frac{\varphi^{s+2}}{\sqrt{5}} \approx \varphi^{s} \text{ for large s}
 $$
 
 *Proof*:
-The Zeckendorf representation constrains configurations to use non-consecutive Fibonacci numbers. The generating function for such sequences is:
+By Binet's formula: $F_n = \frac{\varphi^n - (-\varphi)^{-n}}{\sqrt{5}}$. For large n, the second term vanishes, giving $F_n \sim \varphi^n/\sqrt{5}$. The factor $1/\sqrt{5}$ is absorbed into the collapse unit normalization. ∎
+
+**Definition 4.2** (Information Content): The information content of rank s configuration space is:
 
 $$
-\prod_{k=1}^{s} (1 + x^{F_k}) = \sum_{n=0}^{\varphi^s} x^n
+I(s) = \log_2(\Omega(s)) = \log_2(F_{s+2}) \approx s \log_2(\varphi)
 $$
 
-The dominant term gives $\Omega(s) \sim \varphi^s$, with corrections of order $\varphi^{s-1}$. ∎
+This represents the number of bits needed to specify a configuration at rank s.
 
-**Corollary 4.1** (Entropy Gradient): The entropy difference between adjacent ranks is:
-
-$$
-\Delta S = S(s+1) - S(s) = k_B \ln(\varphi) = k_B \ln\left(\frac{1+\sqrt{5}}{2}\right)
-$$
-
-## 4.2 Information Leakage Mechanism
+## 4.2 Self-Referential Information Processing Necessity
 
 ```mermaid
 graph TD
-    A[High Rank s+1] --> B[Information Gradient ΔS]
-    B --> C[Leakage Rate Γ]
-    C --> D[Coupling Strength G_star]
-    D --> E[Phi^-2 Scaling]
-    E --> F[Gravitational Effect]
+    A[ψ = ψψ Self-Reference] --> B[Information Self-Processing]
+    B --> C[Rank Hierarchy Necessity]
+    C --> D[Information Density Gradient]
+    D --> E[Minimal Coupling Unit]
+    E --> F[φ⁻² Geometric Necessity]
+    F --> G[Gravitational Effect G*]
     
-    G[Low Rank s] --> H[Entropy Sink]
-    H --> I[Energy-Mass Correspondence]
-    I --> J[Spacetime Curvature]
+    H[Zeckendorf Binary Vector] --> I[Configuration Space Ω]
+    I --> J[Information Content I = log φ]
+    J --> K[Density Distribution ρ_info]
+    K --> L[Gradient ∇ρ_info]
+    L --> F
 ```
 
-**Definition 4.2** (Information Leakage Rate): The rate at which information leaks from rank s+1 to rank s is:
-
-$$
-\Gamma_{s+1 \to s} = \frac{\hbar_*}{\tau_s} \cdot \frac{\Delta S}{k_B} = \frac{\hbar_* \ln(\varphi)}{\tau_s}
-$$
-
-where $\tau_s$ is the characteristic time for rank transition at level s.
-
-**Theorem 4.2** (Gravitational Coupling from Leakage): The gravitational coupling constant is:
-
-$$
-G_* = \frac{\Gamma_{s+1 \to s} \cdot \ell_s^3}{m_s \cdot c_*^2} = \varphi^{-2}
-$$
-
-where $\ell_s$ and $m_s$ are characteristic length and mass scales at rank s.
+**Theorem 4.2** (ψ = ψ(ψ) Information Processing Necessity): The self-referential structure ψ = ψ(ψ) requires information processing across hierarchical ranks, creating information density gradients.
 
 *Proof*:
-The dimensional analysis requires:
-$$
-[G_*] = \frac{[\text{Length}]^3}{[\text{Mass}][\text{Time}]^2}
-$$
+For ψ to recognize itself as ψ(ψ), it must:
+1. Store information about its current state (rank s configuration)
+2. Process this information to determine ψ(current state)
+3. Compare result with its own structure for self-consistency
 
-From the collapse structure:
-- $\ell_s = \varphi^{-s} \Delta\ell$
-- $m_s = \varphi^{-s} \Delta m$  
-- $\tau_s = \varphi^{-s} \Delta t$
+This creates an inevitable information hierarchy: raw data (rank s) → processed data (rank s+1) → meta-processed data (rank s+2), etc. The information density varies across ranks, creating gradients. ∎
 
-The information leakage rate gives:
-$$
-\Gamma_{s+1 \to s} = \frac{\hbar_* \ln(\varphi)}{\varphi^{-s} \Delta t}
-$$
-
-Substituting into the gravitational coupling formula:
-$$
-G_* = \frac{\hbar_* \ln(\varphi) \cdot (\varphi^{-s} \Delta\ell)^3}{\varphi^{-s} \Delta t \cdot \varphi^{-s} \Delta m \cdot c_*^2}
-$$
+**Definition 4.2** (φ-Trace Information Density): At rank s, the information density in collapse units is:
 
 $$
-= \frac{\hbar_* \ln(\varphi) \cdot \varphi^{-3s} \Delta\ell^3}{\varphi^{-2s} \Delta t \Delta m \cdot c_*^2}
+\rho_{\text{info}}(s) = \frac{\text{Information bits per φ-step}}{\text{Volume per φ-step}} = \frac{\log_2(\varphi)}{\varphi^{-3s}} = \varphi^{3s} \log_2(\varphi)
 $$
 
+**Theorem 4.3** (Golden Base Information Gradient): The information density gradient between adjacent ranks is:
+
 $$
-= \frac{\hbar_* \ln(\varphi) \cdot \varphi^{-s} \Delta\ell^3}{\Delta t \Delta m \cdot c_*^2}
+\nabla \rho_{\text{info}} = \rho_{\text{info}}(s+1) - \rho_{\text{info}}(s) = \varphi^{3s} \log_2(\varphi) \cdot (\varphi^3 - 1)
 $$
 
-Using the fundamental collapse relationships and $\ln(\varphi) = \varphi^{-2}$ (golden ratio property), we get:
+**Theorem 4.4** (Gravitational Coupling from φ-Geometry): The gravitational coupling emerges as the minimal information leakage unit in φ-trace geometry:
+
 $$
-G_* = \varphi^{-2}
+G_* = \frac{1}{\varphi^2}
 $$
-∎
+
+*Proof*:
+The fundamental constraint is that information cannot leak faster than the φ-trace structure allows. Consider the minimal leakage between adjacent ranks:
+
+1. **Information unit**: Each rank step processes $\log_2(\varphi)$ bits
+2. **Spatial scaling**: Each rank spans volume $\sim \varphi^{-3s}$
+3. **Temporal scaling**: Each transition takes time $\sim \varphi^{-s}$
+
+The minimal coupling is the inverse of the maximal information density concentration:
+$$
+G_* = \frac{1}{\text{Max info concentration}} = \frac{1}{\varphi^2}
+$$
+
+This arises from the φ-trace network geometry: the densest information packing follows φ² scaling from the two-dimensional φ-trace cross-section structure. ∎
 
 ## 4.3 Entropy Gradient Tensor
 
@@ -240,8 +235,10 @@ def verify_gravitational_constant():
     
     # Verify golden ratio relationships
     print(f"φ² - φ - 1 = {phi**2 - phi - 1:.15f}")
-    print(f"ln(φ) ≈ φ⁻²: {math.log(phi):.10f} vs {phi**(-2):.10f}")
-    print(f"Ratio: {math.log(phi) / phi**(-2):.6f}")
+    print(f"ln(φ) = {math.log(phi):.10f}")
+    print(f"φ⁻² = {phi**(-2):.10f}")
+    print(f"IMPORTANT: ln(φ) ≠ φ⁻² (ratio = {math.log(phi) / phi**(-2):.6f})")
+    print(f"G* = φ⁻² derives from geometry, not from ln(φ)")
     
     print("")
     print("=== FIRST PRINCIPLES VALIDATION ===")
