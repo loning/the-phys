@@ -70,7 +70,7 @@ bridges microscopic collapse information to macroscopic temperature.
 ## 47.4 Graph Theory of Statistical Ensembles
 
 **Definition 47.4** (Ensemble Graph): Construct graph G where:
-- Vertices: Microstates {γᵢ}
+- Vertices: Microstates $\{\gamma_i\}$
 - Edges: Allowed transitions
 - Weights: Transition probabilities
 
