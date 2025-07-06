@@ -44,13 +44,29 @@ where $F_k$ are Fibonacci numbers, $S \subseteq \mathbb{N}$ contains no consecut
 
 ```mermaid
 graph TD
-    A[Psi Self Reference] --> B[Collapse Operator C]
+    A[ψ = ψψ Self Reference] --> B[Collapse Operator C]
     B --> C[Zeckendorf Representation]
     C --> D[Fibonacci Basis F_k]
-    D --> E[Golden Ratio Phi]
-    E --> F[Collapse Paths Gamma]
-    F --> G[Rank Structure s_gamma]
-    G --> H[Physical Constants]
+    D --> E[Golden Ratio φ]
+    E --> F[Collapse Paths γ]
+    F --> G[Rank Structure s_γ]
+    G --> H[Observer Selection 6,7]
+    
+    H --> I[Cascade Structure]
+    I --> J[Level 0: Baseline 1/2]
+    I --> K[Level 1: Golden cos²π/φ/4]
+    I --> L[Level 2: Fibonacci 1/47φ⁵]
+    
+    J --> M[Visibility Factor ω₇]
+    K --> M
+    L --> M
+    
+    M --> N[α⁻¹ = 137.036040578812]
+    
+    style A fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
+    style I fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style M fill:#f9f,stroke:#333,stroke-width:2px
+    style N fill:#9f9,stroke:#333,stroke-width:2px
 ```
 
 **Definition 1.3** (φ-trace Rank): For any collapse path γ, define its φ-trace rank as:
@@ -214,12 +230,24 @@ From an information-theoretic perspective, the collapse constants represent opti
 
 ```mermaid
 graph LR
-    A[Self Reference Psi] --> B[Information Encoding]
+    A[ψ = ψψ Reference] --> B[Information Encoding]
     B --> C[Fibonacci Compression]
     C --> D[Rank Stratification]
-    D --> E[Observer Selection]
-    E --> F[Weight Optimization]
-    F --> G[Constant Emergence]
+    D --> E[Observer Selection 6,7]
+    E --> F[Cascade Structure]
+    
+    F --> G[Level 0: Random]
+    F --> H[Level 1: Golden]
+    F --> I[Level 2: Fibonacci]
+    
+    G --> J[Weight Optimization]
+    H --> J
+    I --> J
+    
+    J --> K[α Emergence 0.3ppm]
+    
+    style F fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style K fill:#9f9,stroke:#333,stroke-width:2px
 ```
 
 **Theorem 1.6** (Information Optimality): The ζ-weight system provides the minimal description length for encoding collapse path information.

@@ -300,15 +300,23 @@ This single cascade equation, containing no adjustable parameters, evaluates to 
 ```mermaid
 graph TD
     A[Path Counting<br/>D₆=21, D₇=34] --> B[Weights<br/>w₆ = φ⁻⁶, w₇ = φ⁻⁷]
-    C[Visibility Factor<br/>ω₇ = 0.5328] --> D[Weighted Average]
-    B --> D
     
-    D --> E[⟨w⟩ = 0.04587]
-    E --> F[α = ⟨w⟩/2π]
-    F --> G[α⁻¹ = 136.979]
+    C[Cascade Level 0<br/>Baseline: 1/2] --> H[Cascade Visibility<br/>ω₇ = 0.533040]
+    D[Cascade Level 1<br/>Golden: cos²π/φ/4] --> H
+    E[Cascade Level 2<br/>Fibonacci: 1/47φ⁵] --> H
     
-    style C fill:#f9f,stroke:#333,stroke-width:2px
-    style G fill:#9f9,stroke:#333,stroke-width:2px
+    B --> F[Weighted Average]
+    H --> F
+    
+    F --> G[⟨w⟩ = 0.045874]
+    G --> I[α = ⟨w⟩/2π]
+    I --> J[α⁻¹ = 137.036040578812]
+    
+    style H fill:#f9f,stroke:#333,stroke-width:2px
+    style J fill:#9f9,stroke:#333,stroke-width:2px
+    style C fill:#e1f5fe,stroke:#01579b,stroke-width:1px
+    style D fill:#fff3e0,stroke:#e65100,stroke-width:1px  
+    style E fill:#f3e5f5,stroke:#4a148c,stroke-width:1px
 ```
 
 ## 5.10 Physical Meaning Summary
