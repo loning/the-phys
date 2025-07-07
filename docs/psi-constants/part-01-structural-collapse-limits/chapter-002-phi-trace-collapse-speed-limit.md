@@ -16,7 +16,7 @@ Having established the foundational structure ψ = ψ(ψ) in Chapter 001, we now
 **Theorem 2.1** (Binary Channel Speed): The fundamental speed c* = 2 emerges directly from the binary structure of the universe.
 
 *Proof*:
-1. **Binary Universe**: The universe consists of bits ∈ {0,1}
+1. **Binary Universe**: The universe consists of bits ∈ \{0,1\}
 2. **Channel Count**: This creates exactly 2 information channels
 3. **Channel Capacity**: Each channel can transmit 1 bit per time unit Δτ
 4. **Maximum Rate**: Total information rate = 2 bits per Δτ
@@ -101,7 +101,7 @@ Therefore, c* = 2 directly from the binary channel structure. ∎
 
 ```mermaid
 graph TD
-    A["Binary Universe: bits ∈ {0,1}"] --> B[2 Information Channels]
+    A["Binary Universe: bits ∈ \{0,1\}"] --> B[2 Information Channels]
     B --> C[Channel Capacity: 1 bit/Δτ each]
     C --> D[Total Rate: 2 bits/Δτ]
     D --> E[Natural Units: c* = 2]
@@ -315,7 +315,7 @@ The dimensional analysis confirms that $c_* = 2$ has the correct dimensions for 
 ## 2.12 First Principles Validation
 
 **Validation Checklist**:
-✓ Derived from binary universe: bits ∈ {0,1}  
+✓ Derived from binary universe: bits ∈ \{0,1\}  
 ✓ Emerges from 2 information channels  
 ✓ No circular reasoning or external references  
 ✓ Information-theoretic necessity  
@@ -324,7 +324,7 @@ The dimensional analysis confirms that $c_* = 2$ has the correct dimensions for 
 ✓ Maps correctly to SI value c = 299,792,458 m/s  
 
 **Binary to Speed Summary**:
-1. Universe has bits ∈ {0,1} → 2 channels
+1. Universe has bits ∈ \{0,1\} → 2 channels
 2. Each channel: 1 bit per time unit
 3. Maximum rate: 2 bits per time unit
 4. Therefore: c* = 2 (inevitable)

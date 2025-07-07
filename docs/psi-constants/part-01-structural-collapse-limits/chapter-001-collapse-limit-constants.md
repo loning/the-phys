@@ -34,7 +34,7 @@ Consider any two collapse structures $\psi_1 = \psi_1(\psi_1)$ and $\psi_2 = \ps
 
 ### Binary Universe Origin
 
-**Axiom 1.1** (Binary Existence): The universe consists of bits ∈ {0,1}.
+**Axiom 1.1** (Binary Existence): The universe consists of bits ∈ \{0,1\}.
 
 **Axiom 1.2** (Minimal Constraint): The simplest non-trivial constraint is "no consecutive 1s" to prevent information explosion (11 → 1111 → ...).
 
@@ -302,7 +302,7 @@ Each constant corresponds to a limit or colimit diagram in **CollapseStruct**. T
 
 **From Binary to α**:
 
-1. ✓ Binary universe: bits ∈ {0,1} with "no consecutive 1s"
+1. ✓ Binary universe: bits ∈ \{0,1\} with "no consecutive 1s"
 2. ✓ Fibonacci emergence: Constraint generates $F_{n+2}$ counting
 3. ✓ Golden ratio: φ = (1+√5)/2 from Fibonacci asymptotics
 4. ✓ Minimal observer: Layers 6 (21 states) and 7 (34 states)

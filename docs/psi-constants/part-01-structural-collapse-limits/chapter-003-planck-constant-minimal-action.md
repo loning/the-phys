@@ -16,7 +16,7 @@ Having established the speed limit from binary channels (Chapter 002), we now de
 **Theorem 3.1** (Binary Action Origin): The fundamental action quantum emerges from the minimal binary cycle.
 
 *Proof*:
-1. **Binary Universe**: Bits ∈ {0,1} with constraint "no consecutive 1s"
+1. **Binary Universe**: Bits ∈ \{0,1\} with constraint "no consecutive 1s"
 2. **Minimal Cycle**: 0→1→0 is the smallest complete cycle
 3. **Information Content**: This cycle represents the minimal unit of change
 4. **Phase Space**: Position (which bit) × Momentum (rate of change)
@@ -359,7 +359,7 @@ The uncertainty principle reflects the granular nature of binary information. �
 ## 3.15 First Principles Validation
 
 **Validation Checklist**:
-✓ Derived from binary universe: bits ∈ {0,1}  
+✓ Derived from binary universe: bits ∈ \{0,1\}  
 ✓ Minimal cycle: 0→1→0  
 ✓ No circular reasoning (no assumed relationships)  
 ✓ Fibonacci counting from "no consecutive 1s"  

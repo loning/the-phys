@@ -243,7 +243,7 @@ $$
 \varphi^{-r} = \sum_{k: a_k(r)=1} F_k \varphi^{-k}
 $$
 
-where a_k(r) ∈ {0,1} with no consecutive 1s.
+where a_k(r) ∈ \{0,1\} with no consecutive 1s.
 
 Substituting into the integral:
 

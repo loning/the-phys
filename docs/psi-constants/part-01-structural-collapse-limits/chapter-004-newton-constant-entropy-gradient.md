@@ -16,7 +16,7 @@ Having established the speed limit c* = 2 from binary channels and action quantu
 **Theorem 4.1** (Binary Density Gradient): In a binary universe with constraint "no consecutive 1s", information density naturally varies with spatial scale, creating gradients.
 
 *Proof*:
-1. **Binary Universe**: bits ∈ {0,1} with "no consecutive 1s"
+1. **Binary Universe**: bits ∈ \{0,1\} with "no consecutive 1s"
 2. **State Counting**: $n$-bit region has $F_{n+2}$ valid states
 3. **Spatial Scaling**: As $n$ increases, states grow as $\varphi^n$
 4. **Density Definition**: Information density = states/volume
@@ -58,7 +58,7 @@ where D is the diffusion coefficient. In binary units, D = 1, so the flow is dir
 
 ```mermaid
 graph TD
-    A["Binary Universe: {0,1}"] --> B[No Consecutive 1s]
+    A["Binary Universe: \{0,1\}"] --> B[No Consecutive 1s]
     B --> C[Fibonacci State Counting]
     C --> D[Information Density ρ ~ φⁿ/n³]
     D --> E[Density Gradients ∇ρ]
@@ -102,7 +102,7 @@ This shows gravity as information seeking equilibrium.
 **Theorem 4.5** (G* = φ⁻² Necessity): The gravitational constant must equal φ⁻² from binary first principles.
 
 *Proof*:
-1. **Binary Foundation**: Start with bits ∈ {0,1}
+1. **Binary Foundation**: Start with bits ∈ \{0,1\}
 2. **Constraint**: "No consecutive 1s" → Fibonacci counting
 3. **Growth Rate**: States grow as φⁿ
 4. **Density Scaling**: Information density ~ φⁿ/volume
@@ -259,7 +259,7 @@ def verify_gravitational_constant():
     scaling_factor = G_si / G_star
     
     print(f"Binary Universe Foundation:")
-    print(f"- Bits ∈ {0,1} with 'no consecutive 1s'")
+    print(f"- Bits ∈ \{0,1\} with 'no consecutive 1s'")
     print(f"- Fibonacci growth → φ = {phi:.10f}")
     print(f"- Maximum density = φ² = {phi**2:.10f}")
     print(f"- Gravitational coupling G* = φ⁻² = {G_star:.10f}")
@@ -280,7 +280,7 @@ def verify_gravitational_constant():
     print(f"- G* = φ⁻² = {G_star:.10f} (density gradient)")
     
     print("\n=== FIRST PRINCIPLES VALIDATION ===")
-    print("✓ Derived from binary bits ∈ {0,1}")
+    print("✓ Derived from binary bits ∈ \{0,1\}")
     print("✓ No consecutive 1s → Fibonacci → φ")
     print("✓ Information density gradients")
     print("✓ φ⁻² from maximum concentration")
@@ -318,7 +318,7 @@ Different observers at different scales would measure different numbers, but the
 1. **Speed Limit**: c* = 2 (number of channels)
 2. **Quantum Action**: ħ* = φ²/(2π) (minimal cycle)
 3. **Gravity**: G* = φ⁻² (density gradients)
-4. **Common Origin**: All from bits ∈ {0,1} with "no consecutive 1s"
+4. **Common Origin**: All from bits ∈ \{0,1\} with "no consecutive 1s"
 
 The forces aren't separate—they're different aspects of binary information flow. ∎
 
@@ -348,7 +348,7 @@ The scaling relationship $G = G_* \lambda_L^3 / (\lambda_M \lambda_T^2)$ preserv
 ## 4.14 First Principles Validation
 
 **Validation Checklist**:
-✓ Derived from binary universe: bits ∈ {0,1}  
+✓ Derived from binary universe: bits ∈ \{0,1\}  
 ✓ "No consecutive 1s" → Fibonacci → φ  
 ✓ Information density = states/volume  
 ✓ Density gradients drive information flow  

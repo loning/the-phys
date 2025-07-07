@@ -7,7 +7,7 @@ title: "Ψhē Constants from Collapse"
 
 ## *From Binary Universe to Physical Constants*
 
-Welcome to the complete theoretical framework for deriving all physical constants from the most fundamental principles: bits ∈ {0,1} and self-reference. This book demonstrates how the primordial collapse structure ψ = ψ(ψ) emerges from binary constraints, generating all fundamental constants through φ-trace collapse theory and golden-base binary vectors (Zeckendorf representation).
+Welcome to the complete theoretical framework for deriving all physical constants from the most fundamental principles: bits ∈ \{0,1\} and self-reference. This book demonstrates how the primordial collapse structure ψ = ψ(ψ) emerges from binary constraints, generating all fundamental constants through φ-trace collapse theory and golden-base binary vectors (Zeckendorf representation).
 
 **Key Discovery**: The simplest non-trivial constraint "no consecutive 1s" automatically generates:
 - Fibonacci counting (F₂=1, F₃=2, F₄=3, F₅=5, F₆=8, F₇=13, F₈=21, F₉=34...)
@@ -19,7 +19,7 @@ Welcome to the complete theoretical framework for deriving all physical constant
 
 All physical constants emerge from the binary universe through a remarkable cascade:
 
-1. **Binary axioms**: Bits ∈ {0,1} with constraint "no consecutive 1s"
+1. **Binary axioms**: Bits ∈ \{0,1\} with constraint "no consecutive 1s"
 2. **Fibonacci counting**: Constraint generates $F_{n+2}$ states for $n$-bit strings
 3. **Golden ratio**: Asymptotic Fibonacci ratio φ = (1+√5)/2 emerges naturally
 4. **Minimal observer**: Layers 6 (21 states) and 7 (34 states) form observer-system pair
@@ -164,7 +164,7 @@ The binary universe reveals how all fundamental constants emerge from the simple
 
 ### Core Principles
 
-1. **Binary Foundation**: Universe consists of bits ∈ {0,1} with constraint "no consecutive 1s"
+1. **Binary Foundation**: Universe consists of bits ∈ \{0,1\} with constraint "no consecutive 1s"
 2. **Self-Referential Completeness**: System must describe itself: S = f(S) → ψ = ψ(ψ)
 3. **Fibonacci Emergence**: Binary constraint automatically generates Fibonacci counting
 4. **Golden-Base Binary Vectors**: Quantities expressed in Zeckendorf representation
@@ -191,4 +191,4 @@ Each chapter includes computational verification programs that:
 
 ---
 
-*This work represents a complete theoretical framework for understanding physical constants as emergent properties of the binary universe. Starting from bits ∈ {0,1} and the constraint "no consecutive 1s", all constants emerge through collapse structure, unifying quantum mechanics, general relativity, and cosmology under a single self-referential principle: ψ = ψ(ψ).*
+*This work represents a complete theoretical framework for understanding physical constants as emergent properties of the binary universe. Starting from bits ∈ \{0,1\} and the constraint "no consecutive 1s", all constants emerge through collapse structure, unifying quantum mechanics, general relativity, and cosmology under a single self-referential principle: ψ = ψ(ψ).*

@@ -7,7 +7,7 @@ sidebar_label: "033. α from Rank-6/7 Paths"
 
 ## From ψ = ψ(ψ) to Fine Structure Through Cascade Averaging
 
-Having established the framework in Chapter 001 and explored the physical meaning in Chapter 005, this chapter presents the complete mathematical derivation of the fine structure constant from pure binary principles. We show how α emerges inevitably from bits ∈ {0,1} and the constraint "no consecutive 1s".
+Having established the framework in Chapter 001 and explored the physical meaning in Chapter 005, this chapter presents the complete mathematical derivation of the fine structure constant from pure binary principles. We show how α emerges inevitably from bits ∈ \{0,1\} and the constraint "no consecutive 1s".
 
 **Central Thesis**: Starting from the binary universe, we derive the complete formula for α including:
 - All 34 binary states of Layer 7 (the observer)
@@ -266,7 +266,7 @@ This extraordinary formula depends only on:
 To illuminate the deep inevitability of α, we present an alternative derivation starting from pure binary principles:
 
 **Binary Axioms**:
-1. **Existence as Bits**: Universe consists of bits ∈ {0,1}
+1. **Existence as Bits**: Universe consists of bits ∈ \{0,1\}
 2. **Self-Reference**: System must describe itself: S = f(S)  
 3. **Minimal Complexity**: Choose simplest non-trivial structure
 

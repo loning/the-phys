@@ -75,7 +75,7 @@ $$
 S = \hbar_* \sum_{k} \epsilon_k F_k = \sum_{k} \epsilon_k F_k \cdot \frac{\varphi^2}{2\pi}
 $$
 
-where εₖ ∈ {0,1} with no consecutive 1s.
+where εₖ ∈ \{0,1\} with no consecutive 1s.
 
 3. **Fundamental quanta**: Action quanta are:
 $$
