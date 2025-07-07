@@ -32,7 +32,7 @@ $$
 
 **Physical Meaning**: φ-trace path counting is **deterministic**, not probabilistic. The "statistical" behavior emerges from **pure combinatorial necessity**. ∎
 
-**Definition 11.1** (φ-Trace Path Weight): Each path γ with rank advancement r has weight:
+**Definition 11.1** (φ-Trace Path Weight): Each path γ with rank advancement $r$ has weight:
 
 $$
 w(\gamma) = \varphi^{-r} \text{ (Zeckendorf geometric scaling)}
@@ -67,7 +67,7 @@ $$
 **Theorem 11.3** (G* from φ-Trace Information Gradients): The gravitational constant emerges from φ-trace information density variation.
 
 *Proof*:
-1. **Information density scaling**: φ-trace information density at rank r: $\rho_\varphi(r) = \varphi^r$
+1. **Information density scaling**: φ-trace information density at rank $r$: $\rho_\varphi(r) = \varphi^r$
 2. **Information gradient**: Gradient between adjacent ranks: $\nabla\rho = \varphi^{r+1} - \varphi^r = \varphi^r(\varphi - 1)$
 3. **Relative gradient**: 
 $$
@@ -135,7 +135,7 @@ $$
 **Theorem 11.6** (φ-Trace Path Connectivity): Path connectivity changes at critical φ-trace rank.
 
 *Proof*:
-1. **Fibonacci branching**: Each φ-trace rank r branches into F_{r+1} paths at next rank
+1. **Fibonacci branching**: Each φ-trace rank $r$ branches into $F_{r+1}$ paths at next rank
 2. **Connectivity threshold**: Full connectivity requires sufficient branching
 3. **Critical rank calculation**: Branching balance when $\varphi^r = 2$:
 
@@ -168,8 +168,8 @@ graph TD
 **Theorem 11.7** (φ-Trace Information Conservation): Total φ-trace information is conserved through Zeckendorf uniqueness.
 
 *Proof*:
-1. **Zeckendorf uniqueness**: Every rank r has unique Fibonacci decomposition
-2. **Information content**: Path to rank r contains I(r) = r·log₂(φ) φ-bits
+1. **Zeckendorf uniqueness**: Every rank $r$ has unique Fibonacci decomposition
+2. **Information content**: Path to rank $r$ contains $I(r) = r \cdot \log_2(\varphi)$ φ-bits
 3. **Conservation principle**: φ-trace information cannot be created or destroyed, only redistributed
 4. **Total information invariant**:
 
@@ -179,7 +179,7 @@ $$
 
 **Physical Foundation**: Information conservation follows from **Zeckendorf uniqueness**, not from "Shannon entropy". Each φ-trace path carries specific information content determined by its Fibonacci decomposition. ∎
 
-**Definition 11.4** (φ-Trace Information Content): Path γ with rank advancement r:
+**Definition 11.4** (φ-Trace Information Content): Path γ with rank advancement $r$:
 
 $$
 I(\gamma) = r \cdot \log_2(\varphi) \text{ φ-bits}

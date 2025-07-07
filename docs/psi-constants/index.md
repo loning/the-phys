@@ -20,7 +20,7 @@ Welcome to the complete theoretical framework for deriving all physical constant
 All physical constants emerge from the binary universe through a remarkable cascade:
 
 1. **Binary axioms**: Bits ∈ {0,1} with constraint "no consecutive 1s"
-2. **Fibonacci counting**: Constraint generates F_{n+2} states for n-bit strings
+2. **Fibonacci counting**: Constraint generates $F_{n+2}$ states for $n$-bit strings
 3. **Golden ratio**: Asymptotic Fibonacci ratio φ = (1+√5)/2 emerges naturally
 4. **Minimal observer**: Layers 6 (21 states) and 7 (34 states) form observer-system pair
 5. **Cascade structure**: Three-level quantum interference yields α⁻¹ = 137.036...
@@ -173,8 +173,8 @@ The binary universe reveals how all fundamental constants emerge from the simple
 
 ### Key Notations
 
-- **Binary layers**: Layer n = {all n-bit strings with no consecutive 1s}
-- **Layer counting**: |Layer n| = F_{n+2} states (Fibonacci numbers)
+- **Binary layers**: Layer $n$ = $\{$all $n$-bit strings with no consecutive 1s$\}$
+- **Layer counting**: |Layer $n$| = $F_{n+2}$ states (Fibonacci numbers)
 - **φ-trace rank**: $s(\gamma) = \max\{k : F_k \text{ appears in } \gamma\}$
 - **ζ-weights**: $\zeta(\gamma) = \varphi^{-s(\gamma)}$
 - **Collapse units**: $\Delta\ell$, $\Delta t$, $\Delta m$

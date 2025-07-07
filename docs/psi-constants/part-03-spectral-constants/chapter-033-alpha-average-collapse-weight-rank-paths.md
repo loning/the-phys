@@ -13,7 +13,7 @@ Having established the complete isomorphism between collapse and SI structures i
 
 ## 33.1 Foundation: Zeckendorf Paths and Fibonacci Counting
 
-**Definition 33.1** (Zeckendorf Representation): Every positive integer n has a unique representation:
+**Definition 33.1** (Zeckendorf Representation): Every positive integer $n$ has a unique representation:
 
 $$
 n = \sum_{k} \varepsilon_k F_k, \quad \text{where } \varepsilon_k \in \{0,1\} \text{ and } \varepsilon_k \cdot \varepsilon_{k+1} = 0
@@ -21,7 +21,7 @@ $$
 
 This non-consecutive constraint creates the fundamental discrete structure underlying electromagnetic interactions.
 
-**Theorem 33.1** (Path Counting Formula): The number of length-n binary strings with no consecutive 1s equals:
+**Theorem 33.1** (Path Counting Formula): The number of length-$n$ binary strings with no consecutive 1s equals:
 
 $$
 a_n = F_{n+2}
@@ -33,9 +33,9 @@ $$
 
 ## 33.2 Physical Model: Weighted Collapse Paths
 
-**Axiom 1** (Discrete Path Space): Physical reality consists of discrete collapse paths γ where each path is a length-n binary string with no consecutive 1s.
+**Axiom 1** (Discrete Path Space): Physical reality consists of discrete collapse paths γ where each path is a length-$n$ binary string with no consecutive 1s.
 
-**Axiom 2** (Collapse Weight): Rank-n paths have golden ratio decay weights: $w_n = \varphi^{-n}$
+**Axiom 2** (Collapse Weight): Rank-$n$ paths have golden ratio decay weights: $w_n = \varphi^{-n}$
 
 **Axiom 3** (Observer Principle): The observer is a quantum superposition of all rank-7 paths:
 $$
@@ -161,7 +161,7 @@ $$
 $$
 \alpha = \frac{0.04581376051616}{2\pi} = 0.007296194289
 $$
-Therefore: $\alpha^{-1} = 137.036040578812$ ∎
+Therefore: $\alpha^\{-1\} = 137.036040578812$ ∎
 
 **Precision Analysis**:
 - **Calculated**: α⁻¹ = 137.036040578812
@@ -271,13 +271,13 @@ To illuminate the deep inevitability of α, we present an alternative derivation
 - Constraint "no 11": Creates finite, countable states
 - Physical interpretation: 11 = "collision" destroying information ∎
 
-**Theorem 33.10** (Fibonacci from Binary): The number of n-bit strings with no consecutive 1s equals F_{n+2}.
+**Theorem 33.10** (Fibonacci from Binary): The number of $n$-bit strings with no consecutive 1s equals $F_{n+2}$.
 
 *Proof*: Recursion a(n) = a(n-1) + a(n-2) with a(0)=1, a(1)=2 gives Fibonacci sequence. ∎
 
 **Definition 33.9** (Binary Layers):
-- Layer n = {all n-bit strings with no 11}
-- |Layer n| = F_{n+2} states
+- Layer $n$ = $\{$all $n$-bit strings with no 11$\}$
+- |Layer $n$| = $F_{n+2}$ states
 
 **Explicit Binary States**: To make this concrete, here are ALL states for small layers:
 
@@ -326,7 +326,7 @@ Notice the pattern: NO string contains "11". This constraint automatically gener
 
 *Proof*: Need log₂(21) ≈ 4.4 bits to distinguish Layer 6 states, plus overhead for recording observations. Layer 7 with 34 > 21 states is minimal. ∎
 
-**Binary Phase Assignment**: Each n-bit state |b_{n-1}...b_0⟩ gets phase:
+**Binary Phase Assignment**: Each $n$-bit state $|b_{n-1}...b_0\rangle$ gets phase:
 $$
 \theta = 2\pi \times \frac{\text{binary value}}{2^n}
 $$

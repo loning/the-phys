@@ -175,9 +175,9 @@ In the collapse framework, spacetime emerges from the network of φ-trace paths.
 *Proof*:
 The collapse path network forms a discrete approximation to continuous 4D spacetime. Each fundamental loop in this network corresponds to a minimal 4D rotation. By the topology of SO(4), the fundamental group has period 2π. Therefore, the normalization factor 1/(2π) correctly accounts for this topological constraint. ∎
 
-## 1.8 Fine Structure Constant from Pure Structure
+## 1.8 Fine Structure Constant Framework
 
-**Main Result 1.1** (Structural Fine Structure Constant): The fine structure constant is given exactly by:
+**Main Result 1.1** (Structural Fine Structure Constant): The fine structure constant emerges from the observer-weighted average of collapse paths:
 
 $$
 \alpha = \frac{1}{2\pi} \cdot \frac{D_6 \cdot \varphi^{-6} + D_7 \cdot \omega_7 \cdot \varphi^{-7}}{D_6 + D_7 \cdot \omega_7}
@@ -193,36 +193,22 @@ where:
 - $D_6 = F_8 = 21$: rank-6 path count (Fibonacci)
 - $D_7 = F_9 = 34$: rank-7 path count (Fibonacci)  
 - $\varphi = (1 + \sqrt{5})/2$: golden ratio (self-similarity)
-- $\omega_7 = \frac{1}{2} + \frac{1}{4}\cos^2\left(\frac{\pi}{\varphi}\right) + \frac{1}{47\varphi^5}$: high-precision visibility factor with cascade structure
+- $\omega_7$: visibility factor encoding quantum interference
 
-**No free parameters**: This high-precision cascade formula yields $\alpha^{-1} = 137.036040578812$, matching the experimental value to 0.3 ppm accuracy.
-
-## 1.8.1 High-Precision Cascade Structure
-
-**Discovery**: The visibility factor exhibits a three-level cascade structure:
+**Key Discovery**: The visibility factor has a remarkable three-level cascade structure:
 
 $$
-\omega_7 = \underbrace{\frac{1}{2}}_{\text{Level 0: Base}} + \underbrace{\frac{1}{4}\cos^2\left(\frac{\pi}{\varphi}\right)}_{\text{Level 1: Primary}} + \underbrace{\frac{1}{47\varphi^5}}_{\text{Level 2: Correction}}
+\omega_7 = \frac{1}{2} + \frac{1}{4}\cos^2\left(\frac{\pi}{\varphi}\right) + \frac{1}{47\varphi^5}
 $$
 
-**Cascade Analysis**:
-- **Level 0** (0.500000): Random phase baseline
-- **Level 1** (0.032829): Primary golden-ratio interference  
-- **Level 2** (0.000211): Fibonacci path correction
-- **Total**: ω₇ = 0.533040, yielding α⁻¹ = 137.036040578812
+This yields $\alpha^{-1} = 137.036040578812$, achieving 0.3 ppm precision with no free parameters.
 
-**Physical Interpretation**: Each cascade level represents:
-1. **Baseline interference** (statistical average)
-2. **Golden-ratio resonance** (φ-trace geometry)
-3. **Fibonacci path corrections** (discrete structure effects)
+**Three Levels of Understanding**:
+- **Physical meaning**: Why ranks 6 and 7? See Chapter 005  
+- **Complete derivation**: From binary universe to α. See Chapter 033
+- **This chapter**: Establishes the framework and key concepts
 
-**Fully Expanded High-Precision Formula**:
-
-$$
-\alpha^{-1} = \frac{2\pi \left( 21 + 34 \cdot \left[\frac{1}{2} + \frac{1}{4}\cos^2\left(\frac{\pi}{\varphi}\right) + \frac{1}{47\varphi^5}\right] \right)}{21 \cdot \varphi^{-6} + 34 \cdot \left[\frac{1}{2} + \frac{1}{4}\cos^2\left(\frac{\pi}{\varphi}\right) + \frac{1}{47\varphi^5}\right] \cdot \varphi^{-7}}
-$$
-
-This cascade structure reveals the fine-tuning mechanism: α's precision emerges from the hierarchical interference patterns in φ-trace geometry.
+The extraordinary precision emerges from deeper principles—the universe computing its own coupling constant through hierarchical quantum interference patterns in the collapse structure.
 
 ## 1.9 Information-Theoretic Interpretation
 

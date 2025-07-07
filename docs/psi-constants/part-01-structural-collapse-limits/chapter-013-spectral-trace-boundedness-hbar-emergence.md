@@ -17,8 +17,8 @@ Having established action as accumulated φ-trace information, we now reveal why
 
 *Proof*:
 1. **Self-reference creates operator**: ψ acting on ψ generates operator Ĉ
-2. **Rank structure**: φ-trace paths organize by rank n
-3. **Information content**: Rank-n path carries log_φ(φ^n) = n units of information
+2. **Rank structure**: φ-trace paths organize by rank $n$
+3. **Information content**: Rank-$n$ path carries $\log_\varphi(\varphi^n) = n$ units of information
 4. **Processing weight**: Information processing efficiency decreases with rank:
 $$
 \lambda_n = \varphi^{-n}
@@ -45,7 +45,7 @@ $$
 \text{Tr}[\hat{C}] = \sum_{n=1}^{\infty} D_n \lambda_n = \sum_{n=1}^{\infty} F_{n+2} \varphi^{-n}
 $$
 
-where D_n = F_{n+2} is the number of distinct rank-n paths.
+where $D_n = F_{n+2}$ is the number of distinct rank-$n$ paths.
 
 5. **Convergence**: This series converges because φ > 1:
 $$
@@ -60,8 +60,8 @@ $$
 
 *Proof*:
 1. **Zeckendorf uniqueness**: Each integer has unique Fibonacci decomposition
-2. **Rank quantization**: φ-trace ranks are discrete: n ∈ ℕ
-3. **No accumulation**: Between ranks n and n+1, no intermediate values exist
+2. **Rank quantization**: φ-trace ranks are discrete: $n \in \mathbb{N}$
+3. **No accumulation**: Between ranks $n$ and $n+1$, no intermediate values exist
 4. **Spectral gaps**: 
 $$
 \lambda_n - \lambda_{n+1} = \varphi^{-n} - \varphi^{-(n+1)} = \varphi^{-n}(1 - \varphi^{-1}) > 0
@@ -93,7 +93,7 @@ $$
 **Theorem 13.5** (Gap-Uncertainty Connection): Spectral gaps create uncertainty relations.
 
 *Proof*:
-1. **Adjacent eigenvalues**: λ_n and λ_{n+1} differ by factor φ^(-1)
+1. **Adjacent eigenvalues**: $\lambda_n$ and $\lambda_{n+1}$ differ by factor $\varphi^{-1}$
 2. **Action difference**: 
 $$
 \Delta S = -\hbar_* \log(\lambda_{n+1}/\lambda_n) = \hbar_* \log \varphi
@@ -130,7 +130,7 @@ $$
 **Theorem 13.7** (Trace Class Operator): The φ-trace processing operator is trace class.
 
 *Proof*:
-1. **Positive operator**: All eigenvalues λ_n = φ^(-n) > 0
+1. **Positive operator**: All eigenvalues $\lambda_n = \varphi^{-n} > 0$
 2. **Trace norm**: For positive operators, ||Ĉ||_1 = Tr[Ĉ]
 3. **Finite trace**: We showed Tr[Ĉ] < ∞
 4. **Trace class**: Therefore Ĉ ∈ L¹(H)
@@ -194,7 +194,7 @@ $$
 
 *Proof*:
 1. **Partition function form**: Tr[Ĉ] = Σ D_n λ_n resembles Z = Σ g_n e^(-βE_n)
-2. **Effective energies**: E_n = n ħ* log φ (information energy)
+2. **Effective energies**: $E_n = n \hbar_* \log \varphi$ (information energy)
 3. **Temperature identification**: 
 $$
 k_B T_{\text{eff}} = \hbar_* \log \varphi
