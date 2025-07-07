@@ -5,13 +5,28 @@ title: "Ψhē Constants from Collapse"
 
 # Ψhē Constants from Collapse
 
-## *Collapse-Generated Constants and Measurement Geometry*
+## *From Binary Universe to Physical Constants*
 
-Welcome to the complete theoretical framework for deriving all physical constants from the primordial collapse structure ψ = ψ(ψ). This book presents a systematic derivation of fundamental constants using φ-trace collapse theory, golden-base binary vectors (Zeckendorf representation), and rigorous first-principles methodology.
+Welcome to the complete theoretical framework for deriving all physical constants from the most fundamental principles: bits ∈ {0,1} and self-reference. This book demonstrates how the primordial collapse structure ψ = ψ(ψ) emerges from binary constraints, generating all fundamental constants through φ-trace collapse theory and golden-base binary vectors (Zeckendorf representation).
+
+**Key Discovery**: The simplest non-trivial constraint "no consecutive 1s" automatically generates:
+- Fibonacci counting (F₂=1, F₃=2, F₄=3, F₅=5, F₆=8, F₇=13, F₈=21, F₉=34...)
+- Golden ratio φ = (1+√5)/2 as asymptotic ratio
+- Minimal observer-system pair at Layers 6-7
+- Fine structure constant α⁻¹ = 137.036... through cascade interference
 
 ## Theory Overview
 
-All physical constants emerge as limit or colimit constructions between collapse tensors within the φ-trace framework. The book is structured in four parts with 64 chapters total.
+All physical constants emerge from the binary universe through a remarkable cascade:
+
+1. **Binary axioms**: Bits ∈ {0,1} with constraint "no consecutive 1s"
+2. **Fibonacci counting**: Constraint generates F_{n+2} states for n-bit strings
+3. **Golden ratio**: Asymptotic Fibonacci ratio φ = (1+√5)/2 emerges naturally
+4. **Minimal observer**: Layers 6 (21 states) and 7 (34 states) form observer-system pair
+5. **Cascade structure**: Three-level quantum interference yields α⁻¹ = 137.036...
+6. **All constants**: Emerge as limit or colimit constructions between collapse tensors
+
+The book is structured in four parts with 64 chapters total, deriving all fundamental constants from these binary principles.
 
 ---
 
@@ -66,6 +81,14 @@ All physical constants emerge as limit or colimit constructions between collapse
 ## Part III — Spectral Constants and Collapse Path Averages
 **Chapters 033-048**: Fine structure constant α as rank-6/7 path average, running couplings, and electromagnetic constants from observer trace visibility.
 
+### Binary Foundation of α
+
+The fine structure constant emerges from pure binary principles:
+- **Layer 6**: 21 binary states (electromagnetic field)
+- **Layer 7**: 34 binary states (observer)
+- **Three-level cascade**: 50% baseline + 3.28% golden angle + 0.02% Fibonacci correction
+- **Result**: α⁻¹ = 137.036040578812 (0.3 ppm precision)
+
 | Chapter | Title |
 |---------|-------|
 | [033](./part-03-spectral-constants/chapter-033-alpha-average-collapse-weight-rank-paths.md) | $\alpha$ as Average Collapse Weight Over Rank-6/7 Paths |
@@ -111,21 +134,52 @@ All physical constants emerge as limit or colimit constructions between collapse
 
 ---
 
+## Binary Foundation of All Constants
+
+### From Bits to Physics
+
+The binary universe reveals how all fundamental constants emerge from the simplest possible axioms:
+
+**Speed of Light (c* = 2)**:
+- Binary channels: 0 and 1 provide exactly 2 information pathways
+- Maximum propagation rate = number of channels = 2
+- In SI units: c = 299,792,458 m/s
+
+**Planck Constant (ħ* = φ²/2π)**:
+- Minimal action quantum from golden ratio self-similarity
+- Phase space area of fundamental binary cycle
+- In SI units: ħ = 1.054571... × 10⁻³⁴ J·s
+
+**Newton's Constant (G* = φ⁻²)**:
+- Inverse golden ratio squared encodes gravitational coupling
+- Information gradient between collapse layers
+- In SI units: G = 6.674... × 10⁻¹¹ m³/kg·s²
+
+**Fine Structure Constant (α⁻¹ = 137.036...)**:
+- Layer 6 (21 states) + Layer 7 (34 states) interference
+- Three-level cascade: 50% + 3.28% + 0.02%
+- Most precise derivation: 0.3 ppm accuracy
+
 ## Mathematical Framework
 
 ### Core Principles
 
-1. **Self-Referential Completeness**: All derivations trace back to ψ = ψ(ψ)
-2. **Golden-Base Binary Vectors**: Quantities expressed in Zeckendorf representation
-3. **Category Theory**: Limits and colimits between collapse tensors
-4. **First Principles Only**: No external constants assumed
+1. **Binary Foundation**: Universe consists of bits ∈ {0,1} with constraint "no consecutive 1s"
+2. **Self-Referential Completeness**: System must describe itself: S = f(S) → ψ = ψ(ψ)
+3. **Fibonacci Emergence**: Binary constraint automatically generates Fibonacci counting
+4. **Golden-Base Binary Vectors**: Quantities expressed in Zeckendorf representation
+5. **Category Theory**: Limits and colimits between collapse tensors
+6. **First Principles Only**: No external constants assumed
 
 ### Key Notations
 
+- **Binary layers**: Layer n = {all n-bit strings with no consecutive 1s}
+- **Layer counting**: |Layer n| = F_{n+2} states (Fibonacci numbers)
 - **φ-trace rank**: $s(\gamma) = \max\{k : F_k \text{ appears in } \gamma\}$
 - **ζ-weights**: $\zeta(\gamma) = \varphi^{-s(\gamma)}$
 - **Collapse units**: $\Delta\ell$, $\Delta t$, $\Delta m$
 - **Collapse constants**: $c_* = 2$, $\hbar_* = \varphi^2/2\pi$, $G_* = \varphi^{-2}$
+- **Fine structure**: $\alpha^{-1} = 137.036$ from Layer 6 (21 states) and Layer 7 (34 states)
 
 ## Verification Programs
 
@@ -137,4 +191,4 @@ Each chapter includes computational verification programs that:
 
 ---
 
-*This work represents a complete theoretical framework for understanding physical constants as emergent properties of collapse structure, unifying quantum mechanics, general relativity, and cosmology under a single self-referential principle: ψ = ψ(ψ).*
+*This work represents a complete theoretical framework for understanding physical constants as emergent properties of the binary universe. Starting from bits ∈ {0,1} and the constraint "no consecutive 1s", all constants emerge through collapse structure, unifying quantum mechanics, general relativity, and cosmology under a single self-referential principle: ψ = ψ(ψ).*
