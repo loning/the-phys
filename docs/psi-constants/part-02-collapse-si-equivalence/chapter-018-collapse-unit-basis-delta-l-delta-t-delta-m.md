@@ -120,15 +120,24 @@ $$
 
 *Proof*:
 1. **Speed Relationship**: From bit propagation
-   $$c_* = \frac{\Delta \ell}{\Delta t} = \frac{1/(4\varphi\sqrt{\pi})}{1/(8\varphi\sqrt{\pi})} = 2$$ 
+   
+$$
+c_* = \frac{\Delta \ell}{\Delta t} = \frac{1/(4\varphi\sqrt{\pi})}{1/(8\varphi\sqrt{\pi})} = 2
+$$
    ✓
 
 2. **Action Relationship**: From bit cycling  
-   $$\hbar_* = \Delta m \cdot (\Delta \ell)^2 \cdot (\Delta t)^{-1} = \frac{\varphi^3}{\sqrt{\pi}} \cdot \frac{1}{16\varphi^2\pi} \cdot 8\varphi\sqrt{\pi} = \frac{\varphi^2}{2\pi}$$ 
+   
+$$
+\hbar_* = \Delta m \cdot (\Delta \ell)^2 \cdot (\Delta t)^{-1} = \frac{\varphi^3}{\sqrt{\pi}} \cdot \frac{1}{16\varphi^2\pi} \cdot 8\varphi\sqrt{\pi} = \frac{\varphi^2}{2\pi}
+$$
    ✓
 
 3. **Gravitational Relationship**: From bit clustering
-   $$G_* = \frac{(\Delta \ell)^3}{\Delta m \cdot (\Delta t)^2} = \varphi^{-2}$$ 
+   
+$$
+G_* = \frac{(\Delta \ell)^3}{\Delta m \cdot (\Delta t)^2} = \varphi^{-2}
+$$
    ✓
 
 **Binary Foundation**: These relationships show that the unit system encodes the three fundamental binary operations consistently. The $\varphi$ factors emerge naturally from Fibonacci counting of valid bit arrangements under "no consecutive 1s". ∎
