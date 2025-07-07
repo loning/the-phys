@@ -104,8 +104,10 @@ $$
    - This is the universal constant for any closed path
 
 5. **Result**: 
-   $$\hbar_* = \frac{\text{Phase space volume}}{\text{Topological factor}} = \frac{\varphi^2}{2\pi}$$
-
+   
+$$
+\hbar_* = \frac{\text{Phase space volume}}{\text{Topological factor}} = \frac{\varphi^2}{2\pi}
+$$
 No circular reasoning—derived directly from binary structure! ∎
 
 ## 3.4 Information-Theoretic Validation
