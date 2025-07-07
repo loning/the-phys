@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """
-Chapter 011 Verification: Constants from φ-Trace Fibonacci Path Counting
-Tests deterministic emergence of physical constants from φ-trace path counting
+Chapter 011 Verification: Constants from Binary Path Counting Statistics
+Tests deterministic emergence of physical constants from counting valid binary sequences
 """
 
 import math
 import unittest
 
-class TestChapter011FibonacciPathCounting(unittest.TestCase):
-    """Test suite for Chapter 011: φ-Trace Fibonacci Path Counting Constants"""
+class TestChapter011BinaryPathCounting(unittest.TestCase):
+    """Test suite for Chapter 011: Constants from Binary Path Counting"""
     
     def setUp(self):
         """Set up test constants"""
@@ -25,71 +25,74 @@ class TestChapter011FibonacciPathCounting(unittest.TestCase):
         self.fib = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
         
     def fibonacci(self, n):
-        """Calculate nth Fibonacci number"""
-        if n <= 1:
-            return n
-        a, b = 0, 1
-        for _ in range(2, n+1):
+        """Calculate nth Fibonacci number (1-indexed)"""
+        if n <= 0:
+            return 0
+        if n == 1:
+            return 1
+        if n == 2:
+            return 1
+        a, b = 1, 1
+        for _ in range(3, n+1):
             a, b = b, a + b
         return b
     
-    def test_phi_trace_path_counting(self):
-        """Test φ-trace path counting from Zeckendorf enumeration"""
-        # Total φ-trace path count Ν = Σ F_n φ^(-n)
-        # This is deterministic counting, not statistical mechanics
+    def test_binary_path_counting(self):
+        """Test counting valid binary sequences avoiding '11'"""
+        print("\n=== Binary Path Counting Foundation ===")
         
-        # Compute path count for different rank ranges
-        path_counts = []
-        for max_rank in [5, 10, 15, 20]:
-            count = 0
-            for n in range(1, max_rank + 1):
-                if n < len(self.fib):
-                    count += self.fib[n] * self.phi**(-n)
-                else:
-                    # Generate higher Fibonacci numbers
-                    F_n = self.fibonacci(n)
-                    count += F_n * self.phi**(-n)
-            path_counts.append(count)
+        # Count n-bit sequences with no consecutive 1s
+        def count_valid_binary(n):
+            if n == 0: return 1
+            if n == 1: return 2  # '0' and '1'
+            
+            # Dynamic programming
+            dp = [0] * (n + 1)
+            dp[0] = 1
+            dp[1] = 2
+            
+            for i in range(2, n + 1):
+                dp[i] = dp[i-1] + dp[i-2]
+            
+            return dp[n]
         
-        # Path counts should be increasing
-        for i in range(1, len(path_counts)):
-            self.assertGreater(path_counts[i], path_counts[i-1],
-                              msg="Path count should increase with more ranks")
+        print("n-bits | Valid sequences | Fibonacci")
+        print("-------|-----------------|----------")
         
-        # Each path has deterministic weight φ^(-r), not probability
-        for r in range(1, 8):
-            weight = self.phi**(-r)
-            self.assertGreater(weight, 0, msg="Path weight must be positive")
-            self.assertLess(weight, 1, msg="Path weight decreases with rank")
-    
-    def test_c_star_from_fibonacci_geometry(self):
-        """Test c* emerges from φ-trace path length-time Fibonacci ratios"""
-        # c* = ℓ_P* / Δτ from deterministic φ-trace geometry
-        # NOT from statistical averages
-        
-        # All Fibonacci paths have identical speed ratio
-        l_P_star = 1 / (4 * math.sqrt(self.pi))  # From Chapter 10
-        delta_tau = 1 / (8 * math.sqrt(self.pi))  # From Chapter 7
-        
-        c_geometric = l_P_star / delta_tau
-        self.assertAlmostEqual(c_geometric, 2, places=15,
-                              msg="c* from geometric ratio, not statistics")
-        
-        # Test individual Fibonacci paths
         for n in range(1, 8):
-            if n < len(self.fib):
-                # Path length: F_n * ℓ_P*
-                path_length = self.fib[n] * l_P_star
-                # Path time: F_n * Δτ
-                path_time = self.fib[n] * delta_tau
-                # Speed ratio
-                speed_ratio = path_length / path_time
-                
-                self.assertAlmostEqual(speed_ratio, 2, places=15,
-                                      msg=f"All Fibonacci paths have speed c* = 2 at rank {n}")
+            count = count_valid_binary(n)
+            # Count equals F_{n+2} for n-bit sequences
+            if n+2 < len(self.fib):
+                fib_expected = self.fib[n+1]  # Note: fib array is 0-indexed
+            else:
+                fib_expected = self.fibonacci(n+2)
+            
+            print(f"   {n}   |       {count:<3}       | F_{n+2} = {fib_expected}")
+            
+            self.assertEqual(count, fib_expected,
+                            f"Count for {n}-bit sequences should be F_{n+2}")
         
-        # Verify deterministic nature
-        self.assertEqual(self.c_star, 2, msg="Speed limit is geometric constant")
+        print("\nFibonacci numbers count valid binary sequences!")
+    
+    def test_c_star_from_binary_channels(self):
+        """Test c* emerges from binary channel capacity"""
+        print("\n=== Speed from Binary Channels ===")
+        
+        # c* = bit propagation speed through 2 channels
+        l_P_star = 1 / (4 * math.sqrt(self.pi))  # 1 bit spatial resolution
+        delta_tau = 1 / (8 * math.sqrt(self.pi))  # 1 bit temporal resolution
+        
+        c_binary = l_P_star / delta_tau
+        
+        print(f"Spatial bit resolution: ℓ_P* = {l_P_star:.6f}")
+        print(f"Temporal bit resolution: Δτ = {delta_tau:.6f}")
+        print(f"Speed: c* = ℓ_P*/Δτ = {c_binary:.1f}")
+        
+        self.assertAlmostEqual(c_binary, 2, places=15,
+                              msg="c* = 2 (two binary channels)")
+        
+        print("\nc* = 2 because space has 2 binary propagation channels!")
+        print("Not a statistical average - it's the total binary bandwidth")
     
     def test_action_quantum_from_areas(self):
         """Test ħ* from minimal loop area statistics"""
@@ -509,12 +512,12 @@ class TestChapter011FibonacciPathCounting(unittest.TestCase):
 def main():
     """Run all verification tests with detailed output"""
     print("=" * 70)
-    print("Chapter 011 Verification: Constants from φ-Trace Fibonacci Path Counting")
-    print("Testing deterministic constant emergence from φ-trace path enumeration")
+    print("Chapter 011 Verification: Constants from Binary Path Counting")
+    print("Testing deterministic constant emergence from counting valid bit sequences")
     print("=" * 70)
     
     # Create test suite
-    suite = unittest.TestLoader().loadTestsFromTestCase(TestChapter011FibonacciPathCounting)
+    suite = unittest.TestLoader().loadTestsFromTestCase(TestChapter011BinaryPathCounting)
     
     # Run with verbose output
     runner = unittest.TextTestRunner(verbosity=2)

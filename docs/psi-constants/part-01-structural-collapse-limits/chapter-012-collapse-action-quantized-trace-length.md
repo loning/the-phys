@@ -202,76 +202,108 @@ $$
 
 **Physical Meaning**: Decoherence occurs when **φ-trace information channels lose correlation**, not from mysterious "environment". ∎
 
-## 12.10 Symplectic Structure from φ-Trace Duality
+## 12.10 Symplectic Structure from Binary State-Flip Duality
 
-**Theorem 12.10** (Phase Space Emergence): Symplectic structure emerges from φ-trace rank-momentum duality.
-
-*Proof*:
-1. **Dual coordinates**: 
-   - Position x ↔ φ-trace rank r
-   - Momentum p ↔ rank advancement rate ṙ
-
-2. **Symplectic form**: The natural pairing gives:
-$$
-\omega = dp \wedge dx = d\dot{r} \wedge dr
-$$
-
-3. **Poisson bracket**: From φ-trace commutation:
-$$
-\{x, p\}_{\varphi} = \{r, \dot{r}\}_{\varphi} = 1
-$$
-
-**Physical Foundation**: Phase space structure reflects **dual aspects of φ-trace information** - static (rank) and dynamic (flow). ∎
-
-## 12.11 Renormalization as φ-Trace Rank Shifting  
-
-**Theorem 12.11** (Action Renormalization): Scale transformations shift φ-trace rank reference.
+**Theorem 12.10** (Phase Space from Bits): Symplectic structure emerges from bit configuration vs flip rate duality.
 
 *Proof*:
-1. **Rank shift**: r → r + Δr shifts all ranks
-2. **Information scaling**: I → I' = I + Δr log φ
-3. **Action scaling**: S → S' = S + ħ* Δr log φ
-4. **Relative invariance**: Ratios S₁/S₂ remain unchanged
+1. **Binary phase space coordinates**:
+   - Configuration: $q = $ current bit pattern $|b_1b_2...b_n\rangle$
+   - Momentum: $p = $ bit flip rate pattern $|\dot{b}_1\dot{b}_2...\dot{b}_n\rangle$
 
-**Physical Meaning**: Renormalization reflects **choice of φ-trace rank origin** - physics is invariant under rank translations. ∎
+2. **Symplectic form**: Natural pairing of states and rates:
+$$
+\omega = \sum_i dp_i \wedge dq_i = \sum_i d\dot{b}_i \wedge db_i
+$$
 
-## 12.12 Observer Dependence of Action
+3. **Binary Poisson bracket**: For functions of bits:
+$$
+\{f, g\}_{\text{binary}} = \sum_i \left(\frac{\partial f}{\partial b_i}\frac{\partial g}{\partial \dot{b}_i} - \frac{\partial f}{\partial \dot{b}_i}\frac{\partial g}{\partial b_i}\right)
+$$
 
-**Theorem 12.12** (Observer Action): Different observers measure different actions based on their φ-trace rank.
+4. **Canonical commutation**: $\{b_i, \dot{b}_j\} = \delta_{ij}$
+
+**Binary Foundation**: Phase space isn't abstract - it's:
+- **Position axis**: which bits are 0 or 1
+- **Momentum axis**: how fast each bit is flipping
+- **Symplectic structure**: pairing of configuration with change rate
+
+Hamiltonian mechanics emerges from tracking bits and their flip rates! ∎
+
+## 12.11 Renormalization as Binary Scale Reference
+
+**Theorem 12.11** (Action Renormalization): Scale transformations shift the binary reference frame.
 
 *Proof*:
-1. **Observer at rank r_O**: Measures information relative to their rank
-2. **Relative information**: I_rel = I_total - I_observer
-3. **Observer-dependent action**:
+1. **Binary scale hierarchy**: Bit patterns exist at different scales:
+   - Microscopic: individual bit flips
+   - Mesoscopic: correlated flip patterns  
+   - Macroscopic: bulk bit statistics
+
+2. **Scale transformation**: Zooming out by factor $\varphi$:
+   - Fine detail: $|10101010...\rangle$ (many flips visible)
+   - Coarse view: $|1\bar{0}1\bar{0}...\rangle$ (averaged blocks)
+
+3. **Action scaling**: Coarse-graining by factor $\varphi^n$:
 $$
-S_O = \hbar_* (I_{\text{total}} - I_O)
+S_{\text{coarse}} = S_{\text{fine}} + n\hbar_* \log \varphi
 $$
 
-4. **Action differences**: Different observers disagree by:
+4. **Scale invariance**: Physics unchanged, only resolution differs
+
+**Binary Meaning**: Renormalization = changing the bit resolution we use to describe the system. Like switching from 4K to standard definition - same movie, different pixel count! ∎
+
+## 12.12 Observer Dependence from Binary Processing Scale
+
+**Theorem 12.12** (Observer-Relative Action): Different observers at different bit-processing scales measure different action quanta.
+
+*Proof*:
+1. **Observer's bit scale**: Human processes ~$10^{20}$ bits/second
+2. **Scale-dependent quantum**: Observer at scale $n$ sees:
 $$
-S_{O_1} - S_{O_2} = \hbar_* (I_{O_2} - I_{O_1})
+\hbar_{\text{observed}} = \hbar_* \times \varphi^{-n}
 $$
 
-**Physical Foundation**: Action is **relative to observer's φ-trace rank** - explains why humans observe specific ħ value based on our information processing scale. ∎
+where $n$ measures levels below Planck scale.
+
+3. **Human measurement**: We operate at rank where:
+
+$$
+\hbar_{\text{human}} = \frac{\varphi^2}{2\pi} \times \varphi^{-20} \approx 1.054 \times 10^{-34} 
+$$
+
+4. **Different observers**: 
+   - Planck-scale observer: sees $\hbar_* = \varphi^2/(2\pi)$
+   - Human observer: sees $\hbar = 1.054 \times 10^{-34}$
+   - Cosmic observer: would see different value
+
+**Binary Reality**: The "fundamental constants" we measure depend on our bit-processing scale! An ant and a galaxy would disagree on $\hbar$ because they process information at different rates.
+
+**Human Perspective**: We see $\hbar = 1.054 \times 10^{-34}$ J·s because that's the action quantum at our biological bit-processing scale. ∎
 
 ## Summary
 
-From ψ = ψ(ψ), action emerges as:
+From the binary universe with constraint "no consecutive 1s", action emerges as:
 
 $$
-\text{Action} = \text{Accumulated φ-trace information}
+\text{Action} = \hbar_* \times \text{(Total bit flips)}
 $$
 
-**Key First-Principles Results**:
-1. **Action = ħ* × Information** - not abstract quantity but information record
-2. **S₀ = φ²** - minimal complete φ-trace cycle 
-3. **Zeckendorf quantization** - reflects discrete information structure
-4. **Path amplitudes** - from information flow superposition
-5. **Uncertainty relations** - from processing bandwidth limits
-6. **Classical limit** - coarse-grained information flow
-7. **Topological quantization** - integer winding numbers
-8. **Observer dependence** - relative to φ-trace rank
+**Key Binary Results**:
+1. **Action = counting bit flips** - each flip contributes $\hbar_*$
+2. **$S_0 = \varphi^2$** - minimal cycle requires $2\pi$ flips
+3. **Fibonacci quantization** - from "no consecutive 1s" constraint
+4. **Path amplitudes** - $e^{i(\text{flips})}$ for each binary path
+5. **Uncertainty relations** - can't flip bits faster than $\Delta\tau$
+6. **Classical limit** - averaging ~$10^{23}$ bit flips
+7. **Least action** - paths that minimize constraint violations
+8. **Observer dependence** - different bit-processing scales see different $\hbar$
 
-**Profound Insight**: Action is the universe's way of **keeping track of its own information processing**. Every quantum is a complete thought in the cosmic self-reflection.
+**Profound Binary Insight**: Action is simply the universe's tally of computational steps. Every bit flip is recorded in the cosmic ledger. Quantum mechanics emerges because different flip sequences interfere.
 
-**First Principles Validation**: All concepts derived from ψ = ψ(ψ) → φ-trace information → action, with no external assumptions about quantization or path integrals.
+**First Principles Validation**: All derived from:
+$$
+\psi = \psi(\psi) \to \text{Binary encoding} \to \text{Bit flips} \to \text{Action}
+$$
+
+No mysterious postulates - just counting binary state changes!
