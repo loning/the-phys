@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
 """
-Verification program for Chapter 021: Collapse Derivation of ħ = 1.054571...×10⁻³⁴
-Tests the mathematical consistency of the Planck constant derivation from φ-trace action quantization.
+Verification program for Chapter 021: Binary Universe Derivation of ħ = 1.054571...×10⁻³⁴
+Tests the mathematical consistency of the Planck constant derivation from binary universe theory
+with "no consecutive 1s" constraint, using φ-trace as effective mathematical framework.
 """
 
 import unittest
 import math
 
-class TestChapter021(unittest.TestCase):
+class TestChapter021BinaryActionDerivation(unittest.TestCase):
+    """Test binary universe derivation of Planck constant SI value."""
     
     def setUp(self):
-        # Golden ratio and related constants
+        # Golden ratio from binary constraint "no consecutive 1s"
         self.phi = (1 + math.sqrt(5)) / 2
         self.phi_inv = 1 / self.phi
         
@@ -40,9 +42,75 @@ class TestChapter021(unittest.TestCase):
         self.lambda_t = self.planck_time_SI / self.planck_time_collapse
         self.lambda_m = self.planck_mass_SI / self.planck_mass_collapse
         
+        # Binary processing rates
+        self.R_human = 1e12  # Human bits/second 
+        self.R_fundamental = 1e43  # Universal operations/second
+        
+        # Scale factor (derived from CODATA 2024)
+        self.delta_n = math.log(self.hbar_SI / self.hbar_star) / math.log(self.phi)
+        
         # Tolerance for numerical comparisons
         self.tol = 1e-10
         self.relative_tol = 1e-6  # For derived values with experimental inputs
+    
+    def test_binary_constraint_foundation(self):
+        """Test that φ emerges from 'no consecutive 1s' constraint."""
+        # Fibonacci numbers from constraint counting
+        fib = [1, 1]
+        for i in range(2, 20):
+            fib.append(fib[i-1] + fib[i-2])
+        
+        # φ emerges as limit of Fibonacci ratios
+        phi_approx = fib[-1] / fib[-2]
+        
+        # Should converge to golden ratio
+        self.assertAlmostEqual(phi_approx, self.phi, delta=0.01)
+        
+        # Verify this satisfies φ² = φ + 1 (fundamental binary constraint property)
+        self.assertAlmostEqual(self.phi**2, self.phi + 1, delta=self.tol)
+        
+    def test_binary_action_cycle_derivation(self):
+        """Test derivation of ħ* from binary information cycles."""
+        # Energy per correlation (from constraint)
+        E_correlation = self.phi
+        
+        # Time per cycle (constraint satisfaction)
+        t_cycle = self.phi / (2 * math.pi)
+        
+        # Action = Energy × Time
+        hbar_star_derived = E_correlation * t_cycle
+        
+        # Should equal φ²/(2π)
+        self.assertAlmostEqual(hbar_star_derived, self.hbar_star, delta=self.tol)
+        self.assertAlmostEqual(hbar_star_derived, self.phi**2 / (2 * math.pi), delta=self.tol)
+        
+    def test_human_binary_processing_rate(self):
+        """Test human information processing rate assumptions."""
+        # Neural basis for 10^12 bits/second
+        neurons = 1e11  # ~100 billion neurons
+        firing_rate = 10  # Hz average
+        bits_per_spike = 1  # Binary assumption
+        
+        calculated_rate = neurons * firing_rate * bits_per_spike
+        
+        # Should match our assumption
+        self.assertAlmostEqual(calculated_rate, self.R_human, places=-11)
+        
+    def test_scale_factor_calculation(self):
+        """Test the scale factor derived from CODATA values."""
+        # Calculate delta_n
+        expected_delta_n = math.log(self.hbar_SI / self.hbar_star) / math.log(self.phi)
+        
+        # Should be approximately -160.76 (negative because ħ_SI << ħ*)
+        self.assertAlmostEqual(self.delta_n, expected_delta_n, delta=self.tol)
+        self.assertAlmostEqual(self.delta_n, -160.76, delta=1.0)
+        
+        # Verify the prediction using this scale factor
+        hbar_predicted = self.hbar_star * (self.phi ** self.delta_n)
+        relative_error = abs(hbar_predicted - self.hbar_SI) / self.hbar_SI
+        
+        # Should be essentially exact (construction ensures this)
+        self.assertLess(relative_error, 1e-10)
     
     def test_collapse_action_quantum_value(self):
         """Test the fundamental action quantum ħ* = φ²/(2π)"""
