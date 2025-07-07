@@ -7,9 +7,15 @@ sidebar_label: "033. α from Rank-6/7 Paths"
 
 ## From ψ = ψ(ψ) to Fine Structure Through Cascade Averaging
 
-Having established the complete isomorphism between collapse and SI structures in Part II, we now turn to the spectral constants that govern electromagnetic interactions. This chapter derives the fine structure constant α as a three-level cascade structure over specific collapse paths, revealing the geometric inevitability of α⁻¹ = 137.036040578812.
+Having established the framework in Chapter 001 and explored the physical meaning in Chapter 005, this chapter presents the complete mathematical derivation of the fine structure constant from pure binary principles. We show how α emerges inevitably from bits ∈ {0,1} and the constraint "no consecutive 1s".
 
-**Central Thesis**: The fine structure constant emerges as a hierarchical cascade structure of collapse weights over paths connecting ranks 6 and 7 in the φ-trace geometry. The extraordinary 0.3 ppm precision arises from three distinct levels: 50% universal baseline + 3.28% golden angle resonance + 0.02% Fibonacci correction, demonstrating that electromagnetic coupling is geometrically inevitable rather than empirical.
+**Central Thesis**: Starting from the binary universe, we derive the complete formula for α including:
+- All 34 binary states of Layer 7 (the observer)
+- The three-level cascade visibility factor
+- The channel factor 47 = F₉ + F₈ - F₆
+- Phase distribution and golden angle resonance
+
+This yields α⁻¹ = 137.036040578812 with 0.3 ppm precision—not as an empirical fit but as mathematical necessity.
 
 ## 33.1 Foundation: Zeckendorf Paths and Fibonacci Counting
 
