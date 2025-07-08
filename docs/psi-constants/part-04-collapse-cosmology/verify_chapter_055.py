@@ -14,8 +14,8 @@ import math
 import numpy as np
 from scipy import integrate
 
-class TestRankSpectrumOmega(unittest.TestCase):
-    """Test rank spectrum integral theory for Ω parameters"""
+class TestBinaryRankSpectrumOmega(unittest.TestCase):
+    """Test binary rank spectrum integral theory for Ω parameters"""
     
     def setUp(self):
         """Physical constants and derived values"""
@@ -24,29 +24,32 @@ class TestRankSpectrumOmega(unittest.TestCase):
         
         # Known results from previous chapters
         self.Omega_Lambda = 0.691  # Dark energy (Chapter 051)
-        self.r_max = 147  # Observer horizon (Chapter 052)
+        self.r_max = 147  # Binary observer horizon (Chapter 052)
         
-        # Rank windows for different components
-        self.r_matter_center = 12  # Matter stability peak
-        self.r_matter_width = 3    # Width of matter window
-        self.r_radiation_threshold = 20  # Radiation begins here
+        # Binary rank windows for different components
+        self.r_matter_center = 12  # Binary matter stability peak
+        self.r_matter_width = 3    # Width of stable binary window
+        self.r_radiation_threshold = 20  # Binary radiation begins here
         
         # Observed cosmological parameters
         self.Omega_m_observed = 0.3089  # Matter fraction
         self.Omega_r_observed = 9.2e-5  # Radiation fraction
         self.Omega_k_observed = 0.0     # Curvature (flat universe)
         
+        # Binary universe parameters
+        self.F_infinity = 1 / math.sqrt(5)  # Normalized Fibonacci limit
+        
         print(f"Golden ratio: φ = {self.phi:.6f}")
         print(f"Dark energy fraction: Ω_Λ = {self.Omega_Lambda}")
-        print(f"Observer horizon: r_max = {self.r_max}")
+        print(f"Binary observer horizon: r_max = {self.r_max}")
 
-    def test_01_collapse_path_energy_decomposition(self):
-        """Test 1: Verify energy component functor structure"""
-        print("\n=== Test 1: Collapse Path Energy Decomposition ===")
+    def test_01_binary_collapse_path_energy_decomposition(self):
+        """Test 1: Verify binary energy component functor structure"""
+        print("\n=== Test 1: Binary Collapse Path Energy Decomposition ===")
         
-        # Test spectral completeness axiom
-        def collapse_weight(r):
-            """Weight function W(r) = φ^(-r) for collapse paths"""
+        # Test binary spectral completeness axiom
+        def binary_collapse_weight(r):
+            """Binary weight function W_binary(r) = φ^(-r) for collapse paths"""
             return self.phi ** (-r)
         
         # Approximate integral as sum for testing
@@ -54,7 +57,7 @@ class TestRankSpectrumOmega(unittest.TestCase):
         dr = r_values[1] - r_values[0]
         
         # Test unnormalized weights sum
-        total_weight = sum(collapse_weight(r) * dr for r in r_values)
+        total_weight = sum(binary_collapse_weight(r) * dr for r in r_values)
         
         print(f"Total unnormalized weight: Σ φ^(-r) ≈ {total_weight:.3f}")
         
@@ -73,42 +76,42 @@ class TestRankSpectrumOmega(unittest.TestCase):
         self.assertLess(finite_sum, theoretical_sum * 1.01,
                        "Finite sum should not exceed theoretical value")
         
-        # Test functor preservation
-        # Energy functors should preserve addition
-        def test_functor_additivity(r1, r2):
-            """Test F(r1 + r2) = F(r1) × F(r2) for exponential functor"""
-            w1 = collapse_weight(r1)
-            w2 = collapse_weight(r2)
-            w_sum = collapse_weight(r1 + r2)
+        # Test binary functor preservation
+        # Binary energy functors should preserve addition
+        def test_binary_functor_additivity(r1, r2):
+            """Test F(r1 + r2) = F(r1) × F(r2) for binary exponential functor"""
+            w1 = binary_collapse_weight(r1)
+            w2 = binary_collapse_weight(r2)
+            w_sum = binary_collapse_weight(r1 + r2)
             return abs(w_sum - w1 * w2) < 1e-10
         
         # Test several cases
         test_cases = [(1, 2), (5, 3), (10, 7)]
         for r1, r2 in test_cases:
-            self.assertTrue(test_functor_additivity(r1, r2),
-                           f"Functor should preserve addition for r1={r1}, r2={r2}")
+            self.assertTrue(test_binary_functor_additivity(r1, r2),
+                           f"Binary functor should preserve addition for r1={r1}, r2={r2}")
         
-        print("✓ Energy component functors verified")
+        print("✓ Binary energy component functors verified")
 
-    def test_02_matter_fraction_derivation(self):
-        """Test 2: Verify matter fraction from stable collapse modes"""
-        print("\n=== Test 2: Matter Fraction Derivation ===")
+    def test_02_binary_matter_fraction_derivation(self):
+        """Test 2: Verify matter fraction from stable binary collapse modes"""
+        print("\n=== Test 2: Binary Matter Fraction Derivation ===")
         
-        # Matter stability function: Gaussian around r_center
-        def matter_stability(r):
-            """S_matter(r) - Gaussian envelope for stable modes"""
+        # Binary matter stability function: Gaussian around r_center
+        def binary_matter_stability(r):
+            """S_binary(r) - Gaussian envelope for stable binary patterns"""
             return math.exp(-(r - self.r_matter_center)**2 / (2 * self.r_matter_width**2))
         
-        # Integrand for matter fraction
-        def matter_integrand(r):
-            """Unnormalized matter density at rank r"""
-            return self.phi**(-r) * matter_stability(r)
+        # Binary integrand for matter fraction
+        def binary_matter_integrand(r):
+            """Unnormalized binary matter density at rank r"""
+            return self.phi**(-r) * binary_matter_stability(r)
         
         # Numerical integration
-        matter_integral, error = integrate.quad(matter_integrand, 0, self.r_max)
+        matter_integral, error = integrate.quad(binary_matter_integrand, 0, self.r_max)
         
-        print(f"Matter window: r_center = {self.r_matter_center}, σ = {self.r_matter_width}")
-        print(f"Matter integral (unnormalized): {matter_integral:.6f}")
+        print(f"Binary matter window: r_center = {self.r_matter_center}, σ = {self.r_matter_width}")
+        print(f"Binary matter integral (unnormalized): {matter_integral:.6f}")
         
         # Analytic approximation for Gaussian integral
         # The exact formula needs correction for the specific case
@@ -148,27 +151,27 @@ class TestRankSpectrumOmega(unittest.TestCase):
         
         # Should match observation
         self.assertAlmostEqual(Omega_m_derived, self.Omega_m_observed, places=3,
-                              msg="Derived matter fraction should match observation")
+                              msg="Binary derived matter fraction should match observation")
 
-    def test_03_radiation_fraction_formula(self):
-        """Test 3: Verify radiation fraction from high-rank modes"""
-        print("\n=== Test 3: Radiation Fraction Formula ===")
+    def test_03_binary_radiation_fraction_formula(self):
+        """Test 3: Verify radiation fraction from high-rank binary modes"""
+        print("\n=== Test 3: Binary Radiation Fraction Formula ===")
         
-        # Radiation modes have double suppression φ^(-2r)
-        def radiation_weight(r):
-            """Weight for radiation modes with redshift factor"""
+        # Binary radiation modes have double suppression φ^(-2r)
+        def binary_radiation_weight(r):
+            """Weight for binary radiation modes with redshift factor"""
             if r > self.r_radiation_threshold:
                 return self.phi**(-2 * r)
             else:
                 return 0
         
-        # Sum over high-rank modes
+        # Sum over high-rank binary modes
         radiation_sum = 0
         for r in range(self.r_radiation_threshold + 1, self.r_max + 1):
-            radiation_sum += radiation_weight(r)
+            radiation_sum += binary_radiation_weight(r)
         
-        print(f"Radiation threshold: r > {self.r_radiation_threshold}")
-        print(f"Radiation sum (unnormalized): {radiation_sum:.3e}")
+        print(f"Binary radiation threshold: r > {self.r_radiation_threshold}")
+        print(f"Binary radiation sum (unnormalized): {radiation_sum:.3e}")
         
         # Analytic sum of geometric series
         # Σ φ^(-2r) from r_0 to ∞ = φ^(-2r_0) / (1 - φ^(-2))
@@ -198,11 +201,11 @@ class TestRankSpectrumOmega(unittest.TestCase):
         
         # Should be same order of magnitude
         self.assertLess(abs(math.log10(Omega_r_derived/self.Omega_r_observed)), 1,
-                       "Radiation fraction should be correct order of magnitude")
+                       "Binary radiation fraction should be correct order of magnitude")
 
-    def test_04_flatness_from_completeness(self):
-        """Test 4: Verify flatness from spectral completeness"""
-        print("\n=== Test 4: Flatness from Spectral Completeness ===")
+    def test_04_binary_flatness_from_completeness(self):
+        """Test 4: Verify flatness from binary spectral completeness"""
+        print("\n=== Test 4: Binary Flatness from Spectral Completeness ===")
         
         # Total of all components
         Omega_total = self.Omega_Lambda + self.Omega_m_observed + self.Omega_r_observed
@@ -224,46 +227,46 @@ class TestRankSpectrumOmega(unittest.TestCase):
         self.assertLess(abs(Omega_k), 0.001,
                        "Curvature should be negligible (flat universe)")
         
-        # Test spectral completeness relation
-        # The collapse tensor should have trace = 1
-        def test_trace_unity():
-            """Verify Tr(T_collapse) = 1 in normalized basis"""
+        # Test binary spectral completeness relation
+        # The binary collapse tensor should have trace = 1
+        def test_binary_trace_unity():
+            """Verify Tr(T_binary) = 1 in normalized basis"""
             # Approximate trace as weighted sum
             trace = 0
             for r in range(self.r_max + 1):
-                # Each rank contributes its weight
+                # Each rank contributes its binary weight
                 trace += self.phi**(-r)
             
             # Normalize
             trace_normalized = trace / (self.phi**2)  # Theoretical sum
             return trace_normalized
         
-        trace_value = test_trace_unity()
-        print(f"\nSpectral completeness check:")
-        print(f"  Tr(T_collapse) normalized = {trace_value:.6f}")
-        print(f"  Should equal 1 for complete spectrum")
+        trace_value = test_binary_trace_unity()
+        print(f"\nBinary spectral completeness check:")
+        print(f"  Tr(T_binary) normalized = {trace_value:.6f}")
+        print(f"  Should equal 1 for complete binary spectrum")
         
         self.assertAlmostEqual(trace_value, 1.0, places=2,
-                              msg="Normalized trace should equal unity")
+                              msg="Binary normalized trace should equal unity")
 
-    def test_05_maximum_entropy_distribution(self):
-        """Test 5: Verify maximum entropy principle"""
-        print("\n=== Test 5: Maximum Entropy Distribution ===")
+    def test_05_binary_maximum_entropy_distribution(self):
+        """Test 5: Verify binary maximum entropy principle"""
+        print("\n=== Test 5: Binary Maximum Entropy Distribution ===")
         
-        # Shannon entropy of component distribution
+        # Binary Shannon entropy of component distribution
         components = [
             ('Λ', self.Omega_Lambda),
             ('m', self.Omega_m_observed),
             ('r', self.Omega_r_observed)
         ]
         
-        # Calculate entropy
+        # Calculate binary entropy
         entropy = 0
         for name, omega in components:
             if omega > 0:
                 entropy -= omega * math.log(omega)
         
-        print(f"Component entropy: S = {entropy:.3f}")
+        print(f"Binary component entropy: S = {entropy:.3f}")
         
         # Test variations - perturb distribution
         def calc_entropy(omega_lambda, omega_m, omega_r):
@@ -289,10 +292,10 @@ class TestRankSpectrumOmega(unittest.TestCase):
                 print(f"  Perturbation {i+1}: S = {s_pert:.3f}, ΔS = {s_pert - entropy:.4f}")
                 
                 # For small perturbations, entropy can increase slightly
-                # due to discrete nature of the distribution
+                # due to discrete nature of the binary distribution
                 # Allow small increase
                 self.assertLessEqual(s_pert, entropy + 0.01,
-                                    "Entropy should not increase significantly")
+                                    "Binary entropy should not increase significantly")
         
         # Theoretical maximum for 3 components
         # S_max = ln(3) ≈ 1.099 for equal distribution
@@ -300,9 +303,9 @@ class TestRankSpectrumOmega(unittest.TestCase):
         print(f"\nMaximum possible entropy (equal distribution): {s_max_equal:.3f}")
         print(f"Actual/Maximum ratio: {entropy/s_max_equal:.3f}")
 
-    def test_06_zeckendorf_decomposition_integrals(self):
-        """Test 6: Verify evaluation via Zeckendorf decomposition"""
-        print("\n=== Test 6: Zeckendorf Decomposition of Integrals ===")
+    def test_06_binary_zeckendorf_decomposition_integrals(self):
+        """Test 6: Verify evaluation via binary Zeckendorf decomposition"""
+        print("\n=== Test 6: Binary Zeckendorf Decomposition of Integrals ===")
         
         def fibonacci(n):
             """Calculate n-th Fibonacci number"""
@@ -327,11 +330,11 @@ class TestRankSpectrumOmega(unittest.TestCase):
         
         print(f"Direct integral calculation: {integral_direct:.6f}")
         
-        # Zeckendorf decomposition approach
+        # Binary Zeckendorf decomposition approach
         # For box function, only certain Fibonacci terms contribute
         contributing_indices = []
         for r in range(5, 11):
-            # Find Zeckendorf representation of φ^(-r)
+            # Find binary Zeckendorf representation of φ^(-r)
             # This is complex - for testing, use approximation
             contributing_indices.append(r)
         
@@ -341,7 +344,7 @@ class TestRankSpectrumOmega(unittest.TestCase):
             if k <= 20:  # Avoid overflow
                 zeck_sum += fibonacci(k) * self.phi**(-k) / math.sqrt(5)
         
-        print(f"Zeckendorf approximation: {zeck_sum:.6f}")
+        print(f"Binary Zeckendorf approximation: {zeck_sum:.6f}")
         
         # Test that Fibonacci numbers appear in decomposition
         fib_10 = fibonacci(10)
@@ -354,74 +357,74 @@ class TestRankSpectrumOmega(unittest.TestCase):
         self.assertEqual(fibonacci(10), 55, "F_10 should equal 55")
         self.assertEqual(fibonacci(8), 21, "F_8 should equal 21")
 
-    def test_07_component_category_structure(self):
-        """Test 7: Verify category theory of energy components"""
-        print("\n=== Test 7: Component Category Structure ===")
+    def test_07_binary_component_category_structure(self):
+        """Test 7: Verify binary category theory of energy components"""
+        print("\n=== Test 7: Binary Component Category Structure ===")
         
-        # Define morphisms between components
-        # Morphism existence matrix (1 = exists, 0 = forbidden)
-        morphisms = {
-            ('Λ', 'm'): 1,  # Dark energy ↔ matter
+        # Define binary morphisms between components
+        # Binary morphism existence matrix (1 = exists, 0 = forbidden)
+        binary_morphisms = {
+            ('Λ', 'm'): 1,  # Binary dark energy ↔ matter
             ('m', 'Λ'): 1,
-            ('m', 'r'): 1,  # Matter ↔ radiation
+            ('m', 'r'): 1,  # Binary matter ↔ radiation
             ('r', 'm'): 1,
-            ('m', 'k'): 1,  # Matter ↔ curvature
+            ('m', 'k'): 1,  # Binary matter ↔ curvature
             ('k', 'm'): 1,
-            ('Λ', 'r'): 0,  # No direct Λ ↔ radiation
+            ('Λ', 'r'): 0,  # No direct binary Λ ↔ radiation
             ('r', 'Λ'): 0,
-            ('Λ', 'k'): 0,  # No direct Λ ↔ curvature
+            ('Λ', 'k'): 0,  # No direct binary Λ ↔ curvature
             ('k', 'Λ'): 0,
-            ('r', 'k'): 0,  # No direct radiation ↔ curvature
+            ('r', 'k'): 0,  # No direct binary radiation ↔ curvature
             ('k', 'r'): 0,
         }
         
-        print("Morphism structure:")
-        for (src, dst), exists in morphisms.items():
+        print("Binary morphism structure:")
+        for (src, dst), exists in binary_morphisms.items():
             if exists:
                 print(f"  {src} → {dst}: allowed")
         
-        # Test universal property of matter
-        # Any path from r to Λ must go through m
-        def has_path(src, dst, via=None):
-            """Check if path exists from src to dst, optionally via intermediate"""
+        # Test universal property of binary matter
+        # Any binary path from r to Λ must go through m
+        def has_binary_path(src, dst, via=None):
+            """Check if binary path exists from src to dst, optionally via intermediate"""
             if via:
-                return (morphisms.get((src, via), 0) == 1 and 
-                       morphisms.get((via, dst), 0) == 1)
+                return (binary_morphisms.get((src, via), 0) == 1 and 
+                       binary_morphisms.get((via, dst), 0) == 1)
             else:
-                return morphisms.get((src, dst), 0) == 1
+                return binary_morphisms.get((src, dst), 0) == 1
         
-        # Test r → Λ requires matter
-        direct_r_to_lambda = has_path('r', 'Λ')
-        via_matter = has_path('r', 'Λ', via='m')
+        # Test r → Λ requires binary matter
+        direct_r_to_lambda = has_binary_path('r', 'Λ')
+        via_matter = has_binary_path('r', 'Λ', via='m')
         
-        print(f"\nUniversal property test:")
+        print(f"\nBinary universal property test:")
         print(f"  Direct r → Λ: {direct_r_to_lambda}")
         print(f"  r → m → Λ: {via_matter}")
         
-        self.assertFalse(direct_r_to_lambda, "No direct radiation to dark energy")
-        self.assertTrue(via_matter, "Radiation to dark energy via matter")
+        self.assertFalse(direct_r_to_lambda, "No direct binary radiation to dark energy")
+        self.assertTrue(via_matter, "Binary radiation to dark energy via matter")
         
-        # Test composition preserves structure
-        # Rank differences should add
-        rank_map = {'Λ': 1, 'm': 12, 'r': 25, 'k': 0}
+        # Test composition preserves binary structure
+        # Binary rank differences should add
+        binary_rank_map = {'Λ': 1, 'm': 12, 'r': 25, 'k': 0}
         
-        def morphism_weight(src, dst):
-            """Weight w_ij = φ^(-|r_i - r_j|)"""
-            if morphisms.get((src, dst), 0) == 1:
-                return self.phi ** (-abs(rank_map[src] - rank_map[dst]))
+        def binary_morphism_weight(src, dst):
+            """Binary weight w_ij = φ^(-|r_i - r_j|)"""
+            if binary_morphisms.get((src, dst), 0) == 1:
+                return self.phi ** (-abs(binary_rank_map[src] - binary_rank_map[dst]))
             return 0
         
-        # Calculate some weights
-        w_mr = morphism_weight('m', 'r')
-        w_ml = morphism_weight('m', 'Λ')
+        # Calculate some binary weights
+        w_mr = binary_morphism_weight('m', 'r')
+        w_ml = binary_morphism_weight('m', 'Λ')
         
-        print(f"\nMorphism weights:")
+        print(f"\nBinary morphism weights:")
         print(f"  w(m→r) = φ^(-|12-25|) = {w_mr:.6f}")
         print(f"  w(m→Λ) = φ^(-|12-1|) = {w_ml:.6f}")
 
-    def test_08_time_evolution_sequence(self):
-        """Test 8: Verify cosmic evolution sequence"""
-        print("\n=== Test 8: Time Evolution Sequence ===")
+    def test_08_binary_time_evolution_sequence(self):
+        """Test 8: Verify binary cosmic evolution sequence"""
+        print("\n=== Test 8: Binary Time Evolution Sequence ===")
         
         # Planck time
         t_P = 5.391e-44  # seconds
@@ -450,9 +453,9 @@ class TestRankSpectrumOmega(unittest.TestCase):
         t_eq_ml = t_0_ml * self.phi ** delta_r_ml
         years_ml = t_eq_ml / (365.25 * 24 * 3600)
         
-        print(f"Equality times from rank structure:")
-        print(f"  Radiation-matter: t = {t_eq_rm:.3e} s = {years_rm:.3e} years")
-        print(f"  Matter-Lambda: t = {t_eq_ml:.3e} s = {years_ml:.3e} years")
+        print(f"Binary equality times from rank structure:")
+        print(f"  Binary radiation-matter: t = {t_eq_rm:.3e} s = {years_rm:.3e} years")
+        print(f"  Binary matter-Lambda: t = {t_eq_ml:.3e} s = {years_ml:.3e} years")
         
         # Compare with observations
         t_eq_rm_obs = 47000  # years (observed)
@@ -476,24 +479,24 @@ class TestRankSpectrumOmega(unittest.TestCase):
         self.assertGreater(ratio_ml, 0.1, "M-Λ equality time reasonable")
         self.assertLess(ratio_ml, 10, "M-Λ equality time reasonable")
         
-        # Test evolution sequence
+        # Test binary evolution sequence
         self.assertLess(years_rm, years_ml,
-                       "Radiation-matter equality should precede matter-Lambda")
+                       "Binary radiation-matter equality should precede matter-Lambda")
 
-    def test_09_experimental_predictions(self):
-        """Test 9: Verify experimental predictions"""
-        print("\n=== Test 9: Experimental Predictions ===")
+    def test_09_binary_experimental_predictions(self):
+        """Test 9: Verify binary experimental predictions"""
+        print("\n=== Test 9: Binary Experimental Predictions ===")
         
-        # Prediction 1: Discrete matter spectrum
-        print("Discrete matter density levels:")
+        # Prediction 1: Discrete binary matter spectrum
+        print("Discrete binary matter density levels:")
         rho_0 = 1  # Normalized
         for n in range(1, 6):
             F_n = self._fibonacci(n)
             rho_n = rho_0 * F_n * self.phi**(-n)
             print(f"  n={n}: ρ_n/ρ_0 = F_{n} × φ^(-{n}) = {F_n} × {self.phi**(-n):.4f} = {rho_n:.4f}")
         
-        # Prediction 2: Radiation oscillation frequencies
-        print("\nRadiation oscillation frequencies:")
+        # Prediction 2: Binary radiation oscillation frequencies
+        print("\nBinary radiation oscillation frequencies:")
         nu_0 = 1  # Normalized base frequency
         for n in range(1, 6):
             nu_n = nu_0 * self.phi**n
@@ -507,12 +510,12 @@ class TestRankSpectrumOmega(unittest.TestCase):
         print(f"  ν_2/ν_1 = {ratio_21:.4f} = φ")
         
         self.assertAlmostEqual(ratio_32, self.phi, places=6,
-                              msg="Frequency ratios should equal φ")
+                              msg="Binary frequency ratios should equal φ")
         self.assertAlmostEqual(ratio_21, self.phi, places=6,
-                              msg="Frequency ratios should equal φ")
+                              msg="Binary frequency ratios should equal φ")
         
-        # Prediction 3: Component coupling strengths
-        print("\nComponent coupling strengths:")
+        # Prediction 3: Binary component coupling strengths
+        print("\nBinary component coupling strengths:")
         components = [('Λ', 1), ('m', 12), ('r', 25)]
         
         for i, (comp1, r1) in enumerate(components):
@@ -534,13 +537,13 @@ class TestRankSpectrumOmega(unittest.TestCase):
             return b
 
 
-class TestSummary(unittest.TestCase):
-    """Summary validation of rank spectrum Ω parameters"""
+class TestBinarySummary(unittest.TestCase):
+    """Summary validation of binary rank spectrum Ω parameters"""
     
     def test_summary(self):
         """Comprehensive validation of Ω parameter derivation"""
         print("\n" + "="*60)
-        print("SUMMARY: Rank Spectrum Integral for Ω Parameters")
+        print("SUMMARY: Binary Rank Spectrum Integral for Ω Parameters")
         print("="*60)
         
         phi = (1 + math.sqrt(5)) / 2
@@ -553,29 +556,29 @@ class TestSummary(unittest.TestCase):
         
         print("\nKey Results:")
         print(f"1. Golden ratio: φ = {phi:.6f}")
-        print(f"2. Dark energy: Ω_Λ = {Omega_Lambda:.3f} (low rank r < 3)")
-        print(f"3. Matter: Ω_m = {Omega_m:.3f} (stable rank r ∈ [9,15])")
-        print(f"4. Radiation: Ω_r = {Omega_r:.2e} (high rank r > 20)")
-        print(f"5. Curvature: Ω_k = {Omega_k:.1f} (spectral completeness)")
+        print(f"2. Dark energy: Ω_Λ = {Omega_Lambda:.3f} (binary low rank r < 3)")
+        print(f"3. Matter: Ω_m = {Omega_m:.3f} (stable binary rank r ∈ [9,15])")
+        print(f"4. Radiation: Ω_r = {Omega_r:.2e} (binary high rank r > 20)")
+        print(f"5. Curvature: Ω_k = {Omega_k:.1f} (binary spectral completeness)")
         print(f"6. Total: Σ Ω_i = {Omega_Lambda + Omega_m + Omega_r:.6f}")
         
-        print("\nFirst Principles Validation:")
-        print("✓ Energy component functors from collapse path categories")
-        print("✓ Matter fraction from Gaussian-weighted mid-rank modes")
-        print("✓ Radiation fraction from double-suppressed high-rank modes")
-        print("✓ Flatness from spectral completeness of collapse tensor")
-        print("✓ Maximum entropy distribution of components")
-        print("✓ Zeckendorf decomposition of spectral integrals")
-        print("✓ Universal property of matter in component category")
-        print("✓ Evolution sequence from rank flow dynamics")
-        print("✓ Experimental predictions for discrete spectra")
+        print("\nBinary First Principles Validation:")
+        print("✓ Binary energy component functors from collapse path categories")
+        print("✓ Matter fraction from Gaussian-weighted mid-rank binary patterns")
+        print("✓ Radiation fraction from double-suppressed high-rank binary modes")
+        print("✓ Flatness from binary spectral completeness of collapse tensor")
+        print("✓ Maximum binary entropy distribution of components")
+        print("✓ Binary Zeckendorf decomposition of spectral integrals")
+        print("✓ Universal property of matter in binary component category")
+        print("✓ Binary evolution sequence from rank flow dynamics")
+        print("✓ Binary experimental predictions for discrete spectra")
         
-        print("\nRank Window Structure:")
-        print("✓ Dark energy: r ∈ [0, 3] - vacuum modes")
-        print("✓ Matter: r ∈ [9, 15] - stable bound states")  
-        print("✓ Radiation: r > 20 - high-frequency oscillations")
-        print("✓ Each window selected by appropriate weight function")
-        print("✓ Total spectrum gives flat universe Ω_total = 1")
+        print("\nBinary Rank Window Structure:")
+        print("✓ Dark energy: r ∈ [0, 3] - binary vacuum patterns")
+        print("✓ Matter: r ∈ [9, 15] - stable binary bound states")  
+        print("✓ Radiation: r > 20 - high-frequency binary oscillations")
+        print("✓ Each window selected by appropriate binary weight function")
+        print("✓ Total binary spectrum gives flat universe Ω_total = 1")
 
 
 if __name__ == '__main__':
