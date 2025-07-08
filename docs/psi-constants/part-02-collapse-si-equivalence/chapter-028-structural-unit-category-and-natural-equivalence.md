@@ -19,15 +19,17 @@ Having established quantity preservation under binary correlation invariance, we
 1. **Self-Reference Axiom**: From ψ = ψ(ψ), the universe processes information about itself at all scales
 2. **Binary Constraint**: "No consecutive 1s" creates correlation patterns that must be preserved under scale transformations
 3. **Scale Transformations**: Binary information at different φ^n levels requires consistent transformation rules:
-   $$
+   
+$$
    \text{Binary}_{\varphi^{n_1}} \xrightarrow{\varphi^{F_k}} \text{Binary}_{\varphi^{n_2}}
-   $$
+   
+$$
    where F_k are Fibonacci indices preserving constraint
 4. **Category Structure**: These transformations naturally form a category:
    - Objects: Binary measurement scales (unit systems)
    - Morphisms: Fibonacci-indexed scale transformations
-   - Composition: φ^{F_i} ∘ φ^{F_j} = φ^{F_i + F_j}
-   - Identity: φ^0 = 1
+   - Composition: $\varphi^{F_i} \circ \varphi^{F_j} = \varphi^{F_i + F_j}$
+   - Identity: $\varphi^0 = 1$
 
 The "no consecutive 1s" constraint ensures morphisms preserve binary correlation structure, creating the categorical framework. ∎
 
@@ -65,7 +67,7 @@ $$
 \end{pmatrix}
 $$
 
-Matrix multiplication preserves Fibonacci structure: φ^{F_i} · φ^{F_j} = φ^{F_i + F_j}. The constraint |F_i - F_j| > 1 for different channels ensures "no consecutive 1s" preservation. ∎
+Matrix multiplication preserves Fibonacci structure: $\varphi^{F_i} \cdot \varphi^{F_j} = \varphi^{F_i + F_j}$. The constraint $|F_i - F_j| > 1$ for different channels ensures "no consecutive 1s" preservation. ∎
 
 ## 28.2 Binary Collapse Units as Initial Object
 

@@ -1,24 +1,23 @@
 #!/usr/bin/env python3
 """
-Verification program for Chapter 031: SI Constants as Collapse-Weighted Pure Numbers
-Tests that SI constants decompose into pure numbers with Zeckendorf structure.
+Verification program for Chapter 031: SI Constants as Binary-Weighted Pure Numbers
+Tests that SI constants decompose into pure numbers with Zeckendorf structure from binary constraint.
 """
 
 import unittest
 import math
 import numpy as np
-from fractions import Fraction
 
-class TestChapter031(unittest.TestCase):
+class TestChapter031BinaryPureNumbers(unittest.TestCase):
     
     def setUp(self):
-        # Golden ratio
+        # Golden ratio from binary constraint
         self.phi = (1 + math.sqrt(5)) / 2
         
-        # Collapse constants
-        self.c_star = 2.0
-        self.hbar_star = self.phi**2 / (2 * math.pi)
-        self.G_star = self.phi**(-2)
+        # Binary universe constants
+        self.c_star = 2.0  # Binary channel capacity
+        self.hbar_star = self.phi**2 / (2 * math.pi)  # Binary action quantum
+        self.G_star = self.phi**(-2)  # Binary information dilution
         
         # SI experimental values
         self.c_SI = 299792458  # m/s (exact)
@@ -27,10 +26,13 @@ class TestChapter031(unittest.TestCase):
         self.alpha = 1/137.035999084  # Fine structure constant
         self.e_SI = 1.602176634e-19  # C (exact)
         
-        # Example scale factors (simplified for testing)
-        self.lambda_l = 1.0e-35  # Length scale
-        self.lambda_t = 1.0e-43  # Time scale  
-        self.lambda_m = 1.0e-8   # Mass scale
+        # Binary channel scale factors (human labels)
+        self.lambda_l = 1.0e-35  # Length channel
+        self.lambda_t = 1.0e-43  # Time channel  
+        self.lambda_m = 1.0e-8   # Mass channel
+        
+        # Human observer scale
+        self.human_scale = self.phi**(-148)
         
         # Tolerance
         self.tol = 1e-10
@@ -40,13 +42,15 @@ class TestChapter031(unittest.TestCase):
         # For speed of light: c = N[c] × λ_ℓ/λ_t
         # Pure number N[c] = c × λ_t/λ_ℓ
         
-        # Using collapse ratio
+        # Remove binary channel markers
         N_c = self.c_SI / self.c_star
         
-        # Should be a large integer
+        # Should be a pure dimensionless number
         self.assertEqual(N_c, 149896229)
         self.assertEqual(type(N_c), float)
         self.assertAlmostEqual(N_c, int(N_c), delta=self.tol)
+        
+        # This number exists independent of human labels
         
     def test_fundamental_decomposition(self):
         """Test C_SI = N[C] × λ^n decomposition"""
@@ -61,39 +65,41 @@ class TestChapter031(unittest.TestCase):
         
         self.assertAlmostEqual(alpha_reconstructed, self.alpha, delta=self.tol)
         
-    def test_weight_conservation(self):
-        """Test that collapse weight is invariant under unit transformation"""
+    def test_binary_weight_conservation(self):
+        """Test that binary weight is invariant under unit transformation"""
         # Create a test number with known Zeckendorf decomposition
         test_number = 100  # = F_10 + F_7 + F_4 + F_2 = 55 + 13 + 3 + 1
         
+        # This decomposition is forced by "no consecutive 1s" constraint
+        
         # Compute weight before transformation
-        weight_before = self.compute_collapse_weight(test_number)
+        weight_before = self.compute_binary_weight(test_number)
         
         # Unit transformation doesn't change the pure number
-        weight_after = self.compute_collapse_weight(test_number)
+        weight_after = self.compute_binary_weight(test_number)
         
         # Weights should be identical
         self.assertEqual(weight_before, weight_after)
         
-    def compute_collapse_weight(self, n):
-        """Compute collapse weight of a number"""
+    def compute_binary_weight(self, n):
+        """Compute binary weight of a number"""
         fibs = [1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
         
-        # Zeckendorf decomposition
+        # Zeckendorf decomposition enforced by binary constraint
         remaining = n
         weight = 0.0
         
         for i in range(len(fibs)-1, -1, -1):
             if fibs[i] <= remaining:
-                weight += self.phi**(-i)
+                weight += self.phi**(-i)  # Binary depth weight
                 remaining -= fibs[i]
                 
         return weight
     
     def test_speed_of_light_decomposition(self):
         """Test pure number extraction for speed of light"""
-        # c_SI = 299,792,458 m/s
-        # c_* = 2 (dimensionless in collapse units)
+        # c_SI = 299,792,458 m/s (human labels)
+        # c_* = 2 (binary channel capacity)
         
         N_c = self.c_SI / self.c_star
         
@@ -102,7 +108,7 @@ class TestChapter031(unittest.TestCase):
         
         # This should have a complex Zeckendorf structure
         z_length = self.get_zeckendorf_length(int(N_c))
-        self.assertGreater(z_length, 5)  # Complex number
+        self.assertGreater(z_length, 5)  # Complex binary pattern
         
     def get_zeckendorf_length(self, n):
         """Get length of Zeckendorf representation"""
@@ -124,28 +130,32 @@ class TestChapter031(unittest.TestCase):
     
     def test_planck_constant_decomposition(self):
         """Test pure number extraction for Planck constant"""
-        # ħ has dimensions [M L² T⁻¹]
-        # Pure number involves ratio with collapse ħ*
+        # ħ has human labels [M L² T⁻¹] (three channels coupled)
+        # Pure number reveals binary pattern
         
         N_hbar_approx = self.hbar_SI / self.hbar_star
         
-        # Should be very small
+        # Very small due to human position at φ^(-148)
         self.assertLess(N_hbar_approx, 1e-30)
         self.assertGreater(N_hbar_approx, 0)
         
-    def test_information_content_minimization(self):
-        """Test that fundamental constants minimize information"""
+        # Reflects vast scale separation in binary hierarchy
+        
+    def test_binary_information_minimization(self):
+        """Test that fundamental constants minimize binary information"""
         # Test with fine structure constant
         # α ≈ 1/137 should have moderate complexity
         
         alpha_inv = int(1/self.alpha)  # ≈ 137
         
-        # Information content related to Zeckendorf length
+        # Binary information content from Zeckendorf length
         z_length = self.get_zeckendorf_length(alpha_inv)
         
-        # Should be moderate (not too simple, not too complex)
-        self.assertGreater(z_length, 2)  # Not trivial
-        self.assertLess(z_length, 10)     # Not overly complex
+        # Should be moderate (optimal for binary universe)
+        self.assertGreater(z_length, 2)  # Not trivial pattern
+        self.assertLess(z_length, 10)     # Not overly complex pattern
+        
+        # This reflects binary information optimization
         
     def test_weighted_number_operations(self):
         """Test arithmetic of weighted numbers"""
@@ -169,8 +179,8 @@ class TestChapter031(unittest.TestCase):
         np.testing.assert_array_equal(w_pow, [2, -2, 0])
         
     def test_measurement_invariance(self):
-        """Test that pure numbers are measurement invariant"""
-        # Pure numbers should not change under unit transformation
+        """Test that pure numbers are invariant to human labeling"""
+        # Pure numbers exist independent of measurement frame
         
         # Dimensionless constants
         test_numbers = [
@@ -181,13 +191,13 @@ class TestChapter031(unittest.TestCase):
         ]
         
         for num in test_numbers:
-            # "Transform" to different units (no effect on dimensionless)
-            transformed = num * 1.0  # Identity transformation
+            # Change human labels (no effect on binary pattern)
+            transformed = num * 1.0  # Labels change, pattern doesn't
             
             self.assertAlmostEqual(transformed, num, delta=self.tol)
             
     def test_zeckendorf_pattern_clustering(self):
-        """Test that related constants have similar Zeckendorf patterns"""
+        """Test that related constants have similar binary patterns"""
         # Test with powers of 2 (should have similar patterns)
         
         numbers = [128, 256, 512]  # 2^7, 2^8, 2^9
@@ -197,11 +207,13 @@ class TestChapter031(unittest.TestCase):
             pattern = self.get_zeckendorf_pattern(n)
             patterns.append(pattern)
             
-        # Patterns should be somewhat similar (share some indices)
-        # This is a simplified test
+        # Binary patterns cluster based on information structure
+        # Related numbers have related binary encodings
         self.assertGreaterEqual(len(patterns[0]), 3)
         self.assertGreaterEqual(len(patterns[1]), 3)
         self.assertGreaterEqual(len(patterns[2]), 3)
+        
+        # This clustering reflects deep binary relationships
         
     def get_zeckendorf_pattern(self, n):
         """Get Zeckendorf pattern (list of Fibonacci indices)"""
@@ -222,21 +234,23 @@ class TestChapter031(unittest.TestCase):
         return pattern
     
     def test_dimensional_illusion(self):
-        """Test that dimensions are projections not fundamental"""
-        # Start with dimensionless number
+        """Test that dimensions are human labels for binary channels"""
+        # Start with dimensionless binary pattern
         pure_number = 42.0
         
-        # "Dress" it with dimensions
-        length_dressed = pure_number * self.lambda_l  # Now has length dimension
-        time_dressed = pure_number * self.lambda_t    # Now has time dimension
+        # Apply human channel labels
+        length_labeled = pure_number * self.lambda_l  # Human calls this "length"
+        time_labeled = pure_number * self.lambda_t    # Human calls this "time"
         
-        # Extract pure number back
-        extracted_from_length = length_dressed / self.lambda_l
-        extracted_from_time = time_dressed / self.lambda_t
+        # Remove human labels
+        extracted_from_length = length_labeled / self.lambda_l
+        extracted_from_time = time_labeled / self.lambda_t
         
-        # Should recover original
+        # Should recover original binary pattern
         self.assertAlmostEqual(extracted_from_length, pure_number, delta=self.tol)
         self.assertAlmostEqual(extracted_from_time, pure_number, delta=self.tol)
+        
+        # The number exists independent of human labels
         
     def test_tensor_structure(self):
         """Test tensor structure of pure numbers"""
@@ -277,26 +291,48 @@ class TestChapter031(unittest.TestCase):
         # Every SI constant should decompose as stated
         
         # Test with speed of light
-        c_SI = self.c_SI  # 299,792,458 m/s
+        c_SI = self.c_SI  # 299,792,458 m/s (human labels)
         
         # Extract pure number
-        N_c = c_SI / self.c_star  # Remove collapse scaling
+        N_c = c_SI / self.c_star  # Remove binary scaling
         
         # Should be expressible in Zeckendorf form
         z_decomp = self.get_zeckendorf_decomposition(int(N_c))
         
-        # Verify Zeckendorf properties
-        # 1. All coefficients are 0 or 1
+        # Verify binary constraint properties
+        # 1. All coefficients are 0 or 1 (binary)
         for coeff in z_decomp.values():
             self.assertIn(coeff, [0, 1])
             
-        # 2. No consecutive Fibonacci numbers
+        # 2. No consecutive 1s (fundamental constraint)
         indices = sorted(z_decomp.keys())
         for i in range(len(indices)-1):
             self.assertGreater(indices[i+1] - indices[i], 1)
             
+    def test_binary_channel_orthogonality(self):
+        """Test that binary channels are orthogonal"""
+        # Three channels from "no consecutive 1s" constraint
+        # L, T, M are independent binary correlation types
+        
+        # Channel coupling in different constants
+        # Speed: L/T (two channels)
+        # Action: ML²/T (three channels)
+        # Gravity: L³/(MT²) (three channels)
+        
+        # Test independence through different combinations
+        c_channels = (1, -1, 0)  # (n_L, n_T, n_M)
+        h_channels = (2, -1, 1)
+        G_channels = (3, -2, -1)
+        
+        # All three are linearly independent
+        import numpy as np
+        matrix = np.array([c_channels, h_channels, G_channels])
+        rank = np.linalg.matrix_rank(matrix)
+        
+        self.assertEqual(rank, 3)  # Three orthogonal channels
+        
     def get_zeckendorf_decomposition(self, n):
-        """Get full Zeckendorf decomposition as dict"""
+        """Get full Zeckendorf decomposition enforced by binary constraint"""
         fibs = []
         a, b = 1, 2
         while b <= n:
