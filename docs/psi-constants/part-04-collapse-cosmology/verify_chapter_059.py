@@ -13,8 +13,8 @@ import math
 import numpy as np
 from scipy import integrate
 
-class TestCollapseEquationOfState(unittest.TestCase):
-    """Test equation of state from rank transitions"""
+class TestBinaryCollapseEquationOfState(unittest.TestCase):
+    """Test binary equation of state from rank transitions"""
     
     def setUp(self):
         """Physical constants and derived values"""
@@ -52,13 +52,13 @@ class TestCollapseEquationOfState(unittest.TestCase):
         print(f"Planck energy: E_P = {self.E_P:.3e} J")
         print(f"Effective temperature: T_eff = 1/ln(φ) = {1/math.log(self.phi):.3f}")
 
-    def test_01_transition_pressure_formula(self):
-        """Test 1: Verify pressure from rank transitions"""
-        print("\n=== Test 1: Transition Pressure Formula ===")
+    def test_01_binary_transition_pressure_formula(self):
+        """Test 1: Verify pressure from binary rank transitions"""
+        print("\n=== Test 1: Binary Transition Pressure Formula ===")
         
-        # Transition rate matrix elements
-        def transition_rate(r, r_prime, Gamma_0=1.0):
-            """Γ_rr' = Γ_0 × φ^(-|r-r'|/2)"""
+        # Binary transition rate matrix elements
+        def binary_transition_rate(r, r_prime, Gamma_0=1.0):
+            """Γ_rr'^binary = Γ_0 × φ^(-|r-r'|/2) for valid binary transitions"""
             return Gamma_0 * (self.phi ** (-abs(r - r_prime) / 2))
         
         # Energy at rank r
@@ -72,53 +72,53 @@ class TestCollapseEquationOfState(unittest.TestCase):
             norm = 1 / (sigma * math.sqrt(2 * math.pi))
             return norm * math.exp(-(r - r_center)**2 / (2 * sigma**2))
         
-        # Calculate pressure from transitions
-        def calculate_pressure(P_func, r_max=30):
-            """p = -Σ Γ_rr' E_r P(r) (r'-r)/3"""
+        # Calculate binary pressure from transitions
+        def calculate_binary_pressure(P_func, r_max=30):
+            """p_binary = -Σ Γ_rr'^binary E_r P_binary(r) (r'-r)/3"""
             p = 0
             for r in range(r_max):
                 P_r = P_func(r)
                 if P_r > 0:
                     E_r = energy(r)
-                    # Sum over transitions
+                    # Sum over binary transitions
                     for r_prime in range(max(0, r-3), min(r_max, r+4)):
                         if r_prime != r:
-                            Gamma = transition_rate(r, r_prime)
+                            Gamma = binary_transition_rate(r, r_prime)
                             p += -Gamma * E_r * P_r * (r_prime - r) / 3
             return p
         
-        # Test for matter-like distribution
-        p_matter = calculate_pressure(lambda r: P_distribution(r, 12, 2))
+        # Test for stable binary pattern distribution
+        p_matter = calculate_binary_pressure(lambda r: P_distribution(r, 12, 2))
         
         # Calculate energy density
         rho_matter = sum(P_distribution(r, 12, 2) * energy(r) for r in range(30))
         
-        print(f"Matter-like distribution (r=12):")
-        print(f"  Pressure p = {p_matter:.3e} J/m³")
-        print(f"  Energy density ρ = {rho_matter:.3e} J/m³")
-        print(f"  Equation of state w = p/ρ = {p_matter/rho_matter if rho_matter > 0 else 0:.4f}")
+        print(f"Stable binary pattern distribution (r=12):")
+        print(f"  Binary pressure p = {p_matter:.3e} J/m³")
+        print(f"  Binary energy density ρ = {rho_matter:.3e} J/m³")
+        print(f"  Binary equation of state w = p/ρ = {p_matter/rho_matter if rho_matter > 0 else 0:.4f}")
         
-        # For symmetric transitions, pressure should be small
+        # For symmetric binary transitions, pressure should be small
         self.assertLess(abs(p_matter/rho_matter), 0.1,
-                       "Matter should have |w| < 0.1")
+                       "Stable binary patterns should have |w| < 0.1")
 
-    def test_02_detailed_balance(self):
-        """Test 2: Verify detailed balance condition"""
-        print("\n=== Test 2: Detailed Balance ===")
+    def test_02_binary_detailed_balance(self):
+        """Test 2: Verify binary detailed balance condition"""
+        print("\n=== Test 2: Binary Detailed Balance ===")
         
-        # Equilibrium distribution
-        def P_equilibrium(r, T_eff=None):
-            """P_eq(r) ∝ exp(-E_r/k_B T_eff)"""
+        # Binary equilibrium distribution
+        def P_binary_equilibrium(r, T_eff=None):
+            """P_eq^binary(r) ∝ exp(-E_r/k_B T_eff) for binary patterns"""
             if T_eff is None:
-                T_eff = 1 / math.log(self.phi)  # Natural temperature
+                T_eff = 1 / math.log(self.phi)  # Natural temperature in binary universe
             
-            # In normalized units, P_eq(r) ∝ φ^r
+            # In normalized units, P_eq^binary(r) ∝ φ^r
             # This gives the correct equilibrium ratio
-            Z = sum(self.phi**k for k in range(50))  # Partition function
+            Z = sum(self.phi**k for k in range(50))  # Binary partition function
             return self.phi**r / Z
         
-        # Test detailed balance: Γ_rr' P_eq(r) = Γ_r'r P_eq(r')
-        print("Testing detailed balance:")
+        # Test binary detailed balance: Γ_rr'^binary P_eq^binary(r) = Γ_r'r^binary P_eq^binary(r')
+        print("Testing binary detailed balance:")
         test_pairs = [(0, 1), (5, 6), (10, 12), (20, 21)]
         
         for r, r_prime in test_pairs:
@@ -127,9 +127,9 @@ class TestCollapseEquationOfState(unittest.TestCase):
             # Backward rate r' → r
             Gamma_backward = (self.phi ** (-abs(r_prime - r) / 2))
             
-            # Equilibrium probabilities
-            P_r = P_equilibrium(r)
-            P_r_prime = P_equilibrium(r_prime)
+            # Binary equilibrium probabilities
+            P_r = P_binary_equilibrium(r)
+            P_r_prime = P_binary_equilibrium(r_prime)
             
             # Check balance: Γ_rr' P(r) = Γ_r'r P(r')
             forward_flux = Gamma_forward * P_r
@@ -151,84 +151,84 @@ class TestCollapseEquationOfState(unittest.TestCase):
             self.assertAlmostEqual(ratio, expected_ratio, delta=1e-6,
                                   msg=f"Flux ratio doesn't match equilibrium pattern")
         
-        # Verify equilibrium ratio
-        print("\nEquilibrium probability ratios:")
+        # Verify binary equilibrium ratio
+        print("\nBinary equilibrium probability ratios:")
         for r, r_prime in test_pairs:
-            ratio = P_equilibrium(r_prime) / P_equilibrium(r)
-            expected = self.phi ** (r_prime - r)  # P(r') / P(r) = φ^(r'-r)
-            print(f"  P_eq({r_prime})/P_eq({r}) = {ratio:.6f}, φ^({r_prime}-{r}) = {expected:.6f}")
+            ratio = P_binary_equilibrium(r_prime) / P_binary_equilibrium(r)
+            expected = self.phi ** (r_prime - r)  # P_binary(r') / P_binary(r) = φ^(r'-r)
+            print(f"  P_eq^binary({r_prime})/P_eq^binary({r}) = {ratio:.6f}, φ^({r_prime}-{r}) = {expected:.6f}")
             
             self.assertAlmostEqual(ratio, expected, delta=1e-6,
                                   msg="Equilibrium ratio should be φ^(r'-r)")
 
-    def test_03_component_specific_equation_of_state(self):
-        """Test 3: Verify component-specific equation of state"""
-        print("\n=== Test 3: Component-Specific Equation of State ===")
+    def test_03_binary_component_specific_equation_of_state(self):
+        """Test 3: Verify binary component-specific equation of state"""
+        print("\n=== Test 3: Binary Component-Specific Equation of State ===")
         
-        # Component-specific equations of state from Chapter 059
-        def w_component(r):
-            """Component-specific equation of state"""
-            if r <= 3:  # Dark energy
-                # w = -1 + ε_Λ where ε_Λ ~ ln(φ)/(3φ²)
+        # Binary component-specific equations of state from Chapter 059
+        def w_binary_component(r):
+            """Binary component-specific equation of state"""
+            if r <= 3:  # Low-rank binary (dark energy)
+                # w_binary = -1 + ε_Λ^binary where ε_Λ^binary ~ ln(φ)/(3φ²)
                 epsilon = math.log(self.phi) / (3 * self.phi**2)
                 return -1 + epsilon
-            elif 9 <= r <= 15:  # Matter
-                # w = 0 + ε_m where ε_m ~ ln(φ)/36
+            elif 9 <= r <= 15:  # Stable binary patterns (matter)
+                # w_binary = 0 + ε_m^binary where ε_m^binary ~ ln(φ)/36
                 epsilon = math.log(self.phi) / 36
                 return 0 + epsilon
-            elif r > 20:  # Radiation
-                # w = 1/3 + ε_r where ε_r ~ -ln(φ)/(3r)
+            elif r > 20:  # High-freq binary (radiation)
+                # w_binary = 1/3 + ε_r^binary where ε_r^binary ~ -ln(φ)/(3r)
                 epsilon = -math.log(self.phi) / (3 * r)
                 return 1/3 + epsilon
-            else:  # Intermediate
+            else:  # Intermediate binary patterns
                 # Interpolate
                 return 0.1  # Placeholder
         
-        print("Component-specific equations of state:")
+        print("Binary component-specific equations of state:")
         
         # Test cases
         test_cases = [
-            ("Dark Energy", 1),
-            ("Matter", 12),
-            ("Radiation", 25),
+            ("Low-rank binary (Dark Energy)", 1),
+            ("Stable binary (Matter)", 12),
+            ("High-freq binary (Radiation)", 25),
         ]
         
         for name, r in test_cases:
-            w = w_component(r)
-            print(f"  {name} (r={r}): w = {w:.4f}")
+            w = w_binary_component(r)
+            print(f"  {name} (r={r}): w_binary = {w:.4f}")
         
-        # Verify limits
-        # Dark energy: w ≈ -1
-        w_de = w_component(1)
-        self.assertGreater(w_de, -1.0, "Dark energy w should be > -1")
-        self.assertLess(w_de, -0.9, "Dark energy w should be < -0.9")
+        # Verify binary limits
+        # Low-rank binary: w ≈ -1
+        w_de = w_binary_component(1)
+        self.assertGreater(w_de, -1.0, "Low-rank binary w should be > -1")
+        self.assertLess(w_de, -0.9, "Low-rank binary w should be < -0.9")
         
-        # Matter: w ≈ 0
-        w_m = w_component(12)
-        self.assertGreater(w_m, -0.1, "Matter w should be > -0.1")
-        self.assertLess(w_m, 0.1, "Matter w should be < 0.1")
+        # Stable binary: w ≈ 0
+        w_m = w_binary_component(12)
+        self.assertGreater(w_m, -0.1, "Stable binary w should be > -0.1")
+        self.assertLess(w_m, 0.1, "Stable binary w should be < 0.1")
         
-        # Radiation: w ≈ 1/3
-        w_r = w_component(25)
-        self.assertGreater(w_r, 0.32, "Radiation w should be > 0.32")
-        self.assertLess(w_r, 0.34, "Radiation w should be < 0.34")
+        # High-freq binary: w ≈ 1/3
+        w_r = w_binary_component(25)
+        self.assertGreater(w_r, 0.32, "High-freq binary w should be > 0.32")
+        self.assertLess(w_r, 0.34, "High-freq binary w should be < 0.34")
 
-    def test_04_dark_energy_equation_of_state(self):
-        """Test 4: Verify dark energy w ≈ -1"""
-        print("\n=== Test 4: Dark Energy Equation of State ===")
+    def test_04_binary_dark_energy_equation_of_state(self):
+        """Test 4: Verify binary dark energy w ≈ -1"""
+        print("\n=== Test 4: Binary Dark Energy Equation of State ===")
         
-        # Dark energy window: r ∈ [0, 3]
-        def w_Lambda(sigma_r, r_peak=1):
-            """Dark energy equation of state"""
+        # Binary dark energy window: r ∈ [0, 3]
+        def w_Lambda_binary(sigma_r, r_peak=1):
+            """Binary dark energy equation of state"""
             return -1 + (2 * math.log(self.phi) * sigma_r**2) / (3 * r_peak)
         
-        # For narrow distribution σ ~ 1/φ
+        # For narrow binary distribution σ ~ 1/φ
         sigma_narrow = 1 / self.phi
-        w_narrow = w_Lambda(sigma_narrow)
+        w_narrow = w_Lambda_binary(sigma_narrow)
         
-        print(f"Dark energy with narrow distribution:")
+        print(f"Binary dark energy with narrow distribution:")
         print(f"  σ_r = 1/φ = {sigma_narrow:.4f}")
-        print(f"  w_Λ = -1 + 2ln(φ)/(3φ²) = {w_narrow:.6f}")
+        print(f"  w_Λ^binary = -1 + 2ln(φ)/(3φ²) = {w_narrow:.6f}")
         
         # Calculate correction term
         correction = 2 * math.log(self.phi) / (3 * self.phi**2)
@@ -241,54 +241,54 @@ class TestCollapseEquationOfState(unittest.TestCase):
         
         # Should match the formula
         self.assertAlmostEqual(w_narrow, expected_w, delta=1e-6,
-                              msg="Dark energy should match formula")
+                              msg="Binary dark energy should match formula")
         
-        # Test time variation
-        print("\nTime-varying dark energy:")
+        # Test time variation in binary universe
+        print("\nTime-varying binary dark energy:")
         sigma_values = [1/self.phi, 1/math.sqrt(self.phi), 1.0]
         for sigma in sigma_values:
-            w = w_Lambda(sigma)
-            print(f"  σ = {sigma:.3f}: w = {w:.6f}")
+            w = w_Lambda_binary(sigma)
+            print(f"  σ = {sigma:.3f}: w_binary = {w:.6f}")
 
-    def test_05_matter_radiation_windows(self):
-        """Test 5: Verify matter and radiation equations of state"""
-        print("\n=== Test 5: Matter and Radiation Windows ===")
+    def test_05_binary_matter_radiation_windows(self):
+        """Test 5: Verify binary matter and radiation equations of state"""
+        print("\n=== Test 5: Binary Matter and Radiation Windows ===")
         
-        # Matter window: r ∈ [9, 15], peak at r_m = 12
+        # Stable binary pattern window: r ∈ [9, 15], peak at r_m = 12
         r_m = 12
         sigma_m = 1.0
-        w_m_theory = math.log(self.phi) / 18  # From derivation
+        w_m_theory = math.log(self.phi) / 18  # From binary derivation
         
-        print(f"Matter equation of state:")
-        print(f"  Rank window: r ∈ [9, 15], peak r_m = {r_m}")
+        print(f"Stable binary pattern equation of state:")
+        print(f"  Binary rank window: r ∈ [9, 15], peak r_m = {r_m}")
         print(f"  Width σ_m = {sigma_m}")
-        print(f"  w_m = ln(φ)/18 = {w_m_theory:.4f}")
+        print(f"  w_m^binary = ln(φ)/18 = {w_m_theory:.4f}")
         
-        # Should be effectively zero
+        # Should be effectively zero for stable binary patterns
         self.assertLess(abs(w_m_theory), 0.05,
-                       "Matter should have |w| < 0.05")
+                       "Stable binary should have |w| < 0.05")
         
-        # Radiation window: r > 20, effective r_r = 25
+        # High-freq binary pattern window: r > 20, effective r_r = 25
         r_r = 25
         w_r_theory = 1/3 - math.log(self.phi) / (3 * r_r)
         
-        print(f"\nRadiation equation of state:")
-        print(f"  Effective rank r_r = {r_r}")
-        print(f"  w_r = 1/3 - ln(φ)/(3r_r) = {w_r_theory:.4f}")
+        print(f"\nHigh-freq binary pattern equation of state:")
+        print(f"  Effective binary rank r_r = {r_r}")
+        print(f"  w_r^binary = 1/3 - ln(φ)/(3r_r) = {w_r_theory:.4f}")
         print(f"  Classical w = 1/3 = {1/3:.4f}")
-        print(f"  Quantum correction: {w_r_theory - 1/3:.4f}")
+        print(f"  Binary quantum correction: {w_r_theory - 1/3:.4f}")
         
-        # Should be close to 1/3
-        self.assertGreater(w_r_theory, 0.31, "Radiation w should be > 0.31")
-        self.assertLess(w_r_theory, 0.34, "Radiation w should be < 0.34")
+        # Should be close to 1/3 for high-freq binary
+        self.assertGreater(w_r_theory, 0.31, "High-freq binary w should be > 0.31")
+        self.assertLess(w_r_theory, 0.34, "High-freq binary w should be < 0.34")
 
-    def test_06_information_pressure(self):
-        """Test 6: Verify information-theoretic pressure"""
-        print("\n=== Test 6: Information Pressure ===")
+    def test_06_binary_information_pressure(self):
+        """Test 6: Verify binary information-theoretic pressure"""
+        print("\n=== Test 6: Binary Information Pressure ===")
         
-        # Information pressure: p_info = -k_B T Σ P(r) ln(P(r)) v_r
-        def information_entropy(P_func, r_max=30):
-            """S = -Σ P(r) ln P(r)"""
+        # Binary information pressure: p_info^binary = -k_B T Σ P_binary(r) ln(P_binary(r)) v_r^binary
+        def binary_information_entropy(P_func, r_max=30):
+            """S_binary = -Σ P_binary(r) ln P_binary(r)"""
             S = 0
             for r in range(r_max):
                 P_r = P_func(r)
@@ -296,9 +296,9 @@ class TestCollapseEquationOfState(unittest.TestCase):
                     S -= P_r * math.log(P_r)
             return S
         
-        # Rank flow velocity (simplified)
-        def rank_velocity(r, r_center=12):
-            """v_r ∝ -(r - r_center)"""
+        # Binary rank flow velocity (simplified)
+        def binary_rank_velocity(r, r_center=12):
+            """v_r^binary ∝ -(r - r_center)"""
             return -0.1 * (r - r_center)
         
         # Test distribution
@@ -308,87 +308,87 @@ class TestCollapseEquationOfState(unittest.TestCase):
             norm = 1 / (sigma * math.sqrt(2 * math.pi))
             return norm * math.exp(-(r - r_center)**2 / (2 * sigma**2))
         
-        # Calculate information pressure
-        S = information_entropy(P_test)
+        # Calculate binary information pressure
+        S = binary_information_entropy(P_test)
         
-        # Average velocity
-        v_avg = sum(P_test(r) * rank_velocity(r) for r in range(30))
+        # Average binary velocity
+        v_avg = sum(P_test(r) * binary_rank_velocity(r) for r in range(30))
         
-        # Information pressure (in natural units)
+        # Binary information pressure (in natural units)
         p_info = -S * v_avg
         
-        print(f"Information pressure calculation:")
-        print(f"  Entropy S = {S:.3f}")
-        print(f"  Average velocity <v_r> = {v_avg:.4f}")
-        print(f"  Information pressure p_info ∝ {p_info:.4f}")
+        print(f"Binary information pressure calculation:")
+        print(f"  Binary entropy S_binary = {S:.3f}")
+        print(f"  Average binary velocity <v_r^binary> = {v_avg:.4f}")
+        print(f"  Binary information pressure p_info^binary ∝ {p_info:.4f}")
         
-        # Test entropy gradient contribution
-        def entropy_gradient(r, r_center=12, sigma=3):
-            """dS/dr at rank r"""
+        # Test binary entropy gradient contribution
+        def binary_entropy_gradient(r, r_center=12, sigma=3):
+            """dS_binary/dr at rank r"""
             P = P_test(r)
             if P == 0:
                 return 0
-            # S = -P ln(P), so dS/dr = -dP/dr (1 + ln(P))
+            # S_binary = -P ln(P), so dS/dr = -dP/dr (1 + ln(P))
             dP_dr = -(r - r_center) / sigma**2 * P
             return -dP_dr * (1 + math.log(P))
         
-        print("\nEntropy gradient:")
+        print("\nBinary entropy gradient:")
         for r in [6, 9, 12, 15, 18]:
-            dS_dr = entropy_gradient(r)
-            print(f"  dS/dr at r={r}: {dS_dr:.4f}")
+            dS_dr = binary_entropy_gradient(r)
+            print(f"  dS_binary/dr at r={r}: {dS_dr:.4f}")
 
-    def test_07_category_theory_functors(self):
-        """Test 7: Verify category theory of equations of state"""
-        print("\n=== Test 7: Category Theory of Equations of State ===")
+    def test_07_binary_category_theory_functors(self):
+        """Test 7: Verify binary category theory of equations of state"""
+        print("\n=== Test 7: Binary Category Theory of Equations of State ===")
         
-        # Objects: equations of state w(r)
-        # Morphisms: rank evolution operators
+        # Objects: binary equations of state w_binary(r)
+        # Morphisms: binary rank evolution operators
         
-        # Define simple morphism
-        def rank_evolution(r, dt):
-            """Evolution r → r' after time dt"""
-            # Simple model: drift toward lower ranks
+        # Define simple binary morphism
+        def binary_rank_evolution(r, dt):
+            """Binary evolution r → r' after time dt"""
+            # Simple model: drift toward lower ranks in binary universe
             drift_rate = 0.1
             return r - drift_rate * dt
         
-        # Functor W: RankCat → StateCat
-        def W_functor(r, sigma=1.0):
-            """Map rank to equation of state"""
+        # Binary functor W_binary: BinaryRankCat → BinaryStateCat
+        def W_binary_functor(r, sigma=1.0):
+            """Map binary rank to equation of state"""
             if r == 0:
                 return -1
             return -1 + (2 * sigma**2 * math.log(self.phi)) / (3 * r)
         
-        # Test functoriality: W(f∘g) = W(f)∘W(g)
+        # Test binary functoriality: W_binary(f∘g) = W_binary(f)∘W_binary(g)
         r_initial = 12
         dt1 = 1.0
         dt2 = 2.0
         
-        # Path 1: Compose then apply functor
-        r_intermediate = rank_evolution(r_initial, dt1)
-        r_final_1 = rank_evolution(r_intermediate, dt2)
-        w_final_1 = W_functor(r_final_1)
+        # Path 1: Compose then apply binary functor
+        r_intermediate = binary_rank_evolution(r_initial, dt1)
+        r_final_1 = binary_rank_evolution(r_intermediate, dt2)
+        w_final_1 = W_binary_functor(r_final_1)
         
-        # Path 2: Direct evolution
-        r_final_2 = rank_evolution(r_initial, dt1 + dt2)
-        w_final_2 = W_functor(r_final_2)
+        # Path 2: Direct binary evolution
+        r_final_2 = binary_rank_evolution(r_initial, dt1 + dt2)
+        w_final_2 = W_binary_functor(r_final_2)
         
-        print(f"Functoriality test:")
-        print(f"  Initial: r = {r_initial}, w = {W_functor(r_initial):.4f}")
-        print(f"  Path 1 (compose): r → {r_intermediate:.1f} → {r_final_1:.1f}, w = {w_final_1:.4f}")
-        print(f"  Path 2 (direct): r → {r_final_2:.1f}, w = {w_final_2:.4f}")
+        print(f"Binary functoriality test:")
+        print(f"  Initial: r = {r_initial}, w_binary = {W_binary_functor(r_initial):.4f}")
+        print(f"  Path 1 (compose): r → {r_intermediate:.1f} → {r_final_1:.1f}, w_binary = {w_final_1:.4f}")
+        print(f"  Path 2 (direct): r → {r_final_2:.1f}, w_binary = {w_final_2:.4f}")
         print(f"  Difference: {abs(w_final_1 - w_final_2):.6f}")
         
         self.assertAlmostEqual(w_final_1, w_final_2, delta=1e-6,
-                              msg="Functor should preserve composition")
+                              msg="Binary functor should preserve composition")
 
-    def test_08_quantum_corrections(self):
-        """Test 8: Verify quantum corrections to equation of state"""
-        print("\n=== Test 8: Quantum Corrections ===")
+    def test_08_binary_quantum_corrections(self):
+        """Test 8: Verify binary quantum corrections to equation of state"""
+        print("\n=== Test 8: Binary Quantum Corrections ===")
         
-        # Quantum pressure from zero-point fluctuations
-        def quantum_pressure_ZPF(r):
-            """p_ZPF = (ħω_P/2) Σ_{k=0}^r φ^(-k/2)"""
-            # Geometric sum
+        # Binary quantum pressure from zero-point fluctuations
+        def binary_quantum_pressure_ZPF(r):
+            """p_ZPF^binary = (ħω_P/2) Σ_{k=0}^r φ^(-k/2) for binary modes"""
+            # Geometric sum respecting binary constraints
             if r == 0:
                 return self.hbar * self.omega_P / 2
             
@@ -400,52 +400,52 @@ class TestCollapseEquationOfState(unittest.TestCase):
             """ρ(r) = ρ_P × φ^(-r)"""
             return self.rho_P * (self.phi ** (-r))
         
-        # Quantum correction to w
-        def delta_w_quantum(r):
-            """Δw = p_ZPF/ρ"""
-            p_ZPF = quantum_pressure_ZPF(r)
+        # Binary quantum correction to w
+        def delta_w_binary_quantum(r):
+            """Δw^binary = p_ZPF^binary/ρ_binary"""
+            p_ZPF = binary_quantum_pressure_ZPF(r)
             rho = energy_density(r) * self.c**2  # Convert to energy density
             E_P_density = self.E_P / (self.ell_P**3)  # Planck energy density
             
-            # Normalized correction
+            # Normalized binary correction
             return (p_ZPF / E_P_density) * (self.phi ** r)
         
-        print("Quantum corrections to equation of state:")
+        print("Binary quantum corrections to equation of state:")
         test_ranks = [1, 5, 10, 20, 30]
         
         for r in test_ranks:
-            delta_w = delta_w_quantum(r)
+            delta_w = delta_w_binary_quantum(r)
             suppression = self.phi ** (r/2)
-            print(f"  r={r}: Δw ~ φ^(r/2) = φ^{r/2} = {suppression:.3e}")
+            print(f"  r={r}: Δw^binary ~ φ^(r/2) = φ^{r/2} = {suppression:.3e}")
         
-        # Corrections should be exponentially suppressed at low ranks
-        delta_w_1 = delta_w_quantum(1)
-        delta_w_20 = delta_w_quantum(20)
+        # Binary corrections should be exponentially suppressed at low ranks
+        delta_w_1 = delta_w_binary_quantum(1)
+        delta_w_20 = delta_w_binary_quantum(20)
         
         self.assertLess(abs(delta_w_1), 1e-5,
-                       "Quantum corrections negligible for dark energy")
+                       "Binary quantum corrections negligible for low-rank binary")
         self.assertGreater(abs(delta_w_20), abs(delta_w_1),
-                          "Quantum corrections larger at high ranks")
+                          "Binary quantum corrections larger at high ranks")
 
-    def test_09_observational_signatures(self):
-        """Test 9: Verify observational predictions"""
-        print("\n=== Test 9: Observational Signatures ===")
+    def test_09_binary_observational_signatures(self):
+        """Test 9: Verify binary observational predictions"""
+        print("\n=== Test 9: Binary Observational Signatures ===")
         
-        # Time-varying dark energy
-        def w_Lambda_time(t, A_0=1.0):
-            """w_Λ(t) = -1 + A(t)φ^(-2)"""
-            # A(t) slowly increases
+        # Time-varying binary dark energy
+        def w_Lambda_binary_time(t, A_0=1.0):
+            """w_Λ^binary(t) = -1 + A^binary(t)φ^(-2)"""
+            # A^binary(t) slowly increases as patterns explore
             A_t = A_0 * (1 + 0.01 * t)  # 1% per unit time
             return -1 + A_t * (self.phi ** (-2))
         
-        print("Time-varying dark energy:")
+        print("Time-varying binary dark energy:")
         for t in [0, 1, 5, 10]:
-            w = w_Lambda_time(t)
-            print(f"  t={t}: w_Λ = {w:.6f}")
+            w = w_Lambda_binary_time(t)
+            print(f"  t={t}: w_Λ^binary = {w:.6f}")
         
-        # Discrete pressure levels
-        def pressure_quantized(n, r_0=10):
-            """p_n = p_0(1 + F_n/F_r0 × φ^(-n))"""
+        # Discrete binary pressure levels
+        def binary_pressure_quantized(n, r_0=10):
+            """p_n^binary = p_0(1 + F_n/F_r0 × φ^(-n))"""
             def fibonacci(k):
                 if k <= 0:
                     return 0
@@ -457,7 +457,7 @@ class TestCollapseEquationOfState(unittest.TestCase):
                         a, b = b, a + b
                     return b
             
-            F_n = fibonacci(n)
+            F_n = fibonacci(n)  # Counts valid binary patterns
             F_r0 = fibonacci(r_0)
             
             if F_r0 == 0:
@@ -465,55 +465,55 @@ class TestCollapseEquationOfState(unittest.TestCase):
             
             return 1 + (F_n / F_r0) * (self.phi ** (-n))
         
-        print("\nDiscrete pressure levels:")
+        print("\nDiscrete binary pressure levels:")
         for n in [1, 2, 3, 5, 8]:
-            p_ratio = pressure_quantized(n)
-            print(f"  n={n}: p_n/p_0 = {p_ratio:.4f}")
+            p_ratio = binary_pressure_quantized(n)
+            print(f"  n={n}: p_n^binary/p_0 = {p_ratio:.4f}")
         
-        # Transition radiation
-        def transition_energy(r, r_prime):
-            """E_γ = E_P(φ^(-r) - φ^(-r'))"""
+        # Binary transition radiation
+        def binary_transition_energy(r, r_prime):
+            """E_γ^binary = E_P(φ^(-r) - φ^(-r'))"""
             return self.E_P * (self.phi**(-r) - self.phi**(-r_prime))
         
-        print("\nTransition radiation energies:")
+        print("\nBinary transition radiation energies:")
         transitions = [(1, 0), (12, 11), (25, 24)]
         for r, r_prime in transitions:
-            E_gamma = transition_energy(r, r_prime)
+            E_gamma = binary_transition_energy(r, r_prime)
             # Convert to eV
             E_eV = E_gamma / 1.602e-19
-            print(f"  r={r}→{r_prime}: E_γ = {E_eV:.3e} eV")
+            print(f"  r={r}→{r_prime}: E_γ^binary = {E_eV:.3e} eV")
 
-    def test_10_eos_network_topology(self):
-        """Test 10: Verify equation of state network properties"""
-        print("\n=== Test 10: EoS Network Topology ===")
+    def test_10_binary_eos_network_topology(self):
+        """Test 10: Verify binary equation of state network properties"""
+        print("\n=== Test 10: Binary EoS Network Topology ===")
         
-        # Network where nodes are equations of state
-        # Edges weighted by exp(-ΔS)
+        # Binary network where nodes are equations of state
+        # Edges weighted by exp(-ΔS_binary)
         
-        def entropy_difference(w1, w2):
-            """Entropy change between states"""
-            # Simplified: ΔS ∝ |w1 - w2|
+        def binary_entropy_difference(w1, w2):
+            """Binary entropy change between states"""
+            # Simplified: ΔS_binary ∝ |w1 - w2|
             return abs(w1 - w2) / math.log(self.phi)
         
-        def edge_weight(w1, w2):
-            """Weight = exp(-ΔS)"""
-            return math.exp(-entropy_difference(w1, w2))
+        def binary_edge_weight(w1, w2):
+            """Weight = exp(-ΔS_binary)"""
+            return math.exp(-binary_entropy_difference(w1, w2))
         
-        # Test network nodes
+        # Test binary network nodes
         nodes = [
-            ("Dark Energy", -0.998),
-            ("Quintessence", -0.9),
-            ("Matter", 0.0),
-            ("Radiation", 0.333),
-            ("Stiff", 1.0)
+            ("Low-rank binary", -0.998),
+            ("Transitional binary", -0.9),
+            ("Stable binary", 0.0),
+            ("High-freq binary", 0.333),
+            ("Ultra-high binary", 1.0)
         ]
         
-        print("Equation of state network:")
-        print("\nEdge weights:")
+        print("Binary equation of state network:")
+        print("\nBinary edge weights:")
         for i, (name1, w1) in enumerate(nodes):
             for j, (name2, w2) in enumerate(nodes):
                 if i < j:
-                    weight = edge_weight(w1, w2)
+                    weight = binary_edge_weight(w1, w2)
                     print(f"  {name1} ↔ {name2}: weight = {weight:.4f}")
         
         # Average path length
@@ -524,7 +524,7 @@ class TestCollapseEquationOfState(unittest.TestCase):
         for i in range(n):
             for j in range(i+1, n):
                 # Shortest path distance ~ -ln(weight)
-                weight = edge_weight(nodes[i][1], nodes[j][1])
+                weight = binary_edge_weight(nodes[i][1], nodes[j][1])
                 distance = -math.log(weight) if weight > 0 else float('inf')
                 total_distance += distance
                 count += 1
@@ -532,53 +532,53 @@ class TestCollapseEquationOfState(unittest.TestCase):
         avg_path_length = total_distance / count if count > 0 else 0
         theoretical_L = math.log(n) / math.log(self.phi)
         
-        print(f"\nNetwork properties:")
+        print(f"\nBinary network properties:")
         print(f"  Number of nodes: {n}")
-        print(f"  Average path length: {avg_path_length:.3f}")
-        print(f"  Theoretical L ~ ln(N)/ln(φ) = {theoretical_L:.3f}")
+        print(f"  Average binary path length: {avg_path_length:.3f}")
+        print(f"  Theoretical L_binary ~ ln(N)/ln(φ) = {theoretical_L:.3f}")
         
-        # Clustering coefficient
+        # Binary clustering coefficient
         C_theory = 1 / self.phi
-        print(f"  Theoretical clustering: C = 1/φ = {C_theory:.3f}")
+        print(f"  Theoretical binary clustering: C_binary = 1/φ = {C_theory:.3f}")
 
 
-class TestSummary(unittest.TestCase):
-    """Summary validation of equation of state derivation"""
+class TestBinarySummary(unittest.TestCase):
+    """Summary validation of binary equation of state derivation"""
     
     def test_summary(self):
-        """Comprehensive validation of EoS from rank transitions"""
+        """Comprehensive validation of binary EoS from rank transitions"""
         print("\n" + "="*60)
-        print("SUMMARY: Collapse Equation of State and Dark Energy")
+        print("SUMMARY: Binary Collapse Equation of State and Dark Energy")
         print("="*60)
         
         phi = (1 + math.sqrt(5)) / 2
         
         print("\nKey Results:")
         print(f"1. Golden ratio: φ = {phi:.6f}")
-        print(f"2. Pressure from transitions: p = -Σ Γ_rr' E_r P(r)(r'-r)/3")
-        print(f"3. Universal EoS: w = -1 + (2/3)(σ²/r)ln(φ)")
-        print(f"4. Dark energy: w_Λ ≈ -1 + O(φ^(-2))")
-        print(f"5. Matter: w_m ≈ 0")
-        print(f"6. Radiation: w_r ≈ 1/3")
+        print(f"2. Binary pressure from transitions: p = -Σ Γ_rr'^binary E_r P_binary(r)(r'-r)/3")
+        print(f"3. Universal binary EoS: w_binary = -1 + (2/3)(σ²/r)ln(φ)")
+        print(f"4. Low-rank binary: w_Λ^binary ≈ -1 + O(φ^(-2))")
+        print(f"5. Stable binary: w_m^binary ≈ 0")
+        print(f"6. High-freq binary: w_r^binary ≈ 1/3")
         
-        print("\nFirst Principles Validation:")
-        print("✓ Pressure emerges from rank transition rates")
-        print("✓ Detailed balance from ψ = ψ(ψ) time symmetry")
-        print("✓ Universal formula from fluctuation analysis")
-        print("✓ Dark energy's w ≈ -1 from low-rank resistance")
-        print("✓ Matter's w ≈ 0 from balanced transitions")
-        print("✓ Radiation's w ≈ 1/3 with quantum corrections")
-        print("✓ Information pressure from entropy gradients")
-        print("✓ Functorial structure preserved")
-        print("✓ Quantum corrections exponentially suppressed")
-        print("✓ Observational predictions testable")
+        print("\nBinary First Principles Validation:")
+        print("✓ Pressure emerges from binary pattern transition rates")
+        print("✓ Detailed balance from binary time symmetry")
+        print("✓ Universal formula from binary fluctuation analysis")
+        print("✓ Low-rank binary w ≈ -1 from pattern resistance")
+        print("✓ Stable binary w ≈ 0 from balanced transitions")
+        print("✓ High-freq binary w ≈ 1/3 with quantum corrections")
+        print("✓ Binary information pressure from entropy gradients")
+        print("✓ Binary functorial structure preserved")
+        print("✓ Binary quantum corrections exponentially suppressed")
+        print("✓ Binary observational predictions testable")
         
-        print("\nConceptual Insights:")
-        print("✓ Pressure as resistance to rank transitions")
-        print("✓ Dark energy resists observation of deep levels")
-        print("✓ Matter represents equilibrium balance")
-        print("✓ Radiation seeks maximum exploration")
-        print("✓ Thermodynamics emerges from self-observation dynamics")
+        print("\nBinary Conceptual Insights:")
+        print("✓ Pressure as resistance to binary pattern transitions")
+        print("✓ Low-rank binary resists complexity growth")
+        print("✓ Stable binary represents equilibrium patterns")
+        print("✓ High-freq binary seeks maximum pattern exploration")
+        print("✓ Thermodynamics emerges from binary pattern dynamics")
 
 
 if __name__ == '__main__':
