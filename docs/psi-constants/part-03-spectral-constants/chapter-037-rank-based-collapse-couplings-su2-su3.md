@@ -230,7 +230,7 @@ where $\lambda_i^{(N)}$ are eigenvalues.
 **Theorem 37.10** (Spectral Bounds): For SU(N), the spectrum satisfies:
 
 $$
-\lambda_{\text{max}}^{(N)} \leq $N$ \cdot \varphi^{-r_N}
+\lambda_{\text{max}}^{(N)} \leq N \cdot \varphi^{-r_N}
 $$
 
 where $r_N$ is the characteristic rank for SU(N).
