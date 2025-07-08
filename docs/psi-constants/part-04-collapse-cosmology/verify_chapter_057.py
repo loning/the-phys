@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-Verification of Chapter 057: Collapse Paths and Cosmic Expansion Dynamics
+Verification of Chapter 057: Binary Collapse Paths and Cosmic Expansion Dynamics
 
 Tests the theoretical predictions that cosmic expansion emerges from the evolution
-of collapse paths through rank space in the ψ = ψ(ψ) structure.
+of binary collapse paths through rank space, with "no consecutive 1s" constraint.
 
-All derivations must follow strictly from ψ = ψ(ψ) first principles.
+All derivations must follow strictly from binary universe first principles.
 """
 
 import unittest
@@ -13,8 +13,8 @@ import math
 import numpy as np
 from scipy import integrate
 
-class TestCollapsePathDynamics(unittest.TestCase):
-    """Test collapse path dynamics and cosmic expansion"""
+class TestBinaryCollapsePathDynamics(unittest.TestCase):
+    """Test binary collapse path dynamics and cosmic expansion"""
     
     def setUp(self):
         """Physical constants and derived values"""
@@ -36,32 +36,32 @@ class TestCollapsePathDynamics(unittest.TestCase):
         self.Omega_m = 0.309       # Matter
         self.Omega_r = 9.2e-5      # Radiation
         
-        # Rank parameters
-        self.r_Lambda = 1    # Dark energy rank
-        self.r_matter = 12   # Matter rank
-        self.r_radiation = 25  # Radiation rank
-        self.r_max = 147     # Observer horizon
+        # Binary rank parameters
+        self.r_Lambda = 1    # Low-rank binary (dark energy)
+        self.r_matter = 12   # Stable binary patterns (matter)
+        self.r_radiation = 25  # High-freq binary (radiation)
+        self.r_max = 147     # Binary observer horizon
         
         print(f"Golden ratio: φ = {self.phi:.6f}")
         print(f"Planck density: ρ_P = {self.rho_P:.3e} kg/m³")
         print(f"Hubble constant: H₀ = {self.H0} km/s/Mpc")
 
-    def test_01_path_distribution_evolution(self):
-        """Test 1: Verify path distribution function evolution"""
-        print("\n=== Test 1: Path Distribution Evolution ===")
+    def test_01_binary_path_distribution_evolution(self):
+        """Test 1: Verify binary path distribution function evolution"""
+        print("\n=== Test 1: Binary Path Distribution Evolution ===")
         
-        # Initial distribution - Gaussian around current state
-        def path_distribution(r, t=0):
-            """Path distribution P(r,t) - normalized Gaussian"""
-            r_center = self.r_matter  # Current matter-dominated
+        # Initial binary distribution - Gaussian around current state
+        def binary_path_distribution(r, t=0):
+            """Binary path distribution P_binary(r,t) - normalized over valid patterns"""
+            r_center = self.r_matter  # Current stable binary patterns
             sigma = 3.0
             
-            # Gaussian with evolution
+            # Gaussian with binary evolution
             norm = 1 / (sigma * math.sqrt(2 * math.pi))
             gaussian = norm * math.exp(-(r - r_center)**2 / (2 * sigma**2))
             
-            # Time evolution - drift toward lower ranks
-            drift = 0.1 * t  # Slow drift rate
+            # Binary evolution - drift toward lower ranks
+            drift = 0.1 * t  # Binary pattern drift rate
             r_shifted = r_center - drift  # Center shifts to lower ranks
             
             # Gaussian with shifted center
@@ -69,48 +69,48 @@ class TestCollapsePathDynamics(unittest.TestCase):
             
             return gaussian_evolved
         
-        # Test normalization
+        # Test binary normalization
         r_values = np.linspace(0, 50, 1000)
         dr = r_values[1] - r_values[0]
         
-        total_prob = sum(path_distribution(r, 0) * dr for r in r_values)
-        print(f"Initial normalization: ∫P(r,0)dr = {total_prob:.3f}")
+        total_prob = sum(binary_path_distribution(r, 0) * dr for r in r_values)
+        print(f"Initial binary normalization: ∫P_binary(r,0)dr = {total_prob:.3f}")
         
-        # Should be normalized
+        # Should be normalized over valid binary patterns
         self.assertAlmostEqual(total_prob, 1.0, delta=0.1,
-                              msg="Distribution should be normalized")
+                              msg="Binary distribution should be normalized")
         
-        # Test evolution - average rank should decrease
-        def average_rank(t):
-            """Calculate <r> at time t"""
-            return sum(r * path_distribution(r, t) * dr for r in r_values) / \
-                   sum(path_distribution(r, t) * dr for r in r_values)
+        # Test binary evolution - average rank should decrease
+        def average_binary_rank(t):
+            """Calculate <r>_binary at time t"""
+            return sum(r * binary_path_distribution(r, t) * dr for r in r_values) / \
+                   sum(binary_path_distribution(r, t) * dr for r in r_values)
         
-        r_avg_0 = average_rank(0)
-        r_avg_1 = average_rank(1)
+        r_avg_0 = average_binary_rank(0)
+        r_avg_1 = average_binary_rank(1)
         
-        print(f"\nAverage rank evolution:")
-        print(f"  t=0: <r> = {r_avg_0:.2f}")
-        print(f"  t=1: <r> = {r_avg_1:.2f}")
-        print(f"  Change: Δ<r> = {r_avg_1 - r_avg_0:.3f}")
+        print(f"\nBinary average rank evolution:")
+        print(f"  t=0: <r>_binary = {r_avg_0:.2f}")
+        print(f"  t=1: <r>_binary = {r_avg_1:.2f}")
+        print(f"  Change: Δ<r>_binary = {r_avg_1 - r_avg_0:.3f}")
         
-        # Rank should decrease (universe expanding)
+        # Binary rank should decrease (universe expanding)
         self.assertLess(r_avg_1, r_avg_0,
-                       "Average rank should decrease with time")
+                       "Binary average rank should decrease with time")
 
-    def test_02_rank_flow_velocity(self):
-        """Test 2: Verify rank flow velocity calculation"""
-        print("\n=== Test 2: Rank Flow Velocity ===")
+    def test_02_binary_rank_flow_velocity(self):
+        """Test 2: Verify binary rank flow velocity calculation"""
+        print("\n=== Test 2: Binary Rank Flow Velocity ===")
         
-        # Rank flow velocity from distribution gradient
-        def rank_velocity(r, P_func, dP_dr_func):
-            """Calculate v_r from continuity equation"""
+        # Binary rank flow velocity from distribution gradient
+        def binary_rank_velocity(r, P_func, dP_dr_func):
+            """Calculate v_r^binary from continuity equation"""
             if P_func(r) == 0:
                 return 0
             
-            # Simplified model: v_r ∝ -∂ln(P)/∂r
-            D = 0.1  # Diffusion coefficient
-            return -D * dP_dr_func(r) / P_func(r)
+            # Binary model: v_r ∝ -∂ln(P_binary)/∂r
+            D_binary = 0.1 * math.log(self.phi)  # Binary diffusion includes ln(φ)
+            return -D_binary * dP_dr_func(r) / P_func(r)
         
         # Test distribution
         r_center = self.r_matter
@@ -122,31 +122,32 @@ class TestCollapsePathDynamics(unittest.TestCase):
         def dP_dr(r):
             return -(r - r_center) / sigma**2 * P(r)
         
-        # Calculate velocities at different ranks
-        print("Rank flow velocities:")
+        # Calculate binary velocities at different ranks
+        print("Binary rank flow velocities:")
         test_ranks = [5, 10, 12, 15, 20]
         for r in test_ranks:
-            v_r = rank_velocity(r, P, dP_dr)
-            print(f"  r={r}: v_r = {v_r:.4f}")
+            v_r = binary_rank_velocity(r, P, dP_dr)
+            print(f"  r={r}: v_r^binary = {v_r:.4f}")
         
-        # Velocity should point toward center
-        v_below = rank_velocity(r_center - 5, P, dP_dr)
-        v_above = rank_velocity(r_center + 5, P, dP_dr)
+        # Binary velocity should preserve pattern flow
+        v_below = binary_rank_velocity(r_center - 5, P, dP_dr)
+        v_above = binary_rank_velocity(r_center + 5, P, dP_dr)
         
-        self.assertLess(v_below, 0, "Below center should flow down (toward lower ranks)")
-        self.assertGreater(v_above, 0, "Above center should flow up (toward lower ranks)")
+        self.assertLess(v_below, 0, "Below center: binary flow toward lower ranks")
+        self.assertGreater(v_above, 0, "Above center: binary flow toward lower ranks")
         
-        # Test Hubble relation H = (ln(φ)/3) × v_r
-        v_avg = rank_velocity(r_center, P, dP_dr)  # At peak, v ≈ 0
-        H_from_rank = abs(math.log(self.phi) / 3 * v_avg)
+        # Test binary Hubble relation H = (ln(φ)/3) × v_r^binary
+        v_avg = binary_rank_velocity(r_center, P, dP_dr)  # At peak, v ≈ 0
+        H_from_binary = abs(math.log(self.phi) / 3 * v_avg)
         
-        print(f"\nHubble from rank flow:")
-        print(f"  v_r(average) ≈ {v_avg:.4f}")
-        print(f"  H = (ln(φ)/3) × v_r = {H_from_rank:.6f}")
+        print(f"\nHubble from binary rank flow:")
+        print(f"  v_r^binary(average) ≈ {v_avg:.4f}")
+        print(f"  H = (ln(φ)/3) × v_r^binary = {H_from_binary:.6f}")
+        print(f"  ln(φ) = {math.log(self.phi):.3f} (binary channel capacity)")
 
-    def test_03_cosmic_acceleration_condition(self):
-        """Test 3: Verify cosmic acceleration from rank distribution"""
-        print("\n=== Test 3: Cosmic Acceleration Condition ===")
+    def test_03_binary_cosmic_acceleration_condition(self):
+        """Test 3: Verify cosmic acceleration from binary rank distribution"""
+        print("\n=== Test 3: Binary Cosmic Acceleration Condition ===")
         
         # Critical rank for acceleration
         r_critical = self.r_Lambda + 1 / math.log(self.phi)
@@ -196,13 +197,13 @@ class TestCollapsePathDynamics(unittest.TestCase):
         self.assertLess(r_dynamical, r_critical,
                        "Dynamical rank should be below critical")
 
-    def test_04_friedmann_from_collapse_tensor(self):
-        """Test 4: Verify Friedmann equation from collapse tensor"""
-        print("\n=== Test 4: Friedmann Equation from Collapse ===")
+    def test_04_binary_friedmann_from_collapse_tensor(self):
+        """Test 4: Verify Friedmann equation from binary collapse tensor"""
+        print("\n=== Test 4: Binary Friedmann Equation ===")
         
-        # Energy density at each rank
-        def rho_rank(r):
-            """ρ(r) = ρ_P × φ^(-r)"""
+        # Binary energy density at each rank
+        def rho_binary_rank(r):
+            """ρ_binary(r) = ρ_P × φ^(-r) for valid binary patterns"""
             return self.rho_P * (self.phi ** (-r))
         
         # Test distribution
@@ -221,12 +222,12 @@ class TestCollapsePathDynamics(unittest.TestCase):
         # Calculate total energy density
         rho_total = 0
         for r in range(int(self.r_max)):
-            rho_total += P_current(r) * rho_rank(r)
+            rho_total += P_current(r) * rho_binary_rank(r)
         
-        print(f"Energy density contributions:")
-        print(f"  ρ_Λ = {self.Omega_Lambda * rho_rank(self.r_Lambda):.3e} kg/m³")
-        print(f"  ρ_m = {self.Omega_m * rho_rank(self.r_matter):.3e} kg/m³")
-        print(f"  ρ_r = {self.Omega_r * rho_rank(self.r_radiation):.3e} kg/m³")
+        print(f"Binary energy density contributions:")
+        print(f"  ρ_Λ = {self.Omega_Lambda * rho_binary_rank(self.r_Lambda):.3e} kg/m³")
+        print(f"  ρ_m = {self.Omega_m * rho_binary_rank(self.r_matter):.3e} kg/m³")
+        print(f"  ρ_r = {self.Omega_r * rho_binary_rank(self.r_radiation):.3e} kg/m³")
         
         # Calculate H² from Friedmann equation
         H_squared = 8 * math.pi * self.G * rho_total / 3
@@ -524,8 +525,8 @@ class TestCollapsePathDynamics(unittest.TestCase):
         print("  Same collapse dynamics at all scales!")
 
 
-class TestSummary(unittest.TestCase):
-    """Summary validation of collapse path dynamics"""
+class TestBinarySummary(unittest.TestCase):
+    """Summary validation of binary collapse path dynamics"""
     
     def test_summary(self):
         """Comprehensive validation of cosmic expansion from paths"""

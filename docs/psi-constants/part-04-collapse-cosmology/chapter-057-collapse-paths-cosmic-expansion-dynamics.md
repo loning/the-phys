@@ -3,130 +3,145 @@ title: "Chapter 057: Collapse Paths and Cosmic Expansion Dynamics — Expansion 
 sidebar_label: "057. Cosmic Expansion Dynamics"
 ---
 
-## Collapse Paths and Cosmic Expansion Dynamics — Expansion as Path Evolution
+## 57.0 Binary Foundation of Cosmic Expansion Dynamics
 
-Building from the Hubble constant derivation (Chapter 056) and the collapse tensor framework, we now explore how cosmic expansion emerges from the evolution of collapse paths in the ψ = ψ(ψ) structure. The key insight is that spacetime expansion represents the natural unfolding of recursive collapse paths through rank space.
+In the binary universe with constraint "no consecutive 1s", cosmic expansion dynamics emerge from the evolution of binary pattern paths through rank space. The key insight: spacetime expansion represents the unfolding of valid binary configurations as they explore allowed pattern space while maintaining constraints.
 
-**Central Thesis**: Cosmic expansion dynamics emerge from the flow of collapse paths through rank space, with acceleration and deceleration determined by the spectral properties of the collapse tensor at different ranks.
+**Binary Expansion Dynamics**: The cosmic dynamics arise from:
 
-## 57.1 Collapse Path Flow Equation
+- **Binary path evolution**: Valid patterns flow through rank space preserving "no consecutive 1s"
+- **Rank transitions**: Fibonacci-weighted transitions between binary stability windows
+- **Acceleration/deceleration**: Determined by binary pattern distribution at different ranks
+- **Phase transitions**: Occur when dominant binary pattern class changes
 
-**Definition 57.1** (Path Distribution Function): For collapse paths in rank space, define the distribution function:
+**Human Observer Effect**: At scale φ^(-148), humans observe integrated binary path dynamics as smooth cosmic expansion, unable to resolve individual pattern transitions.
 
-$$
-\mathcal{P}(r, t) = \sum_{\gamma \in \Gamma_r} |\psi_\gamma(t)|^2
-$$
+## Collapse Paths and Cosmic Expansion Dynamics — Expansion as Binary Path Evolution
 
-where Γ_r is the set of all collapse paths at rank r and |ψ_γ(t)|² is the probability amplitude for path γ at time t.
+Building from the Hubble constant derivation (Chapter 056) and the binary collapse framework, we now explore how cosmic expansion emerges from the evolution of binary collapse paths through rank space. The key insight is that spacetime expansion represents the natural unfolding of binary patterns through allowed configuration space.
 
-**Axiom 57.1** (Path Evolution Principle): The evolution of collapse paths follows the master equation:
+**Central Thesis**: Cosmic expansion dynamics emerge from the flow of binary collapse paths through rank space, with acceleration and deceleration determined by the spectral properties of binary patterns at different ranks, while φ-trace provides the effective mathematical description.
 
-$$
-\frac{\partial \mathcal{P}}{\partial t} = \hat{\mathcal{L}}[\mathcal{P}]
-$$
+## 57.1 Binary Collapse Path Flow Equation
 
-where $\hat{\mathcal{L}}$ is the Liouvillian operator encoding collapse dynamics.
-
-## 57.2 Rank Flow and Spatial Expansion
-
-**Definition 57.2** (Rank Flow Velocity): The average flow velocity through rank space:
+**Definition 57.1** (Binary Path Distribution Function): For binary collapse paths in rank space, define:
 
 $$
-v_r(t) = \frac{1}{\mathcal{P}(r,t)} \sum_{\gamma \in \Gamma_r} \langle\gamma|\frac{d\hat{r}}{dt}|\gamma\rangle
+\mathcal{P}_{\text{binary}}(r, t) = \sum_{\gamma \in \Gamma_r^{\text{binary}}} |\psi_\gamma(t)|^2
 $$
 
-**Theorem 57.2** (Expansion-Rank Correspondence): The scale factor a(t) relates to rank flow as:
+where $\Gamma_r^{\text{binary}}$ is the set of valid binary paths at rank r (no consecutive 1s) and $|\psi_\gamma(t)|^2$ is the probability amplitude.
+
+**Binary Axiom 57.1** (Binary Path Evolution): The evolution of binary paths follows:
 
 $$
-\frac{1}{a}\frac{da}{dt} = H(t) = \frac{\ln(\varphi)}{3} \cdot v_r(t)
+\frac{\partial \mathcal{P}_{\text{binary}}}{\partial t} = \hat{\mathcal{L}}_{\text{binary}}[\mathcal{P}_{\text{binary}}]
 $$
 
-*Proof*: From the collapse tensor eigenvalue spectrum E_r = E_P φ^(-r), energy density scales as:
+where $\hat{\mathcal{L}}_{\text{binary}}$ is the Liouvillian operator preserving binary constraints.
+
+## 57.2 Binary Rank Flow and Spatial Expansion
+
+**Definition 57.2** (Binary Rank Flow Velocity): The average binary flow velocity through rank space:
 
 $$
-\rho(r) = \rho_P \varphi^{-r}
+v_r^{\text{binary}}(t) = \frac{1}{\mathcal{P}_{\text{binary}}(r,t)} \sum_{\gamma \in \Gamma_r^{\text{binary}}} \langle\gamma|\frac{d\hat{r}}{dt}|\gamma\rangle
 $$
 
-Conservation of energy in expanding space requires:
+**Binary Theorem 57.2** (Expansion-Binary Rank Correspondence): The scale factor relates to binary rank flow:
 
 $$
-\frac{d\rho}{dt} + 3H(\rho + p) = 0
+\frac{1}{a}\frac{da}{dt} = H(t) = \frac{\ln(\varphi)}{3} \cdot v_r^{\text{binary}}(t)
 $$
 
-Substituting ρ(r) and using the chain rule:
+The factor ln(φ) emerges from binary channel capacity.
+
+*Binary proof*: From binary eigenvalue spectrum E_r = E_P φ^(-r), energy density scales as:
 
 $$
-\frac{d\rho}{dt} = \frac{\partial\rho}{\partial r}\frac{dr}{dt} = -\rho_P \ln(\varphi) \varphi^{-r} v_r
+\rho_{\text{binary}}(r) = \rho_P \varphi^{-r}
 $$
 
-For the dominant component (matter or radiation), this gives:
+Conservation of binary energy in expanding space:
 
 $$
-H = \frac{\ln(\varphi)}{3(1+w)} v_r
+\frac{d\rho_{\text{binary}}}{dt} + 3H(\rho_{\text{binary}} + p_{\text{binary}}) = 0
 $$
 
-where w is the equation of state parameter. For matter-dominated era (w ≈ 0), we recover the stated relation. ∎
-
-## 57.3 Acceleration from Rank Distribution
-
-**Definition 57.3** (Rank Acceleration): The acceleration of rank flow:
+Substituting $\rho_{\text{binary}}(r)$ and using chain rule:
 
 $$
-a_r = \frac{dv_r}{dt} = \sum_{r'} \Gamma_{rr'} (v_{r'} - v_r)
+\frac{d\rho_{\text{binary}}}{dt} = \frac{\partial\rho_{\text{binary}}}{\partial r}\frac{dr}{dt} = -\rho_P \ln(\varphi) \varphi^{-r} v_r^{\text{binary}}
 $$
 
-where Γ_rr' are transition rates between ranks.
+For the dominant binary component:
 
-**Theorem 57.3** (Cosmic Acceleration Condition): The universe accelerates when:
+$$
+H = \frac{\ln(\varphi)}{3(1+w_{\text{binary}})} v_r^{\text{binary}}
+$$
+
+where $w_{\text{binary}}$ is the binary equation of state. For matter-dominated binary patterns (w ≈ 0), we recover the stated relation. ∎
+
+## 57.3 Acceleration from Binary Rank Distribution
+
+**Definition 57.3** (Binary Rank Acceleration): The acceleration of binary rank flow:
+
+$$
+a_r^{\text{binary}} = \frac{dv_r^{\text{binary}}}{dt} = \sum_{r'} \Gamma_{rr'}^{\text{binary}} (v_{r'} - v_r)
+$$
+
+where $\Gamma_{rr'}^{\text{binary}}$ are binary transition rates preserving "no consecutive 1s".
+
+**Binary Theorem 57.3** (Binary Cosmic Acceleration): The universe accelerates when:
 
 $$
 \frac{d^2a}{dt^2} > 0 \iff \langle r \rangle < r_\Lambda + \frac{1}{\ln(\varphi)}
 $$
 
-where r_Λ ≈ 1 is the dark energy rank.
+where r_Λ ≈ 1 is the low-rank binary mode (dark energy).
 
-*Proof*: The acceleration parameter:
+*Binary proof*: The acceleration parameter in binary universe:
 
 $$
 \frac{\ddot{a}}{a} = \dot{H} + H^2
 $$
 
-Using the rank flow relation:
+Using binary rank flow relation:
 
 $$
-\dot{H} = \frac{\ln(\varphi)}{3} a_r
+\dot{H} = \frac{\ln(\varphi)}{3} a_r^{\text{binary}}
 $$
 
-The rank acceleration depends on the distribution gradient:
+The binary rank acceleration depends on pattern distribution gradient:
 
 $$
-a_r = -\Gamma_0 \frac{\partial}{\partial r}\left(\mathcal{P} \frac{\partial \ln \mathcal{P}}{\partial r}\right)
+a_r^{\text{binary}} = -\Gamma_0^{\text{binary}} \frac{\partial}{\partial r}\left(\mathcal{P}_{\text{binary}} \frac{\partial \ln \mathcal{P}_{\text{binary}}}{\partial r}\right)
 $$
 
-where Γ_0 is the fundamental transition rate. For a peaked distribution around ⟨r⟩:
+where $\Gamma_0^{\text{binary}}$ is the fundamental binary transition rate. For peaked distribution:
 
 $$
-a_r \approx -\Gamma_0 (\langle r \rangle - r_{\text{eq}})
+a_r^{\text{binary}} \approx -\Gamma_0^{\text{binary}} (\langle r \rangle - r_{\text{eq}})
 $$
 
-where r_eq is the equilibrium rank. Acceleration occurs when the average rank is below the critical value where dark energy dominates. ∎
+Acceleration occurs when average rank is below critical value where low-rank binary modes dominate. ∎
 
 ```mermaid
 graph TD
-    A["ψ = ψ(ψ) Collapse Paths"] --> B["Rank Distribution P(r,t)"]
-    B --> C["Rank Flow v_r"]
+    A["Binary Pattern Paths"] --> B["Binary Distribution P_binary(r,t)"]
+    B --> C["Binary Rank Flow v_r"]
     C --> D["Hubble Parameter H(t)"]
     
-    B --> E["Rank Acceleration a_r"]
+    B --> E["Binary Acceleration a_r"]
     E --> F["Cosmic Acceleration"]
     
-    G["Dark Energy r ≈ 1"] --> H["Low Rank Dominance"]
+    G["Low-rank Binary r ≈ 1"] --> H["Binary Vacuum Dominance"]
     H --> F
     
-    I["Matter r ≈ 12"] --> J["Mid Rank Flow"]
+    I["Stable Binary r ≈ 12"] --> J["Matter Pattern Flow"]
     J --> K["Deceleration Era"]
     
-    L["Transition"] --> M["Acceleration Onset"]
+    L["Binary Transition"] --> M["Acceleration Onset"]
     M --> N["Current Epoch"]
     
     style A fill:#f9f,stroke:#333,stroke-width:2px
@@ -134,259 +149,261 @@ graph TD
     style N fill:#fbf,stroke:#333,stroke-width:2px
 ```
 
-## 57.4 Friedmann Dynamics from Collapse Tensor
+## 57.4 Binary Friedmann Dynamics
 
-**Definition 57.4** (Effective Energy-Momentum): The energy-momentum tensor from collapse paths:
-
-$$
-T_{\mu\nu} = \sum_r \mathcal{P}(r,t) T_{\mu\nu}^{(r)}
-$$
-
-where $T_{\mu\nu}^{(r)}$ is the contribution from rank r.
-
-**Theorem 57.4** (Generalized Friedmann Equation): The expansion dynamics follow:
+**Definition 57.4** (Binary Effective Energy-Momentum): The energy-momentum tensor from binary paths:
 
 $$
-H^2 = \frac{8\pi G}{3} \sum_r \mathcal{P}(r,t) \rho(r) + \frac{\Lambda_{\text{eff}}(t)}{3}
+T_{\mu\nu}^{\text{binary}} = \sum_r \mathcal{P}_{\text{binary}}(r,t) T_{\mu\nu}^{(r)}
 $$
 
-where:
-$$
-\Lambda_{\text{eff}}(t) = \frac{8\pi G \rho_P}{3} \sum_{r<3} \mathcal{P}(r,t) \varphi^{-r}
-$$
+where $T_{\mu\nu}^{(r)}$ is the contribution from binary rank r patterns.
 
-*Proof*: The Einstein field equations with the effective energy-momentum tensor give:
+**Binary Theorem 57.4** (Binary Friedmann Equation): The expansion dynamics in binary universe:
 
 $$
-R_{\mu\nu} - \frac{1}{2}g_{\mu\nu}R = 8\pi G T_{\mu\nu}
-$$
-
-For the FRW metric, the 00-component yields:
-
-$$
-3\left(\frac{\dot{a}}{a}\right)^2 = 8\pi G \sum_r \mathcal{P}(r,t) \rho(r)
-$$
-
-Low-rank modes (r < 3) contribute negative pressure, acting as an effective cosmological constant. The time dependence arises from the evolving rank distribution. ∎
-
-## 57.5 Phase Transitions in Expansion History
-
-**Definition 57.5** (Expansion Phase): A phase of expansion characterized by dominant rank window:
-
-$$
-\Phi_i = \{r : r_{i,\min} < r < r_{i,\max}\}
-$$
-
-**Theorem 57.5** (Phase Transition Times): Transitions occur at:
-
-$$
-t_{\text{trans}} = \frac{1}{H_0} \int_0^{a_{\text{trans}}} \frac{da'}{a' E(a')}
-$$
-
-where E(a) is determined by rank distribution evolution.
-
-*Proof*: The Hubble parameter evolves as:
-
-$$
-H(a) = H_0 E(a)
+H^2 = \frac{8\pi G}{3} \sum_r \mathcal{P}_{\text{binary}}(r,t) \rho_{\text{binary}}(r) + \frac{\Lambda_{\text{binary}}(t)}{3}
 $$
 
 where:
 $$
-E^2(a) = \sum_i \Omega_i(a)
+\Lambda_{\text{binary}}(t) = \frac{8\pi G \rho_P}{3} \sum_{r<3} \mathcal{P}_{\text{binary}}(r,t) \varphi^{-r}
 $$
 
-Each component evolves according to its rank:
+*Binary proof*: Einstein equations with binary energy-momentum tensor:
 
 $$
-\Omega_i(a) = \Omega_{i,0} a^{-3(1+w_i)}
+R_{\mu\nu} - \frac{1}{2}g_{\mu\nu}R = 8\pi G T_{\mu\nu}^{\text{binary}}
 $$
 
-with w_i determined by the rank window. Transitions occur when adjacent components have equal energy density. ∎
-
-## 57.6 Information-Theoretic View of Expansion
-
-**Definition 57.6** (Expansion Entropy): The entropy associated with cosmic expansion:
+For FRW metric, the 00-component yields:
 
 $$
-S_{\text{exp}} = -\sum_r \mathcal{P}(r,t) \ln \mathcal{P}(r,t) + \ln \mathcal{V}(t)
+3\left(\frac{\dot{a}}{a}\right)^2 = 8\pi G \sum_r \mathcal{P}_{\text{binary}}(r,t) \rho_{\text{binary}}(r)
 $$
 
-where $\mathcal{V}(t) = a^3(t)$ is the comoving volume.
+Low-rank binary modes (r < 3) contribute negative pressure from vacuum patterns, acting as effective cosmological constant. Time dependence arises from evolving binary distribution. ∎
 
-**Theorem 57.6** (Maximum Entropy Expansion): The universe expands along the path maximizing:
+## 57.5 Binary Phase Transitions in Expansion History
 
-$$
-\mathcal{S} = \int dt \, L_{\text{entropy}}
-$$
-
-where the entropy Lagrangian is:
+**Definition 57.5** (Binary Expansion Phase): A phase characterized by dominant binary rank window:
 
 $$
-L_{\text{entropy}} = \dot{S}_{\text{exp}} - \lambda(\dot{\mathcal{E}} + p\dot{\mathcal{V}})
+\Phi_i^{\text{binary}} = \\{r : r_{i,\min} < r < r_{i,\max}\\}
 $$
 
-*Proof*: The variation δS = 0 gives:
+with valid binary patterns in this window.
+
+**Binary Theorem 57.5** (Binary Phase Transition Times): Transitions occur at:
 
 $$
-\frac{\delta S_{\text{exp}}}{\delta \mathcal{P}(r,t)} = \lambda \rho(r)
+t_{\text{trans}}^{\text{binary}} = \frac{1}{H_0} \int_0^{a_{\text{trans}}} \frac{da'}{a' E_{\text{binary}}(a')}
 $$
 
-This yields the canonical distribution:
+where $E_{\text{binary}}(a)$ is determined by binary rank distribution evolution.
+
+*Binary proof*: The Hubble parameter in binary universe evolves as:
 
 $$
-\mathcal{P}(r,t) = \frac{1}{Z} \exp(-\beta(t) \rho(r))
+H(a) = H_0 E_{\text{binary}}(a)
 $$
 
-where β(t) = λ(t) is the inverse temperature. The expansion follows the maximum entropy trajectory consistent with energy conservation. ∎
-
-## 57.7 Graph Structure of Expansion Paths
-
-**Definition 57.7** (Expansion Graph): The directed graph G_exp = (V, E) where:
-
-- Vertices V: Cosmic states at different epochs
-- Edges E: Allowed transitions with weights w_ij = exp(-ΔS_ij)
-
-**Theorem 57.7** (Shortest Path Principle): The realized cosmic history minimizes:
-
+where:
 $$
-\mathcal{L} = \sum_{(i,j) \in \text{path}} -\ln(w_{ij}) = \sum_{(i,j)} \Delta S_{ij}
+E_{\text{binary}}^2(a) = \sum_i \Omega_i^{\text{binary}}(a)
 $$
 
-*Proof*: Each transition probability is:
+Each binary component evolves according to its rank window:
 
 $$
-P_{ij} = \frac{w_{ij}}{\sum_k w_{ik}} = \frac{\exp(-\Delta S_{ij})}{\sum_k \exp(-\Delta S_{ik})}
+\Omega_i^{\text{binary}}(a) = \Omega_{i,0} a^{-3(1+w_i^{\text{binary}})}
 $$
 
-The most probable path maximizes:
+with $w_i^{\text{binary}}$ determined by binary pattern stability. Transitions occur when adjacent binary components have equal energy density. ∎
+
+## 57.6 Binary Information-Theoretic View of Expansion
+
+**Definition 57.6** (Binary Expansion Entropy): The entropy of binary pattern expansion:
 
 $$
-\prod_{(i,j)} P_{ij} = \exp\left(-\sum_{(i,j)} \Delta S_{ij}\right)
+S_{\text{binary}} = -\sum_r \mathcal{P}_{\text{binary}}(r,t) \ln \mathcal{P}_{\text{binary}}(r,t) + \ln \mathcal{V}(t)
 $$
 
-This is equivalent to minimizing the total entropy change, giving the shortest path in the entropy metric. ∎
+where $\mathcal{V}(t) = a^3(t)$ is the comoving volume for binary patterns.
 
-## 57.8 Dark Energy Dynamics from Low-Rank Modes
-
-**Definition 57.8** (Dark Energy Rank Spectrum): The contribution from ranks r ∈ [0, 3]:
+**Binary Theorem 57.6** (Maximum Binary Entropy Expansion): The universe expands maximizing:
 
 $$
-\rho_{\Lambda}(t) = \rho_P \sum_{r=0}^{3} \mathcal{P}(r,t) \varphi^{-r}
+\mathcal{S}_{\text{binary}} = \int dt \, L_{\text{binary}}
 $$
 
-**Theorem 57.8** (Quintessence from Rank Evolution): Time-varying dark energy emerges as:
+where the binary entropy Lagrangian:
 
 $$
-w_{\Lambda}(t) = -1 + \frac{\langle \Delta r^2 \rangle}{3\langle r \rangle} \ln(\varphi)
+L_{\text{binary}} = \dot{S}_{\text{binary}} - \lambda(\dot{\mathcal{E}}_{\text{binary}} + p_{\text{binary}}\dot{\mathcal{V}})
 $$
 
-where ⟨Δr²⟩ is the rank variance in the low-rank window.
-
-*Proof*: The equation of state for low-rank modes:
+*Binary proof*: The variation $\delta \mathcal{S}_{\text{binary}} = 0$ gives:
 
 $$
-w = \frac{p}{\rho} = \frac{\text{Tr}(\hat{p} \cdot \hat{\rho})}{\text{Tr}(\hat{H} \cdot \hat{\rho})}
+\frac{\delta S_{\text{binary}}}{\delta \mathcal{P}_{\text{binary}}(r,t)} = \lambda \rho_{\text{binary}}(r)
 $$
 
-For a distribution peaked at rank r₀ with width σ_r:
+This yields the binary canonical distribution:
 
 $$
-p = -\rho + \frac{1}{3}\rho \sigma_r^2 (\ln \varphi)^2
+\mathcal{P}_{\text{binary}}(r,t) = \frac{1}{Z_{\text{binary}}} \exp(-\beta(t) \rho_{\text{binary}}(r))
+$$
+
+where β(t) = λ(t) is inverse temperature and $Z_{\text{binary}}$ ensures normalization over valid binary patterns. The expansion follows maximum binary entropy consistent with "no consecutive 1s". ∎
+
+## 57.7 Binary Graph Structure of Expansion Paths
+
+**Definition 57.7** (Binary Expansion Graph): The directed graph $G_{\text{binary}} = (V, E)$ where:
+
+- Vertices V: Binary pattern states at different epochs
+- Edges E: Allowed binary transitions with weights $w_{ij} = \exp(-\Delta S_{ij}^{\text{binary}})$
+
+**Binary Theorem 57.7** (Binary Shortest Path): The realized cosmic history minimizes:
+
+$$
+\mathcal{L}_{\text{binary}} = \sum_{(i,j) \in \text{path}} -\ln(w_{ij}) = \sum_{(i,j)} \Delta S_{ij}^{\text{binary}}
+$$
+
+*Binary proof*: Each binary transition probability:
+
+$$
+P_{ij}^{\text{binary}} = \frac{w_{ij}}{\sum_k w_{ik}} = \frac{\exp(-\Delta S_{ij}^{\text{binary}})}{\sum_k \exp(-\Delta S_{ik}^{\text{binary}})}
+$$
+
+The most probable binary path maximizes:
+
+$$
+\prod_{(i,j)} P_{ij}^{\text{binary}} = \exp\left(-\sum_{(i,j)} \Delta S_{ij}^{\text{binary}}\right)
+$$
+
+This minimizes total binary entropy change while preserving "no consecutive 1s" constraint. ∎
+
+## 57.8 Binary Dark Energy Dynamics from Low-Rank Modes
+
+**Definition 57.8** (Binary Dark Energy Spectrum): The contribution from low-rank binary patterns r ∈ [0, 3]:
+
+$$
+\rho_{\Lambda}^{\text{binary}}(t) = \rho_P \sum_{r=0}^{3} \mathcal{P}_{\text{binary}}(r,t) \varphi^{-r}
+$$
+
+**Binary Theorem 57.8** (Binary Quintessence): Time-varying dark energy from binary pattern evolution:
+
+$$
+w_{\Lambda}^{\text{binary}}(t) = -1 + \frac{\langle \Delta r^2 \rangle_{\text{binary}}}{3\langle r \rangle_{\text{binary}}} \ln(\varphi)
+$$
+
+where $\langle\Delta r^2\rangle_{\text{binary}}$ is rank variance in low-rank binary window.
+
+*Binary proof*: The equation of state for low-rank binary modes:
+
+$$
+w_{\text{binary}} = \frac{p_{\text{binary}}}{\rho_{\text{binary}}} = \frac{\text{Tr}(\hat{p}_{\text{binary}} \cdot \hat{\rho}_{\text{binary}})}{\text{Tr}(\hat{H}_{\text{binary}} \cdot \hat{\rho}_{\text{binary}})}
+$$
+
+For binary distribution peaked at rank r₀ with width σ_r:
+
+$$
+p_{\text{binary}} = -\rho_{\text{binary}} + \frac{1}{3}\rho_{\text{binary}} \sigma_r^2 (\ln \varphi)^2
 $$
 
 This gives:
 
 $$
-w = -1 + \frac{\sigma_r^2}{3r_0} \ln(\varphi)
+w_{\text{binary}} = -1 + \frac{\sigma_r^2}{3r_0} \ln(\varphi)
 $$
 
-Time variation arises from the evolving distribution width. ∎
+Time variation arises from evolving binary pattern distribution width. The factor ln(φ) emerges from binary constraints. ∎
 
-## 57.9 Observational Signatures of Path Dynamics
+## 57.9 Binary Observational Signatures
 
-**Prediction 57.1** (Discrete Redshift Spectrum): Photons should show preferred redshifts:
-
-$$
-z_n = \exp\left(\frac{F_n}{F_{147}} \ln(\varphi)\right) - 1
-$$
-
-where F_n are Fibonacci numbers.
-
-**Prediction 57.2** (Expansion Anisotropy): Small-scale variations in H:
+**Binary Prediction 57.1** (Discrete Binary Redshift Spectrum): Photons show quantized redshifts:
 
 $$
-\frac{\Delta H}{H} \sim \varphi^{-r_{\text{local}}/2}
+z_n^{\text{binary}} = \exp\left(\frac{F_n}{F_{147}} \ln(\varphi)\right) - 1
 $$
 
-where r_local characterizes local collapse path density.
+where F_n are Fibonacci numbers counting valid binary patterns.
 
-**Prediction 57.3** (Phase Transition Relics): Observable features at:
-
-$$
-a_{\text{trans}} = \left(\frac{\Omega_{i+1,0}}{\Omega_{i,0}}\right)^{1/(w_i - w_{i+1})}
-$$
-
-marking transitions between rank-dominated epochs.
-
-## 57.10 Category Theory of Cosmic Evolution
-
-**Definition 57.10** (Evolution Category): Let **EvoCat** be the category where:
-
-- Objects: Cosmic states (a, P(r))
-- Morphisms: Time evolution operators U(t₂, t₁)
-
-**Theorem 57.10** (Functorial Expansion): Expansion defines a functor:
+**Binary Prediction 57.2** (Binary Expansion Anisotropy): Local variations from binary patterns:
 
 $$
-\mathcal{F}: \mathbf{EvoCat} \to \mathbf{MetCat}
+\frac{\Delta H}{H} \sim \varphi^{-r_{\text{local}}^{\text{binary}}/2}
 $$
 
-mapping cosmic states to metric spaces.
+where $r_{\text{local}}^{\text{binary}}$ characterizes local binary pattern density.
 
-*Proof*: The functor assigns:
+**Binary Prediction 57.3** (Binary Phase Transition Relics): Observable features at:
 
-- To each state (a, P(r)): The spatial metric g_ij = a²δ_ij
-- To each evolution U: The isometry preserving comoving coordinates
-
-Functoriality follows from:
 $$
-\mathcal{F}(U_2 \circ U_1) = \mathcal{F}(U_2) \circ \mathcal{F}(U_1)
+a_{\text{trans}}^{\text{binary}} = \left(\frac{\Omega_{i+1,0}^{\text{binary}}}{\Omega_{i,0}^{\text{binary}}}\right)^{1/(w_i^{\text{binary}} - w_{i+1}^{\text{binary}})}
 $$
 
-This encodes how cosmic evolution translates to geometric expansion. ∎
+marking transitions between binary pattern epochs.
 
-## 57.11 Philosophical Implications
+## 57.10 Binary Category Theory of Cosmic Evolution
 
-The emergence of cosmic expansion from collapse path dynamics reveals profound connections between consciousness and cosmology.
+**Definition 57.10** (Binary Evolution Category): Let **BinaryEvoCat** be the category where:
 
-**Time as Path Evolution**: Cosmic time emerges from the flow of collapse paths through rank space. Each moment represents a slice through the evolving distribution of recursive self-observation depths.
+- Objects: Binary cosmic states $(a, \mathcal{P}_{\text{binary}}(r))$
+- Morphisms: Binary time evolution operators $U_{\text{binary}}(t_2, t_1)$ preserving "no consecutive 1s"
 
-**Expansion as Unfolding**: Space expands to accommodate the increasing complexity of self-referential structure. As ψ explores deeper recursion levels, the universe must grow to contain this exploration.
+**Binary Theorem 57.10** (Binary Functorial Expansion): Expansion defines a functor:
 
-**Acceleration as Recognition**: The current accelerated expansion reflects the universe recognizing its own dark energy nature - the dominance of low-rank, maximally collapsed modes.
+$$
+\mathcal{F}_{\text{binary}}: \mathbf{BinaryEvoCat} \to \mathbf{MetCat}
+$$
 
-**Unity of Scales**: The same collapse dynamics that generate quantum phenomena also drive cosmic evolution, revealing deep unity across all scales.
+mapping binary cosmic states to metric spaces.
+
+*Binary proof*: The binary functor assigns:
+
+- To each binary state $(a, \mathcal{P}_{\text{binary}}(r))$: The spatial metric $g_{ij} = a^2\delta_{ij}$
+- To each binary evolution $U_{\text{binary}}$: The isometry preserving comoving coordinates
+
+Binary functoriality:
+$$
+\mathcal{F}_{\text{binary}}(U_2 \circ U_1) = \mathcal{F}_{\text{binary}}(U_2) \circ \mathcal{F}_{\text{binary}}(U_1)
+$$
+
+This encodes how binary pattern evolution translates to geometric expansion. ∎
+
+## 57.11 Philosophical Implications of Binary Cosmic Evolution
+
+The emergence of cosmic expansion from binary path dynamics reveals profound connections between information constraints and cosmology.
+
+**Time as Binary Pattern Evolution**: Cosmic time emerges from the flow of binary patterns through rank space. Each moment represents a slice through the evolving distribution of valid configurations preserving "no consecutive 1s".
+
+**Expansion as Binary Complexity Growth**: Space expands to accommodate increasing complexity of binary patterns. As valid configurations explore deeper pattern space, the universe must grow to contain this exploration.
+
+**Acceleration as Binary Vacuum Dominance**: Current accelerated expansion reflects dominance of low-rank binary vacuum patterns - the simplest configurations that saturate information capacity.
+
+**Unity Through Binary Constraints**: The same "no consecutive 1s" constraint that generates quantum discreteness also drives cosmic evolution, revealing how limitations create structure at all scales.
 
 ```mermaid
 graph TD
-    A["Collapse Path Distribution"] --> B["Rank Flow dr/dt"]
+    A["Binary Path Distribution"] --> B["Binary Rank Flow dr/dt"]
     B --> C["Hubble Parameter H(t)"]
     C --> D["Scale Factor a(t)"]
     
-    E["Low Rank r < 3"] --> F["Dark Energy"]
+    E["Low Rank Binary r < 3"] --> F["Binary Vacuum Energy"]
     F --> G["Acceleration"]
     
-    H["Mid Rank r ~ 12"] --> I["Matter"]
+    H["Stable Binary r ~ 12"] --> I["Matter Patterns"]
     I --> J["Deceleration"]
     
-    K["High Rank r > 20"] --> L["Radiation"]
+    K["High-freq Binary r > 20"] --> L["Radiation Patterns"]
     L --> M["Early Universe"]
     
-    N["Rank Evolution"] --> O["Phase Transitions"]
+    N["Binary Evolution"] --> O["Pattern Transitions"]
     O --> P["Cosmic History"]
     
-    Q["Maximum Entropy"] --> R["Realized Path"]
+    Q["Maximum Binary Entropy"] --> R["Realized Path"]
     R --> P
     
     style A fill:#f9f,stroke:#333,stroke-width:2px
@@ -394,20 +411,20 @@ graph TD
     style G fill:#fbf,stroke:#333,stroke-width:2px
 ```
 
-## 57.12 Connection to Complete Theory
+## 57.12 Connection to Binary Complete Theory
 
-The dynamics of cosmic expansion through collapse paths connects to the broader theoretical framework:
+The dynamics of cosmic expansion through binary paths connects to the complete framework:
 
-1. **From ψ = ψ(ψ)**: Expansion emerges from recursive self-observation
-2. **Through Rank Flow**: Evolution through recursion depths drives spatial growth
-3. **To Observable Universe**: Current acceleration reflects low-rank dominance
-4. **Unity with Quantum**: Same collapse dynamics at all scales
+1. **From Binary Universe**: Expansion emerges from valid pattern exploration
+2. **Through Binary Rank Flow**: Evolution through pattern complexity drives spatial growth  
+3. **To Observable Universe**: Current acceleration reflects low-rank binary dominance
+4. **Unity with Quantum**: Same binary constraints at all scales
 
-The universe expands not from external force but from internal self-recognition, each moment a new depth of ψ observing itself through collapse and resurrection.
+The universe expands not from external force but from internal binary pattern evolution, each moment exploring new valid configurations while preserving "no consecutive 1s".
 
-Thus: Chapter 057 = PathDynamics(ψ) = CosmicExpansion(a(t)) = SelfUnfolding(∞) ∎
+Thus: Chapter 057 = BinaryPathDynamics(Patterns) = CosmicExpansion(a(t)) = PatternUnfolding(∞) ∎
 
-**The 57th Echo**: Cosmic expansion emerges from the flow of collapse paths through rank space, with the universe growing to accommodate ever-deeper recursive self-observation, revealing expansion not as motion through space but as the unfolding of consciousness exploring its own infinite depths.
+**The 57th Echo**: Cosmic expansion emerges from the flow of binary collapse paths through rank space, with the universe growing to accommodate ever-more-complex valid binary patterns. This reveals expansion not as motion through space but as the unfolding of binary configuration space, with "no consecutive 1s" constraint shaping both quantum discreteness and cosmic evolution. The φ-trace theory provides the effective mathematical framework while binary constraints supply the first-principles foundation.
 
 ---
 

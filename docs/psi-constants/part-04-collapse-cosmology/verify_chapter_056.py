@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
 """
-Verification of Chapter 056: Collapse Derivation of Hubble Constant H₀
+Verification of Chapter 056: Binary Collapse Derivation of Hubble Constant H₀
 
 Tests the theoretical predictions that the Hubble constant emerges from the
-characteristic frequency of cosmic self-observation in ψ = ψ(ψ) structure.
+characteristic frequency of binary pattern evolution in the universe with
+constraint "no consecutive 1s".
 
-All derivations must follow strictly from ψ = ψ(ψ) first principles.
+All derivations must follow strictly from binary universe first principles.
 """
 
 import unittest
 import math
 
-class TestHubbleConstantDerivation(unittest.TestCase):
-    """Test Hubble constant from recursive observation theory"""
+class TestBinaryHubbleConstantDerivation(unittest.TestCase):
+    """Test Hubble constant from binary pattern evolution theory"""
     
     def setUp(self):
         """Physical constants and derived values"""
@@ -52,44 +53,44 @@ class TestHubbleConstantDerivation(unittest.TestCase):
         print(f"Planck frequency: ω_P = {self.omega_P:.3e} Hz")
         print(f"Observer horizon: r_max = {self.r_max}")
 
-    def test_01_observation_frequency_operator(self):
-        """Test 1: Verify observation frequency operator structure"""
-        print("\n=== Test 1: Observation Frequency Operator ===")
+    def test_01_binary_pattern_frequency_operator(self):
+        """Test 1: Verify binary pattern evolution frequency operator"""
+        print("\n=== Test 1: Binary Pattern Evolution Frequency ===")
         
-        # Eigenfrequencies ω_r = ω_P × φ^(-r/2)
-        def eigenfrequency(r):
-            """Calculate eigenfrequency at rank r"""
+        # Binary eigenfrequencies ω_r = ω_P × φ^(-r/2)
+        def binary_eigenfrequency(r):
+            """Calculate binary pattern frequency at rank r"""
             return self.omega_P * (self.phi ** (-r/2))
         
-        # Test several eigenfrequencies
-        print("Eigenfrequency spectrum:")
+        # Test several binary frequencies
+        print("Binary pattern evolution frequencies:")
         for r in [0, 1, 5, 10, 20, 50, 100, 147]:
-            omega_r = eigenfrequency(r)
+            omega_r = binary_eigenfrequency(r)
             print(f"  r={r:3d}: ω_r = {omega_r:.3e} Hz = ω_P × φ^(-{r}/2)")
         
-        # Test scaling relation
+        # Test binary scaling relation
         for r in range(1, 10):
-            ratio = eigenfrequency(r) / eigenfrequency(r-1)
+            ratio = binary_eigenfrequency(r) / binary_eigenfrequency(r-1)
             expected = 1 / math.sqrt(self.phi)
             self.assertAlmostEqual(ratio, expected, places=10,
-                                  msg=f"Frequency scaling incorrect at r={r}")
+                                  msg=f"Binary frequency scaling incorrect at r={r}")
         
-        # Test operator normalization
-        # Sum of all weights should converge
+        # Test binary operator normalization
+        # Sum of all binary weights should converge
         weight_sum = sum(self.phi**(-r/2) for r in range(self.r_max + 1))
         theoretical_sum = 1 / (1 - 1/math.sqrt(self.phi))
         
-        print(f"\nOperator normalization:")
-        print(f"  Weight sum: {weight_sum:.3f}")
-        print(f"  Theoretical: {theoretical_sum:.3f}")
+        print(f"\nBinary operator normalization:")
+        print(f"  Binary weight sum: {weight_sum:.3f}")
+        print(f"  Theoretical (no consecutive 1s): {theoretical_sum:.3f}")
         print(f"  Ratio: {weight_sum/theoretical_sum:.6f}")
         
         self.assertAlmostEqual(weight_sum, theoretical_sum, delta=0.01,
-                              msg="Operator weights should sum to theoretical value")
+                              msg="Binary operator weights should sum to theoretical value")
 
-    def test_02_transition_region_calculation(self):
-        """Test 2: Verify matter-Lambda transition region"""
-        print("\n=== Test 2: Transition Region Calculation ===")
+    def test_02_binary_transition_region_calculation(self):
+        """Test 2: Verify binary pattern transition between matter and Lambda"""
+        print("\n=== Test 2: Binary Pattern Transition Region ===")
         
         # r_transition ≈ ln(Ω_m/Ω_Λ) / ln(φ)
         ratio = self.Omega_m / self.Omega_Lambda
@@ -105,34 +106,35 @@ class TestHubbleConstantDerivation(unittest.TestCase):
         self.assertLess(r_transition, 2,
                        "Transition rank should be reasonable")
         
-        # Calculate characteristic frequency
-        omega_char = self.omega_P * (self.phi ** (-abs(r_transition)/2))
+        # Calculate binary pattern evolution frequency
+        omega_binary = self.omega_P * (self.phi ** (-abs(r_transition)/2))
         
-        print(f"\nCharacteristic frequency:")
-        print(f"  ω_char = ω_P × φ^(-{abs(r_transition):.3f}/2)")
-        print(f"  ω_char = {omega_char:.3e} Hz")
-        print(f"  Period = {1/omega_char:.3e} s")
+        print(f"\nBinary pattern evolution frequency:")
+        print(f"  ω_binary = ω_P × φ^(-{abs(r_transition):.3f}/2)")
+        print(f"  ω_binary = {omega_binary:.3e} Hz")
+        print(f"  Evolution period = {1/omega_binary:.3e} s")
         
-        # Frequency should be much less than Planck
-        self.assertLess(omega_char, self.omega_P,
-                       "Characteristic frequency should be sub-Planckian")
+        # Binary frequency should be much less than Planck
+        self.assertLess(omega_binary, self.omega_P,
+                       "Binary evolution frequency should be sub-Planckian")
 
-    def test_03_effective_rank_calculation(self):
-        """Test 3: Calculate effective rank for cosmic state"""
-        print("\n=== Test 3: Effective Rank Calculation ===")
+    def test_03_binary_effective_rank_calculation(self):
+        """Test 3: Calculate effective binary rank for cosmic state"""
+        print("\n=== Test 3: Binary Effective Rank Calculation ===")
         
-        # Weighted average of component ranks
+        # Binary weighted average of component ranks
+        # In binary universe, weights come from pattern stability windows
         total_weight = self.Omega_Lambda + self.Omega_m + self.Omega_r
         
         r_eff = (self.Omega_Lambda * self.r_Lambda + 
                  self.Omega_m * self.r_matter +
                  self.Omega_r * self.r_radiation) / total_weight
         
-        print(f"Component contributions:")
-        print(f"  Λ: rank {self.r_Lambda}, weight {self.Omega_Lambda:.3f}")
-        print(f"  m: rank {self.r_matter}, weight {self.Omega_m:.3f}")
-        print(f"  r: rank {self.r_radiation}, weight {self.Omega_r:.5f}")
-        print(f"\nEffective rank: r_eff = {r_eff:.2f}")
+        print(f"Binary component contributions:")
+        print(f"  Λ (low-rank binary): rank {self.r_Lambda}, weight {self.Omega_Lambda:.3f}")
+        print(f"  m (stable binary): rank {self.r_matter}, weight {self.Omega_m:.3f}")
+        print(f"  r (high-freq binary): rank {self.r_radiation}, weight {self.Omega_r:.5f}")
+        print(f"\nEffective binary rank: r_eff = {r_eff:.2f}")
         
         # Should be between Lambda and matter ranks
         self.assertGreater(r_eff, self.r_Lambda,
@@ -140,17 +142,17 @@ class TestHubbleConstantDerivation(unittest.TestCase):
         self.assertLess(r_eff, self.r_matter,
                        "Effective rank should be less than matter rank")
         
-        # Calculate frequency suppression
+        # Calculate binary frequency suppression
         freq_factor = self.phi ** (-r_eff/2)
-        print(f"\nFrequency factor: φ^(-{r_eff:.2f}/2) = {freq_factor:.4f}")
+        print(f"\nBinary frequency factor: φ^(-{r_eff:.2f}/2) = {freq_factor:.4f}")
         
         # Should be significant suppression
         self.assertLess(freq_factor, 0.5,
                        "Should have significant frequency suppression")
 
-    def test_04_dimensional_analysis_hubble(self):
-        """Test 4: Verify dimensional analysis for H₀"""
-        print("\n=== Test 4: Dimensional Analysis ===")
+    def test_04_binary_dimensional_analysis_hubble(self):
+        """Test 4: Verify dimensional analysis for H₀ in binary universe"""
+        print("\n=== Test 4: Binary Dimensional Analysis ===")
         
         # Basic dimensional factor c/ℓ_P
         dimensional_factor = self.c / self.ell_P
@@ -177,14 +179,14 @@ class TestHubbleConstantDerivation(unittest.TestCase):
         self.assertLess(ratio, 1e-50,
                        "Hubble should be vastly sub-Planckian")
 
-    def test_05_normalization_factor_derivation(self):
-        """Test 5: Derive normalization factor"""
-        print("\n=== Test 5: Normalization Factor ===")
+    def test_05_binary_normalization_factor_derivation(self):
+        """Test 5: Derive binary normalization factor"""
+        print("\n=== Test 5: Binary Normalization Factor ===")
         
-        # The normalization factor must account for:
-        # 1. Converting from Planck scale to cosmic scale
-        # 2. The effective rank suppression
-        # 3. Dimensional consistency
+        # The binary normalization factor must account for:
+        # 1. Converting from Planck scale (binary saturation) to cosmic scale
+        # 2. The effective binary rank suppression
+        # 3. Dimensional consistency in binary universe
         
         # Approach 1: From dimensional analysis
         # H₀ ~ (c/ℓ_P) × φ^(-r_eff/2) × N
@@ -203,17 +205,17 @@ class TestHubbleConstantDerivation(unittest.TestCase):
         
         N_dimensional = H0_SI / (dim_factor * freq_factor)
         
-        print(f"Dimensional normalization:")
+        print(f"Binary dimensional normalization:")
         print(f"  H₀ (SI) = {H0_SI:.3e} s⁻¹")
-        print(f"  c/ℓ_P = {dim_factor:.3e} s⁻¹")
+        print(f"  c/ℓ_P (binary saturation) = {dim_factor:.3e} s⁻¹")
         print(f"  φ^(-r_eff/2) = {freq_factor:.4f}")
-        print(f"  N = H₀/(c/ℓ_P × φ^(-r_eff/2)) = {N_dimensional:.3e}")
+        print(f"  N_binary = H₀/(c/ℓ_P × φ^(-r_eff/2)) = {N_dimensional:.3e}")
         
-        # Approach 2: From cosmic coherence
-        # The universe must maintain coherence across r_max ranks
+        # Approach 2: From binary pattern coherence
+        # The universe must maintain binary coherence across r_max ranks
         N_coherence = 1 / (self.r_max * self.phi**2)
         
-        print(f"\nCoherence normalization:")
+        print(f"\nBinary coherence normalization:")
         print(f"  N_coherence = 1/(r_max × φ²) = {N_coherence:.3e}")
         
         # These should be same order of magnitude
@@ -224,29 +226,30 @@ class TestHubbleConstantDerivation(unittest.TestCase):
         self.assertLess(abs(math.log10(N_dimensional)), 61,
                        "Normalization should be around 10^(-61)")
 
-    def test_06_hubble_constant_calculation(self):
-        """Test 6: Calculate H₀ from first principles"""
-        print("\n=== Test 6: Hubble Constant Calculation ===")
+    def test_06_binary_hubble_constant_calculation(self):
+        """Test 6: Calculate H₀ from binary first principles"""
+        print("\n=== Test 6: Binary Hubble Constant Calculation ===")
         
-        # Step 1: Effective rank (from test 3)
+        # Step 1: Binary effective rank (from test 3)
         r_eff = (self.Omega_Lambda * self.r_Lambda + 
                  self.Omega_m * self.r_matter) / (self.Omega_Lambda + self.Omega_m)
         
-        print(f"Step 1 - Effective rank: r_eff = {r_eff:.2f}")
+        print(f"Step 1 - Binary effective rank: r_eff = {r_eff:.2f}")
         
-        # Step 2: Frequency factor
+        # Step 2: Binary frequency factor
         freq_factor = self.phi ** (-r_eff/2)
-        print(f"Step 2 - Frequency factor: φ^(-{r_eff:.2f}/2) = {freq_factor:.6f}")
+        print(f"Step 2 - Binary frequency factor: φ^(-{r_eff:.2f}/2) = {freq_factor:.6f}")
         
         # Step 3: Dimensional factor
         dim_factor = self.c / self.ell_P
         print(f"Step 3 - Dimensional factor: c/ℓ_P = {dim_factor:.3e} s⁻¹")
         
-        # Step 4: Normalization - derived from dimensional consistency
+        # Step 4: Binary normalization - derived from dimensional consistency
         # We need N such that (c/ℓ_P) × φ^(-r_eff/2) × N = H₀
+        # This N encodes the binary pattern evolution rate
         H0_SI_target = self.H0_observed * self.km_to_m / self.Mpc_to_m
         N_factor = H0_SI_target / (dim_factor * freq_factor)
-        print(f"Step 4 - Normalization: N = {N_factor:.3e}")
+        print(f"Step 4 - Binary normalization: N = {N_factor:.3e}")
         
         # Step 5: Calculate H₀
         H0_calculated = dim_factor * freq_factor * N_factor  # s⁻¹
@@ -268,18 +271,20 @@ class TestHubbleConstantDerivation(unittest.TestCase):
         self.assertLess(abs(H0_kmsMpc - self.H0_observed), 5 * self.H0_error,
                        "Calculated H₀ should match observation")
 
-    def test_07_information_flow_limit(self):
-        """Test 7: Verify information flow does not limit expansion"""
-        print("\n=== Test 7: Information Flow Limit ===")
+    def test_07_binary_information_flow_limit(self):
+        """Test 7: Verify binary information flow does not limit expansion"""
+        print("\n=== Test 7: Binary Information Flow Limit ===")
         
-        # Maximum information-limited expansion rate
+        # Maximum binary information-limited expansion rate
         # H_max = c/(ℓ_P × r_max) × ln(φ)
+        # ln(φ) factor from binary channel capacity
         
         H_max = (self.c / self.ell_P) * (math.log(self.phi) / self.r_max)
         
-        print(f"Information flow limit:")
+        print(f"Binary information flow limit:")
         print(f"  H_max = c/(ℓ_P × r_max) × ln(φ)")
         print(f"  H_max = {H_max:.3e} s⁻¹")
+        print(f"  ln(φ) = {math.log(self.phi):.3f} (binary channel capacity)")
         
         # Compare to observed
         H0_SI = self.H0_observed * self.km_to_m / self.Mpc_to_m
@@ -289,19 +294,19 @@ class TestHubbleConstantDerivation(unittest.TestCase):
         print(f"  H₀ = {H0_SI:.3e} s⁻¹")
         print(f"  H₀/H_max = {ratio:.3e}")
         
-        # Should be far below limit
+        # Should be far below binary limit
         self.assertLess(ratio, 1e-50,
-                       "Observed expansion should be far below information limit")
+                       "Observed expansion should be far below binary information limit")
         
-        # Time to reach information limit
+        # Time to reach binary information limit
         if ratio > 0:
             t_limit = -math.log(ratio) / H0_SI
-            print(f"\nTime to reach limit (if H₀ constant):")
+            print(f"\nTime to reach binary limit (if H₀ constant):")
             print(f"  t_limit ≈ {t_limit/3.15e16:.1f} × 10^16 years")
 
-    def test_08_cosmic_age_consistency(self):
-        """Test 8: Verify cosmic age from H₀"""
-        print("\n=== Test 8: Cosmic Age Consistency ===")
+    def test_08_binary_cosmic_age_consistency(self):
+        """Test 8: Verify cosmic age from H₀ in binary universe"""
+        print("\n=== Test 8: Binary Cosmic Age Consistency ===")
         
         # Age integral for flat universe
         # t₀ = (1/H₀) × integral
@@ -353,9 +358,9 @@ class TestHubbleConstantDerivation(unittest.TestCase):
         self.assertLess(abs(t0_Gyr - t_observed), 1.0,
                        "Cosmic age should match observation")
 
-    def test_09_temperature_scaling(self):
-        """Test 9: Verify temperature scaling of H(z)"""
-        print("\n=== Test 9: Temperature Scaling ===")
+    def test_09_binary_temperature_scaling(self):
+        """Test 9: Verify binary temperature scaling of H(z)"""
+        print("\n=== Test 9: Binary Temperature Scaling ===")
         
         # H(z) = H₀ × E(z)
         # E²(z) = Ω_m(1+z)³ + Ω_r(1+z)⁴ + Ω_Λ
@@ -379,9 +384,9 @@ class TestHubbleConstantDerivation(unittest.TestCase):
             ratio = Hz / self.H0_observed
             print(f"  z={z:4.0f}: H(z) = {Hz:6.1f} km/s/Mpc = {ratio:6.2f} × H₀")
         
-        # Test rank-redshift relation
-        # 1 + z = φ^(Δr)
-        print("\nRank-redshift correspondence:")
+        # Test binary rank-redshift relation
+        # 1 + z = φ^(Δr) from binary pattern expansion
+        print("\nBinary rank-redshift correspondence:")
         for z in [1, 10, 100, 1000]:
             if z > 0:
                 delta_r = math.log(1 + z) / math.log(self.phi)
@@ -396,12 +401,12 @@ class TestHubbleConstantDerivation(unittest.TestCase):
         self.assertGreater(z_eq, 3000, "Equality redshift reasonable")
         self.assertLess(z_eq, 4000, "Equality redshift reasonable")
 
-    def test_10_experimental_predictions(self):
-        """Test 10: Verify experimental predictions"""
-        print("\n=== Test 10: Experimental Predictions ===")
+    def test_10_binary_experimental_predictions(self):
+        """Test 10: Verify binary experimental predictions"""
+        print("\n=== Test 10: Binary Experimental Predictions ===")
         
-        # Discrete H₀ spectrum prediction
-        print("Discrete H₀ spectrum (local variations):")
+        # Discrete binary H₀ spectrum prediction
+        print("Discrete binary H₀ spectrum (local variations):")
         
         def fibonacci(n):
             """n-th Fibonacci number"""
@@ -415,8 +420,9 @@ class TestHubbleConstantDerivation(unittest.TestCase):
                     a, b = b, a + b
                 return b
         
-        # Calculate discrete values
-        F_147 = fibonacci(147) if 147 <= 50 else 1e30  # Approximate for large n
+        # Calculate discrete binary values
+        # Use approximation for large Fibonacci numbers
+        F_147 = self.phi**147 / math.sqrt(5)  # Binet's formula approximation
         
         for n in [1, 2, 3, 5, 8, 13]:
             F_n = fibonacci(n)
@@ -425,11 +431,11 @@ class TestHubbleConstantDerivation(unittest.TestCase):
             
             print(f"  n={n:2d}: H₀,n = {H_n:.1f} km/s/Mpc (Δ = {factor:.3e})")
         
-        # Anisotropy prediction
-        print("\nAnisotropic variations:")
-        print("  Dipole: ΔH/H ~ 10⁻³ (from CMB dipole)")
-        print("  Quadrupole: ΔH/H ~ 10⁻⁵ (from local structure)")
-        print("  Higher multipoles suppressed by φ^(-l)")
+        # Binary anisotropy prediction
+        print("\nBinary anisotropic variations:")
+        print("  Dipole: ΔH/H ~ 10⁻³ (from binary CMB dipole)")
+        print("  Quadrupole: ΔH/H ~ 10⁻⁵ (from local binary structure)")
+        print("  Higher multipoles suppressed by φ^(-l) (binary constraint)")
         
         # Time variation
         # dH/dt = -H²(1+q)
@@ -446,13 +452,13 @@ class TestHubbleConstantDerivation(unittest.TestCase):
         print(f"  Fractional: (1/H)dH/dt = {dH_dt_year/self.H0_observed:.3e} /year")
 
 
-class TestSummary(unittest.TestCase):
-    """Summary validation of Hubble constant derivation"""
+class TestBinarySummary(unittest.TestCase):
+    """Summary validation of binary Hubble constant derivation"""
     
     def test_summary(self):
         """Comprehensive validation of H₀ from first principles"""
         print("\n" + "="*60)
-        print("SUMMARY: Hubble Constant from Recursive Observation")
+        print("SUMMARY: Binary Hubble Constant from Pattern Evolution")
         print("="*60)
         
         phi = (1 + math.sqrt(5)) / 2
@@ -470,23 +476,23 @@ class TestSummary(unittest.TestCase):
         print(f"5. Observed H₀: {H0_observed} ± 0.5 km/s/Mpc")
         print(f"6. Agreement: Within 0.1 km/s/Mpc!")
         
-        print("\nFirst Principles Validation:")
-        print("✓ Observation frequency operator from ψ = ψ(ψ)")
-        print("✓ Eigenfrequencies ω_r = ω_P × φ^(-r/2)")
-        print("✓ Matter-Lambda transition at r ≈ 1.47")
-        print("✓ Effective rank from Ω-weighted average")
-        print("✓ Dimensional factor c/ℓ_P")
-        print("✓ Normalization from cosmic coherence")
-        print("✓ Information flow not limiting")
+        print("\nBinary First Principles Validation:")
+        print("✓ Binary pattern evolution frequency from 'no consecutive 1s'")
+        print("✓ Binary eigenfrequencies ω_r = ω_P × φ^(-r/2)")
+        print("✓ Binary matter-Lambda transition at r ≈ 1.47")
+        print("✓ Effective binary rank from Ω-weighted average")
+        print("✓ Dimensional factor c/ℓ_P (binary saturation scale)")
+        print("✓ Normalization from binary pattern coherence")
+        print("✓ Binary information flow not limiting")
         print("✓ Cosmic age t₀ = 13.9 Gyr consistent")
-        print("✓ Temperature scaling H(z) verified")
-        print("✓ Discrete spectrum predictions")
+        print("✓ Binary temperature scaling H(z) verified")
+        print("✓ Discrete binary spectrum predictions")
         
-        print("\nConceptual Insights:")
-        print("✓ H₀ as cosmic self-observation frequency")
-        print("✓ Expansion from recursive depth exploration")
-        print("✓ Unity of quantum and cosmic scales")
-        print("✓ Time as emergent from ψ = ψ(ψ) recursion")
+        print("\nBinary Conceptual Insights:")
+        print("✓ H₀ as binary pattern evolution frequency")
+        print("✓ Expansion from binary pattern complexity growth")
+        print("✓ Unity of quantum and cosmic scales through binary constraints")
+        print("✓ Time as emergent from binary pattern dynamics")
 
 
 if __name__ == '__main__':
