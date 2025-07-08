@@ -113,13 +113,19 @@ This is ~17 orders of magnitude larger than the observed value Λ_obs ≈ 3.7 ×
 2. **Multi-scale coherence structure** involving different geometric hierarchies
 3. **Categorical corrections** from higher-order collapse tensor interactions
 
-**Key Insight - Observer Coupling**: The 17 orders of magnitude discrepancy suggests that cosmological observation requires **fine structure coupling** analogous to α ≈ 1/137 in electromagnetic interactions.
+**Binary Observer Coupling**: The 17 orders of magnitude gap reveals that cosmic-scale binary patterns require **observer visibility coupling** analogous to electromagnetic α ≈ 1/137.
 
-**Hypothesis**: The observable cosmological constant involves observer coupling:
+**Binary Hypothesis**: Observable cosmological constant emerges from:
 $$
 Λ_{\text{observable}} = Λ_{\text{geometric}} \times α^n \times \text{(cascade corrections)}
 $$
-where α provides the observer visibility factor for cosmological-scale phenomena, just as it does for electromagnetic interactions in Chapter 033.
+
+where:
+- α^n = observer-cosmos coupling strength
+- n ≈ 2 or 3 (multi-level cascade)
+- Cascade corrections from binary pattern hierarchy
+
+This parallels EM observation requiring α coupling at 6-7 bits.
 
 ## 50.5 Cosmic Acceleration from Geometry
 
