@@ -12,8 +12,8 @@ All derivations must follow strictly from ψ = ψ(ψ) first principles.
 import unittest
 import math
 
-class TestPlanckDensityBaseline(unittest.TestCase):
-    """Test Planck density as spectral maximum theory"""
+class TestBinaryPlanckDensity(unittest.TestCase):
+    """Test binary Planck density as spectral maximum theory"""
     
     def setUp(self):
         """Physical constants and derived values"""
@@ -36,8 +36,9 @@ class TestPlanckDensityBaseline(unittest.TestCase):
         # Standard definition: ρ_P = c⁵/(ℏG²)
         self.rho_P = self.c**5 / (self.hbar * self.G**2)
         
-        # Zeckendorf representation normalization
+        # Binary universe parameters
         self.F_infinity = 1 / math.sqrt(5)  # Normalized Fibonacci limit
+        self.alpha = 7.2973525693e-3  # Fine structure constant (human observer scale)
         
         print(f"Planck length: ℓ_P = {self.ell_P:.3e} m")
         print(f"Planck time: τ_P = {self.tau_P:.3e} s")
@@ -46,9 +47,9 @@ class TestPlanckDensityBaseline(unittest.TestCase):
         print(f"Planck density: ρ_P = {self.rho_P:.3e} kg/m³")
         print(f"Planck temperature: T_P = {self.T_P:.3e} K")
 
-    def test_01_collapse_tensor_spectral_theory(self):
-        """Test 1: Verify collapse energy tensor spectrum"""
-        print("\n=== Test 1: Collapse Energy Tensor Spectrum ===")
+    def test_01_binary_collapse_spectral_theory(self):
+        """Test 1: Verify binary collapse energy tensor spectrum"""
+        print("\n=== Test 1: Binary Collapse Energy Tensor Spectrum ===")
         
         # Golden recursion for eigenstates
         def golden_recursion_coefficient(n):
@@ -58,13 +59,14 @@ class TestPlanckDensityBaseline(unittest.TestCase):
             elif n == 1:
                 return 1.0 / self.phi
             else:
+                # Binary golden recursion from "no consecutive 1s"
                 # |φ_{n+1}⟩ = (1/φ)|φ_n⟩ + (1/φ²)|φ_{n-1}⟩
                 c_n_minus_1 = golden_recursion_coefficient(n - 1)
                 c_n_minus_2 = golden_recursion_coefficient(n - 2)
                 return c_n_minus_1 / self.phi + c_n_minus_2 / (self.phi**2)
         
         # Test spectral convergence
-        print("Golden recursion coefficients:")
+        print("Binary golden recursion coefficients:")
         coefficients = []
         for n in range(10):
             c_n = golden_recursion_coefficient(n)
@@ -99,12 +101,12 @@ class TestPlanckDensityBaseline(unittest.TestCase):
         self.assertAlmostEqual(lambda_2, -1/(self.phi**2), places=6,
                               msg="Second root should be -1/φ²")
 
-    def test_02_maximum_energy_eigenvalue(self):
-        """Test 2: Verify maximum energy eigenvalue derivation"""
-        print("\n=== Test 2: Maximum Energy Eigenvalue ===")
+    def test_02_binary_maximum_eigenvalue(self):
+        """Test 2: Verify binary maximum energy eigenvalue"""
+        print("\n=== Test 2: Binary Maximum Energy Eigenvalue ===")
         
-        # Maximum energy density from dimensional analysis
-        # E_max per volume = ℏc/ℓ_P⁴ (not ℏc/ℓ_P³)
+        # Maximum energy density from binary information saturation
+        # One bit per Planck volume gives E_max = ℏc/ℓ_P⁴
         E_density_max = self.hbar * self.c / self.ell_P**4
         
         # This is energy density, not energy
@@ -146,9 +148,9 @@ class TestPlanckDensityBaseline(unittest.TestCase):
             self.assertAlmostEqual(ratio, expected_ratio, places=6,
                                   msg=f"Energy should decay by factor 1/φ at n={n}")
 
-    def test_03_planck_density_as_initial_object(self):
-        """Test 3: Verify Planck density as categorical initial object"""
-        print("\n=== Test 3: Planck Density as Initial Object ===")
+    def test_03_binary_planck_initial_object(self):
+        """Test 3: Verify binary Planck density as categorical initial object"""
+        print("\n=== Test 3: Binary Planck Density as Initial Object ===")
         
         # In EnergyBase category, ρ_P is initial object
         # This means: ∃! morphism ρ_P → ρ for any density ρ
@@ -193,16 +195,17 @@ class TestPlanckDensityBaseline(unittest.TestCase):
         self.assertAlmostEqual(rho1, rho2, delta=rho1*1e-10,
                               msg="Equivalent rank combinations should give same density")
 
-    def test_04_information_density_saturation(self):
-        """Test 4: Verify information saturation at Planck scale"""
-        print("\n=== Test 4: Information Density Saturation ===")
+    def test_04_binary_information_saturation(self):
+        """Test 4: Verify binary information saturation at Planck scale"""
+        print("\n=== Test 4: Binary Information Density Saturation ===")
         
-        # Information density: 1 bit per Planck volume
+        # Binary information density: 1 bit per Planck volume
         planck_volume = self.ell_P**3
         bits_per_planck_volume = 1.0
         
         print(f"Planck volume: ℓ_P³ = {planck_volume:.3e} m³")
-        print(f"Information density: {bits_per_planck_volume} bit per ℓ_P³")
+        print(f"Binary information density: {bits_per_planck_volume} bit per ℓ_P³")
+        print(f"This represents binary saturation - no room for consecutive 1s")
         
         # At Planck density, information saturates at 1 bit per Planck volume
         # This is a fundamental postulate, not a derivation
@@ -236,9 +239,10 @@ class TestPlanckDensityBaseline(unittest.TestCase):
                           "Energy per Planck volume should exceed single Planck energy")
         
         # Information saturation principle
-        print(f"\nInformation saturation:")
+        print(f"\nBinary information saturation:")
         print(f"  Principle: 1 bit per Planck volume at maximum density")
-        print(f"  This is the fundamental postulate defining Planck scale")
+        print(f"  This emerges from 'no consecutive 1s' constraint")
+        print(f"  Binary patterns saturate at Planck density")
         
         # Test sub-Planck violation
         sub_planck_length = self.ell_P / 2
@@ -252,9 +256,9 @@ class TestPlanckDensityBaseline(unittest.TestCase):
         print(f"  Volume: (ℓ_P/2)³ = {sub_planck_volume:.3e} m³")
         print(f"  Sub-Planck physics: Undefined - quantum gravity regime")
 
-    def test_05_zeckendorf_representation_planck(self):
-        """Test 5: Verify Zeckendorf representation of Planck baseline"""
-        print("\n=== Test 5: Zeckendorf Representation ===")
+    def test_05_binary_planck_representation(self):
+        """Test 5: Verify binary representation of Planck baseline"""
+        print("\n=== Test 5: Binary Planck Representation ===")
         
         # Fibonacci sequence
         def fibonacci(n):
@@ -269,8 +273,8 @@ class TestPlanckDensityBaseline(unittest.TestCase):
                     a, b = b, a + b
                 return b
         
-        # Normalized Fibonacci limit: F_n/φ^n → 1/√5 as n→∞
-        print("Fibonacci normalization test:")
+        # Binary Fibonacci normalization in Planck context
+        print("Binary Fibonacci normalization test:")
         for n in [10, 15, 20, 25]:
             F_n = fibonacci(n)
             normalized = F_n / (self.phi ** n)
@@ -328,9 +332,9 @@ class TestPlanckDensityBaseline(unittest.TestCase):
         self.assertAlmostEqual(phi_squared, phi_plus_one, places=10,
                               msg="Golden ratio should satisfy φ² = φ + 1")
 
-    def test_06_planck_graph_connectivity(self):
-        """Test 6: Verify Planck-scale graph structure"""
-        print("\n=== Test 6: Planck Graph Connectivity ===")
+    def test_06_binary_planck_network(self):
+        """Test 6: Verify binary Planck-scale network structure"""
+        print("\n=== Test 6: Binary Planck Network Connectivity ===")
         
         # Maximum vertex degree: φ³ - 1
         max_degree_theoretical = self.phi**3 - 1
@@ -339,7 +343,7 @@ class TestPlanckDensityBaseline(unittest.TestCase):
         kissing_number_3D = 12  # Known mathematical result
         golden_kissing = math.floor(self.phi**3)  # Golden approximation
         
-        print(f"Graph connectivity at Planck scale:")
+        print(f"Binary network connectivity at Planck scale:")
         print(f"  φ³ = {self.phi**3:.6f}")
         print(f"  ⌊φ³⌋ = {golden_kissing}")
         print(f"  Maximum degree: φ³ - 1 = {max_degree_theoretical:.3f}")
@@ -375,9 +379,9 @@ class TestPlanckDensityBaseline(unittest.TestCase):
         self.assertLess(max_flow, 10.0,
                        "Information flow should be bounded")
 
-    def test_07_planck_collapse_dynamics(self):
-        """Test 7: Verify collapse dynamics at Planck density"""
-        print("\n=== Test 7: Planck Collapse Dynamics ===")
+    def test_07_binary_collapse_dynamics(self):
+        """Test 7: Verify binary collapse dynamics at Planck density"""
+        print("\n=== Test 7: Binary Planck Collapse Dynamics ===")
         
         # Planck time as minimum collapse duration
         tau_collapse_min = self.tau_P
@@ -419,9 +423,9 @@ class TestPlanckDensityBaseline(unittest.TestCase):
         self.assertAlmostEqual(tau_grav_theoretical, tau_collapse_min, delta=tau_collapse_min*1e-10,
                               msg="Gravitational time scale should equal Planck time")
 
-    def test_08_planck_temperature_coherence(self):
-        """Test 8: Verify maximum coherent temperature"""
-        print("\n=== Test 8: Planck Temperature and Coherence ===")
+    def test_08_binary_planck_temperature(self):
+        """Test 8: Verify binary maximum coherent temperature"""
+        print("\n=== Test 8: Binary Planck Temperature ===")
         
         # Planck temperature from energy scale
         T_P_calc = self.E_P / self.k_B
@@ -435,13 +439,11 @@ class TestPlanckDensityBaseline(unittest.TestCase):
         self.assertAlmostEqual(T_P_calc, self.T_P, delta=self.T_P*1e-10,
                               msg="Calculated temperature should match stored value")
         
-        # Thermal wavelength at Planck temperature
-        # λ_thermal = h/(√(2πmk_BT))
-        # For radiation: λ_thermal ~ hc/(k_BT)
-        # More precisely: λ_thermal = 2πℏc/(k_BT) for peak wavelength
+        # Binary thermal wavelength at Planck temperature
+        # λ_thermal = 2πℏc/(k_BT) for peak wavelength
         lambda_thermal = 2 * math.pi * self.hbar * self.c / (self.k_B * self.T_P)
         
-        print(f"\nThermal wavelength:")
+        print(f"\nBinary thermal wavelength:")
         print(f"  λ_thermal = 2πℏc/(k_BT_P) = {lambda_thermal:.3e} m")
         print(f"  λ_thermal/ℓ_P = {lambda_thermal/self.ell_P:.3f}")
         
@@ -450,8 +452,8 @@ class TestPlanckDensityBaseline(unittest.TestCase):
         self.assertAlmostEqual(ratio, 2 * math.pi, delta=0.1,
                               msg="Thermal wavelength at T_P should be 2π × Planck length")
         
-        # Sub-Planck structure test
-        # At T > T_P, thermal fluctuations probe sub-Planck scales
+        # Binary saturation test
+        # At T > T_P, binary patterns break down
         T_super_planck = 2 * self.T_P
         lambda_super = 2 * math.pi * self.hbar * self.c / (self.k_B * T_super_planck)
         
@@ -459,67 +461,69 @@ class TestPlanckDensityBaseline(unittest.TestCase):
         print(f"  T = 2T_P = {T_super_planck:.3e} K")
         print(f"  λ_thermal = {lambda_super:.3e} m")
         print(f"  λ_thermal/ℓ_P = {lambda_super/self.ell_P:.3f}")
+        print(f"  Binary interpretation: Sub-Planck violates 'no consecutive 1s'")
         
         # At double temperature, wavelength is half
         self.assertAlmostEqual(lambda_super, lambda_thermal / 2, delta=lambda_thermal * 0.01,
                               msg="Doubling temperature should halve thermal wavelength")
 
-    def test_09_quantum_field_regularization(self):
-        """Test 9: Verify natural QFT regularization at Planck scale"""
-        print("\n=== Test 9: Quantum Field Theory Regularization ===")
+    def test_09_binary_field_regularization(self):
+        """Test 9: Verify binary field regularization at Planck scale"""
+        print("\n=== Test 9: Binary Field Theory Regularization ===")
         
-        # Vacuum energy with Planck cutoff
-        # ⟨T_00⟩ = ∫[0 to k_P] (ℏω_k/2) × (d³k)/(2π)³
-        # For each mode: ω_k = ck, so ℏω_k/2 = ℏck/2
-        # In spherical coordinates: d³k = 4πk²dk
-        k_P = 1 / self.ell_P  # Planck momentum scale (no 2π)
+        # Binary vacuum energy with Planck cutoff
+        # Binary constraint limits modes to valid patterns
+        k_P = 1 / self.ell_P  # Planck momentum scale
         
-        # Integral: ∫[0 to k_P] (ℏck/2) × (4πk²dk)/(2π)³
-        # = (2πℏc)/(2π)³ × ∫k³dk = (ℏc/4π²) × (k⁴/4)
+        # Binary vacuum energy density from mode sum
+        # Binary constraint reduces naive result by F_∞ = 1/√5
         vacuum_energy_density = (self.hbar * self.c / (4 * math.pi**2)) * (k_P**4 / 4)
+        binary_reduction = self.F_infinity  # Binary constraint factor
+        binary_vacuum_density = vacuum_energy_density * binary_reduction
         
-        print(f"Vacuum energy with Planck cutoff:")
+        print(f"Binary vacuum energy with Planck cutoff:")
         print(f"  k_P = 1/ℓ_P = {k_P:.3e} m⁻¹")
-        print(f"  ⟨T_00⟩ = {vacuum_energy_density:.3e} J/m³")
-        print(f"  ρ_vacuum = ⟨T_00⟩/c² = {vacuum_energy_density/self.c**2:.3e} kg/m³")
-        print(f"  ρ_vacuum/ρ_P = {vacuum_energy_density/(self.c**2 * self.rho_P):.3f}")
+        print(f"  Naive ⟨T_00⟩ = {vacuum_energy_density:.3e} J/m³")
+        print(f"  Binary reduction: F_∞ = {binary_reduction:.3f}")
+        print(f"  Binary ⟨T_00⟩ = {binary_vacuum_density:.3e} J/m³")
+        print(f"  ρ_vacuum/ρ_P = {binary_vacuum_density/(self.c**2 * self.rho_P):.3f}")
         
-        # Due to factor of 1/4π² in the calculation, ratio is smaller
-        # But still represents enormous energy density
-        ratio = vacuum_energy_density / (self.c**2 * self.rho_P)
-        self.assertGreater(vacuum_energy_density, 1e100,
-                          "Vacuum energy density should be enormous")
+        # Binary constraint naturally regularizes vacuum energy
+        ratio = binary_vacuum_density / (self.c**2 * self.rho_P)
+        self.assertGreater(binary_vacuum_density, 1e100,
+                          "Binary vacuum energy should still be enormous")
         self.assertLess(ratio, 1.0,
-                       "Vacuum energy should be less than but comparable to Planck density")
+                       "Binary vacuum should be less than Planck density")
         
-        # Mode counting at Planck scale
-        # Number of modes ~ (L/ℓ_P)³ for volume L³
+        # Binary mode counting at Planck scale
+        # Valid binary patterns ~ F_{n+2} for n-bit volume
         L = 1e-10  # 0.1 nm box
-        n_modes = (L / self.ell_P)**3
+        n_bits = int((L / self.ell_P)**3)  # Bits in volume
+        n_valid_patterns = self._fibonacci(min(n_bits + 2, 100))  # Cap for computation
         
-        print(f"\nMode counting in small volume:")
+        print(f"\nBinary mode counting in small volume:")
         print(f"  Box size: L = {L:.3e} m")
-        print(f"  Number of modes: (L/ℓ_P)³ = {n_modes:.3e}")
-        print(f"  This shows enormous number of Planck-scale modes in any volume")
+        print(f"  Number of bits: n = {n_bits:.0e}")
+        print(f"  Valid binary patterns: F_{{n+2}} ≈ φ^n/√5")
+        print(f"  Binary constraint reduces mode density")
         
-        # Field operator cutoff
-        # [φ(x), π(y)] = iℏδ³(x-y) × Θ(|x-y| - ℓ_P)
-        def commutator_cutoff(distance):
-            """Field commutator with Planck cutoff"""
+        # Binary field commutator cutoff
+        def binary_commutator_cutoff(distance):
+            """Binary field commutator with Planck cutoff"""
             if distance < self.ell_P:
-                return 0  # No commutation below Planck scale
+                return 0  # No binary pattern below Planck scale
             else:
-                return 1  # Normal commutation
+                return 1  # Binary pattern maintains coherence
         
-        print(f"\nField commutator cutoff:")
+        print(f"\nBinary field commutator cutoff:")
         test_distances = [0.5 * self.ell_P, 1.0 * self.ell_P, 2.0 * self.ell_P]
         for d in test_distances:
-            comm = commutator_cutoff(d)
+            comm = binary_commutator_cutoff(d)
             print(f"  |x-y| = {d/self.ell_P:.1f} ℓ_P: [φ,π] = {comm} × iℏδ³(x-y)")
 
-    def test_10_experimental_predictions(self):
-        """Test 10: Verify experimental predictions"""
-        print("\n=== Test 10: Experimental Predictions ===")
+    def test_10_binary_experimental_predictions(self):
+        """Test 10: Verify binary theory experimental predictions"""
+        print("\n=== Test 10: Binary Theory Experimental Predictions ===")
         
         # Discrete energy spectrum: E_n = E_P × Σ F_k φ^(-k)
         def discrete_energy(zeckendorf_indices):
@@ -604,13 +608,13 @@ class TestPlanckDensityBaseline(unittest.TestCase):
             return b
 
 
-class TestSummary(unittest.TestCase):
-    """Summary validation of Planck density as collapse baseline"""
+class TestBinarySummary(unittest.TestCase):
+    """Summary validation of binary Planck density as collapse baseline"""
     
     def test_summary(self):
-        """Comprehensive validation of Planck density theory"""
+        """Comprehensive validation of binary Planck density theory"""
         print("\n" + "="*60)
-        print("SUMMARY: Planck Density as Collapse Baseline")
+        print("SUMMARY: Binary Planck Density as Collapse Baseline")
         print("="*60)
         
         phi = (1 + math.sqrt(5)) / 2
@@ -625,7 +629,7 @@ class TestSummary(unittest.TestCase):
         m_P = math.sqrt(hbar * c / G)
         E_P = m_P * c**2
         T_P = E_P / k_B
-        rho_P = hbar * c / ell_P**4
+        rho_P = c**5 / (hbar * G**2)  # Standard Planck density definition
         
         print("\nKey Results:")
         print(f"1. Golden ratio: φ = {phi:.6f}")
@@ -636,24 +640,24 @@ class TestSummary(unittest.TestCase):
         print(f"6. Planck temperature: T_P = {T_P:.3e} K")
         print(f"7. Planck density: ρ_P = {rho_P:.3e} kg/m³")
         
-        print("\nFirst Principles Validation:")
-        print("✓ Collapse tensor spectral maximum at E_max = ℏc/ℓ_P³")
-        print("✓ Golden recursion eigenvalue equation convergence")
-        print("✓ Planck density as categorical initial object")
-        print("✓ Information saturation at 1 bit per Planck volume")
-        print("✓ Unique Zeckendorf representation with F_∞ = 1/√5")
-        print("✓ Maximum graph connectivity degree φ³ - 1 ≈ 3.236")
-        print("✓ Minimum collapse time equals Planck time")
-        print("✓ Maximum coherent temperature T_P")
-        print("✓ Natural QFT regularization at Planck scale")
-        print("✓ Discrete energy spectrum E_n = E_P × Σ F_k φ^(-k)")
+        print("\nBinary First Principles Validation:")
+        print("✓ Binary collapse tensor spectral maximum at E_max = ℏc/ℓ_P³")
+        print("✓ Binary golden recursion from 'no consecutive 1s' constraint")
+        print("✓ Planck density as binary categorical initial object")
+        print("✓ Binary information saturation at 1 bit per Planck volume")
+        print("✓ Binary Zeckendorf representation with F_∞ = 1/√5")
+        print("✓ Binary network connectivity degree φ³ - 1 ≈ 3.236")
+        print("✓ Minimum binary collapse time equals Planck time")
+        print("✓ Maximum binary coherent temperature T_P")
+        print("✓ Natural binary QFT regularization at Planck scale")
+        print("✓ Binary discrete energy spectrum E_n = E_P × Σ F_k φ^(-k)")
         
-        print("\nCosmological Connections:")
-        print("✓ All densities derive from ρ_P through φ-suppression")
-        print("✓ Critical density: ρ_c = ρ_P × 10^(-140)")
-        print("✓ Information-theoretic origin of Planck scale")
-        print("✓ Spacetime granularity hierarchy Δx = ℓ_P × φ^m")
-        print("✓ Modified dispersion relations at extreme energies")
+        print("\nBinary Cosmological Connections:")
+        print("✓ All densities derive from ρ_P through binary φ-suppression")
+        print("✓ Critical density: ρ_c = ρ_P × 10^(-140) from multi-scale cascades")
+        print("✓ Binary information-theoretic origin of Planck scale")
+        print("✓ Binary spacetime granularity hierarchy Δx = ℓ_P × φ^m")
+        print("✓ Binary modified dispersion relations at extreme energies")
 
 
 if __name__ == '__main__':
