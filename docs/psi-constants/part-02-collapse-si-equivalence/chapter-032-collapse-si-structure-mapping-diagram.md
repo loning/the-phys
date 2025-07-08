@@ -90,35 +90,35 @@ preserving all dimensional algebra.
 
 ## 32.4 Constant Mapping Structure
 
-**Definition 32.4** (Constant Correspondence): For each fundamental constant:
+**Definition 32.4** (Binary Constant Correspondence): For each fundamental constant:
 
 ```mermaid
 graph LR
-    subgraph "Collapse Constants"
-        c_star["c* = 2"]
-        hbar_star["ħ* = φ²/(2π)"]
-        G_star["G* = φ⁻²"]
+    subgraph "Binary Constants"
+        c_bin["c* = 2 (channel limit)"]
+        hbar_bin["ħ* = φ²/(2π) (min change)"]
+        G_bin["G* = φ⁻² (dilution)"]
     end
     
-    subgraph "Pure Numbers"
-        N_c["N[c] = 149,896,229"]
-        N_h["N[ħ] ≈ 10⁻³⁵"]
-        N_G["N[G] ≈ 10⁻¹⁰"]
+    subgraph "Binary Patterns"
+        N_c["Pattern[c] = 149,896,229"]
+        N_h["Pattern[ħ] ≈ 10⁻³⁵"]
+        N_G["Pattern[G] ≈ 10⁻¹⁰"]
     end
     
-    subgraph "SI Constants"
+    subgraph "Human Labels"
         c_SI["c = 299,792,458 m/s"]
         hbar_SI["ħ = 1.054...×10⁻³⁴ J\cdot s"]
         G_SI["G = 6.674×10⁻¹¹ m³/kg\cdot s²"]
     end
     
-    c_star -->|"× N[c]"| N_c
-    hbar_star -->|"× N[ħ]"| N_h
-    G_star -->|"× N[G]"| N_G
+    c_bin -->|"count patterns"| N_c
+    hbar_bin -->|"count patterns"| N_h
+    G_bin -->|"count patterns"| N_G
     
-    N_c -->|"× λ"| c_SI
-    N_h -->|"× λ"| hbar_SI
-    N_G -->|"× λ"| G_SI
+    N_c -->|"human scale φ⁻¹⁴⁸"| c_SI
+    N_h -->|"human scale φ⁻¹⁴⁸"| hbar_SI
+    N_G -->|"human scale φ⁻¹⁴⁸"| G_SI
 ```
 
 **Theorem 32.4** (Constant Preservation): The mapping preserves all physical relationships:
@@ -192,30 +192,32 @@ maps automorphisms of ψ-structure to SI symmetries.
 
 ## 32.8 Measurement Process Diagram
 
-**Definition 32.8** (Measurement Flow): The complete measurement process:
+**Definition 32.8** (Binary Measurement Flow): The complete measurement process:
 
 ```mermaid
 sequenceDiagram
+    participant Binary as "Binary Pattern"
     participant Psi as "ψ State"
-    participant Collapse as "Collapse Structure"
-    participant Operator as "Observable Operator"
-    participant Pure as "Pure Number"
-    participant SI as "SI Value"
-    participant Lab as "Laboratory"
+    participant Labels as "Human Labels"
+    participant Operator as "Observable"
+    participant Pattern as "Binary Count"
+    participant Result as "Lab Result"
     
-    Psi->>Collapse: Self-reference iteration
-    Collapse->>Operator: Tensor contraction
-    Operator->>Pure: Eigenvalue extraction
-    Pure->>SI: Dimensional dressing
-    SI->>Lab: Physical measurement
-    Lab-->>Psi: Feedback (collapse)
+    Binary->>Psi: Self-reference
+    Psi->>Labels: Apply convention
+    Labels->>Operator: Define observable
+    Operator->>Pattern: Extract binary
+    Pattern->>Result: Scale to human
+    Result-->>Binary: Preserve pattern
 ```
 
-**Theorem 32.8** (Measurement Consistency): All measurement paths commute:
+**Theorem 32.8** (Binary Measurement Consistency): All measurement paths preserve binary patterns:
 
 $$
-\langle \psi | \hat{O} | \psi \rangle_{collapse} = \text{Lab measurement}_{SI}
+\text{Binary}[\langle \psi | \hat{O} | \psi \rangle] = \text{Binary}[\text{Lab measurement}]
 $$
+
+**Binary Proof**: Measurements can only count binary patterns. Different labeling conventions cannot change the pattern count.
 
 ## 32.9 Category Equivalence
 
@@ -355,12 +357,14 @@ $$
 $$
 
 where:
+
 - $\mathcal{F}_1$: Collapse → SI (forward map)
 - $\mathcal{F}_2$: SI → Collapse (inverse map)
 - $\mathcal{F}_2 \circ \mathcal{F}_1 = \text{id}_{\textbf{Collapse}}$
 - $\mathcal{F}_1 \circ \mathcal{F}_2 = \text{id}_{\textbf{SI}}$
 
 This isomorphism preserves:
+
 1. All physical predictions
 2. All symmetries and conservation laws
 3. All information content
@@ -368,6 +372,7 @@ This isomorphism preserves:
 
 *Proof*:
 Starting from ψ = ψ(ψ), we have shown:
+
 - Collapse structure emerges necessarily (Part I)
 - SI can be mapped bijectively to collapse (Part II)
 - Pure numbers mediate the correspondence (Chapter 31)
